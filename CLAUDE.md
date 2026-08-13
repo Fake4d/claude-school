@@ -94,6 +94,26 @@ Drittanbieter-Artikeln war schlicht falsch („nur macOS“ — tatsächlich gib
 für Windows und Mac, im Browser und am Handy). Der Cowork-Comic ist deshalb
 durchgehend gegen die offizielle Dokumentation geprüft.
 
+## Veröffentlichen
+
+Nicht von Hand kopieren. Ein Skript **außerhalb** dieses Repos erledigt beide Ziele
+zugleich — Git und Webseite:
+
+```
+~/claude/bin/anleitungen-veroeffentlichen.sh        # bauen, prüfen, Git + Web
+~/claude/bin/anleitungen-veroeffentlichen.sh -n     # Probelauf
+```
+
+Es liegt bewusst nicht hier, weil es die FTP-Zugangsdaten braucht
+(`~/claude/state/ftp.conf`). Quelle sind immer die Arbeitsordner
+`~/claude/{befehlsreferenz,claude-anleitung,cowork-anleitung}` — die Dateien in diesem
+Repo sind Kopien daraus und sollten nicht direkt bearbeitet werden.
+
+**Chromium stempelt ein Erstellungsdatum ins PDF.** Die Comic-PDFs unterscheiden sich
+deshalb nach jedem Druck, auch wenn sich inhaltlich nichts geändert hat. Das Skript
+fängt das ab: Ist das HTML unverändert, behält es die alte PDF-Fassung, statt einen
+nichtssagenden Commit zu erzeugen.
+
 ## Reproduzierbarkeit
 
 Die Skripte in `werkzeuge/` erzeugen die Dateien oben **byte-identisch**. Das ist
