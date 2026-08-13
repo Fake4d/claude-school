@@ -23,11 +23,6 @@ dem Gedächtnis geschrieben. Figuren und Schaubilder sind handgeschriebenes SVG.
 Beide Comics lassen bewusst Themen aus, die schnell veralten (Preise, Nutzungsgrenzen).
 Was fehlt, steht am Ende der jeweiligen Projektseite.
 
-## Online
-
-Alle drei Anleitungen liegen auch im Netz:
-**[claude.christian-grafe.de](https://claude.christian-grafe.de/)**
-
 ## Lizenz und Hinweise
 
 Die Comics gehen auf einen englischen Instagram-Comic von *okaashish* zurück —
