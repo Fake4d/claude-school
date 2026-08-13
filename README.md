@@ -23,6 +23,20 @@ dem Gedächtnis geschrieben. Figuren und Schaubilder sind handgeschriebenes SVG.
 Beide Comics lassen bewusst Themen aus, die schnell veralten (Preise, Nutzungsgrenzen).
 Was fehlt, steht am Ende der jeweiligen Projektseite.
 
+## Selbst bauen
+
+Die Skripte in [`werkzeuge/`](werkzeuge/) sind die Werkzeuge zur Erstellung — sie
+erzeugen die Dateien oben byte-identisch. Nur Python 3 nötig, keine Bibliotheken;
+zum Drucken Chromium (Comics) bzw. WeasyPrint (Referenz).
+
+```bash
+cd werkzeuge/cowork-comic && python3 build.py     # -> cowork-anleitung.html
+cd werkzeuge/befehlsreferenz && python3 build_ref.py
+```
+
+Jede Anleitung hat ihren eigenen Ordner, die Schriften liegen gemeinsam in
+`werkzeuge/schriften/`. Details und Fallstricke stehen in [`CLAUDE.md`](CLAUDE.md).
+
 ## Lizenz und Hinweise
 
 Die Comics gehen auf einen englischen Instagram-Comic von *okaashish* zurück —

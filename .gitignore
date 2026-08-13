@@ -1,0 +1,7 @@
+# Bauergebnisse entstehen beim Ausführen der Skripte in werkzeuge/.
+# Die fertigen Fassungen liegen versioniert in den Ordnern oben.
+werkzeuge/*/*.html
+werkzeuge/*/*.pdf
+
+__pycache__/
+*.pyc
