@@ -242,4 +242,5 @@ SLASH = {
 "artifact-design": "Gestaltungsregeln für veröffentlichte Seiten.",
 "artifact-diagramming": "Diagramme für veröffentlichte Seiten.",
 "artifact-capabilities": "Was veröffentlichte Seiten zur Laufzeit können.",
+"artifact-components": "Baukasten wiederverwendbarer Bausteine für veröffentlichte Seiten.",
 }

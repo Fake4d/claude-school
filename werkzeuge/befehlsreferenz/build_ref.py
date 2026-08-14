@@ -4,8 +4,8 @@
 import json, pathlib, datetime, re, sys
 import texte_de as T
 
-VERSION = "2.1.229"
-VORGAENGER = "2.1.228"
+VERSION = "2.1.232"
+VORGAENGER = "2.1.229"
 HERE = pathlib.Path(__file__).parent
 
 opts = json.loads((HERE / "opts.json").read_text())
@@ -157,19 +157,16 @@ gesondert am Ende, damit nichts als verfügbar erscheint, was es nicht ist.</p>
 
 <div class="kasten">
 <h3>Was sich seit der letzten Fassung geändert hat</h3>
-<p><b>Nichts, das eine Sitzung zu sehen bekommt.</b> {VORGAENGER} und {VERSION} liegen
-beide noch auf diesem Rechner. <code>claude --help</code> und die Hilfetexte aller
-Unterbefehle sind Zeichen für Zeichen identisch; kein Terminal-Befehl, keine Option ist
-dazugekommen oder weggefallen (Teil A und B).</p>
-<p>Bei den Slash-Befehlen (Teil C) ist die ausgelesene Liste ebenfalls unverändert —
-gleiche {len(slash)} Namen, gleiche Beschreibungen, gleiche Zweitnamen und
-Argumenthinweise. Verändert hat sich nur intern, in einer Weise, die eine Sitzung nie zu
-Gesicht bekommt: Die Bezeichner, mit denen das Programm intern prüft, ob ein Befehl
-freigeschaltet ist, sind nach dem Neubauen der Fassung anders benannt (zum Beispiel bei
-<code>/model</code>, <code>/mcp</code> und <code>/fork</code>) — reines Nebenprodukt des
-Minifizierens beim Bauen der Version, ohne Auswirkung auf Verhalten oder Verfügbarkeit.</p>
-<p>Diese Fassung ist also im Kern eine Bestätigung: {VERSION} verhält sich für die Zwecke
-dieser Liste identisch zu {VORGAENGER}.</p>
+<p><code>claude --help</code> und die Hilfetexte aller Unterbefehle sind Zeichen für
+Zeichen identisch zu {VORGAENGER}; kein Terminal-Befehl, keine Option ist dazugekommen
+oder weggefallen (Teil A und B).</p>
+<p>Bei den Slash-Befehlen (Teil C) hat sich die Zahl der Befehle geändert: von 114 auf
+115. Neu dazugekommen sind <code>/artifact-components</code> und
+<code>/claude-api</code>, weggefallen ist <code>/loop</code>. Inhaltlich geändert hat
+sich an keinem der übrigen Befehle etwas — gleiche Beschreibungen, gleiche Zweitnamen,
+gleiche Argumenthinweise. Bei 37 Befehlen haben sich nur die internen Bezeichner
+geändert, mit denen das Programm prüft, ob ein Befehl freigeschaltet ist — reines
+Nebenprodukt des Minifizierens beim Bauen der Version, ohne Bedeutung für eine Sitzung.</p>
 </div>
 
 {abschnitt("Teil A · Terminal-Befehle und Optionen",
