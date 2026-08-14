@@ -243,4 +243,12 @@ SLASH = {
 "artifact-diagramming": "Diagramme für veröffentlichte Seiten.",
 "artifact-capabilities": "Was veröffentlichte Seiten zur Laufzeit können.",
 "artifact-components": "Baukasten wiederverwendbarer Bausteine für veröffentlichte Seiten.",
+"commit": "Legt einen Git-Commit an, mit passend geschriebener Nachricht.",
+"commit-push-pr": "Committen, hochladen und einen Pull Request eröffnen – in einem Zug.",
+"cowork-plugin": "Legt ein neues Cowork-Plugin an oder passt ein vorhandenes an.",
+"memory-types": "Nachschlagewerk zu den Gedächtnisarten: was wohin gehört und wann.",
+"prototype": "Macht aus einer Idee einen lauffähigen Entwurf und veröffentlicht ihn als Seite.",
+"verify": "Prüft nach, ob eine Änderung wirklich tut, was sie soll – im echten Durchlauf.",
+"whiteboard": "Öffnet eine freie Zeichenfläche für Skizzen und Schaubilder.",
+"workshop": "Entwirft etwas Schritt für Schritt gemeinsam mit Dir, als wachsendes Dokument.",
 }

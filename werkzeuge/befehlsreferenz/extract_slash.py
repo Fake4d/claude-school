@@ -117,6 +117,16 @@ def variable_aufloesen(bezeichner):
     return VARCACHE[bezeichner]
 
 
+# Kurze Zuweisungen `VAR="wert"` einmalig einsammeln. Einzeln zu suchen waere
+# unbezahlbar: die Datei hat ~300 Mio Zeichen und es gibt hunderte Bezeichner.
+NAMEN_MAP = dict(re.findall(r'([A-Za-z_$][\w$]{0,8})\s*=\s*"([a-z0-9][a-z0-9:_-]{2,30})"', data))
+
+
+def name_aufloesen(bezeichner):
+    """`name:TEn` -> "loop". Nur kurze, namensartige Werte."""
+    return NAMEN_MAP.get(bezeichner, "")
+
+
 def entschluesseln(s):
     try:
         return s.encode().decode("unicode_escape")
@@ -136,14 +146,23 @@ for t in ANKER.finditer(data):
     if obj is None or "inputSchema" in obj[:400]:
         continue
     nm = feld_oberste_ebene(obj, r'name:"([a-z0-9][a-z0-9:_-]{2,30})"')
-    if not nm:
-        continue
+    name_aus_variable = False
+    if nm:
+        name = nm.group(1)
+    else:
+        # Seit 2.1.232 steht der Name teilweise in einer Variablen: `name:TEn`
+        # statt `name:"loop"`. Ohne diese Aufloesung fielen solche Befehle aus
+        # der Liste - und sahen im Versionsvergleich aus wie geloescht.
+        nv = feld_oberste_ebene(obj, r'name:([A-Za-z_$][\w$]{0,8})\s*[,}]')
+        name = name_aufloesen(nv.group(1)) if nv else ""
+        if not re.fullmatch(r'[a-z0-9][a-z0-9:_-]{2,30}', name):
+            continue
+        name_aus_variable = True
     typ = feld_oberste_ebene(obj, r'type:"(local|local-jsx|prompt)"')
     hat_merkmal = typ or feld_oberste_ebene(obj, r'(isEnabled|aliases|requires|userInvocable|getPromptForCommand)[:(]') \
         or None
     if not hat_merkmal:
         continue
-    name = nm.group(1)
 
     ds = feld_oberste_ebene(obj, r'description:"((?:[^"\\]|\\.)*)"')
     if ds:
@@ -171,6 +190,12 @@ for t in ANKER.finditer(data):
         "enabled": e.group(1).strip() if e else "true",
     }
     eintrag["verfuegbar"] = not AUS.match(eintrag["enabled"])
+    # Bei ueber eine Variable aufgeloesten Namen ist die Verwechslungsgefahr groesser:
+    # ein beliebiges Objekt kann zufaellig `name` und `description` tragen. Eine
+    # Beschreibung, die nur ein einzelnes kurzes Wort ist (z.B. "method"), ist keine -
+    # solche Treffer verwerfen. Bei Namen als Literal bleibt es wie bisher.
+    if name_aus_variable and " " not in desc and len(desc) < 20:
+        continue
     alt = befehle.get(name)
     if alt is None or (not alt["desc"] and desc):
         befehle[name] = eintrag

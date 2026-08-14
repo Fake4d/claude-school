@@ -149,8 +149,9 @@ Aktualisierung der Fassung vom 5. August 2026 ({VORGAENGER})</p>
 {VERSION} ausgelesen — <code>claude --help</code> und die Hilfe jedes Unterbefehls.</p>
 <p>Die Slash-Befehle (Teil C) stammen aus den Befehlsdefinitionen im Programm selbst. Das
 Ausleseverfahren erkennt auch Befehle, deren Beschreibung erst zur Laufzeit gebildet oder
-aus einer Variablen geholt wird — es wurde für die Fassung 2.1.228 dafür neu geschrieben
-und liefert seither eine vollständigere Liste als zuvor.</p>
+aus einer Variablen geholt wird, und seit dieser Fassung ebenso solche, deren <i>Name</i>
+in einer Variablen steht statt als Text im Programm. Beides kommt durch das Verdichten
+des Programmcodes beim Bauen zustande und sagt nichts über den Befehl selbst aus.</p>
 <p>Befehle, die im Programm angelegt, aber per Schalter abgeschaltet sind, stehen
 gesondert am Ende, damit nichts als verfügbar erscheint, was es nicht ist.</p>
 </div>
@@ -160,13 +161,22 @@ gesondert am Ende, damit nichts als verfügbar erscheint, was es nicht ist.</p>
 <p><code>claude --help</code> und die Hilfetexte aller Unterbefehle sind Zeichen für
 Zeichen identisch zu {VORGAENGER}; kein Terminal-Befehl, keine Option ist dazugekommen
 oder weggefallen (Teil A und B).</p>
-<p>Bei den Slash-Befehlen (Teil C) hat sich die Zahl der Befehle geändert: von 114 auf
-115. Neu dazugekommen sind <code>/artifact-components</code> und
-<code>/claude-api</code>, weggefallen ist <code>/loop</code>. Inhaltlich geändert hat
-sich an keinem der übrigen Befehle etwas — gleiche Beschreibungen, gleiche Zweitnamen,
-gleiche Argumenthinweise. Bei 37 Befehlen haben sich nur die internen Bezeichner
-geändert, mit denen das Programm prüft, ob ein Befehl freigeschaltet ist — reines
-Nebenprodukt des Minifizierens beim Bauen der Version, ohne Bedeutung für eine Sitzung.</p>
+<p>Bei den Slash-Befehlen (Teil C) sind gegenüber {VORGAENGER} genau zwei dazugekommen:
+<code>/artifact-components</code> und <code>/claude-api</code>. <b>Weggefallen ist
+keiner</b>, und an den übrigen hat sich inhaltlich nichts geändert — gleiche
+Beschreibungen, gleiche Zweitnamen, gleiche Argumenthinweise.</p>
+<p><b>Trotzdem ist die Liste deutlich länger geworden, von 114 auf {len(slash)}
+Einträge.</b> Das liegt nicht an neuen Befehlen, sondern am verbesserten Ausleseverfahren:
+13 Befehle standen schon vorher zur Verfügung, wurden aber übersehen, weil ihr Name im
+Programm nicht als Text, sondern in einer Variablen abgelegt ist. Darunter
+<code>/dataviz</code>, <code>/workshop</code>, <code>/whiteboard</code>,
+<code>/prototype</code>, <code>/verify</code>, <code>/simplify</code> und
+<code>/commit</code>. Sie sind also nicht neu — sie fehlten vorher zu Unrecht.</p>
+<p class="unter" style="margin-top:2mm">Anlass für die Verbesserung war ein Fehlalarm:
+Beim ersten Abgleich sah es so aus, als sei <code>/loop</code> entfallen. Tatsächlich war
+nur dessen Name in eine Variable gewandert; den Befehl gibt es unverändert. Das Verfahren
+prüft solche Fälle jetzt mit — und ein scheinbarer Wegfall führt nicht mehr
+ungeprüft in diese Liste.</p>
 </div>
 
 {abschnitt("Teil A · Terminal-Befehle und Optionen",
