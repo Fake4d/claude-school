@@ -36,9 +36,18 @@ Die Comicseiten haben feste Höhe (`210×262 mm`) und `overflow:hidden`. Zu viel
 wird also **stillschweigend abgeschnitten**, ohne Fehlermeldung. Beim Durchblättern
 übersieht man das zuverlässig.
 
-Verfahren: PDF mit `pdftoppm -jpeg -r 50` in Bilder wandeln und je Seite den Abstand
-der äußersten nicht-weißen Pixel zu allen **vier** Rändern messen. Unter ~10 px ist
-verdächtig.
+Dafür gibt es `werkzeuge/qa-ueberlauf.py` — nicht von Hand nachbauen:
+
+```bash
+python3 werkzeuge/qa-ueberlauf.py pfad/zur.pdf     # Rückgabewert 1 bei Verdacht
+python3 werkzeuge/qa-ueberlauf.py --alle pfad.pdf  # auch die sauberen Seiten zeigen
+```
+
+Es wandelt das PDF mit `pdftoppm -jpeg -r 50` in Bilder und misst je Seite den
+Abstand der äußersten nicht-weißen Pixel zu allen **vier** Rändern; unter ~10 px gilt
+als verdächtig. Das Veröffentlichungsskript ruft **genau diese Datei** auf — es gibt
+also keine zweite Fassung, die altern könnte. Wer hier etwas ändert, ändert damit
+auch die Sperre vor dem Veröffentlichen.
 
 Zwei Dinge, die ich auf die harte Tour gelernt habe:
 
@@ -104,10 +113,20 @@ zugleich — Git und Webseite:
 ~/claude/bin/anleitungen-veroeffentlichen.sh -n     # Probelauf
 ```
 
-Es liegt bewusst nicht hier, weil es die FTP-Zugangsdaten braucht
-(`~/claude/state/ftp.conf`). Quelle sind immer die Arbeitsordner
+Es liegt bewusst **nicht** in diesem Repo, und das aus zwei Gründen: Es braucht die
+FTP-Zugangsdaten (`~/claude/state/ftp.conf`), und es enthält Domain, Mailadressen und
+absolute Pfade eines bestimmten Servers — nichts davon gehört in ein öffentliches
+Repo. Was daran allgemein brauchbar ist, ist stattdessen als eigenes Werkzeug
+herausgelöst und hier veröffentlicht: `werkzeuge/qa-ueberlauf.py`.
+
+Quelle sind immer die Arbeitsordner
 `~/claude/{befehlsreferenz,claude-anleitung,cowork-anleitung}` — die Dateien in diesem
 Repo sind Kopien daraus und sollten nicht direkt bearbeitet werden.
+
+Ein zweites Skript außerhalb, `~/claude/bin/refcheck.sh`, läuft täglich per cron und
+vergleicht die installierte Claude-Fassung mit der zuletzt veröffentlichten. Nur bei
+einer neuen Fassung wird gearbeitet. **Verschwindet dabei ein Slash-Befehl, bricht es
+ab und fragt nach**, statt zu veröffentlichen — siehe den Abschnitt dazu weiter unten.
 
 **Chromium stempelt ein Erstellungsdatum ins PDF.** Die Comic-PDFs unterscheiden sich
 deshalb nach jedem Druck, auch wenn sich inhaltlich nichts geändert hat. Das Skript

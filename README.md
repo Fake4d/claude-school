@@ -37,6 +37,22 @@ cd werkzeuge/befehlsreferenz && python3 build_ref.py
 Jede Anleitung hat ihren eigenen Ordner, die Schriften liegen gemeinsam in
 `werkzeuge/schriften/`. Details und Fallstricke stehen in [`CLAUDE.md`](CLAUDE.md).
 
+### Abgeschnittene Seiten finden
+
+Die Comicseiten haben feste Höhe und `overflow:hidden` — zu viel Inhalt wird beim
+Drucken stillschweigend abgeschnitten, ohne Fehlermeldung. Dagegen hilft
+[`werkzeuge/qa-ueberlauf.py`](werkzeuge/qa-ueberlauf.py): es misst je Seite den
+Abstand der äußersten Tinte zu allen vier Blatträndern und meldet, was zu knapp wird.
+
+```bash
+python3 werkzeuge/qa-ueberlauf.py cowork-comic/cowork-anleitung.pdf
+```
+
+Rückgabewert 1 bei Verdacht — damit lässt es sich als Sperre in einen
+Veröffentlichungsablauf hängen. Genau so wird es hier verwendet: ohne bestandene
+Prüfung wird nichts veröffentlicht. Es taugt für jedes PDF mit festem Seitenformat,
+nicht nur für diese Comics.
+
 ## Lizenz und Hinweise
 
 Die Comics gehen auf einen englischen Instagram-Comic von *okaashish* zurück —
