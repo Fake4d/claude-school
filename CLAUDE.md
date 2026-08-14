@@ -119,3 +119,17 @@ nichtssagenden Commit zu erzeugen.
 Die Skripte in `werkzeuge/` erzeugen die Dateien oben **byte-identisch**. Das ist
 geprüft und soll so bleiben: Wer etwas am Inhalt ändert, ändert das Skript und baut
 neu — nicht die fertige Datei von Hand.
+
+## Verschwundene Slash-Befehle sind fast immer ein Auslesefehler
+
+Am 14.08.2026 meldete der Abgleich, `/loop` sei entfallen. Tatsächlich war nur dessen
+Name im Programm von einem Textliteral in eine Variable gewandert (`TEn="loop"`) —
+Nebenprodukt des Verdichtens beim Bauen. `extract_slash.py` löst Namen deshalb jetzt
+über eine **einmalig** aufgebaute Zuordnungstabelle auf; einzeln zu suchen wäre
+unbezahlbar, die Datei hat rund 300 Mio Zeichen.
+
+Wer daran wieder etwas ändert: **immer gegen die vorige Fassung gegenprüfen.** Der
+reparierte Extraktor muss dort dieselben Befehle finden wie zuvor, nur eben mehr —
+verlieren darf er keinen. Bei über Variablen aufgelöste Namen ist die
+Verwechslungsgefahr höher, deshalb fliegen Treffer mit einer Ein-Wort-Beschreibung
+(etwa `"method"`) wieder raus.
