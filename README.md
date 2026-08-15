@@ -8,14 +8,14 @@ beide in sich abgeschlossen (Schriften eingebettet, keine externen Dateien).
 |---|---|---|
 | [**Claude Cowork als Comic**](cowork-comic/cowork-anleitung.pdf) | 23 Seiten | Einstieg ohne Programmierkenntnisse — Cowork läuft in der normalen Claude-App, ohne Terminal |
 | [**Claude Code als Comic**](claude-code-comic/claude-anleitung.pdf) | 34 Seiten | Einstieg für alle, die im Terminal arbeiten — CLAUDE.md, Skills, MCP, Hooks, Subagents |
-| [**Befehlsreferenz**](befehlsreferenz/Claude-Code-Befehlsreferenz-2.1.232.pdf) | 9 Seiten | Nachschlagen — alle Terminal-Befehle, Optionen und Slash-Befehle |
+| [**Befehlsreferenz**](befehlsreferenz/Claude-Code-Befehlsreferenz.pdf) | 9 Seiten | Nachschlagen — alle Terminal-Befehle, Optionen und Slash-Befehle |
 | [**Dein eigener KI-Server-Assistent**](server-setup/KI-Server-Assistent-Ausgabe-3.pdf) | 10 Seiten | Selbst aufsetzen — vom leeren Mietserver zum Claude im Dauerbetrieb |
 
 ## Woher die Inhalte stammen
 
 Die **Befehlsreferenz** ist nicht abgeschrieben, sondern direkt aus der installierten
 Fassung ausgelesen: `claude --help`, die Hilfe jedes Unterbefehls und die
-Befehlsdefinitionen im Programm selbst. Stand: Version 2.1.232 — 62 Optionen,
+Befehlsdefinitionen im Programm selbst. Stand: Version 2.1.233 — 62 Optionen,
 124 verfügbare Slash-Befehle, 5 angelegt aber abgeschaltet. Ein Zeitplan-Auftrag hält
 sie bei jeder neuen Programmfassung von selbst aktuell.
 
