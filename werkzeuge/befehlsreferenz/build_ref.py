@@ -4,8 +4,8 @@
 import json, pathlib, datetime, re, sys
 import texte_de as T
 
-VERSION = "2.1.232"
-VORGAENGER = "2.1.229"
+VERSION = "2.1.233"
+VORGAENGER = "2.1.232"
 HERE = pathlib.Path(__file__).parent
 
 opts = json.loads((HERE / "opts.json").read_text())
@@ -141,7 +141,7 @@ section {{ break-inside: auto; }}
 <p class="lead">Alle Terminal-Befehle, alle Optionen und alle Slash-Befehle innerhalb einer
 Sitzung — mit einer Erklärung, was sie tun.</p>
 <p class="meta">Zusammengestellt von Christians virtuellem Server · {heute} ·
-Aktualisierung der Fassung vom 5. August 2026 ({VORGAENGER})</p>
+Aktualisierung der Fassung vom 14. August 2026 ({VORGAENGER})</p>
 
 <div class="kasten">
 <h3>Wie diese Liste entstanden ist</h3>
@@ -158,25 +158,21 @@ gesondert am Ende, damit nichts als verfügbar erscheint, was es nicht ist.</p>
 
 <div class="kasten">
 <h3>Was sich seit der letzten Fassung geändert hat</h3>
-<p><code>claude --help</code> und die Hilfetexte aller Unterbefehle sind Zeichen für
-Zeichen identisch zu {VORGAENGER}; kein Terminal-Befehl, keine Option ist dazugekommen
-oder weggefallen (Teil A und B).</p>
-<p>Bei den Slash-Befehlen (Teil C) sind gegenüber {VORGAENGER} genau zwei dazugekommen:
-<code>/artifact-components</code> und <code>/claude-api</code>. <b>Weggefallen ist
-keiner</b>, und an den übrigen hat sich inhaltlich nichts geändert — gleiche
-Beschreibungen, gleiche Zweitnamen, gleiche Argumenthinweise.</p>
-<p><b>Trotzdem ist die Liste deutlich länger geworden, von 114 auf {len(slash)}
-Einträge.</b> Das liegt nicht an neuen Befehlen, sondern am verbesserten Ausleseverfahren:
-13 Befehle standen schon vorher zur Verfügung, wurden aber übersehen, weil ihr Name im
-Programm nicht als Text, sondern in einer Variablen abgelegt ist. Darunter
-<code>/dataviz</code>, <code>/workshop</code>, <code>/whiteboard</code>,
-<code>/prototype</code>, <code>/verify</code>, <code>/simplify</code> und
-<code>/commit</code>. Sie sind also nicht neu — sie fehlten vorher zu Unrecht.</p>
-<p class="unter" style="margin-top:2mm">Anlass für die Verbesserung war ein Fehlalarm:
-Beim ersten Abgleich sah es so aus, als sei <code>/loop</code> entfallen. Tatsächlich war
-nur dessen Name in eine Variable gewandert; den Befehl gibt es unverändert. Das Verfahren
-prüft solche Fälle jetzt mit — und ein scheinbarer Wegfall führt nicht mehr
-ungeprüft in diese Liste.</p>
+<p>Bei den Terminal-Optionen (Teil A) hat sich nichts geändert: <code>claude --help</code>
+ist zeichengleich zu {VORGAENGER}.</p>
+<p>Bei den Unterbefehlen (Teil B) gibt es eine inhaltliche Änderung: <code>claude plugin
+validate</code> prüft jetzt auch einen bloßen <code>.claude/skills</code>-Ordner und meldet
+<code>SKILL.md</code>-Dateien, deren Vorspann (Frontmatter) sich nicht einlesen lässt. Die
+Kurzbeschreibung in dieser Liste ("Plugin auf Fehler prüfen.") bleibt zutreffend, wurde aber
+nicht um dieses Detail erweitert.</p>
+<p>Bei den Slash-Befehlen (Teil C) hat sich die Zahl nicht geändert: {len(slash)} Einträge wie
+zuvor, keiner ist dazugekommen oder weggefallen.</p>
+<p class="unter" style="margin-top:2mm">Beim automatischen Abgleich sah es kurzzeitig so aus,
+als sei <code>/claude-api</code> entfallen. Grund war diesmal keine falsche Namensauflösung wie
+beim <code>/loop</code>-Fall, sondern eine leere Kurzbeschreibung: sie liegt in dieser Fassung
+als Array mehrerer Textbausteine vor statt als einzelner Text, und das Ausleseverfahren kannte
+dieses Muster noch nicht. Der Befehl selbst war nie betroffen. Das Verfahren wurde entsprechend
+erweitert.</p>
 </div>
 
 {abschnitt("Teil A · Terminal-Befehle und Optionen",

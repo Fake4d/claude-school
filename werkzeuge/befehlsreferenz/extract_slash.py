@@ -107,6 +107,12 @@ def variable_aufloesen(bezeichner):
         return VARCACHE[bezeichner]
     m = re.search(r'(?:var\s+)?' + re.escape(bezeichner) +
                   r'\s*=\s*(["\'])((?:[^\\]|\\.)*?)\1', data)
+    if not m:
+        # Manche Beschreibungen liegen als Array mehrerer Textbausteine vor
+        # (Kurzbeschreibung + Trigger-/Skip-Hinweise). Dann zaehlt nur der
+        # erste String im Array als Kurzbeschreibung.
+        m = re.search(r'(?:var\s+)?' + re.escape(bezeichner) +
+                      r'\s*=\s*\[\s*(["\'])((?:[^\\]|\\.)*?)\1', data)
     text = ""
     if m:
         try:
