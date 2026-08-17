@@ -1,19 +1,39 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Setzt die Claude-Code-Befehlsreferenz als HTML (danach -> PDF)."""
-import json, pathlib, datetime, re, sys
-import texte_de as T
+"""Setzt die Claude-Code-Befehlsreferenz als HTML (danach -> PDF).
+
+Baut BEIDE Sprachfassungen in einem Lauf — deutsch und englisch. Das ist
+Absicht: eine einzelne Fassung kann so nicht vergessen werden und auch nicht
+mit einer anderen Programmversion auseinanderlaufen.
+
+    python3 build_ref.py            beide Sprachen
+    python3 build_ref.py de         nur deutsch (zum schnellen Nachsehen)
+    python3 build_ref.py --force    trotz fehlender Übersetzungen bauen
+"""
+import json, pathlib, datetime, sys
+import texte_de, texte_en, aenderungen
 
 VERSION = "2.1.233"
 VORGAENGER = "2.1.232"
+VORGAENGER_DATUM = datetime.date(2026, 8, 14)   # Erscheinungstag der Vorfassung
 HERE = pathlib.Path(__file__).parent
+
+# Sprachkennung -> (Textmodul, Änderungskasten, Dateiname ohne Endung)
+SPRACHEN = {
+    "de": (texte_de, aenderungen.DE, "Claude-Code-Befehlsreferenz"),
+    "en": (texte_en, aenderungen.EN, "Claude-Code-Command-Reference"),
+}
 
 opts = json.loads((HERE / "opts.json").read_text())
 subs = json.loads((HERE / "subs.json").read_text())
 slash = json.loads((HERE / f"slash-{VERSION}.json").read_text())
 
 # ---------------------------------------------------------------- Abgleich --
-def norm_opt(f):
+# Die deutschen Optionsschlüssel tragen eingedeutschte Platzhalter
+# (<verzeichnisse...> statt <directories...>); englisch bleibt das Original.
+def norm_opt(f, sprache):
+    if sprache != "de":
+        return f
     return (f.replace("<directories...>", "<verzeichnisse...>")
              .replace("<tools...>", "<werkzeuge...>")
              .replace("<prompt>", "<text>").replace("<level>", "<stufe>")
@@ -31,12 +51,13 @@ def norm_opt(f):
              .replace("[value]", "[wert]").replace("[session]", "[sitzung]"))
 
 fehlt = []
-for f, _ in opts:
-    if norm_opt(f) not in T.OPTIONEN:
-        fehlt.append("OPTION " + f)
-for b in slash:
-    if b["name"] not in T.SLASH:
-        fehlt.append("SLASH /" + b["name"])
+for sprache, (T, _, _) in SPRACHEN.items():
+    for f, _d in opts:
+        if norm_opt(f, sprache) not in T.OPTIONEN:
+            fehlt.append(f"[{sprache}] OPTION " + f)
+    for b in slash:
+        if b["name"] not in T.SLASH:
+            fehlt.append(f"[{sprache}] SLASH /" + b["name"])
 if fehlt:
     print("FEHLENDE ÜBERSETZUNGEN:")
     for f in fehlt:
@@ -53,54 +74,62 @@ def abschnitt(titel, inhalt, unter=""):
     u = f'<p class="unter">{unter}</p>' if unter else ""
     return f'<section><h2>{titel}</h2>{u}{inhalt}</section>'
 
-# Teil A
-start = "".join([
-    zeile("claude", "Startet eine Sitzung im aktuellen Ordner."),
-    zeile("claude &quot;deine Frage&quot;", "Startet mit einer ersten Nachricht."),
-    zeile("claude -p &quot;…&quot;", "Antwortet einmal und beendet sich — für Skripte."),
-])
-opt_html = "".join(zeile(norm_opt(f).replace("<", "&lt;").replace(">", "&gt;"),
-                         T.OPTIONEN[norm_opt(f)]) for f, _ in opts)
+def datum(d, S, form="datum_kurz"):
+    """Datum in der Schreibweise der jeweiligen Sprache.
 
-# Teil B
-sub_html = ""
-for gruppe, eintraege in subs.items():
-    if gruppe not in T.UNTERBEFEHLE:
-        continue
-    kopf = zeile(f"claude {gruppe}", T.UNTERBEFEHLE[gruppe], "kopf")
-    kinder = ""
-    for name, _ in eintraege:
-        n = name.split(" ")[0]
-        if n.endswith(":"):
+    Monatsnamen kommen aus dem Textmodul, nicht aus strftime: sonst haenge die
+    Ausgabe daran, welches Locale gerade gesetzt ist - im cron ein anderes als
+    in der Sitzung.
+    """
+    return S[form].format(t=d.day, m=d.month, j=d.year, mn=S["monate"][d.month - 1])
+
+def baue(sprache):
+    T, aend, dateiname = SPRACHEN[sprache]
+    S = T.SEITE
+
+    # Teil A
+    start = "".join(zeile(l, r) for l, r in S["start_zeilen"])
+    opt_html = "".join(zeile(norm_opt(f, sprache).replace("<", "&lt;").replace(">", "&gt;"),
+                             T.OPTIONEN[norm_opt(f, sprache)]) for f, _ in opts)
+
+    # Teil B
+    sub_html = ""
+    for gruppe, eintraege in subs.items():
+        if gruppe not in T.UNTERBEFEHLE:
             continue
-        schluessel = f"{gruppe} {n}"
-        if schluessel in T.UNTERBEFEHLE:
-            kinder += zeile(f"claude {gruppe} {n}", T.UNTERBEFEHLE[schluessel], "kind")
-    sub_html += kopf + kinder
+        sub_html += zeile(f"claude {gruppe}", T.UNTERBEFEHLE[gruppe], "kopf")
+        for name, _ in eintraege:
+            n = name.split(" ")[0]
+            if n.endswith(":"):
+                continue
+            schluessel = f"{gruppe} {n}"
+            if schluessel in T.UNTERBEFEHLE:
+                sub_html += zeile(f"claude {gruppe} {n}", T.UNTERBEFEHLE[schluessel], "kind")
 
-# Teil C
-def slash_zeile(b):
-    name = "/" + b["name"]
-    zusatz = []
-    if b["aliases"]:
-        zusatz.append("auch " + ", ".join("/" + a for a in b["aliases"]))
-    if b["hint"]:
-        zusatz.append(b["hint"].replace("<", "&lt;").replace(">", "&gt;"))
-    z = f' <span class="zus">{" · ".join(zusatz)}</span>' if zusatz else ""
-    txt = T.SLASH[b["name"]]
-    if not b["verfuegbar"]:
-        txt += ' <span class="aus">im Programm angelegt, aber abgeschaltet</span>'
-    return zeile(name + z, txt)
+    # Teil C
+    def slash_zeile(b):
+        zusatz = []
+        if b["aliases"]:
+            zusatz.append(S["alias"] + ", ".join("/" + a for a in b["aliases"]))
+        if b["hint"]:
+            zusatz.append(b["hint"].replace("<", "&lt;").replace(">", "&gt;"))
+        z = f' <span class="zus">{" · ".join(zusatz)}</span>' if zusatz else ""
+        txt = T.SLASH[b["name"]]
+        if not b["verfuegbar"]:
+            txt += f' <span class="aus">{S["abgeschaltet"]}</span>'
+        return zeile("/" + b["name"] + z, txt)
 
-verf = [b for b in slash if b["verfuegbar"]]
-aus = [b for b in slash if not b["verfuegbar"]]
-slash_html = "".join(slash_zeile(b) for b in sorted(verf, key=lambda b: b["name"]))
-aus_html = "".join(slash_zeile(b) for b in sorted(aus, key=lambda b: b["name"]))
+    verf = [b for b in slash if b["verfuegbar"]]
+    aus = [b for b in slash if not b["verfuegbar"]]
+    slash_html = "".join(slash_zeile(b) for b in sorted(verf, key=lambda b: b["name"]))
+    aus_html = "".join(slash_zeile(b) for b in sorted(aus, key=lambda b: b["name"]))
 
-heute = datetime.date.today().strftime("%d.%m.%Y").lstrip("0")
+    heute = datum(datetime.date.today(), S)
+    werte = dict(v=VERSION, vorg=VORGAENGER, datum=heute,
+                 vorg_datum=datum(VORGAENGER_DATUM, S, "datum_lang"), n_slash=len(slash))
 
-HTML = f"""<!doctype html>
-<html lang="de"><head><meta charset="utf-8"><title>Claude Code · Befehlsreferenz {VERSION}</title>
+    HTML = f"""<!doctype html>
+<html lang="{S['lang']}"><head><meta charset="utf-8"><title>{S['titel'].format(**werte)}</title>
 <style>
 @page {{ size: A4 portrait; margin: 17mm 15mm 15mm; }}
 * {{ box-sizing: border-box; }}
@@ -136,67 +165,46 @@ section {{ break-inside: auto; }}
   padding-top: 2mm; }}
 </style></head><body>
 
-<div class="kopfzeile">Vollständige Referenz · geprüft gegen Version {VERSION}</div>
-<h1>Claude Code<br>Befehlsreferenz</h1>
-<p class="lead">Alle Terminal-Befehle, alle Optionen und alle Slash-Befehle innerhalb einer
-Sitzung — mit einer Erklärung, was sie tun.</p>
-<p class="meta">Zusammengestellt von Christians virtuellem Server · {heute} ·
-Aktualisierung der Fassung vom 14. August 2026 ({VORGAENGER})</p>
+<div class="kopfzeile">{S['kopfzeile'].format(**werte)}</div>
+<h1>{S['h1']}</h1>
+<p class="lead">{S['lead']}</p>
+<p class="meta">{S['meta'].format(**werte)}</p>
 
 <div class="kasten">
-<h3>Wie diese Liste entstanden ist</h3>
-<p>Terminal-Befehle und Optionen (Teil A und B) sind direkt aus der installierten Fassung
-{VERSION} ausgelesen — <code>claude --help</code> und die Hilfe jedes Unterbefehls.</p>
-<p>Die Slash-Befehle (Teil C) stammen aus den Befehlsdefinitionen im Programm selbst. Das
-Ausleseverfahren erkennt auch Befehle, deren Beschreibung erst zur Laufzeit gebildet oder
-aus einer Variablen geholt wird, und seit dieser Fassung ebenso solche, deren <i>Name</i>
-in einer Variablen steht statt als Text im Programm. Beides kommt durch das Verdichten
-des Programmcodes beim Bauen zustande und sagt nichts über den Befehl selbst aus.</p>
-<p>Befehle, die im Programm angelegt, aber per Schalter abgeschaltet sind, stehen
-gesondert am Ende, damit nichts als verfügbar erscheint, was es nicht ist.</p>
+<h3>{S['kasten1_titel']}</h3>
+{S['kasten1'].format(**werte)}
 </div>
 
 <div class="kasten">
-<h3>Was sich seit der letzten Fassung geändert hat</h3>
-<p>Bei den Terminal-Optionen (Teil A) hat sich nichts geändert: <code>claude --help</code>
-ist zeichengleich zu {VORGAENGER}.</p>
-<p>Bei den Unterbefehlen (Teil B) gibt es eine inhaltliche Änderung: <code>claude plugin
-validate</code> prüft jetzt auch einen bloßen <code>.claude/skills</code>-Ordner und meldet
-<code>SKILL.md</code>-Dateien, deren Vorspann (Frontmatter) sich nicht einlesen lässt. Die
-Kurzbeschreibung in dieser Liste ("Plugin auf Fehler prüfen.") bleibt zutreffend, wurde aber
-nicht um dieses Detail erweitert.</p>
-<p>Bei den Slash-Befehlen (Teil C) hat sich die Zahl nicht geändert: {len(slash)} Einträge wie
-zuvor, keiner ist dazugekommen oder weggefallen.</p>
-<p class="unter" style="margin-top:2mm">Beim automatischen Abgleich sah es kurzzeitig so aus,
-als sei <code>/claude-api</code> entfallen. Grund war diesmal keine falsche Namensauflösung wie
-beim <code>/loop</code>-Fall, sondern eine leere Kurzbeschreibung: sie liegt in dieser Fassung
-als Array mehrerer Textbausteine vor statt als einzelner Text, und das Ausleseverfahren kannte
-dieses Muster noch nicht. Der Befehl selbst war nie betroffen. Das Verfahren wurde entsprechend
-erweitert.</p>
+<h3>{S['kasten2_titel']}</h3>
+{aend.format(**werte)}
 </div>
 
-{abschnitt("Teil A · Terminal-Befehle und Optionen",
-           '<h3>Sitzung starten</h3>' + start + '<h3>Optionen</h3>' + opt_html,
-           "Aufrufform: <code>claude [optionen] [befehl] [eingabe]</code>. "
-           "Ohne Angaben startet eine Sitzung im aktuellen Ordner.")}
+{abschnitt(S['teilA_titel'],
+           f'<h3>{S["teilA_h3_start"]}</h3>' + start + f'<h3>{S["teilA_h3_opt"]}</h3>' + opt_html,
+           S['teilA_unter'])}
 
-{abschnitt("Teil B · Unterbefehle", sub_html,
-           "Aufrufe der Form <code>claude &lt;unterbefehl&gt;</code>. "
-           "Eingerückt die jeweils zugehörigen Unter-Unterbefehle.")}
+{abschnitt(S['teilB_titel'], sub_html, S['teilB_unter'])}
 
-{abschnitt("Teil C · Slash-Befehle in der Sitzung", slash_html,
-           f"{len(verf)} verfügbare Befehle, alphabetisch. Grau dahinter: Zweitnamen "
-           "und erwartete Argumente.")}
+{abschnitt(S['teilC_titel'], slash_html, S['teilC_unter'].format(n=len(verf)))}
 
-{abschnitt("Anhang · Angelegt, aber abgeschaltet", aus_html,
-           "Diese Namen existieren im Programm, sind in dieser Fassung aber per Schalter "
-           "deaktiviert und stehen in einer Sitzung nicht zur Verfügung.")}
+{abschnitt(S['anhang_titel'], aus_html, S['anhang_unter'])}
 
-<div class="fuss">Claude Code {VERSION} · {len(opts)} Optionen · {len(verf)} verfügbare
-Slash-Befehle · {len(aus)} abgeschaltet · Stand {heute}</div>
+<div class="fuss">{S['fuss'].format(opt=len(opts), verf=len(verf), aus=len(aus), **werte)}</div>
 </body></html>"""
 
-ziel = HERE / f"Claude-Code-Befehlsreferenz-{VERSION}.html"
-ziel.write_text(HTML, encoding="utf-8")
-print(f"geschrieben: {ziel.name} · {len(opts)} Optionen · {len(verf)} Slash-Befehle "
-      f"· {len(aus)} abgeschaltet")
+    ziel = HERE / f"{dateiname}-{VERSION}.html"
+    ziel.write_text(HTML, encoding="utf-8")
+    return ziel, len(verf), len(aus)
+
+
+gewuenscht = [a for a in sys.argv[1:] if a in SPRACHEN] or list(SPRACHEN)
+namen = []
+for sprache in gewuenscht:
+    ziel, n_verf, n_aus = baue(sprache)
+    namen.append(ziel.name)
+
+# Die Zusammenfassungszeile liest anleitungen-veroeffentlichen.sh aus (Anzahl
+# Optionen/Slash-Befehle/abgeschaltet) - Wortlaut bitte nicht ändern.
+print(f"geschrieben: {', '.join(namen)} · {len(opts)} Optionen · {n_verf} Slash-Befehle "
+      f"· {n_aus} abgeschaltet")

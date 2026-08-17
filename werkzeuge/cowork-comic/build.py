@@ -1,7 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Baut die deutsche Claude-Cowork-Comic-Anleitung als HTML (danach -> PDF)."""
-import base64, pathlib
+"""Baut die Claude-Cowork-Comic-Anleitung als HTML (danach -> PDF).
+
+Erzeugt beide Sprachfassungen in einem Lauf: die deutsche direkt, die englische,
+indem die fertige Seite durch i18n.uebersetze() mit dem Wörterbuch aus
+texte_en.py läuft. Es gibt also nur EIN Bauskript und nur EIN Layout.
+
+    python3 build.py            beide Sprachen
+    python3 build.py de         nur deutsch
+"""
+import base64, pathlib, sys
 
 HERE = pathlib.Path(__file__).parent
 
@@ -626,6 +634,24 @@ html, body {{ margin:0; padding:0; background:#fff; color:#141414;
 {"".join(pages)}
 </body></html>'''
 
-out = HERE / "cowork-anleitung.html"
-out.write_text(HTML, encoding="utf-8")
-print(f"geschrieben: {out}  ({len(HTML)/1024:.0f} KB, {len(P)} Seiten)")
+gewuenscht = [a for a in sys.argv[1:] if a in ("de", "en")] or ["de", "en"]
+
+if "de" in gewuenscht:
+    out = HERE / "cowork-anleitung.html"
+    out.write_text(HTML, encoding="utf-8")
+    print(f"geschrieben: {out}  ({len(HTML)/1024:.0f} KB, {len(P)} Seiten)")
+
+if "en" in gewuenscht:
+    import i18n, texte_en
+    en, fehlt = i18n.uebersetze(HTML, texte_en.TEXTE)
+    if fehlt:
+        print("FEHLENDE ÜBERSETZUNGEN (texte_en.py):")
+        for f in fehlt:
+            print("   ", repr(f))
+        sys.exit(1)
+    en = en.replace('<html lang="de">', '<html lang="en">', 1)
+    en = en.replace("<title>Claude Cowork – die Anleitung</title>",
+                    f"<title>{texte_en.TITEL}</title>", 1)
+    out = HERE / "cowork-comic-en.html"
+    out.write_text(en, encoding="utf-8")
+    print(f"geschrieben: {out}  ({len(en)/1024:.0f} KB, {len(P)} Seiten)")

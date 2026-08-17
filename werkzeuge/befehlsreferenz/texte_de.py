@@ -252,3 +252,66 @@ SLASH = {
 "whiteboard": "Öffnet eine freie Zeichenfläche für Skizzen und Schaubilder.",
 "workshop": "Entwirft etwas Schritt für Schritt gemeinsam mit Dir, als wachsendes Dokument.",
 }
+
+# ------------------------------------------------------- Seitentexte ----
+# Alles, was keine Befehlsbeschreibung ist: Überschriften, Kästen, Fußzeile.
+# {v} = Fassung, {vorg} = Vorfassung, {datum} = Datum dieser Ausgabe,
+# {vorg_datum} = Datum der Vorausgabe, {n} = eine Anzahl.
+SEITE = {
+"lang": "de",
+"datum_kurz": "{t:02d}.{m:02d}.{j}",
+"datum_lang": "{t}. {mn} {j}",
+"monate": ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli",
+           "August", "September", "Oktober", "November", "Dezember"],
+"titel": "Claude Code · Befehlsreferenz {v}",
+"kopfzeile": "Vollständige Referenz · geprüft gegen Version {v}",
+"h1": "Claude Code<br>Befehlsreferenz",
+"lead": "Alle Terminal-Befehle, alle Optionen und alle Slash-Befehle innerhalb einer "
+        "Sitzung — mit einer Erklärung, was sie tun.",
+"meta": "Zusammengestellt von Christians virtuellem Server · {datum} · "
+        "Aktualisierung der Fassung vom {vorg_datum} ({vorg})",
+
+"start_zeilen": [
+    ("claude", "Startet eine Sitzung im aktuellen Ordner."),
+    ("claude &quot;deine Frage&quot;", "Startet mit einer ersten Nachricht."),
+    ("claude -p &quot;…&quot;", "Antwortet einmal und beendet sich — für Skripte."),
+],
+
+"kasten1_titel": "Wie diese Liste entstanden ist",
+"kasten1": """
+<p>Terminal-Befehle und Optionen (Teil A und B) sind direkt aus der installierten Fassung
+{v} ausgelesen — <code>claude --help</code> und die Hilfe jedes Unterbefehls.</p>
+<p>Die Slash-Befehle (Teil C) stammen aus den Befehlsdefinitionen im Programm selbst. Das
+Ausleseverfahren erkennt auch Befehle, deren Beschreibung erst zur Laufzeit gebildet oder
+aus einer Variablen geholt wird, und seit dieser Fassung ebenso solche, deren <i>Name</i>
+in einer Variablen steht statt als Text im Programm. Beides kommt durch das Verdichten
+des Programmcodes beim Bauen zustande und sagt nichts über den Befehl selbst aus.</p>
+<p>Befehle, die im Programm angelegt, aber per Schalter abgeschaltet sind, stehen
+gesondert am Ende, damit nichts als verfügbar erscheint, was es nicht ist.</p>
+""",
+
+"kasten2_titel": "Was sich seit der letzten Fassung geändert hat",
+
+"teilA_titel": "Teil A · Terminal-Befehle und Optionen",
+"teilA_unter": "Aufrufform: <code>claude [optionen] [befehl] [eingabe]</code>. "
+               "Ohne Angaben startet eine Sitzung im aktuellen Ordner.",
+"teilA_h3_start": "Sitzung starten",
+"teilA_h3_opt": "Optionen",
+
+"teilB_titel": "Teil B · Unterbefehle",
+"teilB_unter": "Aufrufe der Form <code>claude &lt;unterbefehl&gt;</code>. "
+               "Eingerückt die jeweils zugehörigen Unter-Unterbefehle.",
+
+"teilC_titel": "Teil C · Slash-Befehle in der Sitzung",
+"teilC_unter": "{n} verfügbare Befehle, alphabetisch. Grau dahinter: Zweitnamen "
+               "und erwartete Argumente.",
+
+"anhang_titel": "Anhang · Angelegt, aber abgeschaltet",
+"anhang_unter": "Diese Namen existieren im Programm, sind in dieser Fassung aber per "
+                "Schalter deaktiviert und stehen in einer Sitzung nicht zur Verfügung.",
+
+"alias": "auch ",
+"abgeschaltet": "im Programm angelegt, aber abgeschaltet",
+"fuss": "Claude Code {v} · {opt} Optionen · {verf} verfügbare Slash-Befehle · "
+        "{aus} abgeschaltet · Stand {datum}",
+}

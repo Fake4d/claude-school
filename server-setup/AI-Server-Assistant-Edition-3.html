@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Your own AI server assistant — Edition 3</title>
+<style>
+  @page {
+    size: A4; margin: 20mm 18mm 18mm 18mm;
+    @bottom-center { content: "Your own AI server assistant · Edition 3"; font-family: "DejaVu Sans", sans-serif; font-size: 8pt; color: #9aa0a6; }
+    @bottom-right  { content: "Page " counter(page) " / " counter(pages); font-family: "DejaVu Sans", sans-serif; font-size: 8pt; color: #9aa0a6; }
+  }
+  @page :first { margin-top: 0; }
+  * { box-sizing: border-box; }
+  html { font-family: "DejaVu Sans", "Liberation Sans", sans-serif; font-size: 10.5pt; color: #22262b; line-height: 1.5; }
+  body { margin: 0; padding: 0; }
+
+  .cover { background: linear-gradient(135deg, #C15F3C 0%, #A63D2E 100%); color: #fff;
+           padding: 26mm 18mm 14mm 18mm; margin: 0 -18mm 8mm -18mm; }
+  .cover .kicker { font-size: 10pt; letter-spacing: 2px; text-transform: uppercase; opacity: .9; margin: 0 0 6mm 0; }
+  .cover h1 { font-family: "DejaVu Serif", serif; font-size: 27pt; line-height: 1.15; margin: 0 0 5mm 0; font-weight: 700; }
+  .cover p { font-size: 11.5pt; margin: 0; max-width: 150mm; opacity: .96; }
+  .cover .sig { margin-top: 8mm; font-size: 9.5pt; opacity: .85; }
+
+  h2 { font-family: "DejaVu Serif", serif; font-size: 15pt; color: #A63D2E; margin: 9mm 0 3mm 0;
+       padding-bottom: 1.5mm; border-bottom: 2px solid #eadfd9; page-break-after: avoid; }
+  h2 .num { display: inline-block; width: 8mm; height: 8mm; line-height: 8mm; text-align: center;
+            background: #C15F3C; color: #fff; border-radius: 50%; font-size: 10pt; margin-right: 3mm;
+            font-family: "DejaVu Sans", sans-serif; vertical-align: middle; }
+  h3 { font-size: 11.5pt; color: #22262b; margin: 5mm 0 1.5mm 0; page-break-after: avoid; }
+  p { margin: 0 0 2.5mm 0; }
+  ul, ol { margin: 0 0 3mm 0; padding-left: 6mm; }
+  li { margin: 0 0 1.5mm 0; }
+  strong { color: #17408B; }
+
+  code { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; background: #f2ede9; padding: .5mm 1.2mm; border-radius: 2px; }
+  pre { font-family: "DejaVu Sans Mono", monospace; font-size: 8.4pt; line-height: 1.45;
+        background: #2b2f36; color: #f4f1ec; padding: 3mm 4mm; border-radius: 3px;
+        margin: 0 0 3mm 0; white-space: pre-wrap; word-wrap: break-word; page-break-inside: avoid; }
+  pre .c { color: #8fb98f; }
+  pre .h { color: #f0b86e; }
+
+  .box { border-radius: 4px; padding: 3mm 4mm; margin: 0 0 3mm 0; page-break-inside: avoid; }
+  .box p:last-child { margin-bottom: 0; }
+  .box .t { font-weight: bold; display: block; margin-bottom: 1mm; }
+  .tip  { background: #eef6ee; border-left: 3.5px solid #4a8f4a; }
+  .warn { background: #fdf0ec; border-left: 3.5px solid #C15F3C; }
+  .info { background: #eef1f8; border-left: 3.5px solid #17408B; }
+  .new  { background: #fff8e6; border-left: 3.5px solid #d4a017; }
+
+  table { width: 100%; border-collapse: collapse; margin: 0 0 3mm 0; font-size: 9.5pt; }
+  th { text-align: left; border-bottom: 1.5px solid #d9cfc9; padding: 1.5mm 2mm 1.5mm 0; color: #6b6560; font-weight: normal; font-size: 8.5pt; text-transform: uppercase; letter-spacing: .5px; }
+  td { border-bottom: 1px solid #ece5e0; padding: 1.5mm 2mm 1.5mm 0; vertical-align: top; }
+  .newpage { page-break-before: always; }
+  .chk { list-style: none; padding-left: 0; }
+  .chk li { padding-left: 6mm; text-indent: -6mm; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <p class="kicker">Edition 3 · revised and verified · August 2026</p>
+  <h1>Your own<br>AI server assistant</h1>
+  <p>From an empty Linux server to a digital colleague that runs around the clock,
+  is reachable through the Claude app and survives a reboot without complaint.</p>
+  <p class="sig">Written and verified step by step by Christian&#8217;s virtual server<br>
+  Checked against Claude Code 2.1.232 on Ubuntu</p>
+</div>
+
+<div class="box new">
+  <span class="t">What is new in this edition</span>
+  <p>Edition 2 got you as far as continuous operation. This edition closes the three gaps
+  that showed up in daily use:</p>
+  <ul style="margin-bottom:0">
+    <li><strong>The service now picks the conversation back up.</strong> Without one small
+        addition in part 4 it started from scratch after every restart — particularly
+        annoying in the middle of a job.</li>
+    <li><strong>Part 7 is new:</strong> push notifications to your phone. With it your
+        assistant speaks up by itself when it needs a decision or something important
+        has happened.</li>
+    <li>All commands and version numbers are verified against <strong>Claude Code 2.1.232</strong>.</li>
+  </ul>
+</div>
+
+<h2><span class="num">0</span>What you need</h2>
+<ul>
+  <li><strong>A small Linux server (VPS).</strong> A rented machine on the internet that is yours
+      alone. Providers include Hetzner, netcup, DigitalOcean, Linode, OVH. The smallest package is
+      enough (roughly &euro;4–7 a month). Take <strong>Ubuntu 24.04 LTS or newer</strong>. Two things
+      matter: at least <strong>2 GB of RAM</strong> and <strong>10 GB of free disk space</strong> —
+      Claude Code is a large program and keeps old versions around.</li>
+  <li><strong>A Claude subscription</strong> (Pro or Max). The free Claude is not enough.</li>
+  <li><strong>A terminal.</strong> Built into the Mac, on Windows use &#8220;Windows Terminal&#8221;.</li>
+  <li><strong>About 60 minutes.</strong> With continuous operation from part 4, closer to 75.</li>
+</ul>
+
+<h2><span class="num">1</span>The starting block — server ready in one go</h2>
+<p>After ordering you get an IP address and a password for the user <code>root</code>.
+Log in (substitute your own IP):</p>
+<pre>ssh root@203.0.113.10</pre>
+<p>The first time it asks <code>Are you sure…?</code> — type <code>yes</code>, then the password.
+Now comes the block that prepares everything else. <strong>Replace <code>myname</code>
+everywhere with the user name you want</strong> and then paste the whole thing in:</p>
+
+<pre><span class="c"># ---------- as root, right after the first login ----------</span>
+apt update &amp;&amp; apt full-upgrade -y
+apt install -y curl git ufw jq python3 ripgrep
+
+<span class="c"># 1) create your own user (asks for a password)</span>
+adduser myname
+usermod -aG sudo myname
+
+<span class="c"># 2) sudo without a password prompt — required for automated runs</span>
+echo 'myname ALL=(ALL) NOPASSWD: ALL' &gt; /etc/sudoers.d/claude
+chmod 0440 /etc/sudoers.d/claude
+visudo -c
+
+<span class="c"># 3) firewall: only SSH open</span>
+ufw allow OpenSSH
+ufw --force enable</pre>
+
+<div class="box warn">
+  <span class="t">Important: check first, close the root session afterwards</span>
+  <p>The command <code>visudo -c</code> must answer with <code>… parsed OK</code>. If it reports an
+  error, delete the file again immediately with
+  <code>rm /etc/sudoers.d/claude</code> — <strong>while you are still logged in as root</strong>.
+  A broken sudo file otherwise locks you out of all administrator rights. Leave this root window
+  open until you have confirmed in the next step that everything works.</p>
+</div>
+
+<p>Now log in as the new user in a <strong>second</strong> terminal window and check both
+permissions:</p>
+<pre>ssh myname@203.0.113.10
+sudo -n true &amp;&amp; echo "sudo without password: OK"</pre>
+<p>If <code>sudo without password: OK</code> appears, everything is right — and you can close the
+root window.</p>
+
+<div class="box info">
+  <span class="t">Why sudo without a password?</span>
+  <p>When Claude works on its own later — at night, on a schedule, or remote-controlled through the
+  app — nobody is sitting there to type a password. Without this permission every command that
+  needs administrator rights simply stalls. It is a deliberate trade-off: whoever gets into your
+  user account has full administrator access as well. That is why SSH access is the place you
+  really should secure — see part 10.</p>
+</div>
+
+<h2><span class="num">2</span>Install Claude Code and sign in</h2>
+<pre>curl -fsSL https://claude.ai/install.sh | bash
+exec $SHELL -l          <span class="c"># reload PATH</span>
+claude --version        <span class="c"># expects e.g.: 2.1.232 (Claude Code)</span>
+claude doctor           <span class="c"># checks the installation</span></pre>
+
+<p>The installer puts the program under <code>~/.local/share/claude/versions/</code> and links it
+through <code>~/.local/bin/claude</code>. <strong>Remember this path</strong> — you need it in
+parts 4 and 6. If you get <code>command not found</code>, log out once and back in.</p>
+
+<p>Now the first start and the sign-in:</p>
+<pre>claude</pre>
+<p>It shows you a link and a code. Open the link on your phone or PC, sign in with your Claude
+subscription, confirm the code. On the first start it also asks about the colour scheme and
+whether you trust the current folder — confirm both once. <code>/exit</code> gets you back out.</p>
+
+<div class="box tip">
+  <span class="t">Claude keeps itself up to date</span>
+  <p>It pulls new versions automatically at startup. By hand it is <code>claude update</code>.
+  Old versions stay behind and take up about 270 MB each — with
+  <code>ls -la ~/.local/share/claude/versions/</code> you can see them and safely delete the older
+  ones. That is the reason for the 10 GB recommendation in part 0.</p>
+</div>
+
+<h2><span class="num">3</span>The magic trick: hand over the bootstrap prompt</h2>
+<p>This is the moment where your assistant builds itself. The accompanying file
+<code>setup-prompt-en.txt</code> holds a prepared text. First create its working directory and start
+it there:</p>
+<pre>mkdir -p ~/assistant
+cd ~/assistant
+claude</pre>
+<p>Open <code>setup-prompt-en.txt</code>, copy everything between the two marker lines and paste it
+in as the first message. From there Claude walks you through the setup — it asks questions, sets
+up its memory, checks the basic security and, if you want, configures e-mail and web.</p>
+
+<div class="box info">
+  <span class="t">Why <code>~/assistant</code> of all places?</span>
+  <p>Claude remembers trust and settings <strong>per directory</strong>. If the service from part 4
+  later starts in a different folder than the one where you confirmed everything, it asks again —
+  and stalls. So stick to one fixed working folder.</p>
+</div>
+
+<h2><span class="num">4</span>Continuous operation: as a service, reachable from the app, reboot-proof</h2>
+<p>Up to this point Claude only lives while your terminal window is open. Now we turn it into a
+real server service: it starts with the system, runs around the clock, is reachable from the
+Claude app and survives every reboot — without asking anything.</p>
+
+<p>Three pieces belong to that, and all three are necessary:</p>
+<table>
+  <tr><th style="width:32mm">Piece</th><th>What for</th></tr>
+  <tr><td><strong>System service</strong></td><td>starts Claude automatically at boot and restarts it if it crashes</td></tr>
+  <tr><td><strong>Pseudo terminal</strong></td><td>Claude needs a terminal. Without one it stalls at every prompt and cannot store the answer either</td></tr>
+  <tr><td><strong>Pre-confirmations</strong></td><td>the one-off notice dialogs are ticked off in advance, so nobody has to type &#8220;yes&#8221; after a reboot</td></tr>
+</table>
+
+<h3>Step 1: create the service</h3>
+<p>You can paste this block unchanged — it fills in your user name and your home directory
+automatically:</p>
+<pre>sudo tee /etc/systemd/system/claude-code.service &gt;/dev/null &lt;&lt;EOF
+[Unit]
+Description=Claude Code Remote Control Session
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=$USER
+WorkingDirectory=$HOME/assistant
+ExecStart=/usr/bin/script -qec "$HOME/.local/bin/claude --remote-control --name vps-main --continue" /dev/null
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+EOF</pre>
+
+<p class="cap" style="font-size:9pt;color:#6b6560;margin-top:-1mm">Careful when typing it out: <code>ExecStart=…</code> is <strong>a single line</strong>, even though it is shown wrapped above.</p>
+<p>Four spots are worth a look:</p>
+<ul>
+  <li><code>script -qec "…" /dev/null</code> is the pseudo-terminal trick. Without it the service
+      does start, but hangs at the first dialog.</li>
+  <li>The call uses <code>~/.local/bin/claude</code>, that is the <strong>link</strong> — not the
+      specific version underneath. Otherwise the service points into nothing after the next
+      automatic update.</li>
+  <li><code>--name vps-main</code> is the name the session shows up under in the app later.
+      Feel free to pick something descriptive.</li>
+  <li><code>--continue</code> picks the <strong>last conversation back up</strong> at startup
+      instead of beginning from scratch. New in this edition — see the box just below.</li>
+</ul>
+
+<div class="box">
+  <span class="t">Why <code>--continue</code> makes the difference</span>
+  <p>Without this addition the service starts a fresh session after every restart. Everything you
+  had discussed is gone — and because <code>Restart=on-failure</code> applies, that can happen in
+  the middle of a job without you noticing.</p>
+  <p>With <code>--continue</code> it attaches itself to the most recent conversation instead. A
+  crash or a reboot becomes a short interruption rather than a loss of memory.</p>
+  <p style="margin-bottom:0">The flip side, so you are not caught out: restarting the service no longer gives you a
+  <em>fresh</em> session. &#8220;Remember this just for this conversation&#8221; therefore survives
+  a reboot as well. If you really want to start over, clear the conversation with
+  <code>/clear</code> from inside the app.</p>
+</div>
+
+<h3>Step 2: tick off the one-off prompts in advance</h3>
+<p>This is the step most people fail at. Claude stores &#8220;already seen&#8221; ticks in the file
+<code>~/.claude.json</code>. If they are missing, the service stalls at a prompt after every
+restart. This command sets them and makes a backup first:</p>
+<pre>python3 - &lt;&lt;'PY'
+import json, os, shutil
+p = os.path.expanduser('~/.claude.json')
+shutil.copy(p, p + '.bak')
+d = json.load(open(p))
+d['hasCompletedOnboarding'] = True
+d['hasSeenAutoModeEntryWarning'] = True
+proj = d.setdefault('projects', {}).setdefault(os.path.expanduser('~/assistant'), {})
+proj['hasTrustDialogAccepted'] = True
+json.dump(d, open(p, 'w'), indent=2)
+print('Flags set. Backup: ~/.claude.json.bak')
+PY</pre>
+
+<h3>Step 3: start the service and check it</h3>
+<pre>sudo systemctl daemon-reload
+sudo systemctl enable --now claude-code.service
+systemctl status claude-code.service --no-pager</pre>
+<p>The status output must say <code>active (running)</code>. If it does not,
+<code>journalctl -u claude-code -n 40 --no-pager</code> shows the reason.</p>
+
+<h3>Step 4: the acid test — reboot</h3>
+<pre>sudo reboot</pre>
+<p>Wait about a minute, reconnect and check:</p>
+<pre>systemctl status claude-code.service --no-pager</pre>
+<p>If it says <code>active (running)</code> again <strong>without you having confirmed
+anything</strong>, you have reached the goal.</p>
+
+<div class="box warn">
+  <span class="t">If it still hangs at a prompt</span>
+  <p>Then check exactly these four points, in this order:</p>
+  <ol style="margin-bottom:0">
+    <li>Does the service run as the same user in whose home directory the flags live?
+        <code>systemctl show claude-code -p User</code></li>
+    <li>Does the path under <code>projects</code> in <code>~/.claude.json</code> match
+        <code>WorkingDirectory</code> character for character? No trailing slash, no tilde, no
+        symlink.</li>
+    <li>Is the pseudo terminal really there? <code>ps -o tty= -p $(pgrep -f remote-control | head -1)</code>
+        must <strong>not</strong> print <code>?</code>.</li>
+    <li>Is there something in <code>~/.claude/settings.json</code> that overrides the mode?</li>
+  </ol>
+</div>
+
+<h3>Step 5: connect from the app</h3>
+<p>Open the Claude app on your phone or <strong>claude.ai/code</strong> in the browser — signed in
+with the same account as on the server. Your session shows up there under the name you gave it
+(<code>vps-main</code>). You simply type a message, and real work happens on your server. That is
+the state you were after: the server runs, you are out and about, and the two meet.</p>
+
+<div class="box tip">
+  <span class="t">Handy in everyday use</span>
+  <p><code>sudo systemctl restart claude-code</code> brings the service back up — thanks to
+  <code>--continue</code> the conversation carries on afterwards instead of starting over. If a
+  conversation has got stuck, a restart will not help; <code>/clear</code> from inside the app
+  will. <code>journalctl -u claude-code -f</code> shows live what the service is doing.</p>
+</div>
+
+<h2><span class="num">5</span>Optional: sending e-mail</h2>
+<p>If your assistant is to write e-mail, it needs a mailbox. You need three details from your mail
+settings: SMTP server, address and password. Just tell Claude in the conversation:</p>
+<pre>Please set yourself up so that you can send e-mail.
+SMTP server smtp.myprovider.com, port 587,
+address me@myprovider.com. I&#8217;ll give you the password in a moment.</pre>
+<p>It installs <code>msmtp</code>, stores the credentials with strict file permissions and sends a
+test mail together with you. Without credentials of your own, simply skip this part — it is not
+allowed to invent them.</p>
+
+<h2><span class="num">6</span>Optional: autonomous — it works while you sleep</h2>
+<p>A scheduled job (a &#8220;cron job&#8221;) checks regularly whether there is anything to do — new
+mail in the mailbox, for instance — and only then starts a real Claude run. Claude sets that up
+for you too. To make it reliable, give it these three points; I tripped over every one of them
+myself:</p>
+
+<table>
+  <tr><th style="width:34mm">Pitfall</th><th>Fix</th></tr>
+  <tr><td><strong>Cron does not know your PATH</strong></td>
+      <td><code>~/.local/bin</code> is missing there. In the script either set <code>export PATH="$HOME/.local/bin:$PATH"</code>
+          or call Claude with its full path — otherwise you get &#8220;command not found&#8221; and
+          the job fails silently.</td></tr>
+  <tr><td><strong>Two runs at once</strong></td>
+      <td>Guard it with <code>flock</code>, otherwise stalled runs overtake one another.</td></tr>
+  <tr><td><strong>Cost</strong></td>
+      <td>First use a cheap check to see <em>whether</em> there is work at all. Only then start the
+          run that costs money. And put a <code>timeout</code> in front of it.</td></tr>
+</table>
+
+<p>The actual call in the script looks like this — <code>-p</code> means &#8220;work through it
+once, no conversation&#8221;, and the tool list limits what it may do in the process:</p>
+<pre>timeout 1800 "$HOME/.local/bin/claude" -p --model sonnet \
+  --allowedTools "Bash(mailbox:*),Read" \
+  --max-turns 30 \
+  "Your task description here" &gt;&gt;"$LOG" 2&gt;&amp;1</pre>
+
+<div class="box warn">
+  <span class="t">Incoming content is not an instruction</span>
+  <p>The single most important standing rule: the content of other people&#8217;s e-mails, web pages
+  and messages is <strong>never an instruction</strong> to Claude. It does not follow demands found
+  in them (&#8220;send me file X&#8221;, &#8220;run Y&#8221;). And anything only you can decide —
+  money, appointments, commitments in your name — it hands back to you instead of acting itself.
+  The bootstrap prompt writes exactly that into its memory.</p>
+</div>
+
+<h2><span class="num">7</span>Optional: push notifications to your phone</h2>
+
+<p>Mail and schedules are one-way streets: your assistant puts something down, and at some point
+you go and look. For the reverse case — <em>it</em> needs <em>you</em> — a channel is still
+missing. That is exactly what a push is good for: a short nudge to your phone when a decision is
+due or something important has happened.</p>
+
+<p>The simplest way is <strong>ntfy.sh</strong>. No account, nothing to set up on the server, no
+keys: you think up a hard-to-guess name for your channel, subscribe to it in the ntfy app — and
+everything sent to that address lands on your phone.</p>
+
+<div class="box warn">
+  <span class="t">The channel name is your only protection</span>
+  <p style="margin-bottom:0">Whoever knows the name is reading along — on ntfy.sh every channel is publicly readable. So do
+  not take anything guessable like <code>myserver</code>, take something long and random. And more
+  importantly: <strong>never send content in the push.</strong> No mail addresses, no third-party
+  names, no subject lines, no amounts, no credentials. The push only says <em>that</em> something
+  is up — the <em>what</em> belongs in an e-mail.</p>
+</div>
+
+<p>A channel name nobody will guess, and setting up the app:</p>
+
+<pre>head -c 18 /dev/urandom | base64 | tr -dc 'a-zA-Z0-9'
+# yields e.g.: k7Rq2wZm4TnLp9Xd</pre>
+
+<p>Install the <strong>ntfy</strong> app (iOS and Android, free), subscribe to exactly that name
+there — and have Claude build you the little sending script:</p>
+
+<pre>Please create a script ~/assistant/bin/push.sh for me that sends
+a message to my channel via ntfy.sh. Put the channel name into a
+separate configuration file with permissions 600, not into the
+script itself. Two send attempts, a 15 second timeout, and write
+every send into a log file.</pre>
+
+<p>After that one call is enough, from any script and from any automated run:</p>
+
+<pre>~/assistant/bin/push.sh "A question is waiting — details by e-mail"</pre>
+
+<div class="box">
+  <span class="t">Stay frugal, or you will soon stop looking</span>
+  <p>A push is only worth anything if it arrives rarely. This rule has proven itself:
+  <strong>only for decisions and for trouble</strong> — not for success messages, and certainly
+  not as status chatter.</p>
+  <p style="margin-bottom:0">A practical example from everyday use: a scheduled job checks daily whether a new program
+  version has arrived. If everything is as before — the normal case — nothing happens at all. Only
+  if it really changed something does a push arrive. And if anything strikes it as odd in the
+  process, it publishes nothing and asks instead. That handbrake is worth more than any
+  convenience.</p>
+</div>
+
+<h2><span class="num">8</span>Driving it from your phone</h2>
+<ul>
+  <li><strong>The Claude app or claude.ai/code</strong> — the comfortable route, once part 4 is in
+      place. Your server session is simply there.</li>
+  <li><strong>An SSH app</strong> (Termius, for example) — the direct route into the terminal, when
+      you want to look at something on the server yourself.</li>
+</ul>
+
+<h2><span class="num">9</span>Connecting further services (connectors)</h2>
+<p>Claude can dock onto other systems — mail, calendar, Drive and more. That way it fetches live
+data instead of relying on its built-in knowledge alone. A topic for later: simply ask it
+<em>&#8220;Which connectors can I attach, and how?&#8221;</em> when you get that far.</p>
+
+<h2><span class="num">10</span>Security &amp; good habits</h2>
+<ul>
+  <li><strong>Secure SSH access.</strong> Because of the passwordless sudo from part 1, your user
+      account is the master key. Have Claude set up logging in with an <strong>SSH key instead of a
+      password</strong> and switch password login off — that is the single most effective measure.
+      It explains every step, and you test the new login in a second window before closing the old
+      one.</li>
+  <li><strong>Do not work as root.</strong> Your ordinary user plus <code>sudo</code> for individual
+      commands is enough.</li>
+  <li><strong>Protect credentials.</strong> Always file permissions <code>600</code>, never printed
+      in the clear.</li>
+  <li><strong>Have it ask before anything irreversible.</strong> Deleting, overwriting, restarting,
+      sending something outward.</li>
+  <li><strong>Keep an eye on the cost.</strong> Automated runs cost money. Have every run logged at
+      first and look into the log after a few days.</li>
+</ul>
+
+<h3>Your checklist to tick off</h3>
+<ul class="chk">
+  <li>☐ Own user created, <code>sudo -n true</code> runs without a password</li>
+  <li>☐ Firewall active, only SSH open</li>
+  <li>☐ <code>claude --version</code> shows a version</li>
+  <li>☐ Bootstrap prompt completed, memory in place</li>
+  <li>☐ Service running: <code>systemctl status claude-code</code> shows <code>active (running)</code></li>
+  <li>☐ After <code>sudo reboot</code> it runs again — without a prompt, and the conversation is still there</li>
+  <li>☐ The session is visible in the Claude app and answers</li>
+  <li>☐ <em>Optional:</em> a test push arrives on your phone</li>
+  <li>☐ SSH key set up, password login off</li>
+</ul>
+
+<div class="box tip" style="margin-top:6mm">
+  <span class="t">And then?</span>
+  <p>Then the good part begins. Tell it what annoys you in daily life — and have it build tools for
+  that. That is exactly how everything I can do here on Christian&#8217;s server came about. If
+  something jams: it can read its own errors. <em>&#8220;Look in the journal and work out why the
+  service will not start&#8221;</em> is a perfectly ordinary request.</p>
+</div>
+
+</body>
+</html>

@@ -5,13 +5,14 @@ wirklich weh tut — nicht, was man sich aus den Dateien selbst zusammenlesen ka
 
 ## Bauweg
 
-Alle drei Anleitungen entstehen gleich: ein Python-Skript schreibt **eine einzige
-HTML-Datei**, daraus wird das PDF gedruckt. Kein Framework, keine Abhängigkeiten
+Alle Anleitungen entstehen gleich: ein Python-Skript schreibt **eine einzige
+HTML-Datei je Sprache**, daraus wird das PDF gedruckt. Kein Framework, keine Abhängigkeiten
 außer dem Drucker.
 
 - Comics: `build.py` → HTML → **Chromium headless** → PDF
 - Befehlsreferenz: `build_ref.py` → HTML → **WeasyPrint** → PDF
 - Server-Anleitung: **handgeschriebenes HTML** → WeasyPrint → PDF
+- Englische Fassungen: aus der deutschen abgeleitet, siehe „Zweisprachig“ weiter unten
 
 Die Comics brauchen Chromium, weil WeasyPrint das Flexbox-Layout der Panels nicht
 sauber umbricht. Umgekehrt reicht der Referenz WeasyPrint völlig.
@@ -166,6 +167,52 @@ nichtssagenden Commit zu erzeugen.
 Die Skripte in `werkzeuge/` erzeugen die Dateien oben **byte-identisch**. Das ist
 geprüft und soll so bleiben: Wer etwas am Inhalt ändert, ändert das Skript und baut
 neu — nicht die fertige Datei von Hand.
+
+## Zweisprachig: Deutsch ist die Quelle, Englisch fällt daraus ab
+
+Seit dem 17.08.2026 gibt es jede Anleitung auch auf Englisch. Wichtigste Regel:
+**Es gibt kein zweites Bauskript je Sprache.** Der Versuch wäre der klassische Weg
+in zwei Fassungen, die auseinanderlaufen. Stattdessen:
+
+- **Befehlsreferenz:** `texte_de.py` und `texte_en.py` tragen dieselben Schlüssel
+  (Original-Bezeichner aus dem Programm), dazu je ein `SEITE`-Wörterbuch mit den
+  Überschriften und Kästen. `build_ref.py` schreibt **beide** Fassungen in einem Lauf.
+  Der Änderungskasten steht in `aenderungen.py` — DE und EN in **einer** Datei, damit
+  beim Versionswechsel nur eine Stelle anzufassen ist.
+- **Comics und Server-Anleitung:** `i18n.py` nimmt das fertige deutsche HTML und
+  tauscht den Inhalt jedes Blatt-Elements gegen den Eintrag aus `texte_en.py`.
+  Schlüssel ist der deutsche Text **einschließlich der Auszeichnung darin**
+  (`<b>`, `<code>`, `<span class="chip-sub">`) — die trägt das Layout und muss auf
+  beiden Seiten gleich aussehen.
+
+Das Sicherheitsnetz ist die Vollständigkeitsprüfung: Fehlt zu einem deutschen Text
+das Gegenstück, **bricht der Bau ab** und nennt den fehlenden Satz. Wer also einen
+deutschen Satz umformuliert, bekommt die englische Nacharbeit sofort aufs Auge —
+und nicht erst der Leser drei Monate später.
+
+Zwei Dinge, die beim Umbau aufgefallen sind:
+
+1. **Englisch ist nicht automatisch kürzer.** Auf der Dispatch-Seite des
+   Cowork-Comics lief die `.chain` seitlich aus dem Blatt, weil vier Kettenglieder
+   in der Übersetzung länger geraten waren (`.chain` steht auf `nowrap`). Die
+   Überlauf-QA hat es gefunden — sie läuft deshalb über **alle vier** Comic-PDFs,
+   nicht nur die deutschen.
+2. **In Codeblöcken steckt Text.** `i18n.uebersetze(..., pre=True)` behandelt einen
+   ganzen `<pre>`-Block als eine Einheit. Das ist für die Server-Anleitung nötig:
+   dort steht Deutsch nicht nur in den Kommentar-Spans, sondern auch in
+   `echo`-Ausgaben und in den Beispielaufträgen an Claude. Die Befehle selbst bleiben
+   Zeichen für Zeichen gleich; der Platzhalter-Benutzer heißt englisch `myname`.
+
+Die englischen Dateinamen sind fest und werden von `zielname_von()` im
+Veröffentlichungsskript vergeben: `Claude-Code-Command-Reference.*`,
+`claude-code-comic-en.*`, `cowork-comic-en.*`, `AI-Server-Assistant-Edition-3.*`,
+`setup-prompt-en.txt`. Auf der Webseite liegen sie **im selben Ordner** wie die
+deutschen; die Projektseiten bleiben deutsch und bekommen nur eine Zeile mit dem
+Verweis darauf.
+
+Die README ist gespalten: `README.md` ist die englische Kurzfassung, `README.de.md`
+die ausführliche deutsche. Beide tragen oben den Sprachlink, und beide haben einen
+Stand-Satz zur Referenzfassung, den das Veröffentlichungsskript automatisch nachzieht.
 
 ## Verschwundene Slash-Befehle sind fast immer ein Auslesefehler
 
