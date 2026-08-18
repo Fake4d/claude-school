@@ -9,7 +9,7 @@ Alle Anleitungen entstehen gleich: ein Python-Skript schreibt **eine einzige
 HTML-Datei je Sprache**, daraus wird das PDF gedruckt. Kein Framework, keine Abhängigkeiten
 außer dem Drucker.
 
-- Comics: `build.py` → HTML → **Chromium headless** → PDF
+- Comics (drei Stück): `build.py` → HTML → **Chromium headless** → PDF
 - Befehlsreferenz: `build_ref.py` → HTML → **WeasyPrint** → PDF
 - Server-Anleitung: **handgeschriebenes HTML** → WeasyPrint → PDF
 - Englische Fassungen: aus der deutschen abgeleitet, siehe „Zweisprachig“ weiter unten
@@ -213,6 +213,42 @@ Verweis darauf.
 Die README ist gespalten: `README.md` ist die englische Kurzfassung, `README.de.md`
 die ausführliche deutsche. Beide tragen oben den Sprachlink, und beide haben einen
 Stand-Satz zur Referenzfassung, den das Veröffentlichungsskript automatisch nachzieht.
+
+## Die drei Comics sind eine Leiter, keine Sammlung
+
+Seit dem 18.08.2026 gibt es drei Comics, und sie bauen aufeinander auf. Die Achse ist
+**nicht** „Büroarbeit oder Programmieren“ — das war die alte, zu enge Lesart. Die Achse
+ist: **wie weit lässt Du Claude an Deine Sachen?**
+
+| Stufe | Heft | Claude arbeitet … |
+|---|---|---|
+| 1 | `chat-comic/` | … im Gespräch. Alles geht durch Dich: hochladen, herunterladen. |
+| 2 | `cowork-comic/` | … in Deinen Ordnern (Desktop-App). |
+| 3 | `claude-code-comic/` | … auf dem ganzen Rechner, mit eigenen Werkzeugen, auch ohne Dich. |
+
+Zwei Dinge, die man dabei falsch machen kann und die hier schon geprüft sind:
+
+- **„Cowork = Desktop-App“ stimmt nicht ganz.** Cowork gibt es auch im Browser und am
+  Handy; exklusiv ist der Desktop-App nur die **Ordnerfreigabe**. Die Stufengrenze ist
+  also der Ordnerzugriff, nicht die App.
+- **„Claude Code = Programmieren“ stimmt auch nicht.** Dieses Repo selbst ist der
+  Gegenbeweis: Comics, PDFs, Webseiten, cron, Mail. Der Unterschied zu Stufe 2 ist der
+  Zugriff auf den ganzen Rechner plus zwei Dinge, die es nur dort gibt — Claude eigene
+  Werkzeuge beibringen (CLAUDE.md, Skills, MCP, Hooks) und dauerhaft ohne Dich laufen
+  lassen.
+
+Die Faustregel für den Leser: *etwas erledigen lassen* → Cowork. *Werkzeuge bauen, die
+danach von allein laufen* → Code.
+
+Auch inhaltlich sauber trennen: **Artifacts gehören in Stufe 1**, nicht in den
+Cowork-Comic. Cowork erzeugt echte Dateien in Deinen Ordnern; ein Artifact entsteht im
+Gespräch und bleibt dort. Genau dieser Unterschied macht die Stufen erst verständlich —
+wer Artifacts in Cowork nachrüstet, verwischt ihn.
+
+Der Chat-Comic ist gegen die offizielle Dokumentation geprüft (18.08.2026). Ein Fund
+daraus, der die Stufengrenze schärft: **Auch der normale Chat baut echte Dateien** —
+xlsx, docx, pptx, pdf, auf allen Plänen. Aber in einem abgeschotteten Bereich, den man
+herunterlädt. Der Comic sagt das ausdrücklich, sonst wirkt Stufe 2 überflüssig.
 
 ## Verschwundene Slash-Befehle sind fast immer ein Auslesefehler
 

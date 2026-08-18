@@ -2,15 +2,21 @@
 
 *[English](README.md) · **Deutsch***
 
-Anleitungen zu Claude — zwei Comics für den Einstieg, eine vollständige
-Befehlsreferenz und eine Praxisanleitung zum Selbstaufsetzen. Jede Anleitung gibt es
-auf **Deutsch und Englisch**, jeweils als PDF und als HTML-Datei, beide in sich
-abgeschlossen (Schriften eingebettet, keine externen Dateien).
+Anleitungen zu Claude — **drei Comics in aufeinander aufbauenden Stufen**, dazu eine
+vollständige Befehlsreferenz und eine Praxisanleitung zum Selbstaufsetzen. Jede
+Anleitung gibt es auf **Deutsch und Englisch**, jeweils als PDF und als HTML-Datei,
+beide in sich abgeschlossen (Schriften eingebettet, keine externen Dateien).
+
+Die drei Comics folgen einer Frage: **wie weit lässt Du Claude an Deine Sachen?**
+Im Gespräch geht alles durch Dich hindurch. Mit der Desktop-App arbeitet Claude in
+Deinen Ordnern. Im Terminal arbeitet es auf dem ganzen Rechner — und läuft ohne Dich
+weiter.
 
 | Anleitung | Umfang | Für wen | Englisch |
 |---|---|---|---|
-| [**Claude Cowork als Comic**](cowork-comic/cowork-anleitung.pdf) | 23 Seiten | Einstieg ohne Programmierkenntnisse — Cowork läuft in der normalen Claude-App, ohne Terminal | [PDF](cowork-comic/cowork-comic-en.pdf) |
-| [**Claude Code als Comic**](claude-code-comic/claude-anleitung.pdf) | 34 Seiten | Einstieg für alle, die im Terminal arbeiten — CLAUDE.md, Skills, MCP, Hooks, Subagents | [PDF](claude-code-comic/claude-code-comic-en.pdf) |
+| [**Claude im Gespräch als Comic**](chat-comic/chat-anleitung.pdf) | 22 Seiten | Stufe 1 — nichts zu installieren: Artifacts, Projekte, Gedächtnis, Research | [PDF](chat-comic/chat-comic-en.pdf) |
+| [**Claude Cowork als Comic**](cowork-comic/cowork-anleitung.pdf) | 23 Seiten | Stufe 2 — Desktop-App: Claude arbeitet direkt in Deinen Ordnern | [PDF](cowork-comic/cowork-comic-en.pdf) |
+| [**Claude Code als Comic**](claude-code-comic/claude-anleitung.pdf) | 34 Seiten | Stufe 3 — Terminal: der ganze Rechner, eigene Werkzeuge, läuft ohne Dich | [PDF](claude-code-comic/claude-code-comic-en.pdf) |
 | [**Befehlsreferenz**](befehlsreferenz/Claude-Code-Befehlsreferenz.pdf) | 9 Seiten | Nachschlagen — alle Terminal-Befehle, Optionen und Slash-Befehle | [PDF](befehlsreferenz/Claude-Code-Command-Reference.pdf) |
 | [**Dein eigener KI-Server-Assistent**](server-setup/KI-Server-Assistent-Ausgabe-3.pdf) | 10 Seiten | Selbst aufsetzen — vom leeren Mietserver zum Claude im Dauerbetrieb | [PDF](server-setup/AI-Server-Assistant-Edition-3.pdf) |
 
@@ -39,7 +45,7 @@ erzeugen die Dateien oben byte-identisch. Nur Python 3 nötig, keine Bibliotheke
 zum Drucken Chromium (Comics) bzw. WeasyPrint (Referenz).
 
 ```bash
-cd werkzeuge/cowork-comic && python3 build.py     # -> beide Sprachen
+cd werkzeuge/chat-comic && python3 build.py       # -> beide Sprachen
 cd werkzeuge/befehlsreferenz && python3 build_ref.py
 cd werkzeuge/server-setup && python3 uebersetze.py
 ```

@@ -2,15 +2,21 @@
 
 ***English** · [Deutsch](README.de.md)*
 
-Guides to Claude — two comics for getting started, a complete command reference
-and a hands-on guide to setting up your own server assistant. Every guide comes in
-**English and German**, each as a PDF and as a single HTML file, both self-contained
-(fonts embedded, no external files).
+Guides to Claude — **three comics that build on one another**, plus a complete command
+reference and a hands-on guide to setting up your own server assistant. Every guide
+comes in **English and German**, each as a PDF and as a single HTML file, both
+self-contained (fonts embedded, no external files).
+
+The three comics follow one question: **how far do you let Claude at your things?**
+In the conversation everything passes through you. With the desktop app Claude works
+in your folders. In the terminal it works on the whole machine — and keeps running
+without you.
 
 | Guide | Length | Who for |
 |---|---|---|
-| [**Claude Cowork as a comic**](cowork-comic/cowork-comic-en.pdf) | 23 pages | Getting started without programming — Cowork runs in the ordinary Claude app, no terminal |
-| [**Claude Code as a comic**](claude-code-comic/claude-code-comic-en.pdf) | 34 pages | Getting started in the terminal — CLAUDE.md, skills, MCP, hooks, subagents |
+| [**Claude in conversation as a comic**](chat-comic/chat-comic-en.pdf) | 22 pages | Stage 1 — nothing to install: artifacts, projects, memory, research |
+| [**Claude Cowork as a comic**](cowork-comic/cowork-comic-en.pdf) | 23 pages | Stage 2 — desktop app: Claude works directly in your folders |
+| [**Claude Code as a comic**](claude-code-comic/claude-code-comic-en.pdf) | 34 pages | Stage 3 — terminal: the whole machine, your own tools, runs without you |
 | [**Command reference**](befehlsreferenz/Claude-Code-Command-Reference.pdf) | 9 pages | Looking things up — every terminal command, option and slash command |
 | [**Your own AI server assistant**](server-setup/AI-Server-Assistant-Edition-3.pdf) | 10 pages | Building it yourself — from an empty rented server to Claude running around the clock |
 
@@ -39,7 +45,7 @@ above byte for byte. Python 3 only, no libraries; for printing you need Chromium
 (comics) or WeasyPrint (reference and server guide).
 
 ```bash
-cd werkzeuge/cowork-comic && python3 build.py      # -> both languages
+cd werkzeuge/chat-comic && python3 build.py        # -> both languages
 cd werkzeuge/befehlsreferenz && python3 build_ref.py
 cd werkzeuge/server-setup && python3 uebersetze.py
 ```
