@@ -113,11 +113,18 @@ du getan hast.
       Arbeitsverzeichnis, Restart=on-failure, RestartSec=10 und
       After/Wants=network-online.target.
 
-   b) Als Startbefehl "claude --remote-control --name <sprechender-name>",
-      eingepackt in ein Pseudo-Terminal:
-        /usr/bin/script -qec "<pfad-zu-claude> --remote-control --name ..." /dev/null
+   b) Als Startbefehl "claude --remote-control --name <sprechender-name>
+      --continue", eingepackt in ein Pseudo-Terminal:
+        /usr/bin/script -qec "<pfad-zu-claude> --remote-control --name ... --continue" /dev/null
       Das Pseudo-Terminal ist zwingend: Ohne Terminal bleibst du bei jeder
       Rückfrage stehen und kannst die Antwort auch nicht speichern.
+      --continue nimmt beim Start das zuletzt geführte Gespräch wieder auf,
+      statt bei null anzufangen. Ohne diesen Zusatz ist nach jedem Absturz
+      und jedem Reboot alles weg, was wir besprochen hatten — und weil
+      Restart=on-failure greift, kann das mitten in der Arbeit passieren,
+      ohne dass ich es merke. Die Kehrseite gehört dazu: Ein Neustart des
+      Dienstes gibt mir damit keine frische Sitzung mehr. Will ich wirklich
+      von vorn anfangen, leere ich das Gespräch vorher mit /clear.
       Verwende im Aufruf den Verweis ~/.local/bin/claude und NICHT die
       konkrete Version darunter, sonst zeigt der Dienst nach dem nächsten
       Auto-Update ins Leere.

@@ -107,13 +107,21 @@ explicit consent. After each point, briefly summarise what you did.
       as my user, with WorkingDirectory = this working directory,
       Restart=on-failure, RestartSec=10 and After/Wants=network-online.target.
 
-   b) As the start command "claude --remote-control --name <descriptive-name>",
-      wrapped in a pseudo terminal:
-        /usr/bin/script -qec "<path-to-claude> --remote-control --name ..." /dev/null
+   b) As the start command "claude --remote-control --name <descriptive-name>
+      --continue", wrapped in a pseudo terminal:
+        /usr/bin/script -qec "<path-to-claude> --remote-control --name ... --continue" /dev/null
       The pseudo terminal is mandatory: without a terminal you stall at every
-      prompt and cannot store the answer either. In the call use the link
-      ~/.local/bin/claude and NOT the specific version underneath, otherwise the
-      service points into nothing after the next auto-update.
+      prompt and cannot store the answer either.
+      --continue picks the most recent conversation back up at startup instead
+      of beginning from scratch. Without it everything we discussed is gone
+      after every crash and every reboot — and because Restart=on-failure
+      applies, that can happen in the middle of the work without me noticing.
+      The flip side comes with it: restarting the service no longer gives me a
+      fresh session. If I really want to start over, I clear the conversation
+      with /clear first.
+      In the call use the link ~/.local/bin/claude and NOT the specific version
+      underneath, otherwise the service points into nothing after the next
+      auto-update.
       Explicitly do NOT use --dangerously-skip-permissions; in remote control
       operation it is not needed.
 
