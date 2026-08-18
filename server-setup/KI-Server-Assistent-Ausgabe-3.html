@@ -68,7 +68,7 @@
 
 <div class="box new">
   <span class="t">Was in dieser Ausgabe neu ist</span>
-  <p>Ausgabe 2 brachte dich bis zum Dauerbetrieb. Diese Ausgabe schließt die drei Lücken,
+  <p>Ausgabe 2 brachte dich bis zum Dauerbetrieb. Diese Ausgabe schließt die Lücken,
   die sich im täglichen Gebrauch gezeigt haben:</p>
   <ul style="margin-bottom:0">
     <li><strong>Der Dienst nimmt das Gespräch jetzt wieder auf.</strong> Ohne einen kleinen
@@ -77,6 +77,9 @@
     <li><strong>Teil 7 ist neu:</strong> Push-Nachrichten aufs Handy. Damit meldet sich dein
         Assistent von selbst, wenn er eine Entscheidung braucht oder etwas Wichtiges
         passiert ist.</li>
+    <li><strong>Teil 4 weiß jetzt, was der Prompt schon gebaut hat.</strong> Wer den
+        Bootstrap-Prompt vollständig durchläuft, bekommt den Dienst dort bereits — Teil 4
+        sagt nun, was zu prüfen und was zu überspringen ist.</li>
     <li>Alle Befehle und Versionsangaben sind gegen <strong>Claude Code 2.1.232</strong>
         geprüft.</li>
   </ul>
@@ -178,7 +181,9 @@ cd ~/assistant
 claude</pre>
 <p>Öffne <code>setup-prompt.txt</code>, kopiere alles zwischen den beiden Markierungslinien und füge
 es als erste Nachricht ein. Ab da führt Claude dich durch die Einrichtung — er stellt Fragen, legt
-sein Gedächtnis an, prüft die Grundsicherheit und richtet auf Wunsch E-Mail und Web ein.</p>
+sein Gedächtnis an, prüft die Grundsicherheit und richtet auf Wunsch E-Mail und Web ein. Sein letzter
+Punkt baut außerdem den Dauerbetrieb aus Teil 4 gleich mit auf, also den Systemdienst. Lies Teil 4
+trotzdem — dort steht, was dabei passiert ist und wie du es nachprüfst.</p>
 
 <div class="box info">
   <span class="t">Warum ausgerechnet <code>~/assistant</code>?</span>
@@ -188,9 +193,20 @@ sein Gedächtnis an, prüft die Grundsicherheit und richtet auf Wunsch E-Mail un
 </div>
 
 <h2><span class="num">4</span>Dauerbetrieb: als Dienst, per App erreichbar, neustartfest</h2>
-<p>Bis hierher lebt Claude nur, solange dein Terminal-Fenster offen ist. Jetzt machen wir daraus
-einen echten Serverdienst: Er startet mit dem System, läuft rund um die Uhr, ist aus der Claude-App
-erreichbar und übersteht jeden Neustart — ohne Rückfragen.</p>
+<p>Ohne Dienst lebt Claude nur, solange dein Terminal-Fenster offen ist. Als echter Serverdienst
+dagegen startet er mit dem System, läuft rund um die Uhr, ist aus der Claude-App erreichbar und
+übersteht jeden Neustart — ohne Rückfragen.</p>
+
+<div class="box tip">
+  <span class="t">Prompt ganz durchlaufen? Dann steht das meiste schon</span>
+  <p>Punkt 8 des Bootstrap-Prompts richtet genau diesen Dienst ein. Sieh deshalb zuerst nach, was
+  bereits läuft: <code>systemctl status claude-code.service --no-pager</code>.</p>
+  <p>Steht dort <code>active (running)</code>, überspring die Schritte 1 und 2 — sie würden nur
+  dasselbe noch einmal anlegen. Lies die Erklärungen darin trotzdem, vor allem den Kasten zu
+  <code>--continue</code>, und mach dann bei <strong>Schritt 4</strong> weiter: die Nagelprobe mit
+  dem Neustart hat dir bisher niemand abgenommen.</p>
+  <p>Hast du den Prompt abgekürzt oder Punkt 8 ausgelassen, arbeite Teil 4 von vorn durch.</p>
+</div>
 
 <p>Dazu gehören drei Teile, und alle drei sind nötig:</p>
 <table>

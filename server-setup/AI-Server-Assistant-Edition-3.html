@@ -68,7 +68,7 @@
 
 <div class="box new">
   <span class="t">What is new in this edition</span>
-  <p>Edition 2 got you as far as continuous operation. This edition closes the three gaps
+  <p>Edition 2 got you as far as continuous operation. This edition closes the gaps
   that showed up in daily use:</p>
   <ul style="margin-bottom:0">
     <li><strong>The service now picks the conversation back up.</strong> Without one small
@@ -77,6 +77,9 @@
     <li><strong>Part 7 is new:</strong> push notifications to your phone. With it your
         assistant speaks up by itself when it needs a decision or something important
         has happened.</li>
+    <li><strong>Part 4 now knows what the prompt has already built.</strong> Anyone who runs the
+        bootstrap prompt all the way through gets the service there already — part 4 now says
+        what to check and what to skip.</li>
     <li>All commands and version numbers are verified against <strong>Claude Code 2.1.232</strong>.</li>
   </ul>
 </div>
@@ -176,7 +179,9 @@ cd ~/assistant
 claude</pre>
 <p>Open <code>setup-prompt-en.txt</code>, copy everything between the two marker lines and paste it
 in as the first message. From there Claude walks you through the setup — it asks questions, sets
-up its memory, checks the basic security and, if you want, configures e-mail and web.</p>
+up its memory, checks the basic security and, if you want, configures e-mail and web. Its last item
+also builds the continuous operation from part 4 right away, meaning the system service. Read part 4
+anyway — it explains what happened there and how to verify it.</p>
 
 <div class="box info">
   <span class="t">Why <code>~/assistant</code> of all places?</span>
@@ -186,9 +191,20 @@ up its memory, checks the basic security and, if you want, configures e-mail and
 </div>
 
 <h2><span class="num">4</span>Continuous operation: as a service, reachable from the app, reboot-proof</h2>
-<p>Up to this point Claude only lives while your terminal window is open. Now we turn it into a
-real server service: it starts with the system, runs around the clock, is reachable from the
-Claude app and survives every reboot — without asking anything.</p>
+<p>Without a service Claude only lives while your terminal window is open. As a real server
+service it starts with the system, runs around the clock, is reachable from the Claude app and
+survives every reboot — without asking anything.</p>
+
+<div class="box tip">
+  <span class="t">Ran the whole prompt? Then most of this already stands</span>
+  <p>Item 8 of the bootstrap prompt sets up this exact service. So first look at what is already
+  running: <code>systemctl status claude-code.service --no-pager</code>.</p>
+  <p>If it says <code>active (running)</code>, skip steps 1 and 2 — they would only create the same
+  thing a second time. Read the explanations in them anyway, above all the box about
+  <code>--continue</code>, and then carry on at <strong>step 4</strong>: the acid test with the
+  reboot is one nobody has done for you yet.</p>
+  <p>If you cut the prompt short or left item 8 out, work through part 4 from the beginning.</p>
+</div>
 
 <p>Three pieces belong to that, and all three are necessary:</p>
 <table>

@@ -24,8 +24,10 @@ TEXTE = {
     "Written and verified step by step by Christian&#8217;s virtual server<br>\n  Checked against Claude Code 2.1.232 on Ubuntu",
 
 "Was in dieser Ausgabe neu ist": "What is new in this edition",
-"Ausgabe 2 brachte dich bis zum Dauerbetrieb. Diese Ausgabe schließt die drei Lücken,\n  die sich im täglichen Gebrauch gezeigt haben:":
-    "Edition 2 got you as far as continuous operation. This edition closes the three gaps\n  that showed up in daily use:",
+"Ausgabe 2 brachte dich bis zum Dauerbetrieb. Diese Ausgabe schließt die Lücken,\n  die sich im täglichen Gebrauch gezeigt haben:":
+    "Edition 2 got you as far as continuous operation. This edition closes the gaps\n  that showed up in daily use:",
+"<strong>Teil 4 weiß jetzt, was der Prompt schon gebaut hat.</strong> Wer den\n        Bootstrap-Prompt vollständig durchläuft, bekommt den Dienst dort bereits — Teil 4\n        sagt nun, was zu prüfen und was zu überspringen ist.":
+    "<strong>Part 4 now knows what the prompt has already built.</strong> Anyone who runs the\n        bootstrap prompt all the way through gets the service there already — part 4 now says\n        what to check and what to skip.",
 "<strong>Der Dienst nimmt das Gespräch jetzt wieder auf.</strong> Ohne einen kleinen\n        Zusatz in Teil 4 begann er nach jedem Neustart bei null — mitten in der Arbeit\n        besonders ärgerlich.":
     "<strong>The service now picks the conversation back up.</strong> Without one small\n        addition in part 4 it started from scratch after every restart — particularly\n        annoying in the middle of a job.",
 "<strong>Teil 7 ist neu:</strong> Push-Nachrichten aufs Handy. Damit meldet sich dein\n        Assistent von selbst, wenn er eine Entscheidung braucht oder etwas Wichtiges\n        passiert ist.":
@@ -92,8 +94,8 @@ TEXTE = {
     "<span class=\"num\">3</span>The magic trick: hand over the bootstrap prompt",
 "Das ist der Moment, in dem sich dein Assistent selbst aufbaut. In der beiliegenden Datei\n<code>setup-prompt.txt</code> steht ein vorbereiteter Text. Lege zuerst sein Arbeitsverzeichnis an\nund starte ihn dort:":
     "This is the moment where your assistant builds itself. The accompanying file\n<code>setup-prompt-en.txt</code> holds a prepared text. First create its working directory and start\nit there:",
-"Öffne <code>setup-prompt.txt</code>, kopiere alles zwischen den beiden Markierungslinien und füge\nes als erste Nachricht ein. Ab da führt Claude dich durch die Einrichtung — er stellt Fragen, legt\nsein Gedächtnis an, prüft die Grundsicherheit und richtet auf Wunsch E-Mail und Web ein.":
-    "Open <code>setup-prompt-en.txt</code>, copy everything between the two marker lines and paste it\nin as the first message. From there Claude walks you through the setup — it asks questions, sets\nup its memory, checks the basic security and, if you want, configures e-mail and web.",
+"Öffne <code>setup-prompt.txt</code>, kopiere alles zwischen den beiden Markierungslinien und füge\nes als erste Nachricht ein. Ab da führt Claude dich durch die Einrichtung — er stellt Fragen, legt\nsein Gedächtnis an, prüft die Grundsicherheit und richtet auf Wunsch E-Mail und Web ein. Sein letzter\nPunkt baut außerdem den Dauerbetrieb aus Teil 4 gleich mit auf, also den Systemdienst. Lies Teil 4\ntrotzdem — dort steht, was dabei passiert ist und wie du es nachprüfst.":
+    "Open <code>setup-prompt-en.txt</code>, copy everything between the two marker lines and paste it\nin as the first message. From there Claude walks you through the setup — it asks questions, sets\nup its memory, checks the basic security and, if you want, configures e-mail and web. Its last item\nalso builds the continuous operation from part 4 right away, meaning the system service. Read part 4\nanyway — it explains what happened there and how to verify it.",
 "Warum ausgerechnet <code>~/assistant</code>?": "Why <code>~/assistant</code> of all places?",
 "Claude merkt sich Vertrauen und Einstellungen <strong>pro Verzeichnis</strong>. Wenn der\n  Dienst aus Teil 4 später in einem anderen Ordner startet als dem, in dem du alles bestätigt\n  hast, fragt er wieder nach — und bleibt stehen. Bleib deshalb bei einem festen Arbeitsordner.":
     "Claude remembers trust and settings <strong>per directory</strong>. If the service from part 4\n  later starts in a different folder than the one where you confirmed everything, it asks again —\n  and stalls. So stick to one fixed working folder.",
@@ -101,8 +103,17 @@ TEXTE = {
 # --- Teil 4 ---
 "<span class=\"num\">4</span>Dauerbetrieb: als Dienst, per App erreichbar, neustartfest":
     "<span class=\"num\">4</span>Continuous operation: as a service, reachable from the app, reboot-proof",
-"Bis hierher lebt Claude nur, solange dein Terminal-Fenster offen ist. Jetzt machen wir daraus\neinen echten Serverdienst: Er startet mit dem System, läuft rund um die Uhr, ist aus der Claude-App\nerreichbar und übersteht jeden Neustart — ohne Rückfragen.":
-    "Up to this point Claude only lives while your terminal window is open. Now we turn it into a\nreal server service: it starts with the system, runs around the clock, is reachable from the\nClaude app and survives every reboot — without asking anything.",
+"Ohne Dienst lebt Claude nur, solange dein Terminal-Fenster offen ist. Als echter Serverdienst\ndagegen startet er mit dem System, läuft rund um die Uhr, ist aus der Claude-App erreichbar und\nübersteht jeden Neustart — ohne Rückfragen.":
+    "Without a service Claude only lives while your terminal window is open. As a real server\nservice it starts with the system, runs around the clock, is reachable from the Claude app and\nsurvives every reboot — without asking anything.",
+
+"Prompt ganz durchlaufen? Dann steht das meiste schon":
+    "Ran the whole prompt? Then most of this already stands",
+"Punkt 8 des Bootstrap-Prompts richtet genau diesen Dienst ein. Sieh deshalb zuerst nach, was\n  bereits läuft: <code>systemctl status claude-code.service --no-pager</code>.":
+    "Item 8 of the bootstrap prompt sets up this exact service. So first look at what is already\n  running: <code>systemctl status claude-code.service --no-pager</code>.",
+"Steht dort <code>active (running)</code>, überspring die Schritte 1 und 2 — sie würden nur\n  dasselbe noch einmal anlegen. Lies die Erklärungen darin trotzdem, vor allem den Kasten zu\n  <code>--continue</code>, und mach dann bei <strong>Schritt 4</strong> weiter: die Nagelprobe mit\n  dem Neustart hat dir bisher niemand abgenommen.":
+    "If it says <code>active (running)</code>, skip steps 1 and 2 — they would only create the same\n  thing a second time. Read the explanations in them anyway, above all the box about\n  <code>--continue</code>, and then carry on at <strong>step 4</strong>: the acid test with the\n  reboot is one nobody has done for you yet.",
+"Hast du den Prompt abgekürzt oder Punkt 8 ausgelassen, arbeite Teil 4 von vorn durch.":
+    "If you cut the prompt short or left item 8 out, work through part 4 from the beginning.",
 "Dazu gehören drei Teile, und alle drei sind nötig:":
     "Three pieces belong to that, and all three are necessary:",
 "Baustein": "Piece",

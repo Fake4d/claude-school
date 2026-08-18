@@ -1,6 +1,6 @@
 ========================================================================
   BOOTSTRAP PROMPT FOR A NEW CLAUDE SERVER ASSISTANT
-  Edition 2 — checked against Claude Code 2.1.220, July 2026
+  Edition 3 — matching the guide, checked against Claude Code 2.1.232, August 2026
   ------------------------------------------------------------------------
   How to use this file:
    1. Set up the server and install Claude Code (parts 1-2 of the PDF).
@@ -9,9 +9,13 @@
    3. Copy everything below the line and paste it as the first message.
    4. Answer Claude's questions. The rest builds itself.
 
-  NEW in edition 2: point 8 sets up continuous operation — after that
-  Claude runs as a system service, is reachable through the Claude app
-  and survives every reboot without asking anything.
+  NEW in edition 3: point 8 starts the service with --continue. Claude thus
+  picks the most recent conversation back up after a crash or a reboot,
+  instead of starting from scratch.
+
+  Point 8 sets up the complete continuous operation — the same thing part 4
+  of the guide walks through by hand. If you let this prompt run all the way
+  through, part 4 is only there to verify, not to work through.
 ========================================================================
 ------------------------------ COPY FROM HERE ------------------------------
 
