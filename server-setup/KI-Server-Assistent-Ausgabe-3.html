@@ -39,6 +39,7 @@
   pre .c { color: #8fb98f; }
   pre .h { color: #f0b86e; }
 
+  .nb { white-space: nowrap; }
   .box { border-radius: 4px; padding: 3mm 4mm; margin: 0 0 3mm 0; page-break-inside: avoid; }
   .box p:last-child { margin-bottom: 0; }
   .box .t { font-weight: bold; display: block; margin-bottom: 1mm; }
@@ -203,7 +204,7 @@ dagegen startet er mit dem System, läuft rund um die Uhr, ist aus der Claude-Ap
   bereits läuft: <code>systemctl status claude-code.service --no-pager</code>.</p>
   <p>Steht dort <code>active (running)</code>, überspring die Schritte 1 und 2 — sie würden nur
   dasselbe noch einmal anlegen. Lies die Erklärungen darin trotzdem, vor allem den Kasten zu
-  <code>--continue</code>, und mach dann bei <strong>Schritt 4</strong> weiter: die Nagelprobe mit
+  <code class="nb">--continue</code>, und mach dann bei <strong>Schritt 4</strong> weiter: die Nagelprobe mit
   dem Neustart hat dir bisher niemand abgenommen.</p>
   <p>Hast du den Prompt abgekürzt oder Punkt 8 ausgelassen, arbeite Teil 4 von vorn durch.</p>
 </div>
@@ -247,16 +248,16 @@ EOF</pre>
       ins Leere.</li>
   <li><code>--name vps-main</code> ist der Name, unter dem die Sitzung später in der App auftaucht.
       Nimm ruhig etwas Sprechendes.</li>
-  <li><code>--continue</code> nimmt beim Start das <strong>letzte Gespräch wieder auf</strong>,
+  <li><code class="nb">--continue</code> nimmt beim Start das <strong>letzte Gespräch wieder auf</strong>,
       statt bei null anzufangen. Neu in dieser Ausgabe — siehe den Kasten gleich darunter.</li>
 </ul>
 
 <div class="box">
-  <span class="t">Warum <code>--continue</code> den Unterschied macht</span>
+  <span class="t">Warum <code class="nb">--continue</code> den Unterschied macht</span>
   <p>Ohne diesen Zusatz beginnt der Dienst nach jedem Neustart eine frische Sitzung. Alles,
   was ihr besprochen hattet, ist weg — und weil <code>Restart=on-failure</code> greift, kann
   das mitten in der Arbeit passieren, ohne dass du es merkst.</p>
-  <p>Mit <code>--continue</code> hängt er sich stattdessen an das zuletzt geführte Gespräch.
+  <p>Mit <code class="nb">--continue</code> hängt er sich stattdessen an das zuletzt geführte Gespräch.
   Ein Absturz oder ein Reboot wird damit zu einer kurzen Unterbrechung statt zu einem
   Gedächtnisverlust.</p>
   <p style="margin-bottom:0">Die Kehrseite, damit du nicht überrascht wirst: Ein Neustart des
@@ -321,7 +322,7 @@ und beides findet zusammen.</p>
 <div class="box tip">
   <span class="t">Nützlich im Alltag</span>
   <p><code>sudo systemctl restart claude-code</code> setzt den Dienst neu auf — durch
-  <code>--continue</code> läuft das Gespräch danach weiter, statt neu zu beginnen. Hat sich
+  <code class="nb">--continue</code> läuft das Gespräch danach weiter, statt neu zu beginnen. Hat sich
   ein Gespräch festgefahren, hilft nicht der Neustart, sondern <code>/clear</code> aus der
   App heraus. <code>journalctl -u claude-code -f</code> zeigt live mit, was der Dienst tut.</p>
 </div>

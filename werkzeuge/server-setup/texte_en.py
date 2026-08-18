@@ -110,8 +110,8 @@ TEXTE = {
     "Ran the whole prompt? Then most of this already stands",
 "Punkt 8 des Bootstrap-Prompts richtet genau diesen Dienst ein. Sieh deshalb zuerst nach, was\n  bereits läuft: <code>systemctl status claude-code.service --no-pager</code>.":
     "Item 8 of the bootstrap prompt sets up this exact service. So first look at what is already\n  running: <code>systemctl status claude-code.service --no-pager</code>.",
-"Steht dort <code>active (running)</code>, überspring die Schritte 1 und 2 — sie würden nur\n  dasselbe noch einmal anlegen. Lies die Erklärungen darin trotzdem, vor allem den Kasten zu\n  <code>--continue</code>, und mach dann bei <strong>Schritt 4</strong> weiter: die Nagelprobe mit\n  dem Neustart hat dir bisher niemand abgenommen.":
-    "If it says <code>active (running)</code>, skip steps 1 and 2 — they would only create the same\n  thing a second time. Read the explanations in them anyway, above all the box about\n  <code>--continue</code>, and then carry on at <strong>step 4</strong>: the acid test with the\n  reboot is one nobody has done for you yet.",
+"Steht dort <code>active (running)</code>, überspring die Schritte 1 und 2 — sie würden nur\n  dasselbe noch einmal anlegen. Lies die Erklärungen darin trotzdem, vor allem den Kasten zu\n  <code class=\"nb\">--continue</code>, und mach dann bei <strong>Schritt 4</strong> weiter: die Nagelprobe mit\n  dem Neustart hat dir bisher niemand abgenommen.":
+    "If it says <code>active (running)</code>, skip steps 1 and 2 — they would only create the same\n  thing a second time. Read the explanations in them anyway, above all the box about\n  <code class=\"nb\">--continue</code>, and then carry on at <strong>step 4</strong>: the acid test with the\n  reboot is one nobody has done for you yet.",
 "Hast du den Prompt abgekürzt oder Punkt 8 ausgelassen, arbeite Teil 4 von vorn durch.":
     "If you cut the prompt short or left item 8 out, work through part 4 from the beginning.",
 "Dazu gehören drei Teile, und alle drei sind nötig:":
@@ -139,14 +139,14 @@ TEXTE = {
     "The call uses <code>~/.local/bin/claude</code>, that is the <strong>link</strong> — not the\n      specific version underneath. Otherwise the service points into nothing after the next\n      automatic update.",
 "<code>--name vps-main</code> ist der Name, unter dem die Sitzung später in der App auftaucht.\n      Nimm ruhig etwas Sprechendes.":
     "<code>--name vps-main</code> is the name the session shows up under in the app later.\n      Feel free to pick something descriptive.",
-"<code>--continue</code> nimmt beim Start das <strong>letzte Gespräch wieder auf</strong>,\n      statt bei null anzufangen. Neu in dieser Ausgabe — siehe den Kasten gleich darunter.":
-    "<code>--continue</code> picks the <strong>last conversation back up</strong> at startup\n      instead of beginning from scratch. New in this edition — see the box just below.",
-"Warum <code>--continue</code> den Unterschied macht":
-    "Why <code>--continue</code> makes the difference",
+"<code class=\"nb\">--continue</code> nimmt beim Start das <strong>letzte Gespräch wieder auf</strong>,\n      statt bei null anzufangen. Neu in dieser Ausgabe — siehe den Kasten gleich darunter.":
+    "<code class=\"nb\">--continue</code> picks the <strong>last conversation back up</strong> at startup\n      instead of beginning from scratch. New in this edition — see the box just below.",
+"Warum <code class=\"nb\">--continue</code> den Unterschied macht":
+    "Why <code class=\"nb\">--continue</code> makes the difference",
 "Ohne diesen Zusatz beginnt der Dienst nach jedem Neustart eine frische Sitzung. Alles,\n  was ihr besprochen hattet, ist weg — und weil <code>Restart=on-failure</code> greift, kann\n  das mitten in der Arbeit passieren, ohne dass du es merkst.":
     "Without this addition the service starts a fresh session after every restart. Everything you\n  had discussed is gone — and because <code>Restart=on-failure</code> applies, that can happen in\n  the middle of a job without you noticing.",
-"Mit <code>--continue</code> hängt er sich stattdessen an das zuletzt geführte Gespräch.\n  Ein Absturz oder ein Reboot wird damit zu einer kurzen Unterbrechung statt zu einem\n  Gedächtnisverlust.":
-    "With <code>--continue</code> it attaches itself to the most recent conversation instead. A\n  crash or a reboot becomes a short interruption rather than a loss of memory.",
+"Mit <code class=\"nb\">--continue</code> hängt er sich stattdessen an das zuletzt geführte Gespräch.\n  Ein Absturz oder ein Reboot wird damit zu einer kurzen Unterbrechung statt zu einem\n  Gedächtnisverlust.":
+    "With <code class=\"nb\">--continue</code> it attaches itself to the most recent conversation instead. A\n  crash or a reboot becomes a short interruption rather than a loss of memory.",
 "Die Kehrseite, damit du nicht überrascht wirst: Ein Neustart des\n  Dienstes gibt dir jetzt <em>keine</em> frische Sitzung mehr. „Merk dir das nur für dieses\n  Gespräch“ überlebt damit auch einen Reboot. Willst du wirklich von vorn anfangen, leere\n  das Gespräch mit <code>/clear</code> aus der App heraus.":
     "The flip side, so you are not caught out: restarting the service no longer gives you a\n  <em>fresh</em> session. &#8220;Remember this just for this conversation&#8221; therefore survives\n  a reboot as well. If you really want to start over, clear the conversation with\n  <code>/clear</code> from inside the app.",
 "Schritt 2: Die einmaligen Rückfragen vorab abhaken":
@@ -176,8 +176,8 @@ TEXTE = {
 "Öffne die Claude-App auf dem Handy oder <strong>claude.ai/code</strong> im Browser — angemeldet\nmit demselben Konto wie auf dem Server. Dort taucht deine Sitzung unter dem Namen auf, den du\nvergeben hast (<code>vps-main</code>). Du tippst einfach eine Nachricht, und auf deinem Server\npassiert echte Arbeit. Das ist der Zustand, den du wolltest: Der Server läuft, du bist unterwegs,\nund beides findet zusammen.":
     "Open the Claude app on your phone or <strong>claude.ai/code</strong> in the browser — signed in\nwith the same account as on the server. Your session shows up there under the name you gave it\n(<code>vps-main</code>). You simply type a message, and real work happens on your server. That is\nthe state you were after: the server runs, you are out and about, and the two meet.",
 "Nützlich im Alltag": "Handy in everyday use",
-"<code>sudo systemctl restart claude-code</code> setzt den Dienst neu auf — durch\n  <code>--continue</code> läuft das Gespräch danach weiter, statt neu zu beginnen. Hat sich\n  ein Gespräch festgefahren, hilft nicht der Neustart, sondern <code>/clear</code> aus der\n  App heraus. <code>journalctl -u claude-code -f</code> zeigt live mit, was der Dienst tut.":
-    "<code>sudo systemctl restart claude-code</code> brings the service back up — thanks to\n  <code>--continue</code> the conversation carries on afterwards instead of starting over. If a\n  conversation has got stuck, a restart will not help; <code>/clear</code> from inside the app\n  will. <code>journalctl -u claude-code -f</code> shows live what the service is doing.",
+"<code>sudo systemctl restart claude-code</code> setzt den Dienst neu auf — durch\n  <code class=\"nb\">--continue</code> läuft das Gespräch danach weiter, statt neu zu beginnen. Hat sich\n  ein Gespräch festgefahren, hilft nicht der Neustart, sondern <code>/clear</code> aus der\n  App heraus. <code>journalctl -u claude-code -f</code> zeigt live mit, was der Dienst tut.":
+    "<code>sudo systemctl restart claude-code</code> brings the service back up — thanks to\n  <code class=\"nb\">--continue</code> the conversation carries on afterwards instead of starting over. If a\n  conversation has got stuck, a restart will not help; <code>/clear</code> from inside the app\n  will. <code>journalctl -u claude-code -f</code> shows live what the service is doing.",
 
 # --- Teil 5 ---
 "<span class=\"num\">5</span>Optional: E-Mails verschicken":

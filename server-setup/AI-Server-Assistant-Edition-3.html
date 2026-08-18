@@ -39,6 +39,7 @@
   pre .c { color: #8fb98f; }
   pre .h { color: #f0b86e; }
 
+  .nb { white-space: nowrap; }
   .box { border-radius: 4px; padding: 3mm 4mm; margin: 0 0 3mm 0; page-break-inside: avoid; }
   .box p:last-child { margin-bottom: 0; }
   .box .t { font-weight: bold; display: block; margin-bottom: 1mm; }
@@ -201,7 +202,7 @@ survives every reboot — without asking anything.</p>
   running: <code>systemctl status claude-code.service --no-pager</code>.</p>
   <p>If it says <code>active (running)</code>, skip steps 1 and 2 — they would only create the same
   thing a second time. Read the explanations in them anyway, above all the box about
-  <code>--continue</code>, and then carry on at <strong>step 4</strong>: the acid test with the
+  <code class="nb">--continue</code>, and then carry on at <strong>step 4</strong>: the acid test with the
   reboot is one nobody has done for you yet.</p>
   <p>If you cut the prompt short or left item 8 out, work through part 4 from the beginning.</p>
 </div>
@@ -245,16 +246,16 @@ EOF</pre>
       automatic update.</li>
   <li><code>--name vps-main</code> is the name the session shows up under in the app later.
       Feel free to pick something descriptive.</li>
-  <li><code>--continue</code> picks the <strong>last conversation back up</strong> at startup
+  <li><code class="nb">--continue</code> picks the <strong>last conversation back up</strong> at startup
       instead of beginning from scratch. New in this edition — see the box just below.</li>
 </ul>
 
 <div class="box">
-  <span class="t">Why <code>--continue</code> makes the difference</span>
+  <span class="t">Why <code class="nb">--continue</code> makes the difference</span>
   <p>Without this addition the service starts a fresh session after every restart. Everything you
   had discussed is gone — and because <code>Restart=on-failure</code> applies, that can happen in
   the middle of a job without you noticing.</p>
-  <p>With <code>--continue</code> it attaches itself to the most recent conversation instead. A
+  <p>With <code class="nb">--continue</code> it attaches itself to the most recent conversation instead. A
   crash or a reboot becomes a short interruption rather than a loss of memory.</p>
   <p style="margin-bottom:0">The flip side, so you are not caught out: restarting the service no longer gives you a
   <em>fresh</em> session. &#8220;Remember this just for this conversation&#8221; therefore survives
@@ -317,7 +318,7 @@ the state you were after: the server runs, you are out and about, and the two me
 <div class="box tip">
   <span class="t">Handy in everyday use</span>
   <p><code>sudo systemctl restart claude-code</code> brings the service back up — thanks to
-  <code>--continue</code> the conversation carries on afterwards instead of starting over. If a
+  <code class="nb">--continue</code> the conversation carries on afterwards instead of starting over. If a
   conversation has got stuck, a restart will not help; <code>/clear</code> from inside the app
   will. <code>journalctl -u claude-code -f</code> shows live what the service is doing.</p>
 </div>
