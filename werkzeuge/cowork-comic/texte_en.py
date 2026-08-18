@@ -48,19 +48,8 @@ TEXTE = {
 # --- Chat vs. Cowork ---
 "Aber ich kann Claude doch jetzt schon Fragen&nbsp;stellen?":
     "But I can already ask&nbsp;Claude questions?",
-"Im Chat bekommst Du eine <b>Antwort</b> – und baust daraus selbst die Datei.":
-    "In chat you get an <b>answer</b> – and you build the file from it yourself.",
-"In Cowork bekommst Du die <b>fertige Datei</b>. Claude liest Deine Unterlagen, schreibt das Ergebnis und sagt Dir, woher jede Angabe stammt.":
-    "In Cowork you get the <b>finished file</b>. Claude reads your documents, writes the result and tells you where every figure came from.",
 "Chat": "Chat",
-"Du fragst": "You ask",
-"Claude antwortet": "Claude answers",
-"Du baust die Datei selbst": "You build the file yourself",
 "Cowork": "Cowork",
-"Du beschreibst das Ziel": "You describe the goal",
-"Claude arbeitet": "Claude works",
-"Fertige Datei": "Finished file",
-"Du bekommst das Ergebnis": "You get the result",
 
 # --- Erste Schritte ---
 "Wie fange ich an?": "How do I get started?",
@@ -319,19 +308,7 @@ TEXTE = {
 # --- Cowork oder Code ---
 "Und wann nehme ich das andere – Claude Code?":
     "And when do I use the other one – Claude Code?",
-"Cowork, wenn am Ende <b>Dateien</b> stehen: Berichte, Tabellen, Recherchen, aufgeräumte Ordner.":
-    "Cowork when <b>files</b> come out at the end: reports, spreadsheets, research, tidied-up folders.",
-"Claude Code, wenn am Ende <b>Quelltext</b> steht. Das ist die Werkzeugkiste für Leute, die programmieren.":
-    "Claude Code when <b>source code</b> comes out at the end. That is the toolbox for people who program.",
-"Büroarbeit": "Office work",
-"nichts einzurichten": "nothing to set up",
-"in der normalen App": "in the ordinary app",
-"für alle": "for everyone",
 "Claude Code": "Claude Code",
-"Programmieren": "Programming",
-"Terminal und Git": "Terminal and Git",
-"jeder Schritt sichtbar": "every step visible",
-"für Bastler": "for tinkerers",
 
 # --- Wo finde ich es ---
 "Und wo finde ich das jetzt?": "And where do I find it?",
@@ -371,8 +348,36 @@ TEXTE = {
     "<b>On a schedule</b> &#8211; recurring jobs under &#8220;Scheduled&#8221;",
 "<b>Vorsicht</b> &#8211; fremde Inhalte, Finanzen, Zugangsdaten":
     "<b>Careful</b> &#8211; outside content, finances, credentials",
-"<b>Cowork oder Code</b> &#8211; Dateien oder Quelltext":
-    "<b>Cowork or Code</b> &#8211; files or source code",
+# --- Chat oder Cowork (neu gefasst 18.08.2026: der Chat baut selbst Dateien) ---
+"Klar – und im Chat bekommst Du sogar fertige Dateien. Gebaut werden sie aber in einem abgeschotteten Bereich, und Du lädst sie Dir herunter.":
+    "Sure – and in chat you even get finished files. But they are built in a sealed-off area, and you download them yourself.",
+"In Cowork arbeitet Claude <b>direkt in Deinen Ordnern</b>: liest, was dort liegt, und legt das Ergebnis daneben. Kein Hochladen, kein Herunterladen.":
+    "In Cowork, Claude works <b>directly in your folders</b>: it reads what is there and puts the result beside it. No uploading, no downloading.",
+"Im Chat": "In chat",
+"Du lädst hoch": "You upload",
+"Claude baut": "Claude builds",
+"Du lädst herunter": "You download",
+"alles geht durch Dich hindurch": "everything passes through you",
+"In Cowork": "In Cowork",
+"Dein Ordner": "Your folder",
+"Claude arbeitet darin": "Claude works inside it",
+"nichts hoch, nichts herunter": "nothing up, nothing down",
+
+# --- Die drei Stufen ---
+"Das hängt daran, wie weit Du Claude an Deine Sachen lässt. Cowork ist die mittlere Stufe: Deine Ordner, sonst nichts.":
+    "It depends on how far you let Claude at your things. Cowork is the middle stage: your folders, nothing else.",
+"Claude Code darf auf den ganzen Rechner. Dafür kannst Du ihm eigene Werkzeuge beibringen – und es läuft auch weiter, wenn Du nicht dabei bist.":
+    "Claude Code is allowed onto the whole machine. In return you can teach it tools of your own – and it keeps running when you are not there.",
+"<b>1 · Im Gespräch</b><span>nichts einzurichten – Du lädst hoch, Du lädst herunter</span>":
+    "<b>1 · In the conversation</b><span>nothing to set up – you upload, you download</span>",
+"<b>2 · Cowork</b><span>hier bist Du: Claude arbeitet in Deinen Ordnern</span>":
+    "<b>2 · Cowork</b><span>you are here: Claude works in your folders</span>",
+"<b>3 · Claude Code</b><span>Terminal: der ganze Rechner, eigene Werkzeuge, läuft ohne Dich</span>":
+    "<b>3 · Claude Code</b><span>terminal: the whole machine, your own tools, runs without you</span>",
+"für Stufe 1 und 3 gibt es je ein eigenes Heft":
+    "stages 1 and 3 each have a booklet of their own",
+"<b>Die drei Stufen</b> &#8211; wie weit Claude an Deine Sachen darf":
+    "<b>The three stages</b> &#8211; how far Claude may go into your things",
 }
 
 TITEL = "Claude Cowork – the guide"

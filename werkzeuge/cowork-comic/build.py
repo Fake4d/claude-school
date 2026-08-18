@@ -184,16 +184,16 @@ panel("Was ist Cowork",
 # --- Chat oder Cowork ---
 panel("Chat oder Cowork",
   "Aber ich kann Claude doch jetzt schon Fragen&nbsp;stellen?",
-  ["Im Chat bekommst Du eine <b>Antwort</b> – und baust daraus selbst die Datei.",
-   "In Cowork bekommst Du die <b>fertige Datei</b>. Claude liest Deine Unterlagen, schreibt das Ergebnis und sagt Dir, woher jede Angabe stammt."],
+  ["Klar – und im Chat bekommst Du sogar fertige Dateien. Gebaut werden sie aber in einem abgeschotteten Bereich, und Du lädst sie Dir herunter.",
+   "In Cowork arbeitet Claude <b>direkt in Deinen Ordnern</b>: liest, was dort liegt, und legt das Ergebnis daneben. Kein Hochladen, kein Herunterladen."],
   f'''<div class="stage-wide">
-<div class="half"><div class="half-title">Chat</div>
-{chip("Du fragst","blue")}{AD}{chip("Claude antwortet","blue")}{AD}{human("confused",0.55)}
-<div class="cap">Du baust die Datei selbst</div></div>
+<div class="half"><div class="half-title">Im Chat</div>
+{chip("Du lädst hoch","blue")}{AD}{chip("Claude baut","blue")}{AD}{chip("Du lädst herunter","blue")}
+<div class="cap">alles geht durch Dich hindurch</div></div>
 <div class="divider"></div>
-<div class="half"><div class="half-title t-green">Cowork</div>
-{chip("Du beschreibst das Ziel","green")}{AD}{chip("Claude arbeitet","green")}{AD}{doc("Fertige Datei","green",3)}
-<div class="cap c-green">Du bekommst das Ergebnis</div></div></div>''')
+<div class="half"><div class="half-title t-green">In Cowork</div>
+{chip("Dein Ordner","green")}{AD}{chip("Claude arbeitet darin","green")}{AD}{doc("Ergebnis liegt da","green",3)}
+<div class="cap c-green">nichts hoch, nichts herunter</div></div></div>''')
 
 # --- Erste Schritte ---
 panel("Erste Schritte",
@@ -406,18 +406,17 @@ panel("Sicher arbeiten",
 </div>'''))
 
 # --- Cowork oder Code ---
-panel("Cowork oder Code",
+panel("Die drei Stufen",
   "Und wann nehme ich das andere – Claude Code?",
-  ["Cowork, wenn am Ende <b>Dateien</b> stehen: Berichte, Tabellen, Recherchen, aufgeräumte Ordner.",
-   "Claude Code, wenn am Ende <b>Quelltext</b> steht. Das ist die Werkzeugkiste für Leute, die programmieren."],
-  f'''<div class="stage-wide">
-<div class="half"><div class="half-title t-green">Cowork</div>
-{chip("Büroarbeit","green")}{chip("nichts einzurichten","green")}{chip("in der normalen App","green")}
-{human("happy",0.62)}<div class="cap c-green">für alle</div></div>
-<div class="divider"></div>
-<div class="half"><div class="half-title">Claude Code</div>
-{chip("Programmieren","blue")}{chip("Terminal und Git","blue")}{chip("jeder Schritt sichtbar","blue")}
-{bean("hips",0.62)}<div class="cap c-blue">für Bastler</div></div></div>''')
+  ["Das hängt daran, wie weit Du Claude an Deine Sachen lässt. Cowork ist die mittlere Stufe: Deine Ordner, sonst nichts.",
+   "Claude Code darf auf den ganzen Rechner. Dafür kannst Du ihm eigene Werkzeuge beibringen – und es läuft auch weiter, wenn Du nicht dabei bist."],
+  breit(human("think",0.78), bean("point",0.78),
+    f'''<div class="ladder">
+<div class="rung c-blue"><b>1 · Im Gespräch</b><span>nichts einzurichten – Du lädst hoch, Du lädst herunter</span></div>
+<div class="rung c-green"><b>2 · Cowork</b><span>hier bist Du: Claude arbeitet in Deinen Ordnern</span></div>
+<div class="rung c-orange"><b>3 · Claude Code</b><span>Terminal: der ganze Rechner, eigene Werkzeuge, läuft ohne Dich</span></div>
+</div>''',
+    '<div class="cap c-blue">für Stufe 1 und 3 gibt es je ein eigenes Heft</div>'))
 
 # --- Wo bekomme ich es ---
 panel("Wo es das gibt",
@@ -447,7 +446,7 @@ panel("Fazit",
 <div class="fin-line"><b>Berechtigungen</b> &#8211; drei Stufen, Du bestimmst</div>
 <div class="fin-line"><b>Nach Zeitplan</b> &#8211; wiederkehrende Aufgaben unter „Scheduled“</div>
 <div class="fin-line"><b>Vorsicht</b> &#8211; fremde Inhalte, Finanzen, Zugangsdaten</div>
-<div class="fin-line"><b>Cowork oder Code</b> &#8211; Dateien oder Quelltext</div>
+<div class="fin-line"><b>Die drei Stufen</b> &#8211; wie weit Claude an Deine Sachen darf</div>
 </div></div>''')
 # ------------------------------------------------------------------- Bau ----
 

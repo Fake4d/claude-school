@@ -426,7 +426,7 @@ panel("Parallele Sitzungen",
 # --- Cowork: was ist das ---
 panel("Cowork",
   "Und was ist dann Cowork?",
-  ["Dieselbe Technik wie Claude Code – nur für Büroarbeit statt Programmieren, ohne Terminal und ohne Einrichten.",
+  ["Dieselbe Technik wie Claude Code – nur in der ganz normalen Claude-App statt im Terminal, ohne Einrichten.",
    "Du gibst Ordner frei, beschreibst das Ziel, und Claude arbeitet los: Tabellen mit echten Formeln, Präsentationen, fertige Dokumente."],
   breit(human("think",0.78), bean("right",0.78),
     f'''<div class="mini-row">{chip("Deine Ordner","blue")}{chip("Deine Zugänge","blue")}</div>''',
@@ -450,18 +450,17 @@ panel("Cowork konkret",
 {chip("Macht einfach","orange",sub="ohne Rückfrage")}</div>'''))
 
 # --- Cowork oder Code ---
-panel("Cowork oder Code",
+panel("Die drei Stufen",
   "Wann nehme ich denn was?",
-  ["Cowork, wenn am Ende Dateien stehen: Berichte, Tabellen, Recherchen. Nichts einzurichten, und es läuft abgeschottet.",
-   "Claude Code, wenn am Ende Quelltext steht: Tests, Git und volle Sicht auf jeden einzelnen Schritt."],
-  f'''<div class="stage-wide">
-<div class="half"><div class="half-title t-green">Cowork</div>
-{chip("Büroarbeit","green")}{chip("nichts einzurichten","green")}{chip("läuft abgeschottet","green")}
-{human("happy",0.62)}<div class="cap c-green">für alle</div></div>
-<div class="divider"></div>
-<div class="half"><div class="half-title">Claude Code</div>
-{chip("Programmieren","blue")}{chip("Terminal und Git","blue")}{chip("jeder Schritt sichtbar","blue")}
-{bean("hips",0.62)}<div class="cap c-blue">für Bastler</div></div></div>''')
+  ["Die Frage ist immer, wie weit Claude an Deine Sachen darf. Cowork bekommt einzelne Ordner, läuft abgeschottet und braucht keine Einrichtung.",
+   "Claude Code bekommt den ganzen Rechner. Nur hier kannst Du ihm eigene Werkzeuge beibringen – und nur hier läuft er weiter, wenn Du weg bist."],
+  breit(human("think",0.78), bean("point",0.78),
+    f'''<div class="ladder">
+<div class="rung c-blue"><b>1 · Im Gespräch</b><span>nichts einzurichten – Du lädst hoch, Du lädst herunter</span></div>
+<div class="rung c-green"><b>2 · Cowork</b><span>Desktop-App: Claude arbeitet in Deinen Ordnern</span></div>
+<div class="rung c-orange"><b>3 · Claude Code</b><span>hier bist Du: der ganze Rechner, eigene Werkzeuge, läuft ohne Dich</span></div>
+</div>''',
+    '<div class="cap c-blue">erledigen lassen → Cowork · Werkzeuge bauen, die von allein laufen → Code</div>'))
 
 # --- Routinen ---
 panel("Routinen",
@@ -583,7 +582,7 @@ panel("Fazit",
 <div class="fin-line"><b>Subagents</b> &#8211; Helfer mit eigenem Kopf</div>
 <div class="fin-line"><b>Kontextfenster</b> &#8211; das Arbeitsgedächtnis</div>
 <div class="fin-line"><b>Checkpoints &amp; Memory</b> &#8211; zurückspulen und behalten</div>
-<div class="fin-line"><b>Cowork</b> &#8211; dasselbe für Büroarbeit, ohne Terminal</div>
+<div class="fin-line"><b>Cowork</b> &#8211; dasselbe in Deinen Ordnern, ohne Terminal</div>
 <div class="fin-line"><b>Routinen</b> &#8211; laufen nach Plan in der Cloud</div>
 <div class="fin-line"><b>Berechtigungen</b> &#8211; Du bestimmst, wie weit Claude darf</div>
 <div class="fin-line"><b>/loop</b> &#8211; wiederholt etwas, solange Du dabei bist</div>

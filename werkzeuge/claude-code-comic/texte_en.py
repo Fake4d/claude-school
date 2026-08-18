@@ -306,8 +306,6 @@ TEXTE = {
 
 # --- Cowork ---
 "Und was ist dann Cowork?": "So what is Cowork, then?",
-"Dieselbe Technik wie Claude Code – nur für Büroarbeit statt Programmieren, ohne Terminal und ohne Einrichten.":
-    "The same machinery as Claude Code – only for office work instead of programming, with no terminal and nothing to set up.",
 "Du gibst Ordner frei, beschreibst das Ziel, und Claude arbeitet los: Tabellen mit echten Formeln, Präsentationen, fertige Dokumente.":
     "You share folders, describe the goal, and Claude gets going: spreadsheets with real formulas, presentations, finished documents.",
 "Deine Ordner": "Your folders",
@@ -335,19 +333,7 @@ TEXTE = {
 
 # --- Cowork oder Code ---
 "Wann nehme ich denn was?": "When do I use which?",
-"Cowork, wenn am Ende Dateien stehen: Berichte, Tabellen, Recherchen. Nichts einzurichten, und es läuft abgeschottet.":
-    "Cowork when files come out at the end: reports, spreadsheets, research. Nothing to set up, and it runs sealed off.",
-"Claude Code, wenn am Ende Quelltext steht: Tests, Git und volle Sicht auf jeden einzelnen Schritt.":
-    "Claude Code when source code comes out at the end: tests, Git and full sight of every single step.",
-"Büroarbeit": "Office work",
-"nichts einzurichten": "nothing to set up",
-"läuft abgeschottet": "runs sealed off",
-"für alle": "for everyone",
 "Claude Code": "Claude Code",
-"Programmieren": "Programming",
-"Terminal und Git": "Terminal and Git",
-"jeder Schritt sichtbar": "every step visible",
-"für Bastler": "for tinkerers",
 
 # --- Routinen ---
 "Und wenn etwas regelmäßig von allein laufen soll?":
@@ -493,14 +479,29 @@ TEXTE = {
     "<b>Context window</b> &#8211; the working memory",
 "<b>Checkpoints &amp; Memory</b> &#8211; zurückspulen und behalten":
     "<b>Checkpoints &amp; memory</b> &#8211; rewind and remember",
-"<b>Cowork</b> &#8211; dasselbe für Büroarbeit, ohne Terminal":
-    "<b>Cowork</b> &#8211; the same for office work, without a terminal",
 "<b>Routinen</b> &#8211; laufen nach Plan in der Cloud":
     "<b>Routines</b> &#8211; run to a schedule in the cloud",
 "<b>Berechtigungen</b> &#8211; Du bestimmst, wie weit Claude darf":
     "<b>Permissions</b> &#8211; you decide how far Claude may go",
 "<b>/loop</b> &#8211; wiederholt etwas, solange Du dabei bist":
     "<b>/loop</b> &#8211; repeats something while you are there",
+# --- Cowork und die drei Stufen (neu gefasst 18.08.2026) ---
+"Dieselbe Technik wie Claude Code – nur in der ganz normalen Claude-App statt im Terminal, ohne Einrichten.":
+    "The same machinery as Claude Code – only in the ordinary Claude app instead of the terminal, with nothing to set up.",
+"Die Frage ist immer, wie weit Claude an Deine Sachen darf. Cowork bekommt einzelne Ordner, läuft abgeschottet und braucht keine Einrichtung.":
+    "The question is always how far Claude may go into your things. Cowork gets individual folders, runs sealed off and needs no setting up.",
+"Claude Code bekommt den ganzen Rechner. Nur hier kannst Du ihm eigene Werkzeuge beibringen – und nur hier läuft er weiter, wenn Du weg bist.":
+    "Claude Code gets the whole machine. Only here can you teach it tools of your own – and only here does it keep going when you are away.",
+"<b>1 · Im Gespräch</b><span>nichts einzurichten – Du lädst hoch, Du lädst herunter</span>":
+    "<b>1 · In the conversation</b><span>nothing to set up – you upload, you download</span>",
+"<b>2 · Cowork</b><span>Desktop-App: Claude arbeitet in Deinen Ordnern</span>":
+    "<b>2 · Cowork</b><span>desktop app: Claude works in your folders</span>",
+"<b>3 · Claude Code</b><span>hier bist Du: der ganze Rechner, eigene Werkzeuge, läuft ohne Dich</span>":
+    "<b>3 · Claude Code</b><span>you are here: the whole machine, your own tools, runs without you</span>",
+"erledigen lassen → Cowork · Werkzeuge bauen, die von allein laufen → Code":
+    "getting things done → Cowork · building tools that run by themselves → Code",
+"<b>Cowork</b> &#8211; dasselbe in Deinen Ordnern, ohne Terminal":
+    "<b>Cowork</b> &#8211; the same inside your folders, without a terminal",
 }
 
 # Seitentitel und Sprachkennung des Dokuments.
