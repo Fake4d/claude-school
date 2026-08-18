@@ -200,8 +200,8 @@ survives every reboot — without asking anything.</p>
   <span class="t">Ran the whole prompt? Then most of this already stands</span>
   <p>Item 8 of the bootstrap prompt sets up this exact service. So first look at what is already
   running: <code>systemctl status claude-code.service --no-pager</code>.</p>
-  <p>If it says <code>active (running)</code>, skip steps 1 and 2 — they would only create the same
-  thing a second time. Read the explanations in them anyway, above all the box about
+  <p>If it says <code>active (running)</code>, skip steps 1 to 3 — they would only create and start
+  the same thing a second time. Read the explanations in them anyway, above all the box about
   <code class="nb">--continue</code>, and then carry on at <strong>step 4</strong>: the acid test with the
   reboot is one nobody has done for you yet.</p>
   <p>If you cut the prompt short or left item 8 out, work through part 4 from the beginning.</p>

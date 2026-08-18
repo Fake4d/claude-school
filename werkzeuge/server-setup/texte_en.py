@@ -110,8 +110,8 @@ TEXTE = {
     "Ran the whole prompt? Then most of this already stands",
 "Punkt 8 des Bootstrap-Prompts richtet genau diesen Dienst ein. Sieh deshalb zuerst nach, was\n  bereits läuft: <code>systemctl status claude-code.service --no-pager</code>.":
     "Item 8 of the bootstrap prompt sets up this exact service. So first look at what is already\n  running: <code>systemctl status claude-code.service --no-pager</code>.",
-"Steht dort <code>active (running)</code>, überspring die Schritte 1 und 2 — sie würden nur\n  dasselbe noch einmal anlegen. Lies die Erklärungen darin trotzdem, vor allem den Kasten zu\n  <code class=\"nb\">--continue</code>, und mach dann bei <strong>Schritt 4</strong> weiter: die Nagelprobe mit\n  dem Neustart hat dir bisher niemand abgenommen.":
-    "If it says <code>active (running)</code>, skip steps 1 and 2 — they would only create the same\n  thing a second time. Read the explanations in them anyway, above all the box about\n  <code class=\"nb\">--continue</code>, and then carry on at <strong>step 4</strong>: the acid test with the\n  reboot is one nobody has done for you yet.",
+"Steht dort <code>active (running)</code>, überspring die Schritte 1 bis 3 — sie würden nur\n  dasselbe noch einmal anlegen und starten. Lies die Erklärungen darin trotzdem, vor allem den Kasten zu\n  <code class=\"nb\">--continue</code>, und mach dann bei <strong>Schritt 4</strong> weiter: die Nagelprobe mit\n  dem Neustart hat dir bisher niemand abgenommen.":
+    "If it says <code>active (running)</code>, skip steps 1 to 3 — they would only create and start\n  the same thing a second time. Read the explanations in them anyway, above all the box about\n  <code class=\"nb\">--continue</code>, and then carry on at <strong>step 4</strong>: the acid test with the\n  reboot is one nobody has done for you yet.",
 "Hast du den Prompt abgekürzt oder Punkt 8 ausgelassen, arbeite Teil 4 von vorn durch.":
     "If you cut the prompt short or left item 8 out, work through part 4 from the beginning.",
 "Dazu gehören drei Teile, und alle drei sind nötig:":
