@@ -35,7 +35,7 @@ Die **Server-Anleitung** ist auf einem laufenden Server Schritt für Schritt
 nachvollzogen. Sie enthält keine echten Zugangsdaten — Benutzername, IP-Adresse und
 Mailkonto sind Platzhalter zum Ersetzen.
 
-Beide Comics lassen bewusst Themen aus, die schnell veralten (Preise, Nutzungsgrenzen).
+Alle drei Comics lassen bewusst Themen aus, die schnell veralten (Preise, Nutzungsgrenzen).
 Was fehlt, steht am Ende der jeweiligen Projektseite.
 
 ## Selbst bauen
