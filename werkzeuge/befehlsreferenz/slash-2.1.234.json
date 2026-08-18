@@ -16,7 +16,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ade()",
+  "enabled": "Spe()",
   "verfuegbar": true
  },
  {
@@ -76,7 +76,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "AY()",
+  "enabled": "qX()&&Q4()===null",
   "verfuegbar": true
  },
  {
@@ -86,7 +86,7 @@
   "variabel": false,
   "hint": "[--request-id <uuid>] (--wizard posture=\\u2026 scope=\\u2026 depth=\\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
   "aliases": [],
-  "enabled": "EDa()&&xn()",
+  "enabled": "sYa()&&kn()",
   "verfuegbar": true
  },
  {
@@ -96,7 +96,7 @@
   "variabel": false,
   "hint": "[auto|<tokens>]",
   "aliases": [],
-  "enabled": "!xn()",
+  "enabled": "!kn()",
   "verfuegbar": true
  },
  {
@@ -106,7 +106,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ZKp()&&!xn()",
+  "enabled": "yzf()&&!kn()",
   "verfuegbar": true
  },
  {
@@ -148,7 +148,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "DQv().enable_slash_command",
+  "enabled": "UWS().enable_slash_command",
   "verfuegbar": true
  },
  {
@@ -180,7 +180,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!xn()",
+  "enabled": "!kn()",
   "verfuegbar": true
  },
  {
@@ -200,7 +200,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!e&&(kYr()||Mtg())",
+  "enabled": "!e&&(den()||Yvg())",
   "verfuegbar": true
  },
  {
@@ -233,7 +233,7 @@
   "variabel": false,
   "hint": "[guidance]",
   "aliases": [],
-  "enabled": "bNo()",
+  "enabled": "Hzo()",
   "verfuegbar": true
  },
  {
@@ -275,7 +275,7 @@
   "variabel": false,
   "hint": "[all]",
   "aliases": [],
-  "enabled": "!xn()",
+  "enabled": "!kn()",
   "verfuegbar": true
  },
  {
@@ -335,7 +335,7 @@
   "variabel": false,
   "hint": "consent | revoke",
   "aliases": [],
-  "enabled": "OYe()",
+  "enabled": "AZe()",
   "verfuegbar": true
  },
  {
@@ -345,7 +345,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "OYe()",
+  "enabled": "AZe()",
   "verfuegbar": true
  },
  {
@@ -355,7 +355,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "OYe()",
+  "enabled": "AZe()",
   "verfuegbar": true
  },
  {
@@ -365,7 +365,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "OYe()",
+  "enabled": "AZe()",
   "verfuegbar": true
  },
  {
@@ -449,7 +449,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "YMt()&&!xn()",
+  "enabled": "dBt()&&!kn()",
   "verfuegbar": true
  },
  {
@@ -499,7 +499,7 @@
   "variabel": false,
   "hint": "<directive>",
   "aliases": [],
-  "enabled": "!LS()",
+  "enabled": "!Yv()",
   "verfuegbar": true
  },
  {
@@ -519,7 +519,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "bs(\"allow_heap_dump\")",
+  "enabled": "Is(\"allow_heap_dump\")",
   "verfuegbar": true
  },
  {
@@ -619,7 +619,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "dAe()",
+  "enabled": "XHe()",
   "verfuegbar": true
  },
  {
@@ -631,7 +631,7 @@
   "aliases": [
    "peers"
   ],
-  "enabled": "fg()",
+  "enabled": "bg()",
   "verfuegbar": true
  },
  {
@@ -683,7 +683,7 @@
   "variabel": false,
   "hint": "[reconnect|enable|disable [<server>|all]]",
   "aliases": [],
-  "enabled": "xn()",
+  "enabled": "kn()",
   "verfuegbar": true
  },
  {
@@ -703,7 +703,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Ig()&&!bFe()&&i5s()",
+  "enabled": "Zg()&&!vUe()&&FVs()",
   "verfuegbar": true
  },
  {
@@ -726,7 +726,7 @@
   "variabel": false,
   "hint": "<model>",
   "aliases": [],
-  "enabled": "xn()",
+  "enabled": "kn()",
   "verfuegbar": true
  },
  {
@@ -814,7 +814,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Sst()",
+  "enabled": "ict()",
   "verfuegbar": true
  },
  {
@@ -844,7 +844,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "rt(\"tengu_velvet_static\"",
+  "enabled": "tt(\"tengu_velvet_static\"",
   "verfuegbar": true
  },
  {
@@ -854,7 +854,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Zi()||!1",
+  "enabled": "Yi()||!1",
   "verfuegbar": true
  },
  {
@@ -916,7 +916,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Zi()&&bs(\"allow_remote_sessions\")",
+  "enabled": "Yi()&&Is(\"allow_remote_sessions\")",
   "verfuegbar": true
  },
  {
@@ -1005,7 +1005,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "{if(!ra())return!1;let e=YA();return!(e?CNe.includes(e.terminal??\"\"):WY.isJetBrainsIdeTerminal())",
+  "enabled": "{if(!Os())return!1;let e=Jw();return!(e?AFe.includes(e.terminal??\"\"):XX.isJetBrainsIdeTerminal())",
   "verfuegbar": true
  },
  {
@@ -1017,7 +1017,7 @@
   "aliases": [
    "remote"
   ],
-  "enabled": "dc()",
+  "enabled": "sc()",
   "verfuegbar": true
  },
  {
@@ -1127,7 +1127,7 @@
   "variabel": false,
   "hint": "<task>",
   "aliases": [],
-  "enabled": "!LS()",
+  "enabled": "!Yv()",
   "verfuegbar": true
  },
  {
@@ -1149,7 +1149,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "bs(\"allow_team_onboarding\")",
+  "enabled": "Is(\"allow_team_onboarding\")",
   "verfuegbar": true
  },
  {
@@ -1161,7 +1161,7 @@
   "aliases": [
    "tp"
   ],
-  "enabled": "Zi()&&bs(\"allow_remote_sessions\")",
+  "enabled": "Yi()&&Is(\"allow_remote_sessions\")",
   "verfuegbar": true
  },
  {
@@ -1201,7 +1201,7 @@
   "variabel": false,
   "hint": "<prompt>",
   "aliases": [],
-  "enabled": "xze()",
+  "enabled": "v3e()",
   "verfuegbar": true
  },
  {
@@ -1246,7 +1246,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "YMt()&&!xn()",
+  "enabled": "dBt()&&!kn()",
   "verfuegbar": true
  },
  {
@@ -1286,7 +1286,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "rt(\"tengu_cobalt_lantern\"",
+  "enabled": "tt(\"tengu_cobalt_lantern\"",
   "verfuegbar": true
  },
  {
@@ -1330,7 +1330,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "YD()",
+  "enabled": "RP()",
   "verfuegbar": true
  },
  {

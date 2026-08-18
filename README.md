@@ -21,7 +21,7 @@ The German editions live next to them in the same folders; the
 
 The **command reference** is not copied from the documentation but read straight out
 of the installed build: `claude --help`, the help of every subcommand, and the command
-definitions inside the program itself. As of version 2.1.233 — 62 options,
+definitions inside the program itself. As of version 2.1.234 — 62 options,
 124 available slash commands, 5 present but switched off. A scheduled job keeps it
 current on every new release of the program.
 

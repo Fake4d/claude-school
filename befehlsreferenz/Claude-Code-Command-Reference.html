@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>Claude Code · Command Reference 2.1.233</title>
+<html lang="en"><head><meta charset="utf-8"><title>Claude Code · Command Reference 2.1.234</title>
 <style>
 @page { size: A4 portrait; margin: 17mm 15mm 15mm; }
 * { box-sizing: border-box; }
@@ -35,16 +35,16 @@ section { break-inside: auto; }
   padding-top: 2mm; }
 </style></head><body>
 
-<div class="kopfzeile">Complete reference · checked against version 2.1.233</div>
+<div class="kopfzeile">Complete reference · checked against version 2.1.234</div>
 <h1>Claude Code<br>Command Reference</h1>
 <p class="lead">Every terminal command, every option and every slash command inside a session — with an explanation of what it does.</p>
-<p class="meta">Compiled by Christian's virtual server · 17 August 2026 · Update of the edition of 14 August 2026 (2.1.232)</p>
+<p class="meta">Compiled by Christian's virtual server · 18 August 2026 · Update of the edition of 15 August 2026 (2.1.233)</p>
 
 <div class="kasten">
 <h3>How this list came about</h3>
 
 <p>Terminal commands and options (parts A and B) are read straight out of the installed
-version 2.1.233 — <code>claude --help</code> and the help of every subcommand.</p>
+version 2.1.234 — <code>claude --help</code> and the help of every subcommand.</p>
 <p>The slash commands (part C) come from the command definitions inside the program itself.
 The extraction also picks up commands whose description is only assembled at runtime or
 fetched from a variable, and since this edition equally those whose <i>name</i> sits in a
@@ -58,20 +58,12 @@ at the end, so that nothing appears available that is not.</p>
 <div class="kasten">
 <h3>What has changed since the last edition</h3>
 
-<p>Nothing changed among the terminal options (part A): <code>claude --help</code> is
-character-for-character identical to 2.1.232.</p>
-<p>Among the subcommands (part B) there is one real change: <code>claude plugin validate</code>
-now also checks a bare <code>.claude/skills</code> folder and reports <code>SKILL.md</code>
-files whose frontmatter cannot be parsed. The short description in this list ("Check a plugin
-for errors.") remains accurate and was not extended with that detail.</p>
+<p>A no-op release: nothing changed in substance compared with 2.1.233.</p>
+<p>Among the terminal options (part A), <code>claude --help</code> is character-for-character
+identical to 2.1.233. The subcommand help (part B) is likewise identical.</p>
 <p>Among the slash commands (part C) the count is unchanged: 129 entries as before,
-none added, none dropped.</p>
-<p class="unter" style="margin-top:2mm">During the automatic comparison it briefly looked as
-if <code>/claude-api</code> had disappeared. This time the cause was not a failed name lookup
-as in the <code>/loop</code> case, but an empty short description: in this version it is an
-array of several text fragments rather than a single string, and the extraction did not yet
-know that shape. The command itself was never affected. The extraction has been extended
-accordingly.</p>
+none added, none dropped, no short description changed in substance. For 35 commands purely
+internal identifiers changed — of no consequence for this list.</p>
 
 </div>
 
@@ -83,5 +75,5 @@ accordingly.</p>
 
 <section><h2>Appendix · Present, but switched off</h2><p class="unter">These names exist in the program, but are disabled by a flag in this version and are not available inside a session.</p><div class="z "><div class="l"><code>/loops</code></div><div class="r">List, create and delete loops. <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/pause-memory <span class="zus">also /memory-pause, /toggle-memory</span></code></div><div class="r">Pause automatic memory for this session. <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/update <span class="zus">also /restart</span></code></div><div class="r">Move to the newest version. <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/version</code></div><div class="r">Show the version of this session. <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/wellbeing <span class="zus">also /breaks, /break-reminder, /downtime</span></code></div><div class="r">Set up break reminders and quiet hours. <span class="aus">present in the program, but switched off</span></div></div></section>
 
-<div class="fuss">Claude Code 2.1.233 · 62 options · 124 available slash commands · 5 switched off · as of 17 August 2026</div>
+<div class="fuss">Claude Code 2.1.234 · 62 options · 124 available slash commands · 5 switched off · as of 18 August 2026</div>
 </body></html>
