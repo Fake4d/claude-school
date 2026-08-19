@@ -414,7 +414,7 @@ panel("Die drei Stufen",
   breit(human("point",0.78), bean("right",0.78),
     f'''<div class="ladder">
 <div class="rung c-green"><b>1 · Im Gespräch</b><span>nichts einzurichten – Du lädst hoch, Du lädst herunter</span></div>
-<div class="rung c-blue"><b>2 · Cowork</b><span>Desktop-App: Claude arbeitet direkt in Deinen Ordnern</span></div>
+<div class="rung c-blue"><b>2 · Cowork</b><span>Claude arbeitet direkt in Deinen Ordnern</span></div>
 <div class="rung c-orange"><b>3 · Claude Code</b><span>Terminal: Claude arbeitet auf dem ganzen Rechner – und läuft ohne Dich weiter</span></div>
 </div>''',
     '<div class="cap c-blue">für Stufe 2 und 3 gibt es je ein eigenes Heft</div>'))

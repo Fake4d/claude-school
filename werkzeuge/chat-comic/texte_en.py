@@ -334,8 +334,8 @@ TEXTE = {
     "Here, in the conversation, everything passes through you: you put in, you take out. That covers an astonishing amount.",
 "<b>1 · Im Gespräch</b><span>nichts einzurichten – Du lädst hoch, Du lädst herunter</span>":
     "<b>1 · In the conversation</b><span>nothing to set up – you upload, you download</span>",
-"<b>2 · Cowork</b><span>Desktop-App: Claude arbeitet direkt in Deinen Ordnern</span>":
-    "<b>2 · Cowork</b><span>desktop app: Claude works directly in your folders</span>",
+"<b>2 · Cowork</b><span>Claude arbeitet direkt in Deinen Ordnern</span>":
+    "<b>2 · Cowork</b><span>Claude works directly in your folders</span>",
 "<b>3 · Claude Code</b><span>Terminal: Claude arbeitet auf dem ganzen Rechner – und läuft ohne Dich weiter</span>":
     "<b>3 · Claude Code</b><span>terminal: Claude works on the whole machine – and keeps running without you</span>",
 "für Stufe 2 und 3 gibt es je ein eigenes Heft":
