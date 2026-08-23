@@ -123,14 +123,36 @@ def variable_aufloesen(bezeichner):
     return VARCACHE[bezeichner]
 
 
-# Kurze Zuweisungen `VAR="wert"` einmalig einsammeln. Einzeln zu suchen waere
-# unbezahlbar: die Datei hat ~300 Mio Zeichen und es gibt hunderte Bezeichner.
-NAMEN_MAP = dict(re.findall(r'([A-Za-z_$][\w$]{0,8})\s*=\s*"([a-z0-9][a-z0-9:_-]{2,30})"', data))
+# Kurze Zuweisungen `VAR="wert"` einmalig einsammeln, MIT Position. Einzeln zu
+# suchen waere unbezahlbar: die Datei hat ~300 Mio Zeichen und es gibt hunderte
+# Bezeichner. Derselbe kurze Bezeichner (z.B. `$ne`) wird im minifizierten Bundle
+# aber fuer VIELE unabhaengige Variablen in verschiedenen Modulen wiederverwendet -
+# ein globales "letzter Treffer gewinnt" greift dann leicht daneben (so verschwand
+# /artifact-capabilities am 23.08.2026 aus der Liste: seine echte Zuweisung
+# `$ne="artifact-capabilities"` lag 18 Mio Zeichen VOR der Objektstelle, eine
+# voellig fremde `$ne="trigger-hover"` aus einer UI-Bibliothek aber 14 Mio Zeichen
+# DANACH - und gewann als letzter Fund im Dict. Deshalb je Bezeichner eine nach
+# Position sortierte Liste vorhalten und bei Bedarf die naechste vorangehende
+# Zuweisung vor der Objektstelle waehlen - Variablen sind an dieser Stelle im
+# Bundle immer schon zugewiesen, eine nachfolgende ist zwangslaeufig ein anderer
+# Gueltigkeitsbereich.
+NAMEN_POS = {}
+for m in re.finditer(r'([A-Za-z_$][\w$]{0,8})\s*=\s*"([a-z0-9][a-z0-9:_-]{2,30})"', data):
+    NAMEN_POS.setdefault(m.group(1), []).append((m.start(), m.group(2)))
 
 
-def name_aufloesen(bezeichner):
-    """`name:TEn` -> "loop". Nur kurze, namensartige Werte."""
-    return NAMEN_MAP.get(bezeichner, "")
+def name_aufloesen(bezeichner, vor_position):
+    """`name:TEn` -> "loop", ueber die naechste Zuweisung VOR `vor_position`."""
+    treffer = NAMEN_POS.get(bezeichner)
+    if not treffer:
+        return ""
+    beste = ""
+    for pos, wert in treffer:
+        if pos < vor_position:
+            beste = wert
+        else:
+            break
+    return beste
 
 
 def entschluesseln(s):
@@ -160,7 +182,7 @@ for t in ANKER.finditer(data):
         # statt `name:"loop"`. Ohne diese Aufloesung fielen solche Befehle aus
         # der Liste - und sahen im Versionsvergleich aus wie geloescht.
         nv = feld_oberste_ebene(obj, r'name:([A-Za-z_$][\w$]{0,8})\s*[,}]')
-        name = name_aufloesen(nv.group(1)) if nv else ""
+        name = name_aufloesen(nv.group(1), t.start()) if nv else ""
         if not re.fullmatch(r'[a-z0-9][a-z0-9:_-]{2,30}', name):
             continue
         name_aus_variable = True

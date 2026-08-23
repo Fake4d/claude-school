@@ -175,6 +175,7 @@ SLASH = {
 "login": "Am Anthropic-Konto anmelden oder Konto wechseln.",
 "loop": "Einen Auftrag in festem Abstand wiederholt laufen lassen.",
 "loops": "Wiederholungen auflisten, anlegen und löschen.",
+"low-priority": "Nach Erreichen des Sitzungslimits mit niedrigerer Priorität fortsetzen; erneuter Aufruf stoppt das wieder.",
 "mcp": "MCP-Server verwalten.",
 "memory": "CLAUDE.md-Dateien und Gedächtnis-Einstellungen bearbeiten.",
 "mobile": "QR-Code für die Handy-App anzeigen.",
