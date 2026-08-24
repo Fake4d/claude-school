@@ -343,11 +343,11 @@ panel("Im Browser",
 # --- Berechtigungen ---
 panel("Berechtigungen",
   "Darf es dann einfach alles machen?",
-  ["Du entscheidest, wie weit die Leine ist. Es gibt drei Stufen.",
-   "Für heikle Sachen nimmst Du <b>Manuell</b>. Die unterste Stufe schaltet <i>alle</i> Kontrollen ab – die würde ich nur nehmen, wenn Du genau weißt, warum."],
+  ["Du entscheidest, wie weit die Leine ist. Es gibt drei Stufen, und Cowork fängt bei der vorsichtigsten an: <b>Manuell</b> ist die Voreinstellung.",
+   "Umschalten kannst Du im Chatfenster. Die unterste Stufe schaltet <i>alle</i> Kontrollen ab – die würde ich nur nehmen, wenn Du genau weißt, warum."],
   breit(human("confused",0.78), bean("hips",0.78),
     f'''<div class="ladder">
-<div class="rung c-blue"><b>Manuell</b><span>fragt vor jedem Schritt – für alles Heikle</span></div>
+<div class="rung c-blue"><b>Manuell</b><span>fragt vor jedem Schritt, Voreinstellung</span></div>
 <div class="rung c-green"><b>Automatisch</b><span>arbeitet durch, prüft sich dabei selbst auf Sicherheit</span></div>
 <div class="rung c-red"><b>Ohne Rückfrage</b><span>fragt nie, nichts prüft mit – nur mit gutem Grund</span></div>
 </div>''',

@@ -230,12 +230,12 @@ TEXTE = {
 
 # --- Berechtigungen ---
 "Darf es dann einfach alles machen?": "So may it simply do anything?",
-"Du entscheidest, wie weit die Leine ist. Es gibt drei Stufen.":
-    "You decide how long the leash is. There are three levels.",
-"Für heikle Sachen nimmst Du <b>Manuell</b>. Die unterste Stufe schaltet <i>alle</i> Kontrollen ab – die würde ich nur nehmen, wenn Du genau weißt, warum.":
-    "For delicate things you use <b>Manual</b>. The bottom level switches <i>all</i> the checks off – I would only use that one if you know exactly why.",
-"<b>Manuell</b><span>fragt vor jedem Schritt – für alles Heikle</span>":
-    "<b>Manual</b><span>asks before every step – for anything delicate</span>",
+"Du entscheidest, wie weit die Leine ist. Es gibt drei Stufen, und Cowork fängt bei der vorsichtigsten an: <b>Manuell</b> ist die Voreinstellung.":
+    "You decide how long the leash is. There are three levels, and Cowork starts on the most careful one: <b>Manual</b> is the default.",
+"Umschalten kannst Du im Chatfenster. Die unterste Stufe schaltet <i>alle</i> Kontrollen ab – die würde ich nur nehmen, wenn Du genau weißt, warum.":
+    "You switch levels in the chat box. The bottom level switches <i>all</i> the checks off – I would only use that one if you know exactly why.",
+"<b>Manuell</b><span>fragt vor jedem Schritt, Voreinstellung</span>":
+    "<b>Manual</b><span>asks before every step, the default</span>",
 "<b>Automatisch</b><span>arbeitet durch, prüft sich dabei selbst auf Sicherheit</span>":
     "<b>Automatic</b><span>works straight through, checking itself for safety</span>",
 "<b>Ohne Rückfrage</b><span>fragt nie, nichts prüft mit – nur mit gutem Grund</span>":
