@@ -284,7 +284,7 @@ panel("Hooks Beispiele",
 panel("Subagents",
   "Was ist mit Subagents? Sind das buchstäblich mehrere&nbsp;Claudes?",
   ["Das sind eigen&shy;ständige Arbeiter, denen Claude klar umrissene Aufgaben geben kann – jeder mit eigenem Kontext&shy;fenster und eigenem Modell.",
-   "Einer recherchiert, einer prüft Code, einer testet. Danach berichten sie zurück an den Haupt-Claude. Verwaltet über <code>/agents</code>."],
+   "Einer recherchiert, einer prüft Code, einer testet. Danach berichten sie zurück an den Haupt-Claude. Angelegt werden sie als Dateien unter <code>.claude/agents/</code> – oder Du lässt Claude das machen."],
   f'''{human("think")}
 <div class="stage-mid">{machine("HAUPT-CLAUDE",260)}
 <div class="mini-row">{AD}{AD}{AD}</div>
@@ -312,14 +312,14 @@ panel("Slash-Befehle",
 # --- Berechtigungen ---
 panel("Berechtigungen",
   "Darf Claude einfach alles auf meinem Rechner?",
-  ["Nein. Von Haus aus darf es lesen – für alles andere fragt es vorher und zeigt Dir genau, was es vorhat.",
-   "Wie streng es zugeht, schaltest Du mit <kbd>Shift</kbd>+<kbd>Tab</kbd> um. Im Plan-Modus schaut Claude sich erst alles an und legt Dir einen Vorschlag hin, bevor irgendetwas passiert."],
-  breit(human("confused",0.78), bean("hips",0.78),
+  ["Auf den bezahlten Zugängen startet Claude Code inzwischen im <b>Auto-Modus</b>: Es arbeitet durch, und statt Dir schaut vor jeder Aktion ein zweites Modell drauf.",
+   "Umschalten kannst Du jederzeit mit <kbd>Shift</kbd>+<kbd>Tab</kbd>: <b>Manuell</b> fragt wieder vor jedem Eingriff, <b>Plan</b> schaut nur und legt Dir einen Vorschlag hin."],
+  breit(human("confused",0.72), bean("hips",0.72),
     f'''<div class="ladder">
+<div class="rung c-red"><b>Automatisch</b><span>arbeitet durch – der Prüfer schaut mit, Voreinstellung</span></div>
 <div class="rung c-blue"><b>Manuell</b><span>liest von allein, fragt vor jedem Eingriff</span></div>
 <div class="rung c-green"><b>Änderungen ok</b><span>darf Dateien anfassen, der Rest bleibt Rückfrage</span></div>
 <div class="rung c-orange"><b>Plan</b><span>schaut nur und schlägt vor – ändert nichts</span></div>
-<div class="rung c-red"><b>Automatisch</b><span>arbeitet durch, mit Sicherheitsnetz im Hintergrund</span></div>
 </div>''',
     '<div class="cap c-blue">umschalten mit Shift + Tab</div>'))
 
@@ -423,6 +423,21 @@ panel("Parallele Sitzungen",
     f'''<div class="mini-row">{chip("Editor","blue")}{chip("Terminal","blue")}{chip("Vorschau","blue")}{chip("Änderungen prüfen","blue")}</div>''',
     '<div class="cap c-blue">alles in einem Fenster</div>'))
 
+# --- Grosser Umbau ---
+panel("Großer Umbau",
+  "Und wenn eine Änderung durch das ganze Projekt geht?",
+  ["Dafür ist <code>/batch</code> da: Claude durchdenkt den Umbau einmal und verteilt ihn dann auf viele Agenten, die gleichzeitig loslegen – jeder in einer eigenen Arbeitskopie.",
+   "Am Ende legt jeder seinen eigenen Änderungs&shy;vorschlag vor. Du siehst sie nebeneinander und nimmst sie einzeln an."],
+  breit(human("confused",0.70), bean("point",0.70),
+    f'''<div class="mini-row">{chip("einmal durchdenken und aufteilen","blue")}</div>''',
+    AD,
+    f'''<div class="mini-row">
+{chip("Agent 1","green",sub="eigene Kopie")}
+{chip("Agent 2","orange",sub="eigene Kopie")}
+{chip("Agent 3","blue",sub="eigene Kopie")}
+{chip("und so weiter","red",sub="bis zu dreißig")}</div>''',
+    '<div class="cap c-blue">je ein Vorschlag zum Durchsehen</div>'))
+
 # --- Cowork: was ist das ---
 panel("Cowork",
   "Und was ist dann Cowork?",
@@ -517,19 +532,47 @@ panel("Schleife oder Routine",
 {chip("in der Cloud","blue")}{chip("Rechner darf aus sein","blue")}{chip("frische Kopie des Projekts","blue")}
 <div class="cap c-blue">für jede Woche</div></div></div>''')
 
+# --- Entwerfen ---
+panel("Entwerfen",
+  "Und wenn ich noch gar nicht weiß, wie es aussehen soll?",
+  ["Dann fang mit <code>/design</code> an. Claude legt Dir mehrere Entwürfe als Blätter auf eine Zeichenfläche – anklicken, verschieben, Text direkt ändern.",
+   "Stimmt die Richtung, gibst Du sie zurück an Claude Code, und dort wird sie gebaut. Steckt noch in der Erprobung."],
+  breit(human("confused",0.76), bean("point",0.76),
+    f'''<div class="chain">{chip("beschreiben","blue")}{AR}{chip("Entwürfe ansehen","orange")}{AR}{chip("selbst nachziehen","green")}{AR}{chip("bauen lassen","blue")}</div>''',
+    AD,
+    f'''<div class="mini-row">
+{chip("mehrere Vorschläge nebeneinander","orange")}
+{chip("anklicken statt beschreiben","green")}</div>''',
+    '<div class="cap c-red">noch in der Erprobung – kann sich ändern</div>'))
+
 # --- 19 ---
 panel("Modelle",
   "Und welches Modell arbeitet da eigentlich?",
-  ["Stand August 2026: <b>Opus&nbsp;5</b> für die schweren Sachen, <b>Sonnet&nbsp;5</b> für den Alltag, <b>Haiku&nbsp;4.5</b> für schnell und günstig.",
+  ["Stand August 2026: <b>Fable&nbsp;5</b> ist das stärkste und für lange Läufe gebaut, <b>Opus&nbsp;5</b> nimmt die schweren Sachen, <b>Sonnet&nbsp;5</b> den Alltag, <b>Haiku&nbsp;4.5</b> das Schnelle und Günstige.",
    "Umschalten mit <code>/model</code>. Mit <code>/fast</code> antwortet Opus schneller – es wird dabei nicht durch ein kleineres Modell ersetzt."],
-  f'''{human("think",0.8)}
-<div class="stage-mid"><div class="models">
+  breit(human("think",0.74), bean("right",0.74),
+    f'''<div class="models">
+<div class="model c-red"><b>Fable 5</b><span>lange Agentenläufe</span><i>1 Mio. Kontext</i></div>
 <div class="model c-blue"><b>Opus 5</b><span>die schweren Aufgaben</span><i>1 Mio. Kontext</i></div>
 <div class="model c-green"><b>Sonnet 5</b><span>der Alltag</span><i>1 Mio. Kontext</i></div>
 <div class="model c-orange"><b>Haiku 4.5</b><span>schnell &amp; günstig</span><i>200 Tsd. Kontext</i></div>
-</div>
-<div class="cap c-blue">wechseln mit /model</div></div>
-{bean("right",0.8)}''')
+</div>''',
+    '<div class="cap c-blue">wechseln mit /model</div>'))
+
+# --- Denkaufwand ---
+panel("Denkaufwand",
+  "Und wie gründlich es dabei arbeitet – kann ich das auch sagen?",
+  ["Ja, das ist die zweite Stellschraube neben dem Modell: <code>/effort</code>. Erst das Modell nach der Schwierigkeit wählen, dann den Aufwand nach der gewünschten Gründlichkeit.",
+   "Voreingestellt ist <b>high</b>. Runter heißt schneller und sparsamer, hoch heißt mehr Nachdenken, mehr Werkzeug&shy;aufrufe, längere Läufe."],
+  breit(human("think",0.64), bean("point",0.64),
+    f'''<div class="ladder">
+<div class="rung c-green"><b>low</b><span>kurze, einfache Aufgaben – am schnellsten</span></div>
+<div class="rung c-green"><b>medium</b><span>der sparsame Mittelweg</span></div>
+<div class="rung c-blue"><b>high</b><span>die Voreinstellung – für alles Anspruchsvolle</span></div>
+<div class="rung c-orange"><b>xhigh</b><span>Agentenläufe über Stunden</span></div>
+<div class="rung c-red"><b>max</b><span>alles geben, ohne Rücksicht auf den Verbrauch</span></div>
+</div>''',
+    '<div class="cap c-blue">einstellen mit /effort</div>'))
 
 # --- Gut fragen ---
 panel("Gut fragen",
@@ -584,8 +627,10 @@ panel("Fazit",
 <div class="fin-line"><b>Checkpoints &amp; Memory</b> &#8211; zurückspulen und behalten</div>
 <div class="fin-line"><b>Cowork</b> &#8211; dasselbe in Deinen Ordnern, ohne Terminal</div>
 <div class="fin-line"><b>Routinen</b> &#8211; laufen nach Plan in der Cloud</div>
-<div class="fin-line"><b>Berechtigungen</b> &#8211; Du bestimmst, wie weit Claude darf</div>
-<div class="fin-line"><b>/loop</b> &#8211; wiederholt etwas, solange Du dabei bist</div>
+<div class="fin-line"><b>Berechtigungen</b> &#8211; heute automatisch, jederzeit strenger</div>
+<div class="fin-line"><b>Denkaufwand</b> &#8211; wie gründlich gearbeitet werden soll</div>
+<div class="fin-line"><b>/loop &amp; /batch</b> &#8211; wiederholen, oder auf viele aufteilen</div>
+<div class="fin-line"><b>/design</b> &#8211; erst entwerfen, dann bauen lassen</div>
 </div></div>''')
 
 # ------------------------------------------------------------------- Bau ----

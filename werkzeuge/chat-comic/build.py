@@ -352,10 +352,11 @@ panel("Handy und Sprache",
 panel("Modelle",
   "Da steht oben ein Name. Muss ich den&nbsp;ändern?",
   ["Meistens nicht. Die Voreinstellung passt für fast alles.",
-   "Wenn eine Aufgabe wirklich schwer ist, nimm das stärkste Modell. Wenn es nur schnell gehen soll, das kleine. Stand August 2026 heißen sie so:"],
-  breit(human("think",0.78), bean("right",0.78),
+   "Wenn eine Aufgabe wirklich schwer ist, nimm ein stärkeres Modell. Wenn es nur schnell gehen soll, das kleine. Stand August 2026 heißen sie so:"],
+  breit(human("think",0.74), bean("right",0.74),
     f'''<div class="models">
-<div class="model c-blue"><b>Opus 5</b><span>die schweren Sachen</span><i>denkt am gründlichsten</i></div>
+<div class="model c-red"><b>Fable 5</b><span>das stärkste</span><i>nicht überall enthalten</i></div>
+<div class="model c-blue"><b>Opus 5</b><span>die schweren Sachen</span><i>denkt gründlich</i></div>
 <div class="model c-green"><b>Sonnet 5</b><span>der Alltag</span><i>die Voreinstellung</i></div>
 <div class="model c-orange"><b>Haiku 4.5</b><span>schnell &amp; günstig</span><i>für Kurzes</i></div>
 </div>''',
@@ -437,6 +438,7 @@ panel("Fazit",
 <b>Gut fragen</b> &#8211; das Ziel sagen, nicht die Schritte<br>
 <b>Nachprüfen</b> &#8211; überzeugend klingen heißt nicht richtig liegen<br>
 <b>Fremde Inhalte</b> &#8211; werden gelesen, nicht befolgt<br>
+<b>Weiterlernen</b> &#8211; kostenlose Kurse auf academy.claude.com<br>
 <b>Weiter geht&#8217;s</b> &#8211; Cowork für Deine Ordner, Code für den ganzen Rechner
 </div></div></div>''')
 # ------------------------------------------------------------------- Bau ----

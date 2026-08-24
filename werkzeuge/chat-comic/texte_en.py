@@ -254,10 +254,12 @@ TEXTE = {
     "There&#8217;s a name at the top. Do I have to&nbsp;change it?",
 "Meistens nicht. Die Voreinstellung passt für fast alles.":
     "Usually not. The default fits almost everything.",
-"Wenn eine Aufgabe wirklich schwer ist, nimm das stärkste Modell. Wenn es nur schnell gehen soll, das kleine. Stand August 2026 heißen sie so:":
-    "If a job is genuinely hard, take the strongest model. If it just has to be quick, take the small one. As of August 2026 they are called:",
-"<b>Opus 5</b><span>die schweren Sachen</span><i>denkt am gründlichsten</i>":
-    "<b>Opus 5</b><span>the heavy jobs</span><i>thinks most thoroughly</i>",
+"Wenn eine Aufgabe wirklich schwer ist, nimm ein stärkeres Modell. Wenn es nur schnell gehen soll, das kleine. Stand August 2026 heißen sie so:":
+    "If a job is genuinely hard, take a stronger model. If it just has to be quick, take the small one. As of August 2026 they are called:",
+"<b>Fable 5</b><span>das stärkste</span><i>nicht überall enthalten</i>":
+    "<b>Fable 5</b><span>the strongest</span><i>not on every plan</i>",
+"<b>Opus 5</b><span>die schweren Sachen</span><i>denkt gründlich</i>":
+    "<b>Opus 5</b><span>the heavy jobs</span><i>thinks thoroughly</i>",
 "<b>Sonnet 5</b><span>der Alltag</span><i>die Voreinstellung</i>":
     "<b>Sonnet 5</b><span>everyday work</span><i>the default</i>",
 "<b>Haiku 4.5</b><span>schnell &amp; günstig</span><i>für Kurzes</i>":
@@ -357,6 +359,7 @@ TEXTE = {
 <b>Gut fragen</b> &#8211; das Ziel sagen, nicht die Schritte<br>
 <b>Nachprüfen</b> &#8211; überzeugend klingen heißt nicht richtig liegen<br>
 <b>Fremde Inhalte</b> &#8211; werden gelesen, nicht befolgt<br>
+<b>Weiterlernen</b> &#8211; kostenlose Kurse auf academy.claude.com<br>
 <b>Weiter geht&#8217;s</b> &#8211; Cowork für Deine Ordner, Code für den ganzen Rechner
 """:
 """
@@ -371,6 +374,7 @@ TEXTE = {
 <b>Asking well</b> &#8211; state the goal, not the steps<br>
 <b>Checking</b> &#8211; sounding certain is not the same as being right<br>
 <b>Outside content</b> &#8211; it gets read, not obeyed<br>
+<b>Keep learning</b> &#8211; free courses at academy.claude.com<br>
 <b>What&#8217;s next</b> &#8211; Cowork for your folders, Code for the whole machine
 """,
 }

@@ -154,8 +154,8 @@ TEXTE = {
     "What about subagents? Are those literally several&nbsp;Claudes?",
 "Das sind eigen&shy;ständige Arbeiter, denen Claude klar umrissene Aufgaben geben kann – jeder mit eigenem Kontext&shy;fenster und eigenem Modell.":
     "They are independent workers Claude can hand clearly defined jobs to – each with its own context window and its own model.",
-"Einer recherchiert, einer prüft Code, einer testet. Danach berichten sie zurück an den Haupt-Claude. Verwaltet über <code>/agents</code>.":
-    "One researches, one reviews code, one tests. Then they report back to the main Claude. Managed through <code>/agents</code>.",
+"Einer recherchiert, einer prüft Code, einer testet. Danach berichten sie zurück an den Haupt-Claude. Angelegt werden sie als Dateien unter <code>.claude/agents/</code> – oder Du lässt Claude das machen.":
+    "One researches, one reviews code, one tests. Then they report back to the main Claude. You create them as files under <code>.claude/agents/</code> – or you let Claude do it for you.",
 "HAUPT-CLAUDE": "MAIN CLAUDE",
 "Recherche-Agent": "Research agent",
 "Code-Agent": "Code agent",
@@ -179,18 +179,18 @@ TEXTE = {
 # --- Berechtigungen ---
 "Darf Claude einfach alles auf meinem Rechner?":
     "Is Claude allowed to do anything at all on my machine?",
-"Nein. Von Haus aus darf es lesen – für alles andere fragt es vorher und zeigt Dir genau, was es vorhat.":
-    "No. Out of the box it may read – for anything else it asks first and shows you exactly what it intends to do.",
-"Wie streng es zugeht, schaltest Du mit <kbd>Shift</kbd>+<kbd>Tab</kbd> um. Im Plan-Modus schaut Claude sich erst alles an und legt Dir einen Vorschlag hin, bevor irgendetwas passiert.":
-    "How strict it is you switch with <kbd>Shift</kbd>+<kbd>Tab</kbd>. In plan mode Claude first looks at everything and puts a proposal in front of you before anything happens.",
+"Auf den bezahlten Zugängen startet Claude Code inzwischen im <b>Auto-Modus</b>: Es arbeitet durch, und statt Dir schaut vor jeder Aktion ein zweites Modell drauf.":
+    "On the paid plans Claude Code now starts in <b>auto mode</b>: it works straight through, and instead of you a second model reviews every action.",
+"Umschalten kannst Du jederzeit mit <kbd>Shift</kbd>+<kbd>Tab</kbd>: <b>Manuell</b> fragt wieder vor jedem Eingriff, <b>Plan</b> schaut nur und legt Dir einen Vorschlag hin.":
+    "You can switch at any time with <kbd>Shift</kbd>+<kbd>Tab</kbd>: <b>manual</b> goes back to asking before every change, <b>plan</b> only looks and puts a proposal in front of you.",
 "<b>Manuell</b><span>liest von allein, fragt vor jedem Eingriff</span>":
     "<b>Manual</b><span>reads on its own, asks before every change</span>",
 "<b>Änderungen ok</b><span>darf Dateien anfassen, der Rest bleibt Rückfrage</span>":
     "<b>Accept edits</b><span>may touch files, everything else still asks</span>",
 "<b>Plan</b><span>schaut nur und schlägt vor – ändert nichts</span>":
     "<b>Plan</b><span>only looks and proposes – changes nothing</span>",
-"<b>Automatisch</b><span>arbeitet durch, mit Sicherheitsnetz im Hintergrund</span>":
-    "<b>Automatic</b><span>works straight through, with a safety net behind it</span>",
+"<b>Automatisch</b><span>arbeitet durch – der Prüfer schaut mit, Voreinstellung</span>":
+    "<b>Auto</b><span>works straight through – the reviewer watches, the default</span>",
 "umschalten mit Shift + Tab": "switch with Shift + Tab",
 
 # --- Tastenkuerzel ---
@@ -399,8 +399,10 @@ TEXTE = {
 
 # --- Modelle ---
 "Und welches Modell arbeitet da eigentlich?": "And which model is actually doing the work?",
-"Stand August 2026: <b>Opus&nbsp;5</b> für die schweren Sachen, <b>Sonnet&nbsp;5</b> für den Alltag, <b>Haiku&nbsp;4.5</b> für schnell und günstig.":
-    "As of August 2026: <b>Opus&nbsp;5</b> for the heavy lifting, <b>Sonnet&nbsp;5</b> for everyday work, <b>Haiku&nbsp;4.5</b> for fast and cheap.",
+"Stand August 2026: <b>Fable&nbsp;5</b> ist das stärkste und für lange Läufe gebaut, <b>Opus&nbsp;5</b> nimmt die schweren Sachen, <b>Sonnet&nbsp;5</b> den Alltag, <b>Haiku&nbsp;4.5</b> das Schnelle und Günstige.":
+    "As of August 2026: <b>Fable&nbsp;5</b> is the strongest and built for long runs, <b>Opus&nbsp;5</b> takes the heavy lifting, <b>Sonnet&nbsp;5</b> the everyday work, <b>Haiku&nbsp;4.5</b> the fast and cheap jobs.",
+"<b>Fable 5</b><span>lange Agentenläufe</span><i>1 Mio. Kontext</i>":
+    "<b>Fable 5</b><span>long agent runs</span><i>1M context</i>",
 "Umschalten mit <code>/model</code>. Mit <code>/fast</code> antwortet Opus schneller – es wird dabei nicht durch ein kleineres Modell ersetzt.":
     "Switch with <code>/model</code>. With <code>/fast</code> Opus answers more quickly – it is not swapped for a smaller model in the process.",
 "<b>Opus 5</b><span>die schweren Aufgaben</span><i>1 Mio. Kontext</i>":
@@ -410,6 +412,58 @@ TEXTE = {
 "<b>Haiku 4.5</b><span>schnell &amp; günstig</span><i>200 Tsd. Kontext</i>":
     "<b>Haiku 4.5</b><span>fast &amp; cheap</span><i>200K context</i>",
 "wechseln mit /model": "switch with /model",
+
+# --- Denkaufwand ---
+"Und wie gründlich es dabei arbeitet – kann ich das auch sagen?":
+    "And how thoroughly it works – can I say that too?",
+"Ja, das ist die zweite Stellschraube neben dem Modell: <code>/effort</code>. Erst das Modell nach der Schwierigkeit wählen, dann den Aufwand nach der gewünschten Gründlichkeit.":
+    "Yes, that is the second dial next to the model: <code>/effort</code>. First pick the model by how hard the task is, then the effort by how thorough you want it.",
+"Voreingestellt ist <b>high</b>. Runter heißt schneller und sparsamer, hoch heißt mehr Nachdenken, mehr Werkzeug&shy;aufrufe, längere Läufe.":
+    "The default is <b>high</b>. Going down means faster and cheaper, going up means more thinking, more tool calls, longer runs.",
+"<b>low</b><span>kurze, einfache Aufgaben – am schnellsten</span>":
+    "<b>low</b><span>short, simple jobs – the fastest</span>",
+"<b>medium</b><span>der sparsame Mittelweg</span>":
+    "<b>medium</b><span>the thrifty middle ground</span>",
+"<b>high</b><span>die Voreinstellung – für alles Anspruchsvolle</span>":
+    "<b>high</b><span>the default – for anything demanding</span>",
+"<b>xhigh</b><span>Agentenläufe über Stunden</span>":
+    "<b>xhigh</b><span>agent runs lasting hours</span>",
+"<b>max</b><span>alles geben, ohne Rücksicht auf den Verbrauch</span>":
+    "<b>max</b><span>everything it has, never mind the spend</span>",
+"einstellen mit /effort": "set it with /effort",
+
+# --- Grosser Umbau ---
+"Und wenn eine Änderung durch das ganze Projekt geht?":
+    "And what if a change runs through the whole project?",
+"Dafür ist <code>/batch</code> da: Claude durchdenkt den Umbau einmal und verteilt ihn dann auf viele Agenten, die gleichzeitig loslegen – jeder in einer eigenen Arbeitskopie.":
+    "That is what <code>/batch</code> is for: Claude thinks the rebuild through once, then hands it out to many agents that start at the same time – each in its own working copy.",
+"Am Ende legt jeder seinen eigenen Änderungs&shy;vorschlag vor. Du siehst sie nebeneinander und nimmst sie einzeln an.":
+    "At the end each one puts up its own set of changes. You see them side by side and accept them one at a time.",
+"einmal durchdenken und aufteilen": "think it through once, then split it up",
+"Agent 1<span class=\"chip-sub\">eigene Kopie</span>":
+    "Agent 1<span class=\"chip-sub\">its own copy</span>",
+"Agent 2<span class=\"chip-sub\">eigene Kopie</span>":
+    "Agent 2<span class=\"chip-sub\">its own copy</span>",
+"Agent 3<span class=\"chip-sub\">eigene Kopie</span>":
+    "Agent 3<span class=\"chip-sub\">its own copy</span>",
+"und so weiter<span class=\"chip-sub\">bis zu dreißig</span>":
+    "and so on<span class=\"chip-sub\">up to thirty</span>",
+"je ein Vorschlag zum Durchsehen": "one set of changes each, to review",
+
+# --- Entwerfen ---
+"Und wenn ich noch gar nicht weiß, wie es aussehen soll?":
+    "And what if I don&#8217;t know yet what it should look like?",
+"Dann fang mit <code>/design</code> an. Claude legt Dir mehrere Entwürfe als Blätter auf eine Zeichenfläche – anklicken, verschieben, Text direkt ändern.":
+    "Then start with <code>/design</code>. Claude lays several drafts out as boards on a canvas – click them, move them, edit the text right there.",
+"Stimmt die Richtung, gibst Du sie zurück an Claude Code, und dort wird sie gebaut. Steckt noch in der Erprobung.":
+    "Once the direction is right, you hand it back to Claude Code, and that is where it gets built. Still an early preview.",
+"beschreiben": "describe it",
+"Entwürfe ansehen": "look at drafts",
+"selbst nachziehen": "adjust it yourself",
+"bauen lassen": "have it built",
+"mehrere Vorschläge nebeneinander": "several proposals side by side",
+"anklicken statt beschreiben": "click instead of describe",
+"noch in der Erprobung – kann sich ändern": "still an early preview – may change",
 
 # --- Gut fragen ---
 "Und wie sage ich es am besten?": "And how do I best put it?",
@@ -481,10 +535,14 @@ TEXTE = {
     "<b>Checkpoints &amp; memory</b> &#8211; rewind and remember",
 "<b>Routinen</b> &#8211; laufen nach Plan in der Cloud":
     "<b>Routines</b> &#8211; run to a schedule in the cloud",
-"<b>Berechtigungen</b> &#8211; Du bestimmst, wie weit Claude darf":
-    "<b>Permissions</b> &#8211; you decide how far Claude may go",
-"<b>/loop</b> &#8211; wiederholt etwas, solange Du dabei bist":
-    "<b>/loop</b> &#8211; repeats something while you are there",
+"<b>Berechtigungen</b> &#8211; heute automatisch, jederzeit strenger":
+    "<b>Permissions</b> &#8211; automatic today, stricter whenever you want",
+"<b>Denkaufwand</b> &#8211; wie gründlich gearbeitet werden soll":
+    "<b>Effort</b> &#8211; how thoroughly the work should be done",
+"<b>/loop &amp; /batch</b> &#8211; wiederholen, oder auf viele aufteilen":
+    "<b>/loop &amp; /batch</b> &#8211; repeat it, or split it across many",
+"<b>/design</b> &#8211; erst entwerfen, dann bauen lassen":
+    "<b>/design</b> &#8211; draft it first, then have it built",
 # --- Cowork und die drei Stufen (neu gefasst 18.08.2026) ---
 "Dieselbe Technik wie Claude Code – nur in der ganz normalen Claude-App statt im Terminal, ohne Einrichten.":
     "The same machinery as Claude Code – only in the ordinary Claude app instead of the terminal, with nothing to set up.",
