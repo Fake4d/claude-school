@@ -14,7 +14,7 @@ zurueckgibt — dann werden alle Textbausteine gesammelt.
 
 Aufruf:  python3 extract_slash.py [version]
 """
-import re, json, pathlib, sys
+import re, json, pathlib, sys, bisect
 
 VERSION = sys.argv[1] if len(sys.argv) > 1 else "2.1.228"
 BIN = pathlib.Path.home() / f".local/share/claude/versions/{VERSION}"
@@ -101,26 +101,49 @@ def getter_texte(obj):
 VARCACHE = {}
 
 
-def variable_aufloesen(bezeichner):
-    """`description:CQE` -> den Text hinter `CQE=\'...\'` im Programm suchen."""
-    if bezeichner in VARCACHE:
-        return VARCACHE[bezeichner]
-    m = re.search(r'(?:var\s+)?' + re.escape(bezeichner) +
-                  r'\s*=\s*(["\'])((?:[^\\]|\\.)*?)\1', data)
+def _text_suchen(bezeichner, feld):
+    m = re.search(r'(?:var\s+|[,;{}\s])' + re.escape(bezeichner) +
+                  r'\s*=\s*(["\'])((?:[^\\]|\\.)*?)\1', feld)
     if not m:
         # Manche Beschreibungen liegen als Array mehrerer Textbausteine vor
         # (Kurzbeschreibung + Trigger-/Skip-Hinweise). Dann zaehlt nur der
         # erste String im Array als Kurzbeschreibung.
-        m = re.search(r'(?:var\s+)?' + re.escape(bezeichner) +
-                      r'\s*=\s*\[\s*(["\'])((?:[^\\]|\\.)*?)\1', data)
-    text = ""
-    if m:
-        try:
-            text = m.group(2).encode().decode("unicode_escape")
-        except Exception:
-            text = m.group(2)
-    VARCACHE[bezeichner] = text.strip()
-    return VARCACHE[bezeichner]
+        m = re.search(r'(?:var\s+|[,;{}\s])' + re.escape(bezeichner) +
+                      r'\s*=\s*\[\s*(["\'])((?:[^\\]|\\.)*?)\1', feld)
+    if not m:
+        return ""
+    try:
+        return m.group(2).encode().decode("unicode_escape").strip()
+    except Exception:
+        return m.group(2).strip()
+
+
+def variable_aufloesen(bezeichner, vor_position):
+    """`description:kd` -> den Text hinter `kd='...'` suchen.
+
+    Wie bei den Namen gilt seit 2.1.243: erst im eigenen Modul suchen, sonst
+    greift man bei einbuchstabigen Bezeichnern einen fremden Text ab. Steht der
+    Bezeichner nicht im Modul, ist er importiert - dann im Herkunftsmodul.
+    """
+    i = modul_von(vor_position)
+    if i is None:
+        return ""
+    schluessel = (bezeichner, i)
+    if schluessel in VARCACHE:
+        return VARCACHE[schluessel]
+    start, ende = modul_bereich(i)
+    text = _text_suchen(bezeichner, data[start:ende])
+    if not text:
+        herkunft = IMPORTE[i].get(bezeichner)
+        if herkunft:
+            chunk, export = herkunft
+            j = NACH_NAME.get(chunk)
+            lokal = export_tabelle(chunk).get(export)
+            if j is not None and lokal:
+                qstart, qende = modul_bereich(j)
+                text = _text_suchen(lokal, data[qstart:qende])
+    VARCACHE[schluessel] = text
+    return text
 
 
 # Kurze Zuweisungen `VAR="wert"` einmalig einsammeln, MIT Position. Einzeln zu
@@ -137,22 +160,141 @@ def variable_aufloesen(bezeichner):
 # Bundle immer schon zugewiesen, eine nachfolgende ist zwangslaeufig ein anderer
 # Gueltigkeitsbereich.
 NAMEN_POS = {}
-for m in re.finditer(r'([A-Za-z_$][\w$]{0,8})\s*=\s*"([a-z0-9][a-z0-9:_-]{2,30})"', data):
+for m in re.finditer(r'([A-Za-z_$][\w$]{0,8})\s*=\s*["\']([a-z0-9][a-z0-9:_-]{2,30})["\']', data):
     NAMEN_POS.setdefault(m.group(1), []).append((m.start(), m.group(2)))
 
 
+# ------------------------------------------------------------ Module --------
+# Seit 2.1.243 ist das Bundle nicht mehr ein durchgehender Block, sondern in
+# Module ("chunks") zerlegt, die sich gegenseitig importieren:
+#
+#   import{Ofb as Qe}from"/$bunfs/root/chunk-vtt3ymv6.js";  ...  {name:Qe,...}
+#
+# `Qe` ist damit KEINE Zuweisung mehr, sondern ein Import-Alias - die Suche nach
+# `Qe="..."` geht ins Leere. Genau daran fielen am 25.08.2026 vierzehn Befehle
+# aus der Liste (alle gebuendelten Skills: /dataviz, /loop, /simplify, ...) und
+# sahen im Versionsvergleich aus wie geloescht.
+#
+# Zusaetzlich sind die modulinternen Bezeichner auf EINEN Buchstaben geschrumpft
+# (`k="dataviz"`). Ein Bezeichner wie `b` kommt im Bundle zehntausendfach vor,
+# eine bundleweite Suche nach der naechsten vorangehenden Zuweisung trifft also
+# fast immer daneben. Beides loest derselbe Schritt: erst das Modul bestimmen,
+# dann nur noch INNERHALB des Moduls suchen - und wenn der Bezeichner dort
+# importiert wird, dem Import ins Herkunftsmodul folgen.
+MODULKOPF = re.compile(r'/\$bunfs/root/(chunk-[a-z0-9]+\.js)\x00// @bun')
+MODUL_START = []          # [(startposition, chunkname)], aufsteigend
+for m in MODULKOPF.finditer(data):
+    MODUL_START.append((m.start(), m.group(1)))
+MODUL_POS = [p for p, _ in MODUL_START]
+
+
+def modul_von(pos):
+    """Index des Moduls, in dem `pos` liegt (oder None ausserhalb)."""
+    i = bisect.bisect_right(MODUL_POS, pos) - 1
+    return i if i >= 0 else None
+
+
+def modul_bereich(i):
+    start = MODUL_POS[i]
+    ende = MODUL_POS[i + 1] if i + 1 < len(MODUL_POS) else len(data)
+    return start, ende
+
+
+# Importe je Modul einsammeln: lokaler Alias -> (Herkunftsmodul, Exportname).
+IMPORTE = [dict() for _ in MODUL_START]
+IMPORT_SATZ = re.compile(r'import\{([^}]{1,4000})\}from"/\$bunfs/root/(chunk-[a-z0-9]+\.js)"')
+GEFRAGT = {}              # chunkname -> Menge der von aussen genutzten Exportnamen
+for m in IMPORT_SATZ.finditer(data):
+    i = modul_von(m.start())
+    if i is None:
+        continue
+    quelle = m.group(2)
+    for paar in m.group(1).split(","):
+        teile = paar.split(" as ")
+        if len(teile) != 2:
+            continue
+        export, lokal = teile[0].strip(), teile[1].strip()
+        if export and lokal:
+            IMPORTE[i][lokal] = (quelle, export)
+            GEFRAGT.setdefault(quelle, set()).add(export)
+
+# Modulname -> Index (ein Chunk kommt genau einmal als Modulkopf vor)
+NACH_NAME = {}
+for i, (_, nm) in enumerate(MODUL_START):
+    NACH_NAME.setdefault(nm, i)
+
+EXPORT_CACHE = {}
+
+
+def export_tabelle(chunk):
+    """Exportname -> lokaler Bezeichner fuer ein Modul.
+
+    Vor jedem Modulkopf steht eine Symboltabelle als reiner ASCII-Lauf, in der
+    Export- und lokaler Name unmittelbar hintereinander stehen, ohne Trenner:
+    `IfbbJfbSKfbM...` = Ifb->b, Jfb->S, Kfb->M. Weil die Laengen variieren, wird
+    an den bekannten Exportnamen verankert (die stehen in den Import-Saetzen der
+    anderen Module) und das Stueck bis zum naechsten Exportnamen als lokaler
+    Bezeichner gelesen.
+    """
+    if chunk in EXPORT_CACHE:
+        return EXPORT_CACHE[chunk]
+    zuordnung = {}
+    i = NACH_NAME.get(chunk)
+    wanted = GEFRAGT.get(chunk)
+    if i is not None and wanted:
+        kopf = MODUL_POS[i]
+        feld = data[max(0, kopf - 60000):kopf]
+        # Unmittelbar vor dem Modulkopf steht die Liste der importierten
+        # Chunk-Pfade. Sie wird abgeschnitten; was davor liegt, endet mit der
+        # Symboltabelle. (Nicht die ERSTE Pfadstelle im Fenster nehmen - die
+        # gehoert noch zu einem frueheren Modul.)
+        pfadliste = re.search(r'(?:/\$bunfs/root/chunk-[a-z0-9]+\.js)+$', feld)
+        if pfadliste:
+            feld = feld[:pfadliste.start()]
+        funde = []
+        for name in wanted:
+            p = feld.rfind(name)
+            if p >= 0:
+                funde.append((p, name))
+        funde.sort()
+        for k, (p, name) in enumerate(funde):
+            ende = funde[k + 1][0] if k + 1 < len(funde) else len(feld)
+            lokal = feld[p + len(name):ende]
+            if re.fullmatch(r'[A-Za-z_$][\w$]{0,3}', lokal):
+                zuordnung[name] = lokal
+    EXPORT_CACHE[chunk] = zuordnung
+    return zuordnung
+
+
 def name_aufloesen(bezeichner, vor_position):
-    """`name:TEn` -> "loop", ueber die naechste Zuweisung VOR `vor_position`."""
-    treffer = NAMEN_POS.get(bezeichner)
-    if not treffer:
-        return ""
-    beste = ""
-    for pos, wert in treffer:
-        if pos < vor_position:
-            beste = wert
-        else:
-            break
-    return beste
+    """`name:Qe` -> "dataviz".
+
+    Erst im eigenen Modul nach einer Zuweisung suchen, dann dem Import folgen.
+    """
+    i = modul_von(vor_position)
+    if i is not None:
+        start, ende = modul_bereich(i)
+        # 1. Zuweisung im selben Modul, die naechste VOR der Fundstelle
+        beste = ""
+        for pos, wert in NAMEN_POS.get(bezeichner, ()):
+            if pos >= vor_position:
+                break
+            if pos >= start:
+                beste = wert
+        if beste:
+            return beste
+        # 2. Import-Alias: ins Herkunftsmodul wechseln
+        herkunft = IMPORTE[i].get(bezeichner)
+        if herkunft:
+            chunk, export = herkunft
+            j = NACH_NAME.get(chunk)
+            lokal = export_tabelle(chunk).get(export)
+            if j is not None and lokal:
+                qstart, qende = modul_bereich(j)
+                for pos, wert in NAMEN_POS.get(lokal, ()):
+                    if qstart <= pos < qende:
+                        return wert
+    return ""
 
 
 def entschluesseln(s):
@@ -202,7 +344,7 @@ for t in ANKER.finditer(data):
             # description verweist auf eine Variable (so liegen die Skill-Texte vor)
             vr = feld_oberste_ebene(obj, r'description:([A-Za-z_$][\w$]{0,6})')
             if vr:
-                desc = variable_aufloesen(vr.group(1))
+                desc = variable_aufloesen(vr.group(1), t.start())
     if not desc:
         continue
 

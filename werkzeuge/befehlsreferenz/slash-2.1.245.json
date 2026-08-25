@@ -16,7 +16,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "rge()",
+  "enabled": "$1()",
   "verfuegbar": true
  },
  {
@@ -42,7 +42,7 @@
  {
   "name": "artifact-components",
   "typ": "registriert",
-  "desc": "Embed reusable artifact components in any HTML artifact — first entry: the workshop decision component (clickable option rows backed by a machine-readable record the session reads back). Use when a non-workshop artifact should carry decisions the reader answers from the published page, or to look up a component's exact scripts, styles, markup contract, and composition limits.",
+  "desc": "Embed reusable artifact components in any HTML artifact - first entry: the workshop decision component (clickable option rows backed by a machine-readable record the session reads back). Use when a non-workshop artifact should carry decisions the reader answers from the published page, or to look up a component's exact scripts, styles, markup contract, and composition limits.",
   "variabel": false,
   "hint": "",
   "aliases": [],
@@ -62,7 +62,7 @@
  {
   "name": "artifact-diagramming",
   "typ": "registriert",
-  "desc": "Diagramming know-how for Artifacts — when a picture earns its place, how to draw one that shows the real mechanism, and the inline-SVG mechanics that keep it legible in both themes.",
+  "desc": "Diagramming know-how for Artifacts - when a picture earns its place, how to draw one that shows the real mechanism, and the inline-SVG mechanics that keep it legible in both themes.",
   "variabel": false,
   "hint": "",
   "aliases": [],
@@ -76,7 +76,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "FQ()&&gN()===null",
+  "enabled": "tBr()&&dm()===null",
   "verfuegbar": true
  },
  {
@@ -86,7 +86,7 @@
   "variabel": false,
   "hint": "[--request-id <uuid>] (--wizard posture=\\u2026 scope=\\u2026 depth=\\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
   "aliases": [],
-  "enabled": "mLl()&&zn()",
+  "enabled": "wBt()&&jt()",
   "verfuegbar": true
  },
  {
@@ -96,7 +96,7 @@
   "variabel": false,
   "hint": "[auto|<tokens>]",
   "aliases": [],
-  "enabled": "!zn()",
+  "enabled": "!jt()",
   "verfuegbar": true
  },
  {
@@ -106,7 +106,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "mFm()&&!zn()",
+  "enabled": "oBr()&&!jt()",
   "verfuegbar": true
  },
  {
@@ -148,7 +148,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "UhE().enable_slash_command",
+  "enabled": "tNs().enable_slash_command",
   "verfuegbar": true
  },
  {
@@ -180,7 +180,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!zn()",
+  "enabled": "!jt()",
   "verfuegbar": true
  },
  {
@@ -200,7 +200,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!e&&(rhn()||Lvy())",
+  "enabled": "!e&&(Re()||Ho())",
   "verfuegbar": true
  },
  {
@@ -214,6 +214,16 @@
    "new"
   ],
   "enabled": "true",
+  "verfuegbar": true
+ },
+ {
+  "name": "cloud-plugins",
+  "typ": "local-jsx",
+  "desc": "Choose whether cloud sessions use the plugins enabled on this machine",
+  "variabel": false,
+  "hint": "",
+  "aliases": [],
+  "enabled": "Ttn()&&!ee.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
   "verfuegbar": true
  },
  {
@@ -233,7 +243,7 @@
   "variabel": false,
   "hint": "[guidance]",
   "aliases": [],
-  "enabled": "Ooi()",
+  "enabled": "gt()",
   "verfuegbar": true
  },
  {
@@ -253,7 +263,7 @@
   "variabel": false,
   "hint": "<optional custom summarization instructions>",
   "aliases": [],
-  "enabled": "!q.DISABLE_COMPACT",
+  "enabled": "!ee.DISABLE_COMPACT",
   "verfuegbar": true
  },
  {
@@ -275,7 +285,7 @@
   "variabel": false,
   "hint": "[all]",
   "aliases": [],
-  "enabled": "!zn()",
+  "enabled": "!jt()",
   "verfuegbar": true
  },
  {
@@ -295,7 +305,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "q.CLAUDE_CODE_ENTRYPOINT===\"remote_cowork\"",
+  "enabled": "P.CLAUDE_CODE_ENTRYPOINT===\"remote_cowork\"",
   "verfuegbar": true
  },
  {
@@ -335,7 +345,7 @@
   "variabel": false,
   "hint": "consent | revoke",
   "aliases": [],
-  "enabled": "Got()",
+  "enabled": "Hj()",
   "verfuegbar": true
  },
  {
@@ -345,7 +355,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Got()",
+  "enabled": "Hj()",
   "verfuegbar": true
  },
  {
@@ -355,7 +365,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Got()",
+  "enabled": "Hj()",
   "verfuegbar": true
  },
  {
@@ -365,7 +375,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Got()",
+  "enabled": "Hj()",
   "verfuegbar": true
  },
  {
@@ -409,7 +419,7 @@
   "aliases": [
    "checkup"
   ],
-  "enabled": "!q.DISABLE_DOCTOR_COMMAND",
+  "enabled": "!P.DISABLE_DOCTOR_COMMAND",
   "verfuegbar": true
  },
  {
@@ -449,7 +459,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "o3t()&&!zn()",
+  "enabled": "V3e()&&!jt()",
   "verfuegbar": true
  },
  {
@@ -499,7 +509,7 @@
   "variabel": false,
   "hint": "<directive>",
   "aliases": [],
-  "enabled": "!ES()",
+  "enabled": "!Pc()",
   "verfuegbar": true
  },
  {
@@ -519,7 +529,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Xs(\"allow_heap_dump\")",
+  "enabled": "$s(\"allow_heap_dump\")",
   "verfuegbar": true
  },
  {
@@ -599,7 +609,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!q.DISABLE_INSTALL_GITHUB_APP_COMMAND",
+  "enabled": "!ee.DISABLE_INSTALL_GITHUB_APP_COMMAND",
   "verfuegbar": true
  },
  {
@@ -619,7 +629,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "xxe()",
+  "enabled": "Kjr()",
   "verfuegbar": true
  },
  {
@@ -631,7 +641,7 @@
   "aliases": [
    "peers"
   ],
-  "enabled": "lg()",
+  "enabled": "Ul()",
   "verfuegbar": true
  },
  {
@@ -641,7 +651,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "!q.DISABLE_LOGIN_COMMAND",
+  "enabled": "!ee.DISABLE_LOGIN_COMMAND",
   "verfuegbar": true
  },
  {
@@ -651,7 +661,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!q.DISABLE_LOGOUT_COMMAND",
+  "enabled": "!ee.DISABLE_LOGOUT_COMMAND",
   "verfuegbar": true
  },
  {
@@ -683,7 +693,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ds()&&(nWe()||yWn())",
+  "enabled": "Bi()&&(l8()||Wkn())",
   "verfuegbar": true
  },
  {
@@ -693,7 +703,7 @@
   "variabel": false,
   "hint": "[reconnect|enable|disable [<server>|all]]",
   "aliases": [],
-  "enabled": "zn()",
+  "enabled": "jt()",
   "verfuegbar": true
  },
  {
@@ -713,7 +723,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Zy()&&!l3e()&&DRa()",
+  "enabled": "kt()&&!rr()&&nr()",
   "verfuegbar": true
  },
  {
@@ -736,7 +746,7 @@
   "variabel": false,
   "hint": "<model>",
   "aliases": [],
-  "enabled": "zn()",
+  "enabled": "jt()",
   "verfuegbar": true
  },
  {
@@ -808,6 +818,16 @@
   "verfuegbar": true
  },
  {
+  "name": "plugin-types",
+  "typ": "local",
+  "desc": "Write claude-code-mcp.d.ts: the inputs of the connected MCP tools, for typing a plugin against this session",
+  "variabel": false,
+  "hint": "[dir]",
+  "aliases": [],
+  "enabled": "true",
+  "verfuegbar": true
+ },
+ {
   "name": "powerup",
   "typ": "local-jsx",
   "desc": "Discover Claude Code features through quick interactive lessons",
@@ -824,7 +844,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Yht()",
+  "enabled": "j1r()",
   "verfuegbar": true
  },
  {
@@ -840,7 +860,7 @@
  {
   "name": "prototype",
   "typ": "registriert",
-  "desc": "Turn an idea into a working proof of concept and publish it as an Artifact — a single self-contained page the user can open, click through, and react to. Run a short intake, state your assumptions, build, then iterate on feedback in the same artifact. Use when the user asks to prototype an idea, mock up a concept, build a proof of concept, or wants to see something working before committing to a real build — including, on an explicit ask, a new feature shown in place on an app they already have.",
+  "desc": "Turn an idea into a working proof of concept and publish it as an Artifact - a single self-contained page the user can open, click through, and react to. Run a short intake, state your assumptions, build, then iterate on feedback in the same artifact. Use when the user asks to prototype an idea, mock up a concept, build a proof of concept, or wants to see something working before committing to a real build - including, on an explicit ask, a new feature shown in place on an app they already have.",
   "variabel": false,
   "hint": "",
   "aliases": [],
@@ -854,7 +874,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "nt(\"tengu_velvet_static\"",
+  "enabled": "Me(\"tengu_velvet_static\"",
   "verfuegbar": true
  },
  {
@@ -864,7 +884,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ds()||!1",
+  "enabled": "Bi()||!1",
   "verfuegbar": true
  },
  {
@@ -926,7 +946,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ds()&&Xs(\"allow_remote_sessions\")",
+  "enabled": "Bi()&&$s(\"allow_remote_sessions\")",
   "verfuegbar": true
  },
  {
@@ -979,7 +999,7 @@
  {
   "name": "run-skill-generator",
   "typ": "registriert",
-  "desc": "Author or improve the run-<unit> skill — a per-project skill that tells agents how to build, launch, and drive this project's app. Use when the user asks to set up the project, get it running, write run instructions, or verify build/run steps work from a clean environment.",
+  "desc": "Author or improve the run-<unit> skill - a per-project skill that tells agents how to build, launch, and drive this project's app. Use when the user asks to set up the project, get it running, write run instructions, or verify build/run steps work from a clean environment.",
   "variabel": false,
   "hint": "",
   "aliases": [],
@@ -999,13 +1019,13 @@
  {
   "name": "schedule",
   "typ": "registriert",
-  "desc": "Create and manage scheduled remote Claude Code agents",
+  "desc": "Create, update, list, or run scheduled cloud agents (routines) that execute on a cron schedule.",
   "variabel": false,
   "hint": "",
   "aliases": [
    "routines"
   ],
-  "enabled": "true",
+  "enabled": "Da()&&Na()&&!P.CLAUDE_CODE_REMOTE&&I(\"tengu_surreal_dali\"",
   "verfuegbar": true
  },
  {
@@ -1015,7 +1035,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "{if(!Ks())return!1;let e=cH();return!(e?ZPe.includes(e.terminal??\"\"):mee.isJetBrainsIdeTerminal())",
+  "enabled": "{if(!Ml())return!1;let e=DQ();return!(e?njt.includes(e.terminal??\"\"):rjt.isJetBrainsIdeTerminal())",
   "verfuegbar": true
  },
  {
@@ -1027,7 +1047,7 @@
   "aliases": [
    "remote"
   ],
-  "enabled": "Ql()",
+  "enabled": "Ac()",
   "verfuegbar": true
  },
  {
@@ -1047,7 +1067,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "q.CLAUDE_CODE_ENTRYPOINT===\"remote_cowork\"",
+  "enabled": "P.CLAUDE_CODE_ENTRYPOINT===\"remote_cowork\"",
   "verfuegbar": true
  },
  {
@@ -1137,7 +1157,7 @@
   "variabel": false,
   "hint": "<task>",
   "aliases": [],
-  "enabled": "!ES()",
+  "enabled": "!Pc()",
   "verfuegbar": true
  },
  {
@@ -1159,7 +1179,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Xs(\"allow_team_onboarding\")",
+  "enabled": "$s(\"allow_team_onboarding\")",
   "verfuegbar": true
  },
  {
@@ -1171,7 +1191,7 @@
   "aliases": [
    "tp"
   ],
-  "enabled": "ds()&&Xs(\"allow_remote_sessions\")",
+  "enabled": "Bi()&&$s(\"allow_remote_sessions\")",
   "verfuegbar": true
  },
  {
@@ -1211,7 +1231,7 @@
   "variabel": false,
   "hint": "<prompt>",
   "aliases": [],
-  "enabled": "Q6e()",
+  "enabled": "m1r()",
   "verfuegbar": true
  },
  {
@@ -1256,7 +1276,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "o3t()&&!zn()",
+  "enabled": "V3e()&&!jt()",
   "verfuegbar": true
  },
  {
@@ -1296,7 +1316,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "nt(\"tengu_cobalt_lantern\"",
+  "enabled": "true",
   "verfuegbar": true
  },
  {
@@ -1316,7 +1336,7 @@
  {
   "name": "whiteboard",
   "typ": "registriert",
-  "desc": "Create a whiteboard artifact — a freehand canvas for sketching architecture diagrams at wireframe fidelity (boxes, databases, decision diamonds, sticky notes, arrows, labels) that the user can send back to this session for planning. Use when the user asks for a whiteboard, wants to sketch a design or diagram to talk through, or wants to draw something and have you plan from it. Only for CREATING a new whiteboard; an existing one is read and edited through its published artifact.",
+  "desc": "Create a whiteboard artifact - a freehand canvas for sketching architecture diagrams at wireframe fidelity (boxes, databases, decision diamonds, sticky notes, arrows, labels) that the user can send back to this session for planning. Use when the user asks for a whiteboard, wants to sketch a design or diagram to talk through, or wants to draw something and have you plan from it. Only for CREATING a new whiteboard; an existing one is read and edited through its published artifact.",
   "variabel": false,
   "hint": "",
   "aliases": [],
@@ -1340,13 +1360,13 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "g$()",
+  "enabled": "tS()",
   "verfuegbar": true
  },
  {
   "name": "workshop",
   "typ": "registriert",
-  "desc": "Build a design together with the user, one decision at a time — publish an evolving plan document as an Artifact, surface each open decision on the page for the reader to answer there, apply their choices in this session, and republish the updated draft until the reader starts the build. Use when asked to workshop a design, brainstorm with decision points, or drive an iterative decide-and-revise loop through an artifact.",
+  "desc": "Build a design together with the user, one decision at a time - publish an evolving plan document as an Artifact, surface each open decision on the page for the reader to answer there, apply their choices in this session, and republish the updated draft until the reader starts the build. Use when asked to workshop a design, brainstorm with decision points, or drive an iterative decide-and-revise loop through an artifact.",
   "variabel": false,
   "hint": "",
   "aliases": [],
