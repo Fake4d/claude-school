@@ -16,7 +16,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "$1()",
+  "enabled": "uW()",
   "verfuegbar": true
  },
  {
@@ -76,7 +76,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "tBr()&&dm()===null",
+  "enabled": "pqr()&&Uf()===null",
   "verfuegbar": true
  },
  {
@@ -86,7 +86,7 @@
   "variabel": false,
   "hint": "[--request-id <uuid>] (--wizard posture=\\u2026 scope=\\u2026 depth=\\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
   "aliases": [],
-  "enabled": "wBt()&&jt()",
+  "enabled": "w1t()&&It()",
   "verfuegbar": true
  },
  {
@@ -96,7 +96,7 @@
   "variabel": false,
   "hint": "[auto|<tokens>]",
   "aliases": [],
-  "enabled": "!jt()",
+  "enabled": "!It()",
   "verfuegbar": true
  },
  {
@@ -106,7 +106,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "oBr()&&!jt()",
+  "enabled": "gqr()&&!It()",
   "verfuegbar": true
  },
  {
@@ -148,7 +148,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "tNs().enable_slash_command",
+  "enabled": "FFs().enable_slash_command",
   "verfuegbar": true
  },
  {
@@ -180,7 +180,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!jt()",
+  "enabled": "!It()",
   "verfuegbar": true
  },
  {
@@ -200,7 +200,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!e&&(Re()||Ho())",
+  "enabled": "!e&&(Re()||Fo())",
   "verfuegbar": true
  },
  {
@@ -223,7 +223,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Ttn()&&!ee.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
+  "enabled": "Urn()&&!V.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
   "verfuegbar": true
  },
  {
@@ -243,7 +243,7 @@
   "variabel": false,
   "hint": "[guidance]",
   "aliases": [],
-  "enabled": "gt()",
+  "enabled": "ft()",
   "verfuegbar": true
  },
  {
@@ -263,7 +263,7 @@
   "variabel": false,
   "hint": "<optional custom summarization instructions>",
   "aliases": [],
-  "enabled": "!ee.DISABLE_COMPACT",
+  "enabled": "!V.DISABLE_COMPACT",
   "verfuegbar": true
  },
  {
@@ -285,7 +285,7 @@
   "variabel": false,
   "hint": "[all]",
   "aliases": [],
-  "enabled": "!jt()",
+  "enabled": "!It()",
   "verfuegbar": true
  },
  {
@@ -305,7 +305,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "P.CLAUDE_CODE_ENTRYPOINT===\"remote_cowork\"",
+  "enabled": "x.CLAUDE_CODE_ENTRYPOINT===\"remote_cowork\"",
   "verfuegbar": true
  },
  {
@@ -340,12 +340,12 @@
  },
  {
   "name": "design",
-  "typ": "local",
-  "desc": "Grant or revoke Claude agent access to your Design projects",
+  "typ": "registriert",
+  "desc": "Hub for Claude Design (claude.ai/design): routes `sync`/`login` to their dedicated commands and maps `import`/`export`/`status`/free-form prompts to the native `",
   "variabel": false,
-  "hint": "consent | revoke",
+  "hint": "[sync|login|consent|revoke|import|export|status|<prompt>]",
   "aliases": [],
-  "enabled": "Hj()",
+  "enabled": "As()",
   "verfuegbar": true
  },
  {
@@ -355,7 +355,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Hj()",
+  "enabled": "yz()",
   "verfuegbar": true
  },
  {
@@ -365,7 +365,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Hj()",
+  "enabled": "yz()",
   "verfuegbar": true
  },
  {
@@ -375,7 +375,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Hj()",
+  "enabled": "yz()",
   "verfuegbar": true
  },
  {
@@ -419,7 +419,7 @@
   "aliases": [
    "checkup"
   ],
-  "enabled": "!P.DISABLE_DOCTOR_COMMAND",
+  "enabled": "!x.DISABLE_DOCTOR_COMMAND",
   "verfuegbar": true
  },
  {
@@ -459,7 +459,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "V3e()&&!jt()",
+  "enabled": "A9e()&&!It()",
   "verfuegbar": true
  },
  {
@@ -509,7 +509,7 @@
   "variabel": false,
   "hint": "<directive>",
   "aliases": [],
-  "enabled": "!Pc()",
+  "enabled": "!Nl()",
   "verfuegbar": true
  },
  {
@@ -529,7 +529,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "$s(\"allow_heap_dump\")",
+  "enabled": "ps(\"allow_heap_dump\")",
   "verfuegbar": true
  },
  {
@@ -609,7 +609,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!ee.DISABLE_INSTALL_GITHUB_APP_COMMAND",
+  "enabled": "!V.DISABLE_INSTALL_GITHUB_APP_COMMAND",
   "verfuegbar": true
  },
  {
@@ -629,7 +629,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Kjr()",
+  "enabled": "o2r()",
   "verfuegbar": true
  },
  {
@@ -641,7 +641,7 @@
   "aliases": [
    "peers"
   ],
-  "enabled": "Ul()",
+  "enabled": "_l()",
   "verfuegbar": true
  },
  {
@@ -651,7 +651,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "!ee.DISABLE_LOGIN_COMMAND",
+  "enabled": "!V.DISABLE_LOGIN_COMMAND",
   "verfuegbar": true
  },
  {
@@ -661,7 +661,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!ee.DISABLE_LOGOUT_COMMAND",
+  "enabled": "!V.DISABLE_LOGOUT_COMMAND",
   "verfuegbar": true
  },
  {
@@ -693,17 +693,17 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Bi()&&(l8()||Wkn())",
+  "enabled": "wi()&&(k9()||iAn())",
   "verfuegbar": true
  },
  {
   "name": "mcp",
-  "typ": "local",
+  "typ": "local-jsx",
   "desc": "Manage MCP servers",
   "variabel": false,
-  "hint": "[reconnect|enable|disable [<server>|all]]",
+  "hint": "[reconnect <server>|enable|disable [<server>|all]]",
   "aliases": [],
-  "enabled": "jt()",
+  "enabled": "true",
   "verfuegbar": true
  },
  {
@@ -723,7 +723,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "kt()&&!rr()&&nr()",
+  "enabled": "bt()&&!ir()&&er()",
   "verfuegbar": true
  },
  {
@@ -741,12 +741,12 @@
  },
  {
   "name": "model",
-  "typ": "local",
-  "desc": "Set the AI model for Claude Code",
+  "typ": "local-jsx",
+  "desc": "Set the AI model for Claude Code (currently …)",
   "variabel": false,
-  "hint": "<model>",
+  "hint": "[model]",
   "aliases": [],
-  "enabled": "jt()",
+  "enabled": "true",
   "verfuegbar": true
  },
  {
@@ -844,7 +844,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "j1r()",
+  "enabled": "JVr()",
   "verfuegbar": true
  },
  {
@@ -874,7 +874,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Me(\"tengu_velvet_static\"",
+  "enabled": "we(\"tengu_velvet_static\"",
   "verfuegbar": true
  },
  {
@@ -884,7 +884,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Bi()||!1",
+  "enabled": "wi()||!1",
   "verfuegbar": true
  },
  {
@@ -946,7 +946,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Bi()&&$s(\"allow_remote_sessions\")",
+  "enabled": "wi()&&ps(\"allow_remote_sessions\")",
   "verfuegbar": true
  },
  {
@@ -1025,7 +1025,7 @@
   "aliases": [
    "routines"
   ],
-  "enabled": "Da()&&Na()&&!P.CLAUDE_CODE_REMOTE&&I(\"tengu_surreal_dali\"",
+  "enabled": "La()&&Oa()&&!x.CLAUDE_CODE_REMOTE&&O(\"tengu_surreal_dali\"",
   "verfuegbar": true
  },
  {
@@ -1035,7 +1035,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "{if(!Ml())return!1;let e=DQ();return!(e?njt.includes(e.terminal??\"\"):rjt.isJetBrainsIdeTerminal())",
+  "enabled": "{if(!il())return!1;let e=jQ();return!(e?nqt.includes(e.terminal??\"\"):rqt.isJetBrainsIdeTerminal())",
   "verfuegbar": true
  },
  {
@@ -1047,7 +1047,7 @@
   "aliases": [
    "remote"
   ],
-  "enabled": "Ac()",
+  "enabled": "Ll()",
   "verfuegbar": true
  },
  {
@@ -1067,7 +1067,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "P.CLAUDE_CODE_ENTRYPOINT===\"remote_cowork\"",
+  "enabled": "x.CLAUDE_CODE_ENTRYPOINT===\"remote_cowork\"",
   "verfuegbar": true
  },
  {
@@ -1157,7 +1157,7 @@
   "variabel": false,
   "hint": "<task>",
   "aliases": [],
-  "enabled": "!Pc()",
+  "enabled": "!Nl()",
   "verfuegbar": true
  },
  {
@@ -1179,7 +1179,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "$s(\"allow_team_onboarding\")",
+  "enabled": "ps(\"allow_team_onboarding\")",
   "verfuegbar": true
  },
  {
@@ -1191,7 +1191,7 @@
   "aliases": [
    "tp"
   ],
-  "enabled": "Bi()&&$s(\"allow_remote_sessions\")",
+  "enabled": "wi()&&ps(\"allow_remote_sessions\")",
   "verfuegbar": true
  },
  {
@@ -1231,7 +1231,7 @@
   "variabel": false,
   "hint": "<prompt>",
   "aliases": [],
-  "enabled": "m1r()",
+  "enabled": "TVr()",
   "verfuegbar": true
  },
  {
@@ -1258,15 +1258,15 @@
  },
  {
   "name": "usage",
-  "typ": "local-jsx",
-  "desc": "Show session cost, plan usage, and activity stats",
+  "typ": "local",
+  "desc": "Show session cost, plan usage, and what's contributing to your limits",
   "variabel": false,
   "hint": "",
   "aliases": [
    "cost",
    "stats"
   ],
-  "enabled": "true",
+  "enabled": "It()",
   "verfuegbar": true
  },
  {
@@ -1276,7 +1276,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "V3e()&&!jt()",
+  "enabled": "A9e()&&!It()",
   "verfuegbar": true
  },
  {
@@ -1291,8 +1291,8 @@
  },
  {
   "name": "version",
-  "typ": "local-jsx",
-  "desc": "Show this session's version (autoupdate may have a newer one)",
+  "typ": "local",
+  "desc": "Print the version this session is running (not what autoupdate downloaded)",
   "variabel": false,
   "hint": "",
   "aliases": [],
@@ -1336,7 +1336,7 @@
  {
   "name": "whiteboard",
   "typ": "registriert",
-  "desc": "Create a whiteboard artifact - a freehand canvas for sketching architecture diagrams at wireframe fidelity (boxes, databases, decision diamonds, sticky notes, arrows, labels) that the user can send back to this session for planning. Use when the user asks for a whiteboard, wants to sketch a design or diagram to talk through, or wants to draw something and have you plan from it. Only for CREATING a new whiteboard; an existing one is read and edited through its published artifact.",
+  "desc": "Create a whiteboard artifact - a shared sketch canvas for wireframe-fidelity diagrams (boxes, databases, decision diamonds, sticky notes, arrows, freehand pen, text) that you and the user both draw on. The user sketches and hits Publish; this session is woken, reads the board (scene data plus a picture of it), and answers by drawing back on the same canvas - or plans from what they drew. Use when the user asks for a whiteboard, wants to sketch a design or diagram to talk through, or wants to draw something and have you answer on the canvas or plan from it. Only for CREATING a new whiteboard; an existing one is read and answered through its published artifact.",
   "variabel": false,
   "hint": "",
   "aliases": [],
@@ -1360,7 +1360,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "tS()",
+  "enabled": "Wb()",
   "verfuegbar": true
  },
  {

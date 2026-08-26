@@ -7,41 +7,50 @@ die andere mit. Reines HTML, wie es im Kasten steht (<p>…</p>).
 """
 
 DE = """
-<p>Gegenüber {vorg} gibt es zwei neue Slash-Befehle: <code>/cloud-plugins</code> — legt fest, ob
-Sitzungen in der Cloud die auf diesem Rechner eingeschalteten Erweiterungen mitbenutzen — und
-<code>/plugin-types</code>, das eine Typdatei <code>claude-code-mcp.d.ts</code> mit den Eingaben
-der verbundenen MCP-Werkzeuge schreibt, um eine Erweiterung gegen diese Sitzung zu typisieren.
-Weggefallen ist kein Befehl.</p>
-<p>Eine Kurzbeschreibung hat sich inhaltlich geändert: <code>/schedule</code> hieß bisher
-„erstellt und verwaltet geplante entfernte Claude-Code-Agenten" und heißt jetzt „erstellt,
-ändert, listet oder startet geplante Cloud-Agenten (Routinen), die nach Zeitplan laufen" — der
-Befehl kann also ausdrücklich auch auflisten und sofort starten, nicht nur anlegen und
-verwalten.</p>
-<p>Bei sechs weiteren Befehlen — <code>/artifact-components</code>,
-<code>/artifact-diagramming</code>, <code>/prototype</code>, <code>/run-skill-generator</code>,
-<code>/whiteboard</code> und <code>/workshop</code> — wurde im Beschreibungstext lediglich der
-Gedankenstrich durch einen einfachen Bindestrich ersetzt. Am Sinn ändert das nichts.</p>
+<p>Gegenüber {vorg} kommt kein Slash-Befehl hinzu und keiner fällt weg; es bleibt bei
+{n_slash} Befehlen. Inhaltlich geändert hat sich genau eine Kurzbeschreibung:
+<code>/whiteboard</code> hieß bisher „eine freihändige Fläche zum Skizzieren von
+Architekturdiagrammen in Drahtmodell-Güte" und heißt jetzt „eine <i>gemeinsame</i>
+Skizzenfläche für Diagramme in Drahtmodell-Güte" — der Zeichenbereich wird also
+ausdrücklich als geteilt beschrieben.</p>
 <p>Bei den Terminal-Optionen (Teil A) ist <code>claude --help</code> zeichengleich zu {vorg},
-und auch die Hilfe der Unterbefehle (Teil B) ist unverändert.</p>
-<p>Bei den Slash-Befehlen (Teil C) steigt die Zahl von 130 auf {n_slash}. Bei 44 Befehlen haben
-sich rein interne Bezeichner geändert — ohne Bedeutung für diese Liste.</p>
+und auch die Hilfe der Unterbefehle (Teil B) ist unverändert. Bei 43 Slash-Befehlen haben sich
+rein interne Bezeichner geändert — ohne Bedeutung für diese Liste.</p>
+<p><b>In eigener Sache:</b> Fünf Beschreibungen und drei Argument-Hinweise weichen von der
+gedruckten Fassung {vorg} ab, ohne dass sich das Programm geändert hätte — betroffen sind
+<code>/design</code>, <code>/mcp</code>, <code>/model</code>, <code>/usage</code> und
+<code>/version</code>. Grund ist eine Korrektur am Ausleseverfahren: Einige Befehle sind im
+Programm mehrfach angelegt, etwa <code>/design</code> als Sammelbefehl <i>und</i> als enge
+Variante für <code>consent|revoke</code>. Bisher gewann schlicht der Eintrag, der zufällig
+früher in der Datei stand; jetzt wird deterministisch der aussagekräftigste gewählt. Bei
+<code>/design</code> steht deshalb erstmals der vollständige Argument-Hinweis
+<code>[sync|login|consent|revoke|import|export|status|&lt;prompt&gt;]</code> statt nur
+<code>consent | revoke</code>.</p>
+<p>Unter der Haube hat Anthropic das Programm neu geschnitten: Die ausgelieferte Datei ist von
+392 auf 246 Megabyte geschrumpft und ihre Module tragen andere Namen. Für die Benutzung ändert
+das nichts, für diese Referenz schon — das Ausleseverfahren musste daran angepasst werden.</p>
 """
 
 EN = """
-<p>Compared with {vorg} there are two new slash commands: <code>/cloud-plugins</code> — decides
-whether cloud sessions use the plugins enabled on this machine — and <code>/plugin-types</code>,
-which writes a <code>claude-code-mcp.d.ts</code> type file describing the inputs of the connected
-MCP tools, so a plugin can be typed against this session. No command was dropped.</p>
-<p>One short description changed in substance: <code>/schedule</code> used to read "create and
-manage scheduled remote Claude Code agents" and now reads "create, update, list, or run scheduled
-cloud agents (routines) that execute on a cron schedule" — so the command explicitly also lists
-and runs them on the spot, not just creates and manages them.</p>
-<p>For six further commands — <code>/artifact-components</code>,
-<code>/artifact-diagramming</code>, <code>/prototype</code>, <code>/run-skill-generator</code>,
-<code>/whiteboard</code> and <code>/workshop</code> — the only change in the description text is
-an em dash replaced by a plain hyphen. Nothing about the meaning changed.</p>
+<p>Compared with {vorg} no slash command is added and none is dropped; the count stays at
+{n_slash}. Exactly one short description changed in substance: <code>/whiteboard</code> used to
+read "a freehand canvas for sketching architecture diagrams at wireframe fidelity" and now reads
+"a <i>shared</i> sketch canvas for wireframe-fidelity diagrams" — the drawing surface is now
+explicitly described as shared.</p>
 <p>Among the terminal options (part A), <code>claude --help</code> is character-for-character
-identical to {vorg}, and the subcommand help (part B) is unchanged as well.</p>
-<p>Among the slash commands (part C) the count rises from 130 to {n_slash}. For 44 commands
+identical to {vorg}, and the subcommand help (part B) is unchanged as well. For 43 slash commands
 purely internal identifiers changed — of no consequence for this list.</p>
+<p><b>A note on this edition:</b> Five descriptions and three argument hints differ from the
+printed {vorg} edition without the program having changed — <code>/design</code>,
+<code>/mcp</code>, <code>/model</code>, <code>/usage</code> and <code>/version</code>. The reason
+is a correction to how this reference is extracted: some commands are defined more than once in
+the program, for instance <code>/design</code> both as an umbrella command <i>and</i> as a narrow
+<code>consent|revoke</code> variant. Previously whichever entry happened to sit earlier in the
+file won; the most informative one is now chosen deterministically. That is why
+<code>/design</code> shows its full argument hint
+<code>[sync|login|consent|revoke|import|export|status|&lt;prompt&gt;]</code> for the first time,
+instead of just <code>consent | revoke</code>.</p>
+<p>Under the hood Anthropic re-cut the program: the shipped file shrank from 392 to 246 megabytes
+and its modules carry different names. This changes nothing about using Claude Code, but it does
+affect this reference — the extraction had to be adapted to it.</p>
 """

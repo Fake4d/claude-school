@@ -137,8 +137,7 @@ def variable_aufloesen(bezeichner, vor_position):
         herkunft = IMPORTE[i].get(bezeichner)
         if herkunft:
             chunk, export = herkunft
-            j = NACH_NAME.get(chunk)
-            lokal = export_tabelle(chunk).get(export)
+            j, lokal = herkunft_modul(chunk, export)
             if j is not None and lokal:
                 qstart, qende = modul_bereich(j)
                 text = _text_suchen(lokal, data[qstart:qende])
@@ -181,10 +180,24 @@ for m in re.finditer(r'([A-Za-z_$][\w$]{0,8})\s*=\s*["\']([a-z0-9][a-z0-9:_-]{2,
 # fast immer daneben. Beides loest derselbe Schritt: erst das Modul bestimmen,
 # dann nur noch INNERHALB des Moduls suchen - und wenn der Bezeichner dort
 # importiert wird, dem Import ins Herkunftsmodul folgen.
-MODULKOPF = re.compile(r'/\$bunfs/root/(chunk-[a-z0-9]+\.js)\x00// @bun')
-MODUL_START = []          # [(startposition, chunkname)], aufsteigend
-for m in MODULKOPF.finditer(data):
-    MODUL_START.append((m.start(), m.group(1)))
+# 2.1.246 benennt Module zusaetzlich als `_668.js` statt `chunk-vtt3ymv6.js`.
+# Beide Formen muessen erkannt werden, sonst landet `modul_von()` im falschen
+# Modul und Namen/Beschreibungen lassen sich nicht mehr aufloesen - die Befehle
+# sehen dann im Versionsvergleich aus wie geloescht.
+CHUNKNAME = r'(?:chunk-[a-z0-9]+|_[0-9]+)\.js'
+MODULKOPF = re.compile(r'/\$bunfs/root/(' + CHUNKNAME + r')\x00// @bun')
+MODUL_START = [(m.start(), m.group(1)) for m in MODULKOPF.finditer(data)]
+
+# 2.1.246 hat das Layout erneut geaendert: der Modulpfad steht nicht mehr
+# unmittelbar vor dem Kopf (der Marker heisst dort `\x00// @bun @bytecode`).
+# Dafuer endet jedes Modul sichtbar mit seinem Export-Satz
+# `export{u as sxd,v as txd,...};`, und die Import-Saetze der anderen Module
+# nennen genau diese Aliase. Ein Modul laesst sich also ueber seine Exporte
+# identifizieren statt ueber den Pfad - das bleibt gueltig, egal wie die
+# Chunk-Dateien beim naechsten Umbau heissen.
+LAYOUT = "pfad" if MODUL_START else "export"
+if LAYOUT == "export":
+    MODUL_START = [(m.start(), None) for m in re.finditer(r'\x00// @bun', data)]
 MODUL_POS = [p for p, _ in MODUL_START]
 
 
@@ -200,9 +213,30 @@ def modul_bereich(i):
     return start, ende
 
 
+# Export-Layout: je Modul `Exportalias -> lokaler Bezeichner` aus dem
+# abschliessenden `export{...}` lesen, dazu global `Exportalias -> Modulindex`.
+EXPORT_LOKAL = [dict() for _ in MODUL_START]
+ALIAS_MODUL = {}
+if LAYOUT == "export":
+    EXPORT_SATZ = re.compile(r'export\{([^}]{1,8000})\};?\s*$')
+    for i in range(len(MODUL_START)):
+        start = MODUL_POS[i]
+        ende = MODUL_POS[i + 1] if i + 1 < len(MODUL_POS) else len(data)
+        m = EXPORT_SATZ.search(data[max(start, ende - 9000):ende])
+        if not m:
+            continue
+        for paar in m.group(1).split(","):
+            teile = paar.split(" as ")
+            if len(teile) != 2:
+                continue
+            lokal, alias = teile[0].strip(), teile[1].strip()
+            if lokal and alias:
+                EXPORT_LOKAL[i][alias] = lokal
+                ALIAS_MODUL.setdefault(alias, i)   # erster Fund gewinnt
+
 # Importe je Modul einsammeln: lokaler Alias -> (Herkunftsmodul, Exportname).
 IMPORTE = [dict() for _ in MODUL_START]
-IMPORT_SATZ = re.compile(r'import\{([^}]{1,4000})\}from"/\$bunfs/root/(chunk-[a-z0-9]+\.js)"')
+IMPORT_SATZ = re.compile(r'import\{([^}]{1,4000})\}from"/\$bunfs/root/(' + CHUNKNAME + r')"')
 GEFRAGT = {}              # chunkname -> Menge der von aussen genutzten Exportnamen
 for m in IMPORT_SATZ.finditer(data):
     i = modul_von(m.start())
@@ -222,6 +256,15 @@ for m in IMPORT_SATZ.finditer(data):
 NACH_NAME = {}
 for i, (_, nm) in enumerate(MODUL_START):
     NACH_NAME.setdefault(nm, i)
+
+def herkunft_modul(chunk, export):
+    """(Modulindex, lokaler Bezeichner) fuer einen Import - fuer beide Layouts."""
+    if LAYOUT == "export":
+        j = ALIAS_MODUL.get(export)
+        return (j, EXPORT_LOKAL[j].get(export)) if j is not None else (None, None)
+    j = NACH_NAME.get(chunk)
+    return j, export_tabelle(chunk).get(export)
+
 
 EXPORT_CACHE = {}
 
@@ -248,7 +291,7 @@ def export_tabelle(chunk):
         # Chunk-Pfade. Sie wird abgeschnitten; was davor liegt, endet mit der
         # Symboltabelle. (Nicht die ERSTE Pfadstelle im Fenster nehmen - die
         # gehoert noch zu einem frueheren Modul.)
-        pfadliste = re.search(r'(?:/\$bunfs/root/chunk-[a-z0-9]+\.js)+$', feld)
+        pfadliste = re.search(r'(?:/\$bunfs/root/' + CHUNKNAME + r')+$', feld)
         if pfadliste:
             feld = feld[:pfadliste.start()]
         funde = []
@@ -287,8 +330,7 @@ def name_aufloesen(bezeichner, vor_position):
         herkunft = IMPORTE[i].get(bezeichner)
         if herkunft:
             chunk, export = herkunft
-            j = NACH_NAME.get(chunk)
-            lokal = export_tabelle(chunk).get(export)
+            j, lokal = herkunft_modul(chunk, export)
             if j is not None and lokal:
                 qstart, qende = modul_bereich(j)
                 for pos, wert in NAMEN_POS.get(lokal, ()):
@@ -310,7 +352,8 @@ befehle = {}
 # zusaetzlich mindestens ein befehlstypisches Feld (type / isEnabled / aliases /
 # requires). `inputSchema` schliesst Werkzeuge und Agenten aus. Diese Regel ist
 # unabhaengig von den Minifier-Namen und damit ueber Versionen hinweg vergleichbar.
-ANKER = re.compile(r'description:(?:"|[A-Za-z_$][\w$]{0,6}[,}])|get description\(\)\s*\{')
+ANKER = re.compile(r'description:(?:"|\(\)\s*=>|[A-Za-z_$][\w$]{0,6}[,}])'
+                   r'|get description\(\)\s*\{')
 for t in ANKER.finditer(data):
     obj = klammer_bereich(data, t.start())
     if obj is None or "inputSchema" in obj[:400]:
@@ -338,8 +381,13 @@ for t in ANKER.finditer(data):
     if ds:
         desc, variabel = entschluesseln(ds.group(1)).strip(), False
     else:
-        tx = getter_texte(obj)
-        desc, variabel = (tx[-1] if tx else ""), len(tx) > 1
+        pf = feld_oberste_ebene(obj, r'description:\(\)\s*=>\s*"((?:[^"\\]|\\.)*)"')
+        if pf:
+            desc, variabel = entschluesseln(pf.group(1)).strip(), False
+            tx = []
+        else:
+            tx = getter_texte(obj)
+            desc, variabel = (tx[-1] if tx else ""), len(tx) > 1
         if not desc:
             # description verweist auf eine Variable (so liegen die Skill-Texte vor)
             vr = feld_oberste_ebene(obj, r'description:([A-Za-z_$][\w$]{0,6})')
@@ -366,8 +414,15 @@ for t in ANKER.finditer(data):
     # solche Treffer verwerfen. Bei Namen als Literal bleibt es wie bisher.
     if name_aus_variable and " " not in desc and len(desc) < 20:
         continue
+    # Manche Namen kommen im Bundle mehrfach vor - etwa `/design` als Hub UND
+    # als enger `consent|revoke`-Variante. Welcher Eintrag frueher in der Datei
+    # steht, wechselt zwischen Fassungen; ein "der erste gewinnt" liesse die
+    # Referenz deshalb grundlos hin- und herspringen. Deterministisch den
+    # aussagekraeftigsten Eintrag waehlen: mit Text vor ohne, dann laengerer
+    # Argument-Hinweis (ein Hub listet alle Unterbefehle), dann laengerer Text.
+    guete = (bool(desc), len(eintrag["hint"]), len(desc))
     alt = befehle.get(name)
-    if alt is None or (not alt["desc"] and desc):
+    if alt is None or guete > (bool(alt["desc"]), len(alt["hint"]), len(alt["desc"])):
         befehle[name] = eintrag
 
 out = sorted(befehle.values(), key=lambda b: b["name"])
