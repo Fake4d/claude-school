@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de"><head><meta charset="utf-8"><title>Claude Code · Befehlsreferenz 2.1.246</title>
+<html lang="de"><head><meta charset="utf-8"><title>Claude Code · Befehlsreferenz 2.1.247</title>
 <style>
 @page { size: A4 portrait; margin: 17mm 15mm 15mm; }
 * { box-sizing: border-box; }
@@ -35,16 +35,16 @@ section { break-inside: auto; }
   padding-top: 2mm; }
 </style></head><body>
 
-<div class="kopfzeile">Vollständige Referenz · geprüft gegen Version 2.1.246</div>
+<div class="kopfzeile">Vollständige Referenz · geprüft gegen Version 2.1.247</div>
 <h1>Claude Code<br>Befehlsreferenz</h1>
 <p class="lead">Alle Terminal-Befehle, alle Optionen und alle Slash-Befehle innerhalb einer Sitzung — mit einer Erklärung, was sie tun.</p>
-<p class="meta">Zusammengestellt von Christians virtuellem Server · 26.08.2026 · Aktualisierung der Fassung vom 25. August 2026 (2.1.245)</p>
+<p class="meta">Zusammengestellt von Christians virtuellem Server · 27.08.2026 · Aktualisierung der Fassung vom 26. August 2026 (2.1.246)</p>
 
 <div class="kasten">
 <h3>Wie diese Liste entstanden ist</h3>
 
 <p>Terminal-Befehle und Optionen (Teil A und B) sind direkt aus der installierten Fassung
-2.1.246 ausgelesen — <code>claude --help</code> und die Hilfe jedes Unterbefehls.</p>
+2.1.247 ausgelesen — <code>claude --help</code> und die Hilfe jedes Unterbefehls.</p>
 <p>Die Slash-Befehle (Teil C) stammen aus den Befehlsdefinitionen im Programm selbst. Das
 Ausleseverfahren erkennt auch Befehle, deren Beschreibung erst zur Laufzeit gebildet oder
 aus einer Variablen geholt wird, und seit dieser Fassung ebenso solche, deren <i>Name</i>
@@ -58,28 +58,13 @@ gesondert am Ende, damit nichts als verfügbar erscheint, was es nicht ist.</p>
 <div class="kasten">
 <h3>Was sich seit der letzten Fassung geändert hat</h3>
 
-<p>Gegenüber 2.1.245 kommt kein Slash-Befehl hinzu und keiner fällt weg; es bleibt bei
-132 Befehlen. Inhaltlich geändert hat sich genau eine Kurzbeschreibung:
-<code>/whiteboard</code> hieß bisher „eine freihändige Fläche zum Skizzieren von
-Architekturdiagrammen in Drahtmodell-Güte" und heißt jetzt „eine <i>gemeinsame</i>
-Skizzenfläche für Diagramme in Drahtmodell-Güte" — der Zeichenbereich wird also
-ausdrücklich als geteilt beschrieben.</p>
-<p>Bei den Terminal-Optionen (Teil A) ist <code>claude --help</code> zeichengleich zu 2.1.245,
-und auch die Hilfe der Unterbefehle (Teil B) ist unverändert. Bei 43 Slash-Befehlen haben sich
-rein interne Bezeichner geändert — ohne Bedeutung für diese Liste.</p>
-<p><b>In eigener Sache:</b> Fünf Beschreibungen und drei Argument-Hinweise weichen von der
-gedruckten Fassung 2.1.245 ab, ohne dass sich das Programm geändert hätte — betroffen sind
-<code>/design</code>, <code>/mcp</code>, <code>/model</code>, <code>/usage</code> und
-<code>/version</code>. Grund ist eine Korrektur am Ausleseverfahren: Einige Befehle sind im
-Programm mehrfach angelegt, etwa <code>/design</code> als Sammelbefehl <i>und</i> als enge
-Variante für <code>consent|revoke</code>. Bisher gewann schlicht der Eintrag, der zufällig
-früher in der Datei stand; jetzt wird deterministisch der aussagekräftigste gewählt. Bei
-<code>/design</code> steht deshalb erstmals der vollständige Argument-Hinweis
-<code>[sync|login|consent|revoke|import|export|status|&lt;prompt&gt;]</code> statt nur
-<code>consent | revoke</code>.</p>
-<p>Unter der Haube hat Anthropic das Programm neu geschnitten: Die ausgelieferte Datei ist von
-392 auf 246 Megabyte geschrumpft und ihre Module tragen andere Namen. Für die Benutzung ändert
-das nichts, für diese Referenz schon — das Ausleseverfahren musste daran angepasst werden.</p>
+<p>Gegenüber 2.1.246 eine Nullrunde: Kein Slash-Befehl kommt hinzu, keiner fällt weg — es bleibt
+bei 132 Befehlen — und keine Kurzbeschreibung hat sich inhaltlich geändert. Bei 37
+Slash-Befehlen haben sich lediglich rein interne Bezeichner geändert, ohne jede Bedeutung für
+diese Liste.</p>
+<p>Auch bei den Terminal-Optionen (Teil A) ist <code>claude --help</code> zeichengleich zu
+2.1.246, und die Hilfe der Unterbefehle (Teil B) ist ebenfalls unverändert. Diese Fassung
+dokumentiert damit ausschließlich den Versionssprung von 2.1.246 auf 2.1.247.</p>
 
 </div>
 
@@ -91,5 +76,5 @@ das nichts, für diese Referenz schon — das Ausleseverfahren musste daran ange
 
 <section><h2>Anhang · Angelegt, aber abgeschaltet</h2><p class="unter">Diese Namen existieren im Programm, sind in dieser Fassung aber per Schalter deaktiviert und stehen in einer Sitzung nicht zur Verfügung.</p><div class="z "><div class="l"><code>/loops</code></div><div class="r">Wiederholungen auflisten, anlegen und löschen. <span class="aus">im Programm angelegt, aber abgeschaltet</span></div></div><div class="z "><div class="l"><code>/pause-memory <span class="zus">auch /memory-pause, /toggle-memory</span></code></div><div class="r">Automatisches Gedächtnis für diese Sitzung anhalten. <span class="aus">im Programm angelegt, aber abgeschaltet</span></div></div><div class="z "><div class="l"><code>/update <span class="zus">auch /restart</span></code></div><div class="r">Auf die neueste Fassung wechseln. <span class="aus">im Programm angelegt, aber abgeschaltet</span></div></div><div class="z "><div class="l"><code>/version</code></div><div class="r">Version dieser Sitzung anzeigen. <span class="aus">im Programm angelegt, aber abgeschaltet</span></div></div><div class="z "><div class="l"><code>/wellbeing <span class="zus">auch /breaks, /break-reminder, /downtime</span></code></div><div class="r">Pausenerinnerungen und Ruhezeiten einstellen. <span class="aus">im Programm angelegt, aber abgeschaltet</span></div></div></section>
 
-<div class="fuss">Claude Code 2.1.246 · 62 Optionen · 127 verfügbare Slash-Befehle · 5 abgeschaltet · Stand 26.08.2026</div>
+<div class="fuss">Claude Code 2.1.247 · 62 Optionen · 127 verfügbare Slash-Befehle · 5 abgeschaltet · Stand 27.08.2026</div>
 </body></html>

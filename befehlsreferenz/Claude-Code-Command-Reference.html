@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>Claude Code · Command Reference 2.1.246</title>
+<html lang="en"><head><meta charset="utf-8"><title>Claude Code · Command Reference 2.1.247</title>
 <style>
 @page { size: A4 portrait; margin: 17mm 15mm 15mm; }
 * { box-sizing: border-box; }
@@ -35,16 +35,16 @@ section { break-inside: auto; }
   padding-top: 2mm; }
 </style></head><body>
 
-<div class="kopfzeile">Complete reference · checked against version 2.1.246</div>
+<div class="kopfzeile">Complete reference · checked against version 2.1.247</div>
 <h1>Claude Code<br>Command Reference</h1>
 <p class="lead">Every terminal command, every option and every slash command inside a session — with an explanation of what it does.</p>
-<p class="meta">Compiled by Christian's virtual server · 26 August 2026 · Update of the edition of 25 August 2026 (2.1.245)</p>
+<p class="meta">Compiled by Christian's virtual server · 27 August 2026 · Update of the edition of 26 August 2026 (2.1.246)</p>
 
 <div class="kasten">
 <h3>How this list came about</h3>
 
 <p>Terminal commands and options (parts A and B) are read straight out of the installed
-version 2.1.246 — <code>claude --help</code> and the help of every subcommand.</p>
+version 2.1.247 — <code>claude --help</code> and the help of every subcommand.</p>
 <p>The slash commands (part C) come from the command definitions inside the program itself.
 The extraction also picks up commands whose description is only assembled at runtime or
 fetched from a variable, and since this edition equally those whose <i>name</i> sits in a
@@ -58,27 +58,12 @@ at the end, so that nothing appears available that is not.</p>
 <div class="kasten">
 <h3>What has changed since the last edition</h3>
 
-<p>Compared with 2.1.245 no slash command is added and none is dropped; the count stays at
-132. Exactly one short description changed in substance: <code>/whiteboard</code> used to
-read "a freehand canvas for sketching architecture diagrams at wireframe fidelity" and now reads
-"a <i>shared</i> sketch canvas for wireframe-fidelity diagrams" — the drawing surface is now
-explicitly described as shared.</p>
+<p>Compared with 2.1.246 this is a null round: no slash command is added, none is dropped — the
+count stays at 132 — and no short description changed in substance. For 37 slash commands
+only purely internal identifiers changed, of no consequence for this list.</p>
 <p>Among the terminal options (part A), <code>claude --help</code> is character-for-character
-identical to 2.1.245, and the subcommand help (part B) is unchanged as well. For 43 slash commands
-purely internal identifiers changed — of no consequence for this list.</p>
-<p><b>A note on this edition:</b> Five descriptions and three argument hints differ from the
-printed 2.1.245 edition without the program having changed — <code>/design</code>,
-<code>/mcp</code>, <code>/model</code>, <code>/usage</code> and <code>/version</code>. The reason
-is a correction to how this reference is extracted: some commands are defined more than once in
-the program, for instance <code>/design</code> both as an umbrella command <i>and</i> as a narrow
-<code>consent|revoke</code> variant. Previously whichever entry happened to sit earlier in the
-file won; the most informative one is now chosen deterministically. That is why
-<code>/design</code> shows its full argument hint
-<code>[sync|login|consent|revoke|import|export|status|&lt;prompt&gt;]</code> for the first time,
-instead of just <code>consent | revoke</code>.</p>
-<p>Under the hood Anthropic re-cut the program: the shipped file shrank from 392 to 246 megabytes
-and its modules carry different names. This changes nothing about using Claude Code, but it does
-affect this reference — the extraction had to be adapted to it.</p>
+identical to 2.1.246, and the subcommand help (part B) is unchanged as well. This edition
+therefore documents nothing but the version bump from 2.1.246 to 2.1.247.</p>
 
 </div>
 
@@ -90,5 +75,5 @@ affect this reference — the extraction had to be adapted to it.</p>
 
 <section><h2>Appendix · Present, but switched off</h2><p class="unter">These names exist in the program, but are disabled by a flag in this version and are not available inside a session.</p><div class="z "><div class="l"><code>/loops</code></div><div class="r">List, create and delete loops. <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/pause-memory <span class="zus">also /memory-pause, /toggle-memory</span></code></div><div class="r">Pause automatic memory for this session. <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/update <span class="zus">also /restart</span></code></div><div class="r">Move to the newest version. <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/version</code></div><div class="r">Show the version of this session. <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/wellbeing <span class="zus">also /breaks, /break-reminder, /downtime</span></code></div><div class="r">Set up break reminders and quiet hours. <span class="aus">present in the program, but switched off</span></div></div></section>
 
-<div class="fuss">Claude Code 2.1.246 · 62 options · 127 available slash commands · 5 switched off · as of 26 August 2026</div>
+<div class="fuss">Claude Code 2.1.247 · 62 options · 127 available slash commands · 5 switched off · as of 27 August 2026</div>
 </body></html>
