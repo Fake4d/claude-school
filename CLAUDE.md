@@ -9,7 +9,7 @@ Alle Anleitungen entstehen gleich: ein Python-Skript schreibt **eine einzige
 HTML-Datei je Sprache**, daraus wird das PDF gedruckt. Kein Framework, keine Abhängigkeiten
 außer dem Drucker.
 
-- Comics (drei Stück): `build.py` → HTML → **Chromium headless** → PDF
+- Comics (vier Stück, eines davon ein Special): `build.py` → HTML → **Chromium headless** → PDF
 - Befehlsreferenz: `build_ref.py` → HTML → **WeasyPrint** → PDF
 - Server-Anleitung: **handgeschriebenes HTML** → WeasyPrint → PDF
 - Englische Fassungen: aus der deutschen abgeleitet, siehe „Zweisprachig“ weiter unten
@@ -83,7 +83,7 @@ Fehler auftaucht, zuerst danach greppen.
 
 ## Schriften
 
-Liegen gemeinsam in `werkzeuge/schriften/`. Beide `build.py` suchen sie **erst neben
+Liegen gemeinsam in `werkzeuge/schriften/`. Alle `build.py` suchen sie **erst neben
 sich, dann in `../schriften`** — damit dasselbe Skript sowohl im Repo als auch in
 einem flachen Arbeitsordner läuft. Diese Doppelsuche bitte erhalten, sonst bricht
 einer der beiden Wege.
@@ -149,8 +149,8 @@ Repo. Was daran allgemein brauchbar ist, ist stattdessen als eigenes Werkzeug
 herausgelöst und hier veröffentlicht: `werkzeuge/qa-ueberlauf.py`.
 
 Quelle sind immer die Arbeitsordner
-`~/claude/{befehlsreferenz,claude-anleitung,cowork-anleitung}` — die Dateien in diesem
-Repo sind Kopien daraus und sollten nicht direkt bearbeitet werden.
+`~/claude/{befehlsreferenz,claude-anleitung,cowork-anleitung,loop-anleitung}` — die
+Dateien in diesem Repo sind Kopien daraus und sollten nicht direkt bearbeitet werden.
 
 Ein zweites Skript außerhalb, `~/claude/bin/refcheck.sh`, läuft täglich per cron und
 vergleicht die installierte Claude-Fassung mit der zuletzt veröffentlichten. Nur bei
@@ -205,8 +205,8 @@ Zwei Dinge, die beim Umbau aufgefallen sind:
 
 Die englischen Dateinamen sind fest und werden von `zielname_von()` im
 Veröffentlichungsskript vergeben: `Claude-Code-Command-Reference.*`,
-`claude-code-comic-en.*`, `cowork-comic-en.*`, `AI-Server-Assistant-Edition-3.*`,
-`setup-prompt-en.txt`. Auf der Webseite liegen sie **im selben Ordner** wie die
+`claude-code-comic-en.*`, `cowork-comic-en.*`, `loop-comic-en.*`,
+`AI-Server-Assistant-Edition-3.*`, `setup-prompt-en.txt`. Auf der Webseite liegen sie **im selben Ordner** wie die
 deutschen; die Projektseiten bleiben deutsch und bekommen nur eine Zeile mit dem
 Verweis darauf.
 
@@ -249,6 +249,13 @@ Der Chat-Comic ist gegen die offizielle Dokumentation geprüft (18.08.2026). Ein
 daraus, der die Stufengrenze schärft: **Auch der normale Chat baut echte Dateien** —
 xlsx, docx, pptx, pdf, auf allen Plänen. Aber in einem abgeschotteten Bereich, den man
 herunterlädt. Der Comic sagt das ausdrücklich, sonst wirkt Stufe 2 überflüssig.
+
+**Seit dem 28.08.2026 gibt es dazu ein Special, `loop-comic/`.** Es ist bewusst
+**kein** vierte Stufe — die Leiter bleibt bei drei Stufen entlang der Zugriffsfrage.
+Das Special vertieft stattdessen ein einzelnes Thema *innerhalb* von Stufe 3
+(`/loop` als Baustein für dauerhaft laufende Routinen: Auto-Pacing, Verifikation,
+Tuning, Worktree-Isolation) und wird auf der Webseite auch entsprechend als
+Bonusheft zu Comic 3 präsentiert, nicht als gleichrangiger vierter Punkt der Leiter.
 
 ## Verschwundene Slash-Befehle sind fast immer ein Auslesefehler
 
