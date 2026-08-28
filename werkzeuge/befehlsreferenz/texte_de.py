@@ -171,6 +171,7 @@ SLASH = {
 "install-slack-app": "Claude-App für Slack installieren.",
 "keybindings": "Datei mit den Tastenkürzeln öffnen.",
 "keybindings-help": "Beim Anpassen der Tastenkürzel helfen.",
+"limit-reset": "Das Sitzungslimit sofort zurücksetzen und weiterarbeiten; einmal pro Woche möglich, zählt weiter aufs Wochenlimit.",
 "list-agents": "Unteragenten und andere erreichbare Sitzungen auflisten.",
 "logout": "Vom Anthropic-Konto abmelden.",
 "login": "Am Anthropic-Konto anmelden oder Konto wechseln.",

@@ -175,6 +175,7 @@ SLASH = {
 "install-slack-app": "Install the Claude app for Slack.",
 "keybindings": "Open the keyboard shortcuts file.",
 "keybindings-help": "Help with customising the keyboard shortcuts.",
+"limit-reset": "Reset your session limit now and keep working; available once a week, still counts toward the weekly limit.",
 "list-agents": "List subagents and other sessions you can reach.",
 "logout": "Sign out of the Anthropic account.",
 "login": "Sign in to the Anthropic account or switch accounts.",

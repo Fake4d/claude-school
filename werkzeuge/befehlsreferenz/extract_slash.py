@@ -227,9 +227,12 @@ if LAYOUT == "export":
             continue
         for paar in m.group(1).split(","):
             teile = paar.split(" as ")
-            if len(teile) != 2:
+            if len(teile) == 2:
+                lokal, alias = teile[0].strip(), teile[1].strip()
+            elif len(teile) == 1:
+                lokal = alias = teile[0].strip()
+            else:
                 continue
-            lokal, alias = teile[0].strip(), teile[1].strip()
             if lokal and alias:
                 EXPORT_LOKAL[i][alias] = lokal
                 ALIAS_MODUL.setdefault(alias, i)   # erster Fund gewinnt
@@ -245,9 +248,16 @@ for m in IMPORT_SATZ.finditer(data):
     quelle = m.group(2)
     for paar in m.group(1).split(","):
         teile = paar.split(" as ")
-        if len(teile) != 2:
+        if len(teile) == 2:
+            export, lokal = teile[0].strip(), teile[1].strip()
+        elif len(teile) == 1:
+            # Ohne Umbenennung (`import{fut}from"..."`) ist der lokale Name
+            # identisch mit dem Exportnamen - seit 2.1.248 kommt das vor und
+            # liess z.B. /dataviz (Export "fut") aus der Liste fallen, weil
+            # nur `Export as Lokal`-Paare erkannt wurden.
+            export = lokal = teile[0].strip()
+        else:
             continue
-        export, lokal = teile[0].strip(), teile[1].strip()
         if export and lokal:
             IMPORTE[i][lokal] = (quelle, export)
             GEFRAGT.setdefault(quelle, set()).add(export)
