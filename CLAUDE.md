@@ -19,8 +19,9 @@ sauber umbricht. Umgekehrt reicht der Referenz WeasyPrint völlig.
 
 Die Server-Anleitung ist die Ausnahme: Sie hat **kein** Bauskript, die HTML-Datei
 selbst ist die Quelle und wird direkt bearbeitet. Sie liegt unter
-`~/claude/florian/anleitung-v3.html` — der Ordnername stammt daher, dass die erste
-Ausgabe für einen Bekannten geschrieben wurde. Beim Veröffentlichen wird sie in
+`~/claude/server-setup-quelle/anleitung-v3.html` (bis 28.08.2026 `~/claude/florian/` —
+die erste Ausgabe war für einen Bekannten geschrieben, der Ordner trug lange dessen
+Namen; beim Aufräumen umbenannt). Beim Veröffentlichen wird sie in
 `KI-Server-Assistent-Ausgabe-3.*` umbenannt; die Umbenennung erledigt
 `zielname_von()` im Veröffentlichungsskript.
 

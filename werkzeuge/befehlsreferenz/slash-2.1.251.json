@@ -16,7 +16,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "IR()",
+  "enabled": "JP()",
   "verfuegbar": true
  },
  {
@@ -76,7 +76,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "I0()&&lf()===null",
+  "enabled": "zk()&&Lp()===null",
   "verfuegbar": true
  },
  {
@@ -86,7 +86,7 @@
   "variabel": false,
   "hint": "[--request-id <uuid>] (--wizard posture=\\u2026 scope=\\u2026 depth=\\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
   "aliases": [],
-  "enabled": "yAe()&&De()",
+  "enabled": "SIe()&&$e()",
   "verfuegbar": true
  },
  {
@@ -96,7 +96,7 @@
   "variabel": false,
   "hint": "[auto|<tokens>]",
   "aliases": [],
-  "enabled": "!De()",
+  "enabled": "!$e()",
   "verfuegbar": true
  },
  {
@@ -106,7 +106,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "OEt()&&!De()",
+  "enabled": "SDt()&&!$e()",
   "verfuegbar": true
  },
  {
@@ -180,7 +180,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!De()",
+  "enabled": "!$e()",
   "verfuegbar": true
  },
  {
@@ -200,7 +200,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!e&&(yJe()||_t())",
+  "enabled": "!e&&(Bet()||Et())",
   "verfuegbar": true
  },
  {
@@ -223,7 +223,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "n6e()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
+  "enabled": "A6e()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
   "verfuegbar": true
  },
  {
@@ -243,7 +243,7 @@
   "variabel": false,
   "hint": "[guidance]",
   "aliases": [],
-  "enabled": "ejt()",
+  "enabled": "Iqt()",
   "verfuegbar": true
  },
  {
@@ -263,7 +263,7 @@
   "variabel": false,
   "hint": "<optional custom summarization instructions>",
   "aliases": [],
-  "enabled": "!Pe(process.env.DISABLE_COMPACT)",
+  "enabled": "!Me(process.env.DISABLE_COMPACT)",
   "verfuegbar": true
  },
  {
@@ -285,7 +285,7 @@
   "variabel": false,
   "hint": "[all]",
   "aliases": [],
-  "enabled": "!De()",
+  "enabled": "!$e()",
   "verfuegbar": true
  },
  {
@@ -321,7 +321,7 @@
  {
   "name": "dataviz",
   "typ": "registriert",
-  "desc": "Use this skill whenever you are about to create ANY chart, graph, plot, dashboard, or data visualization, in ANY output medium — an HTML or React artifact, inline SVG, plotting code in any library (matplotlib, plotly, d3, Recharts, …), an image/PNG you will render and upload, or a chart shared into Slack. Read it BEFORE writing the first line of chart code, choosing chart colors, building a stat tile / meter / KPI row, or laying out a dashboard. Produces visualizations that read as one system — elegant, accessible, consistent in light and dark — using a brand-neutral placeholder palette you swap for your own. Teaches a design-system-agnostic method: a form heuristic, a color formula with a runnable validator, mark specs, and interaction rules. A validated default palette is documented in `references/palette.md` — swap that file's values for your brand's. Triggers on: \"chart\", \"graph\", \"plot\", \"data viz\", \"visualization\", \"dashboard\", \"analytics\", \"visualize data\", \"categorical colors\", \"sequential / diverging palette\", \"stat tile\", \"sparkline\", \"heatmap\", \"legend\", \"axis\", \"tooltip\", \"chart colors\", \"color by series\".",
+  "desc": "Use this skill whenever you are about to create ANY chart, graph, plot, dashboard, or data visualization, in ANY output medium — an HTML or React artifact, inline SVG, plotting code in any library (matplotlib, plotly, d3, Recharts, …), an image/PNG you will render and upload, or a chart shared into Slack. Read it BEFORE writing the first line of chart code, choosing chart colors, building a stat tile / meter / KPI row, or laying out a dashboard. When the destination is a first-party document connector (host-designated, never self-described) that renders live charts, hand it the rows (inline, or as an uploaded data file the chart cites) rather than a rendered PNG/SVG — a picture of a chart loses hover, data inspection and per-value comments. Produces visualizations that read as one system — elegant, accessible, consistent in light and dark — using a brand-neutral placeholder palette you swap for your own. Teaches a design-system-agnostic method: a form heuristic, a color formula with a runnable validator, mark specs, and interaction rules. A validated default palette is documented in `references/palette.md` — swap that file's values for your brand's. Triggers on: \"chart\", \"graph\", \"plot\", \"data viz\", \"visualization\", \"dashboard\", \"analytics\", \"visualize data\", \"categorical colors\", \"sequential / diverging palette\", \"stat tile\", \"sparkline\", \"heatmap\", \"legend\", \"axis\", \"tooltip\", \"chart colors\", \"color by series\".",
   "variabel": false,
   "hint": "",
   "aliases": [],
@@ -345,7 +345,7 @@
   "variabel": false,
   "hint": "[sync|login|consent|revoke|import|export|status|<prompt>]",
   "aliases": [],
-  "enabled": "qfe()",
+  "enabled": "Uhe()",
   "verfuegbar": true
  },
  {
@@ -355,7 +355,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "g3()",
+  "enabled": "m9()",
   "verfuegbar": true
  },
  {
@@ -365,7 +365,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "g3()",
+  "enabled": "m9()",
   "verfuegbar": true
  },
  {
@@ -375,7 +375,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "g3()",
+  "enabled": "m9()",
   "verfuegbar": true
  },
  {
@@ -459,7 +459,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "v_()&&!De()",
+  "enabled": "eS()&&!$e()",
   "verfuegbar": true
  },
  {
@@ -509,7 +509,7 @@
   "variabel": false,
   "hint": "<directive>",
   "aliases": [],
-  "enabled": "!Us()",
+  "enabled": "!Ns()",
   "verfuegbar": true
  },
  {
@@ -529,7 +529,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "xt(\"allow_heap_dump\")",
+  "enabled": "Mt(\"allow_heap_dump\")",
   "verfuegbar": true
  },
  {
@@ -629,7 +629,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "FP()",
+  "enabled": "uM()",
   "verfuegbar": true
  },
  {
@@ -639,7 +639,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "vt()&&Lxe()",
+  "enabled": "wt()&&QPe()",
   "verfuegbar": true
  },
  {
@@ -651,7 +651,7 @@
   "aliases": [
    "peers"
   ],
-  "enabled": "Do()",
+  "enabled": "Xo()",
   "verfuegbar": true
  },
  {
@@ -703,7 +703,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "vt()&&(DP()||Yye())",
+  "enabled": "wt()&&(iM()||VSe())",
   "verfuegbar": true
  },
  {
@@ -733,7 +733,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "zs()&&!tq()&&ndn()",
+  "enabled": "ta()&&!i5()&&zhn()",
   "verfuegbar": true
  },
  {
@@ -854,7 +854,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "PU()",
+  "enabled": "I2()",
   "verfuegbar": true
  },
  {
@@ -884,7 +884,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "x(\"tengu_velvet_static\"",
+  "enabled": "true",
   "verfuegbar": true
  },
  {
@@ -894,7 +894,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "vt()||!1",
+  "enabled": "wt()||!1",
   "verfuegbar": true
  },
  {
@@ -956,7 +956,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "vt()&&xt(\"allow_remote_sessions\")",
+  "enabled": "wt()&&Mt(\"allow_remote_sessions\")",
   "verfuegbar": true
  },
  {
@@ -1029,13 +1029,13 @@
  {
   "name": "schedule",
   "typ": "registriert",
-  "desc": "Create, update, list, or run scheduled cloud agents (routines) that execute on a cron schedule.",
+  "desc": "Create and manage scheduled remote Claude Code agents",
   "variabel": false,
   "hint": "",
   "aliases": [
    "routines"
   ],
-  "enabled": "ar()&&vt()&&!a.CLAUDE_CODE_REMOTE&&x(\"tengu_surreal_dali\"",
+  "enabled": "true",
   "verfuegbar": true
  },
  {
@@ -1045,7 +1045,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "{if(!Ot())return!1;let e=ll();return!(e?xN.includes(e.terminal??\"\"):dA.isJetBrainsIdeTerminal())",
+  "enabled": "{if(!Ot())return!1;let e=vl();return!(e?f1.includes(e.terminal??\"\"):eH.isJetBrainsIdeTerminal())",
   "verfuegbar": true
  },
  {
@@ -1057,7 +1057,7 @@
   "aliases": [
    "remote"
   ],
-  "enabled": "Mn()",
+  "enabled": "Fn()",
   "verfuegbar": true
  },
  {
@@ -1167,7 +1167,7 @@
   "variabel": false,
   "hint": "<task>",
   "aliases": [],
-  "enabled": "!Us()",
+  "enabled": "!Ns()",
   "verfuegbar": true
  },
  {
@@ -1189,7 +1189,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "xt(\"allow_team_onboarding\")",
+  "enabled": "Mt(\"allow_team_onboarding\")",
   "verfuegbar": true
  },
  {
@@ -1201,7 +1201,7 @@
   "aliases": [
    "tp"
   ],
-  "enabled": "vt()&&xt(\"allow_remote_sessions\")",
+  "enabled": "wt()&&Mt(\"allow_remote_sessions\")",
   "verfuegbar": true
  },
  {
@@ -1241,7 +1241,7 @@
   "variabel": false,
   "hint": "<prompt>",
   "aliases": [],
-  "enabled": "sB()",
+  "enabled": "gj()",
   "verfuegbar": true
  },
  {
@@ -1276,7 +1276,7 @@
    "cost",
    "stats"
   ],
-  "enabled": "De()",
+  "enabled": "$e()",
   "verfuegbar": true
  },
  {
@@ -1286,7 +1286,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "v_()&&!De()",
+  "enabled": "eS()&&!$e()",
   "verfuegbar": true
  },
  {
@@ -1354,6 +1354,16 @@
   "verfuegbar": true
  },
  {
+  "name": "whiteboard-mp",
+  "typ": "registriert",
+  "desc": "Create a multiplayer whiteboard artifact - a live sketch canvas for wireframe-fidelity diagrams (boxes, databases, decision diamonds, sticky notes, arrows, freehand, text, pasted images) where everyone with it open sees each other's strokes and cursors as they happen, the board shows whether this session is present, and you can draw on it live as well as answer a Send. Use when the user asks for a multiplayer or live whiteboard, wants to sketch with other people watching, or wants to see you draw in real time. Only for CREATING a new board; an existing one is read and answered through its published artifact.",
+  "variabel": false,
+  "hint": "",
+  "aliases": [],
+  "enabled": "true",
+  "verfuegbar": true
+ },
+ {
   "name": "workflow-launch-exec",
   "typ": "local",
   "desc": "Execute a server-launched workflow handoff (workflow_launch event sessions only)",
@@ -1370,7 +1380,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Hu()",
+  "enabled": "Qu()",
   "verfuegbar": true
  },
  {

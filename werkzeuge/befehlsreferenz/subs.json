@@ -1,5 +1,6 @@
 {
  "agents": [],
+ "attach": [],
  "auth": [
   [
    "login [options]",
@@ -36,6 +37,7 @@
  "gateway": [],
  "import": [],
  "install": [],
+ "logs": [],
  "mcp": [
   [
    "add [options] <name> <commandOrUrl> [args...]",
@@ -51,7 +53,7 @@
   ],
   [
    "add-json [options] <name> <json>",
-   "Add an MCP server (stdio or SSE) with a JSON string"
+   "Add an MCP server (stdio, SSE, HTTP, or WebSocket) with a JSON string"
   ],
   [
    "get <name>",
@@ -142,7 +144,10 @@
    "Delete all Claude Code state for a project (transcripts, tasks, file history, config entry)"
   ]
  ],
+ "respawn": [],
+ "rm": [],
  "setup-token": [],
+ "stop|kill": [],
  "ultrareview": [],
  "update": []
 }

@@ -10,7 +10,7 @@ OPTIONEN = {
 "--append-system-prompt <text>": "Text an die Systemanweisung anhängen.",
 "--autocompact <auto|tokens>": "Ab welcher Füllung automatisch zusammengefasst wird (auto oder 100k–1M).",
 "--ax-screen-reader": "Ausgabe für Screenreader: flacher Text, keine Rahmen, keine Animationen.",
-"--bg, --background": "Sitzung sofort im Hintergrund starten (verwalten mit claude agents).",
+"--bg, --background": "Sitzung im Hintergrund starten und sofort zurückkehren. Gibt die Kennung aus, die claude attach, logs, stop und rm entgegennehmen; claude agents listet sie auf.",
 "--bare": "Sparmodus: ohne Hooks, Plugins, Auto-Gedächtnis und CLAUDE.md-Suche.",
 "--betas <betas...>": "Beta-Kennungen an die Schnittstelle mitsenden (nur mit API-Schlüssel).",
 "--brief": "Erlaubt Claude, dir während der Arbeit kurze Zwischenmeldungen zu schicken.",
@@ -68,6 +68,7 @@ OPTIONEN = {
 
 UNTERBEFEHLE = {
 "agents": "Hintergrund-Agenten verwalten.",
+"attach": "Eine Hintergrundsitzung in diesem Terminal öffnen.",
 "auth": "Anmeldung verwalten.",
 "auth login": "Am Anthropic-Konto anmelden.",
 "auth logout": "Abmelden.",
@@ -81,6 +82,7 @@ UNTERBEFEHLE = {
 "gateway": "Firmen-Gateway für Anmeldung und Telemetrie betreiben.",
 "import": "Konfiguration eines anderen KI-Werkzeugs übernehmen.",
 "install": "Native Fassung installieren (stable, latest oder feste Version).",
+"logs": "Letzte Terminalausgabe einer Hintergrundsitzung anzeigen.",
 "mcp": "MCP-Server einrichten und verwalten.",
 "mcp add": "MCP-Server hinzufügen (stdio, http oder sse).",
 "mcp add-from-claude-desktop": "Server aus Claude Desktop übernehmen (nur Mac und WSL).",
@@ -108,7 +110,10 @@ UNTERBEFEHLE = {
 "plugin validate": "Plugin auf Fehler prüfen.",
 "project": "Projektzustand verwalten.",
 "project purge": "Allen gespeicherten Zustand eines Projekts löschen.",
+"respawn": "Hintergrundsitzung(en) neu starten, damit sie die aktuelle Fassung nutzen.",
+"rm": "Hintergrundsitzung löschen, auch ihren Arbeitsbaum, wenn das gefahrlos möglich ist.",
 "setup-token": "Langlebiges Anmeldetoken erzeugen (für Skripte und CI).",
+"stop|kill": "Hintergrundsitzung anhalten; die Unterhaltung bleibt erhalten.",
 "ultrareview": "Mehrstufige Code-Durchsicht in der Cloud starten.",
 "update|upgrade": "Auf Aktualisierungen prüfen und installieren.",
 }
@@ -254,6 +259,7 @@ SLASH = {
 "prototype": "Macht aus einer Idee einen lauffähigen Entwurf und veröffentlicht ihn als Seite.",
 "verify": "Prüft nach, ob eine Änderung wirklich tut, was sie soll – im echten Durchlauf.",
 "whiteboard": "Öffnet eine freie Zeichenfläche für Skizzen und Schaubilder.",
+"whiteboard-mp": "Öffnet ein Mehrspieler-Whiteboard: Striche und Cursor anderer Betrachter erscheinen live mit.",
 "workshop": "Entwirft etwas Schritt für Schritt gemeinsam mit Dir, als wachsendes Dokument.",
 }
 

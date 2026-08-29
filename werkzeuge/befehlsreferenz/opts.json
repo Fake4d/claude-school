@@ -33,7 +33,7 @@
  ],
  [
   "--bg, --background",
-  "Start the session as a background agent and return immediately (manage with `claude agents`)"
+  "Start the session in the background and return immediately. Prints the id that `claude attach`, `logs`, `stop` and `rm` take; `claude agents` lists them"
  ],
  [
   "--bare",

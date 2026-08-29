@@ -27,8 +27,8 @@ Leiter: es vertieft nur ein einzelnes Thema (`/loop` im Dauerbetrieb).
 
 Die **Befehlsreferenz** ist nicht abgeschrieben, sondern direkt aus der installierten
 Fassung ausgelesen: `claude --help`, die Hilfe jedes Unterbefehls und die
-Befehlsdefinitionen im Programm selbst. Stand: Version 2.1.250 — 62 Optionen,
-128 verfügbare Slash-Befehle, 5 angelegt aber abgeschaltet. Ein Zeitplan-Auftrag hält
+Befehlsdefinitionen im Programm selbst. Stand: Version 2.1.251 — 62 Optionen,
+129 verfügbare Slash-Befehle, 5 angelegt aber abgeschaltet. Ein Zeitplan-Auftrag hält
 sie bei jeder neuen Programmfassung von selbst aktuell.
 
 Die **Comics** sind gegen die offizielle Anthropic-Dokumentation geprüft, nicht aus dem

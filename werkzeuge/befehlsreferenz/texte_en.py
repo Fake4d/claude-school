@@ -15,7 +15,7 @@ OPTIONEN = {
 "--append-system-prompt <prompt>": "Append text to the system prompt.",
 "--autocompact <auto|tokens>": "When to compact automatically (auto, or 100k–1M).",
 "--ax-screen-reader": "Screen-reader output: flat text, no borders, no animations.",
-"--bg, --background": "Start the session in the background right away (manage with claude agents).",
+"--bg, --background": "Start the session in the background and return right away. Prints the id that claude attach, logs, stop and rm take; claude agents lists them.",
 "--bare": "Frugal mode: no hooks, plugins, auto-memory or CLAUDE.md discovery.",
 "--betas <betas...>": "Send beta identifiers to the API (API key users only).",
 "--brief": "Lets Claude send you short progress notes while it works.",
@@ -73,6 +73,7 @@ OPTIONEN = {
 
 UNTERBEFEHLE = {
 "agents": "Manage background agents.",
+"attach": "Open a background session in this terminal.",
 "auth": "Manage sign-in.",
 "auth login": "Sign in to the Anthropic account.",
 "auth logout": "Sign out.",
@@ -86,6 +87,7 @@ UNTERBEFEHLE = {
 "gateway": "Run a company gateway for sign-in and telemetry.",
 "import": "Take over the configuration of another AI tool.",
 "install": "Install the native build (stable, latest or a fixed version).",
+"logs": "Show a background session's recent terminal output.",
 "mcp": "Set up and manage MCP servers.",
 "mcp add": "Add an MCP server (stdio, http or sse).",
 "mcp add-from-claude-desktop": "Import servers from Claude Desktop (Mac and WSL only).",
@@ -113,7 +115,10 @@ UNTERBEFEHLE = {
 "plugin validate": "Check a plugin for errors.",
 "project": "Manage project state.",
 "project purge": "Delete all stored state of a project.",
+"respawn": "Restart background sessions so they run the current version.",
+"rm": "Delete a background session, and its worktree when safe.",
 "setup-token": "Create a long-lived authentication token (for scripts and CI).",
+"stop|kill": "Stop a background session; its conversation is kept.",
 "ultrareview": "Start a multi-stage code review in the cloud.",
 "update|upgrade": "Check for updates and install them.",
 }
@@ -258,6 +263,7 @@ SLASH = {
 "prototype": "Turns an idea into a working draft and publishes it as a page.",
 "verify": "Checks that a change really does what it should — in a real run.",
 "whiteboard": "Opens a free drawing surface for sketches and diagrams.",
+"whiteboard-mp": "Opens a multiplayer whiteboard: other viewers' strokes and cursors appear live.",
 "workshop": "Designs something with you step by step, as a growing document.",
 }
 
