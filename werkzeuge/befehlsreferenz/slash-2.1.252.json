@@ -16,7 +16,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "JP()",
+  "enabled": "s0()",
   "verfuegbar": true
  },
  {
@@ -76,7 +76,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "zk()&&Lp()===null",
+  "enabled": "Jk()&&Pp()===null",
   "verfuegbar": true
  },
  {
@@ -86,7 +86,7 @@
   "variabel": false,
   "hint": "[--request-id <uuid>] (--wizard posture=\\u2026 scope=\\u2026 depth=\\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
   "aliases": [],
-  "enabled": "SIe()&&$e()",
+  "enabled": "zIe()&&$e()",
   "verfuegbar": true
  },
  {
@@ -106,7 +106,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "SDt()&&!$e()",
+  "enabled": "tLt()&&!$e()",
   "verfuegbar": true
  },
  {
@@ -243,7 +243,7 @@
   "variabel": false,
   "hint": "[guidance]",
   "aliases": [],
-  "enabled": "Iqt()",
+  "enabled": "Cqt()",
   "verfuegbar": true
  },
  {
@@ -345,7 +345,7 @@
   "variabel": false,
   "hint": "[sync|login|consent|revoke|import|export|status|<prompt>]",
   "aliases": [],
-  "enabled": "Uhe()",
+  "enabled": "whe()",
   "verfuegbar": true
  },
  {
@@ -629,7 +629,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "uM()",
+  "enabled": "dM()",
   "verfuegbar": true
  },
  {
@@ -639,7 +639,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "wt()&&QPe()",
+  "enabled": "wt()&&n0e()",
   "verfuegbar": true
  },
  {
@@ -703,7 +703,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "wt()&&(iM()||VSe())",
+  "enabled": "wt()&&(sM()||WSe())",
   "verfuegbar": true
  },
  {
@@ -733,7 +733,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ta()&&!i5()&&zhn()",
+  "enabled": "ta()&&!t5()&&Chn()",
   "verfuegbar": true
  },
  {
@@ -854,7 +854,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "I2()",
+  "enabled": "R2()",
   "verfuegbar": true
  },
  {
@@ -1045,7 +1045,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "{if(!Ot())return!1;let e=vl();return!(e?f1.includes(e.terminal??\"\"):eH.isJetBrainsIdeTerminal())",
+  "enabled": "{if(!Ot())return!1;let e=kl();return!(e?f1.includes(e.terminal??\"\"):nH.isJetBrainsIdeTerminal())",
   "verfuegbar": true
  },
  {

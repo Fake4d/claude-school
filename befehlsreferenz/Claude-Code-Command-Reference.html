@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>Claude Code · Command Reference 2.1.251</title>
+<html lang="en"><head><meta charset="utf-8"><title>Claude Code · Command Reference 2.1.252</title>
 <style>
 @page { size: A4 portrait; margin: 17mm 15mm 15mm; }
 * { box-sizing: border-box; }
@@ -35,16 +35,16 @@ section { break-inside: auto; }
   padding-top: 2mm; }
 </style></head><body>
 
-<div class="kopfzeile">Complete reference · checked against version 2.1.251</div>
+<div class="kopfzeile">Complete reference · checked against version 2.1.252</div>
 <h1>Claude Code<br>Command Reference</h1>
 <p class="lead">Every terminal command, every option and every slash command inside a session — with an explanation of what it does.</p>
-<p class="meta">Compiled by Christian's virtual server · 29 August 2026 · Update of the edition of 28 August 2026 (2.1.250)</p>
+<p class="meta">Compiled by Christian's virtual server · 1 September 2026 · Update of the edition of 29 August 2026 (2.1.251)</p>
 
 <div class="kasten">
 <h3>How this list came about</h3>
 
 <p>Terminal commands and options (parts A and B) are read straight out of the installed
-version 2.1.251 — <code>claude --help</code> and the help of every subcommand.</p>
+version 2.1.252 — <code>claude --help</code> and the help of every subcommand.</p>
 <p>The slash commands (part C) come from the command definitions inside the program itself.
 The extraction also picks up commands whose description is only assembled at runtime or
 fetched from a variable, and since this edition equally those whose <i>name</i> sits in a
@@ -58,24 +58,11 @@ at the end, so that nothing appears available that is not.</p>
 <div class="kasten">
 <h3>What has changed since the last edition</h3>
 
-<p>Compared with 2.1.250 one new slash command is added: <code>/whiteboard-mp</code>, a
-multiplayer whiteboard where everyone with the view open sees each other's strokes and cursors
-live. None is dropped, and the list grows to 134 entries. For <code>/dataviz</code> and
-<code>/schedule</code> only the internal trigger text changed (<code>/dataviz</code> now also
-says to hand chart data to a document-capable first-party connector as rows rather than as an
-image; <code>/schedule</code> is worded more tersely) — of no consequence for this list. For 37
-further slash commands only purely internal identifiers changed, likewise of no consequence for
-this list.</p>
-<p>Among the terminal options (part A), the description of <code>--bg, --background</code> was
-refined: it now names the commands used to manage a background session. Those very commands are
-new in the subcommand help (part B): <code>claude attach &lt;id&gt;</code> opens a background
-session in this terminal, <code>claude logs &lt;id&gt;</code> shows its recent output,
-<code>claude respawn</code> restarts it (or all of them at once with <code>--all</code>) to run
-the current version, <code>claude rm &lt;id&gt;</code> deletes it and its worktree when that is
-safe, and <code>claude stop|kill &lt;id&gt;</code> stops it without discarding the conversation —
-it reopens with <code>claude attach</code> or resumes with <code>--resume</code>. <code>mcp
-add-json</code> now states that HTTP and WebSocket are supported alongside stdio and SSE.
-Everything else in parts A and B is character-for-character identical to 2.1.250.</p>
+<p>Compared with 2.1.251 this is a no-op release: the help for <code>claude --help</code> and the
+subcommand help remain character-for-character identical. The slash command list stays unchanged
+at 134 entries — none added, none dropped, and nothing changed in substance for any of them.
+For 12 commands only purely internal identifiers changed, of no consequence for this list. This
+release differs from 2.1.251 only in its version stamp.</p>
 
 </div>
 
@@ -87,5 +74,5 @@ Everything else in parts A and B is character-for-character identical to 2.1.250
 
 <section><h2>Appendix · Present, but switched off</h2><p class="unter">These names exist in the program, but are disabled by a flag in this version and are not available inside a session.</p><div class="z "><div class="l"><code>/loops</code></div><div class="r">List, create and delete loops. <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/pause-memory <span class="zus">also /memory-pause, /toggle-memory</span></code></div><div class="r">Pause automatic memory for this session. <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/update <span class="zus">also /restart</span></code></div><div class="r">Move to the newest version. <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/version</code></div><div class="r">Show the version of this session. <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/wellbeing <span class="zus">also /breaks, /break-reminder, /downtime</span></code></div><div class="r">Set up break reminders and quiet hours. <span class="aus">present in the program, but switched off</span></div></div></section>
 
-<div class="fuss">Claude Code 2.1.251 · 62 options · 129 available slash commands · 5 switched off · as of 29 August 2026</div>
+<div class="fuss">Claude Code 2.1.252 · 62 options · 129 available slash commands · 5 switched off · as of 1 September 2026</div>
 </body></html>
