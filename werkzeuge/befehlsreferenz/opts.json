@@ -168,6 +168,10 @@
   "Permission mode to use for the session (choices: \"acceptEdits\", \"auto\", \"bypassPermissions\", \"manual\", \"dontAsk\", \"plan\")"
  ],
  [
+  "--permission-prompts <target>",
+  "Who answers permission prompts with --print: \"host\" (the SDK host or --permission-prompt-tool) or \"none\" (nobody: anything that would prompt is denied automatically; the permission mode still decides everything else) (choices: \"host\", \"none\", default: \"host\")"
+ ],
+ [
   "--plugin-dir <path>",
   "Load a plugin from a directory or .zip for this session only (repeatable: --plugin-dir A --plugin-dir B.zip) (default: [])"
  ],

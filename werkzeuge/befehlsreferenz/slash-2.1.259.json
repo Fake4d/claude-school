@@ -16,7 +16,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "fR()",
+  "enabled": "vR()",
   "verfuegbar": true
  },
  {
@@ -76,7 +76,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "pT()&&jd()===null",
+  "enabled": "kT()&&Dd()===null",
   "verfuegbar": true
  },
  {
@@ -86,7 +86,7 @@
   "variabel": false,
   "hint": "[--request-id <uuid>] (--wizard posture=\\u2026 scope=\\u2026 depth=\\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
   "aliases": [],
-  "enabled": "ASt()&&Pe()",
+  "enabled": "bvt()&&Le()",
   "verfuegbar": true
  },
  {
@@ -96,7 +96,7 @@
   "variabel": false,
   "hint": "[auto|<tokens>]",
   "aliases": [],
-  "enabled": "!Pe()",
+  "enabled": "!Le()",
   "verfuegbar": true
  },
  {
@@ -106,7 +106,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "eQn()&&!Pe()",
+  "enabled": "Ssr()&&!Le()",
   "verfuegbar": true
  },
  {
@@ -180,7 +180,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!Pe()",
+  "enabled": "!Le()",
   "verfuegbar": true
  },
  {
@@ -190,7 +190,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!r",
+  "enabled": "!i",
   "verfuegbar": true
  },
  {
@@ -200,7 +200,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!e&&(Tot()||At())",
+  "enabled": "!e&&(nst()||Tt())",
   "verfuegbar": true
  },
  {
@@ -223,7 +223,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "NJe()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
+  "enabled": "mQe()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
   "verfuegbar": true
  },
  {
@@ -243,7 +243,7 @@
   "variabel": false,
   "hint": "[guidance]",
   "aliases": [],
-  "enabled": "o8t()",
+  "enabled": "m3t()",
   "verfuegbar": true
  },
  {
@@ -285,7 +285,7 @@
   "variabel": false,
   "hint": "[all]",
   "aliases": [],
-  "enabled": "!Pe()",
+  "enabled": "!Le()",
   "verfuegbar": true
  },
  {
@@ -345,7 +345,7 @@
   "variabel": false,
   "hint": "[sync|login|consent|revoke|import|export|status|<prompt>]",
   "aliases": [],
-  "enabled": "mbe()",
+  "enabled": "bSe()",
   "verfuegbar": true
  },
  {
@@ -355,7 +355,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "F8()",
+  "enabled": "E5()",
   "verfuegbar": true
  },
  {
@@ -365,7 +365,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "F8()",
+  "enabled": "E5()",
   "verfuegbar": true
  },
  {
@@ -375,7 +375,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "F8()",
+  "enabled": "E5()",
   "verfuegbar": true
  },
  {
@@ -459,7 +459,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "vS()&&!Pe()",
+  "enabled": "PS()&&!Le()",
   "verfuegbar": true
  },
  {
@@ -509,7 +509,7 @@
   "variabel": false,
   "hint": "<directive>",
   "aliases": [],
-  "enabled": "!Ts()",
+  "enabled": "!xs()",
   "verfuegbar": true
  },
  {
@@ -529,7 +529,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Nt(\"allow_heap_dump\")",
+  "enabled": "Ft(\"allow_heap_dump\")",
   "verfuegbar": true
  },
  {
@@ -629,7 +629,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "$F()",
+  "enabled": "XF()",
   "verfuegbar": true
  },
  {
@@ -639,7 +639,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "wt()&&CMe()",
+  "enabled": "wt()&&tNe()",
   "verfuegbar": true
  },
  {
@@ -651,7 +651,7 @@
   "aliases": [
    "peers"
   ],
-  "enabled": "qo()",
+  "enabled": "Ko()",
   "verfuegbar": true
  },
  {
@@ -703,7 +703,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "wt()&&(FF()||YDe())",
+  "enabled": "wt()&&(eB()||H$e())",
   "verfuegbar": true
  },
  {
@@ -733,7 +733,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Zs()&&!c5()&&ESn()",
+  "enabled": "ia()&&!j5()&&SEn()",
   "verfuegbar": true
  },
  {
@@ -830,7 +830,7 @@
  {
   "name": "plugin-types",
   "typ": "local",
-  "desc": "Write claude-code-mcp.d.ts: the inputs of the connected MCP tools, for typing a plugin against this session",
+  "desc": "Write claude-code.d.ts and claude-code-mcp.d.ts: the plugin API's TypeScript declarations and the inputs of the connected MCP tools, for typing a hooks module against this session",
   "variabel": false,
   "hint": "[dir]",
   "aliases": [],
@@ -854,7 +854,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "IG()",
+  "enabled": "XG()",
   "verfuegbar": true
  },
  {
@@ -956,7 +956,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "wt()&&Nt(\"allow_remote_sessions\")",
+  "enabled": "wt()&&Ft(\"allow_remote_sessions\")",
   "verfuegbar": true
  },
  {
@@ -1045,7 +1045,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "{if(!xt())return!1;let e=yl();return!(e?aU.includes(e.terminal??\"\"):SH.isJetBrainsIdeTerminal())",
+  "enabled": "{if(!xt())return!1;let e=Sl();return!(e?kU.includes(e.terminal??\"\"):LH.isJetBrainsIdeTerminal())",
   "verfuegbar": true
  },
  {
@@ -1057,7 +1057,7 @@
   "aliases": [
    "remote"
   ],
-  "enabled": "Mn()",
+  "enabled": "Fn()",
   "verfuegbar": true
  },
  {
@@ -1167,7 +1167,7 @@
   "variabel": false,
   "hint": "<task>",
   "aliases": [],
-  "enabled": "!Ts()",
+  "enabled": "!xs()",
   "verfuegbar": true
  },
  {
@@ -1189,7 +1189,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Nt(\"allow_team_onboarding\")",
+  "enabled": "Ft(\"allow_team_onboarding\")",
   "verfuegbar": true
  },
  {
@@ -1201,7 +1201,7 @@
   "aliases": [
    "tp"
   ],
-  "enabled": "wt()&&Nt(\"allow_remote_sessions\")",
+  "enabled": "wt()&&Ft(\"allow_remote_sessions\")",
   "verfuegbar": true
  },
  {
@@ -1241,7 +1241,7 @@
   "variabel": false,
   "hint": "<prompt>",
   "aliases": [],
-  "enabled": "a0()",
+  "enabled": "S0()",
   "verfuegbar": true
  },
  {
@@ -1276,7 +1276,7 @@
    "cost",
    "stats"
   ],
-  "enabled": "Pe()",
+  "enabled": "Le()",
   "verfuegbar": true
  },
  {
@@ -1286,7 +1286,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "vS()&&!Pe()",
+  "enabled": "PS()&&!Le()",
   "verfuegbar": true
  },
  {
@@ -1380,7 +1380,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Ac()",
+  "enabled": "xc()",
   "verfuegbar": true
  },
  {
