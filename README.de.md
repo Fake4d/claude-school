@@ -19,7 +19,7 @@ Leiter: es vertieft nur ein einzelnes Thema (`/loop` im Dauerbetrieb).
 | [**Claude im Gespräch als Comic**](chat-comic/chat-anleitung.pdf) | 22 Seiten | Stufe 1 — nichts zu installieren: Artifacts, Projekte, Gedächtnis, Research | [PDF](chat-comic/chat-comic-en.pdf) |
 | [**Claude Cowork als Comic**](cowork-comic/cowork-anleitung.pdf) | 23 Seiten | Stufe 2 — Desktop-App: Claude arbeitet direkt in Deinen Ordnern | [PDF](cowork-comic/cowork-comic-en.pdf) |
 | [**Claude Code als Comic**](claude-code-comic/claude-anleitung.pdf) | 34 Seiten | Stufe 3 — Terminal: der ganze Rechner, eigene Werkzeuge, läuft ohne Dich | [PDF](claude-code-comic/claude-code-comic-en.pdf) |
-| [**Loop Engineering als Comic**](loop-comic/loop-anleitung.pdf) | 9 Seiten | Special — Bonusheft zu Stufe 3: aus `/loop` wird eine Werkstatt aus Routinen im Dauerbetrieb | [PDF](loop-comic/loop-comic-en.pdf) |
+| [**Loop Engineering als Comic**](loop-comic/loop-anleitung.pdf) | 13 Seiten | Special — Bonusheft zu Stufe 3: aus `/loop` wird eine Werkstatt aus Routinen im Dauerbetrieb | [PDF](loop-comic/loop-comic-en.pdf) |
 | [**Befehlsreferenz**](befehlsreferenz/Claude-Code-Befehlsreferenz.pdf) | 9 Seiten | Nachschlagen — alle Terminal-Befehle, Optionen und Slash-Befehle | [PDF](befehlsreferenz/Claude-Code-Command-Reference.pdf) |
 | [**Dein eigener KI-Server-Assistent**](server-setup/KI-Server-Assistent-Ausgabe-3.pdf) | 10 Seiten | Selbst aufsetzen — vom leeren Mietserver zum Claude im Dauerbetrieb | [PDF](server-setup/AI-Server-Assistant-Edition-3.pdf) |
 
