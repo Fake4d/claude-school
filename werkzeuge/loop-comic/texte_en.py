@@ -14,6 +14,8 @@ TITEL = "Loop Engineering"
 
 TEXTE = {
 
+"Claude": "Claude",
+
 # --- Titelseite ---
 "Ich hab jetzt kapiert, was <code>/loop</code>&nbsp;macht.":
     "I get what <code>/loop</code>&nbsp;does now.",
@@ -26,6 +28,9 @@ TEXTE = {
 "Tuning": "Tuning",
 "Dup-Unifier": "Dup unifier",
 "Routinen-Werkstatt": "Routine workshop",
+"Ralph-Loop": "Ralph loop",
+"Squad": "Squad",
+"Harness": "Harness",
 "Das nennt man <b>Loop&nbsp;Engineering</b>. Komm&#8217;, ich zeig&#8217;s&nbsp;dir.":
     "That&#8217;s called <b>Loop&nbsp;Engineering</b>. Come on, I&#8217;ll show&nbsp;you.",
 
@@ -69,6 +74,20 @@ TEXTE = {
 "Claude wählt selbst, wann der nächste Durchlauf sich lohnt":
     "Claude decides for itself when the next run is worth it",
 
+# --- Ralph-Loop ---
+"Diese Schleife, die einfach immer wieder plant, macht, prüft &#8211; hat das auch einen&nbsp;Namen?":
+    "This loop that just keeps planning, doing, checking &#8211; does that have a&nbsp;name&nbsp;too?",
+"Ja &#8211; das nennt man einen <b>Ralph&#8209;Loop</b>: planen, ausführen, prüfen, von&nbsp;vorn.":
+    "Yes &#8211; that&#8217;s called a <b>Ralph&#8209;loop</b>: plan, execute, check, from the&nbsp;top.",
+"Robust, aber roh &#8211; ohne Bremse frisst er Token weiter, auch wenn er längst am&nbsp;Ziel&nbsp;ist. Genau dafür gibt's Auto-Pacing, und die Verifikation, die als Nächstes&nbsp;kommt.":
+    "Robust, but crude &#8211; without a brake it keeps burning tokens even after it&#8217;s long since done. That&#8217;s exactly what auto-pacing is for, and the verification that comes&nbsp;next.",
+"Planen": "Plan",
+"Ausführen": "Execute",
+"Prüfen": "Check",
+"&#8635; von vorn, bis fertig": "&#8635; from the top, until done",
+"robust, aber ohne Bremse teuer im Token-Verbrauch":
+    "robust, but expensive in tokens without a brake",
+
 # --- Verifikation ---
 "Und wenn dabei niemand zuschaut &#8211; wie soll ich der Schleife dann&nbsp;trauen?":
     "But if nobody&#8217;s watching &#8211; how am I supposed to trust the&nbsp;loop?",
@@ -101,6 +120,20 @@ TEXTE = {
 "Claude bekommt Rückmeldung und tunt den eigenen Ablauf nach":
     "Claude gets feedback and tunes its own routine",
 
+# --- Hill Climbing ---
+"Ist das Nachjustieren von eben auch mit der Zeit systematisch, oder rät man da nur&nbsp;rum?":
+    "Is that tuning from before systematic over time, or is it just guesswork?",
+"Systematisch heißt <b>Hill&nbsp;Climbing</b>: man misst die Qualität mit einer festen Prüfliste &#8211; einem&nbsp;Eval &#8211; und schraubt gezielt an der Routine.":
+    "The systematic version is called <b>hill&nbsp;climbing</b>: you measure quality with a fixed checklist &#8211; an&nbsp;eval &#8211; and adjust the routine on purpose.",
+"Kein Rätselraten: jede Änderung wird gegen den Eval getestet, nur was wirklich besser abschneidet bleibt&nbsp;drin.":
+    "No guesswork: every change gets tested against the eval, only what actually scores better stays&nbsp;in.",
+"Eval definieren": "Define eval",
+"Routine anpassen": "Adjust routine",
+"gegen Eval testen": "Test against eval",
+"&#8599; Schritt für Schritt bergauf": "&#8599; step by step, uphill",
+"nur behalten, was der Eval bestätigt &#8211; das ist Hill Climbing":
+    "keep only what the eval confirms &#8211; that&#8217;s hill climbing",
+
 # --- Isolation ---
 "Laufen da nicht mehrere Schleifen im selben Ordner&nbsp;durcheinander?":
     "Don&#8217;t several loops in the same folder get in each other&#8217;s&nbsp;way?",
@@ -114,6 +147,33 @@ TEXTE = {
 "Worktree C": "Worktree C",
 "jede Schleife für sich, nichts überschreibt sich gegenseitig":
     "each loop on its own, nothing overwrites anything else",
+
+# --- Squads & Fleets ---
+"Die Worktrees von eben &#8211; laufen die dann alle als eigene, einzelne&nbsp;Claudes?":
+    "The worktrees from before &#8211; do they each run as their own, separate&nbsp;Claude?",
+"Meistens ja: jede Routine ihr eigener Claude &#8211; viele davon gleichzeitig nennt man eine <b>Fleet</b>.":
+    "Mostly yes: each routine its own Claude &#8211; many of them at once is called a <b>fleet</b>.",
+"Manchmal arbeiten mehrere Claudes aber auch <b>zusammen</b> an einer einzigen Aufgabe, mit verteilten Rollen &#8211; das ist ein <b>Squad</b>: einer plant, einer baut, einer&nbsp;prüft.":
+    "But sometimes several Claudes work <b>together</b> on a single task, with roles split up &#8211; that&#8217;s a <b>squad</b>: one plans, one builds, one&nbsp;reviews.",
+"Fleet": "Fleet",
+"viele, unabhängig, parallel": "many, independent, parallel",
+"Planer": "Planner",
+"Bauer": "Builder",
+"Prüfer": "Reviewer",
+"wenige, mit verteilten Rollen, an einer Aufgabe": "a few, with split roles, on one task",
+
+# --- Harnesses ---
+"Auto-Pacing, Verifikation, Tuning, Isolation &#8211; hat dieses ganze Gerüst auch einen&nbsp;Namen?":
+    "Auto-pacing, verification, tuning, isolation &#8211; does this whole scaffolding have a&nbsp;name&nbsp;too?",
+"Ja &#8211; die Summe aus Werkzeugen, Rechten, Gedächtnis und Ablaufsteuerung um das Modell herum heißt <b>Harness</b>.":
+    "Yes &#8211; the sum of tools, permissions, memory, and orchestration around the model is called a <b>harness</b>.",
+"Loop Engineering ist genau das: einen Harness bauen, in dem Claude tagelang unbeaufsichtigt arbeiten&nbsp;darf.":
+    "Loop Engineering is exactly that: building a harness Claude can work in, unattended, for&nbsp;days.",
+"Werkzeuge": "Tools",
+"Rechte": "Permissions",
+"Gedächtnis": "Memory",
+"Ablaufsteuerung": "Orchestration",
+"alles zusammen: der <b>Harness</b>": "all of it together: the <b>harness</b>",
 
 # --- Die Leiter ---
 "Wann lohnt sich das ganze Handwerk dann &#8211; reicht <code>/loop</code> nicht&nbsp;meistens?":
@@ -136,15 +196,21 @@ TEXTE = {
 "Genau darum geht's.": "That&#8217;s exactly the point.",
 "<b>/loop</b> &#8211; der Baustein, wiederholt einen Auftrag":
     "<b>/loop</b> &#8211; the building block, repeats a task",
+"<b>Ralph-Loop</b> &#8211; planen, ausführen, prüfen, von vorn":
+    "<b>Ralph loop</b> &#8211; plan, execute, check, from the top",
 "<b>Auto-Pacing</b> &#8211; Claude wählt den Abstand selbst":
     "<b>Auto-pacing</b> &#8211; Claude picks the interval itself",
 "<b>Verifikation</b> &#8211; Tests, Review, erst dann ein Vorschlag":
     "<b>Verification</b> &#8211; tests, review, only then a proposal",
-"<b>Tuning</b> &#8211; ein paar Tage, bis die Routine sitzt":
-    "<b>Tuning</b> &#8211; a few days until the routine sits right",
+"<b>Hill Climbing</b> &#8211; Tuning mit Eval statt Rätselraten":
+    "<b>Hill climbing</b> &#8211; tuning with an eval instead of guesswork",
 "<b>Worktree-Isolation</b> &#8211; jede Schleife für sich":
     "<b>Worktree isolation</b> &#8211; each loop on its own",
-"<b>Loop Engineering</b> &#8211; mehrere davon als Werkstatt im Dauerbetrieb":
-    "<b>Loop Engineering</b> &#8211; several of these as a workshop in permanent operation",
+"<b>Squad / Fleet</b> &#8211; verteilte Rollen oder viele parallel":
+    "<b>Squad / fleet</b> &#8211; split roles, or many in parallel",
+"<b>Harness</b> &#8211; Werkzeuge, Rechte, Gedächtnis, Ablaufsteuerung":
+    "<b>Harness</b> &#8211; tools, permissions, memory, orchestration",
+"<b>Loop Engineering</b> &#8211; all das als Werkstatt im Dauerbetrieb":
+    "<b>Loop Engineering</b> &#8211; all of it as a workshop in permanent operation",
 
 }

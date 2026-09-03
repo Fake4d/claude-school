@@ -141,7 +141,8 @@ html, body { margin:0; padding:0; background:#fff; color:#141414;
     <span class="q">?</span>
     <div class="chip c-blue">Auto-pacing</div><div class="chip c-red">Crash fuzzer</div><div class="chip c-green">Verification</div>
     <div class="chip c-orange">Worktrees</div><div class="chip c-blue">Tuning</div><div class="chip c-red">Dup unifier</div>
-    <div class="chip c-orange">Routine workshop</div>
+    <div class="chip c-orange">Routine workshop</div><div class="chip c-red">Ralph loop</div><div class="chip c-green">Squad</div>
+    <div class="chip c-blue">Harness</div>
   </div>
   <div class="right-of-stage">
     <div class="bubble b-tail-r">That&#8217;s called <b>Loop&nbsp;Engineering</b>. Come on, I&#8217;ll show&nbsp;you.</div>
@@ -156,7 +157,7 @@ html, body { margin:0; padding:0; background:#fff; color:#141414;
 <g class="hatch"><line x1="30" y1="280" x2="58" y2="280"/><line x1="40" y1="288" x2="72" y2="288"/><line x1="112" y1="281" x2="146" y2="281"/><line x1="120" y1="289" x2="156" y2="289"/></g>
 </g></svg>
   </div>
-</div></div></div></section><section class="page"><div class="badge">1/8</div><div class="bubbles"><div class="bubble b-q b-tail-l">Hold on &#8211; I already know <code>/loop</code>. So what is <b>Loop&nbsp;Engineering</b>&nbsp;then?</div><div class="bubble b-a b-tail-r"><p><code>/loop</code> is just the building block: a loop that repeats a task.</p><p>Loop Engineering is the craft around it &#8211; making sure the loop can run <b>unattended for days</b> without causing harm.</p></div></div><div class="scene"><svg class="fig" viewBox="0 0 190 300" style="--s:1.0">
+</div></div></div></section><section class="page"><div class="badge">1/12</div><div class="bubbles"><div class="bubble b-q b-tail-l">Hold on &#8211; I already know <code>/loop</code>. So what is <b>Loop&nbsp;Engineering</b>&nbsp;then?</div><div class="bubble b-a b-tail-r"><p><code>/loop</code> is just the building block: a loop that repeats a task.</p><p>Loop Engineering is the craft around it &#8211; making sure the loop can run <b>unattended for days</b> without causing harm.</p></div></div><div class="scene"><svg class="fig" viewBox="0 0 190 300" style="--s:1.0">
 <defs><pattern id="jeans" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(58)">
 <rect width="7" height="7" fill="#2c49a8"/><line x1="0" y1="0" x2="0" y2="7" stroke="#16266b" stroke-width="2.6"/>
 </pattern></defs>
@@ -185,7 +186,7 @@ html, body { margin:0; padding:0; background:#fff; color:#141414;
 <path d="M70 214 q-8 30 -10 46" class="lnb"/><path d="M112 214 q8 30 10 46" class="lnb"/>
 <ellipse cx="56" cy="266" rx="17" ry="9" fill="#141414"/><ellipse cx="126" cy="266" rx="17" ry="9" fill="#141414"/>
 <g class="hatch"><line x1="30" y1="280" x2="58" y2="280"/><line x1="40" y1="288" x2="72" y2="288"/><line x1="112" y1="281" x2="146" y2="281"/><line x1="120" y1="289" x2="156" y2="289"/></g>
-</g></svg></div></section><section class="page"><div class="badge">2/8</div><div class="bubbles"><div class="bubble b-q b-tail-l">Give me an example of what that looks&nbsp;like in practice.</div><div class="bubble b-a b-tail-r"><p>Boris Cherny runs several routines daily over his own apps, in a Slack&nbsp;channel.</p><p>A crash fuzzer taps around the app and fixes crashes, a dup unifier finds duplicate code, a dead-code remover cleans up &#8211; each routine with its own job.</p></div></div><div class="scene"><div class="scene-col"><div class="figrow"><svg class="fig" viewBox="0 0 190 300" style="--s:0.78">
+</g></svg></div></section><section class="page"><div class="badge">2/12</div><div class="bubbles"><div class="bubble b-q b-tail-l">Give me an example of what that looks&nbsp;like in practice.</div><div class="bubble b-a b-tail-r"><p>Boris Cherny runs several routines daily over his own apps, in a Slack&nbsp;channel.</p><p>A crash fuzzer taps around the app and fixes crashes, a dup unifier finds duplicate code, a dead-code remover cleans up &#8211; each routine with its own job.</p></div></div><div class="scene"><div class="scene-col"><div class="figrow"><svg class="fig" viewBox="0 0 190 300" style="--s:0.78">
 <defs><pattern id="jeans" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(58)">
 <rect width="7" height="7" fill="#2c49a8"/><line x1="0" y1="0" x2="0" y2="7" stroke="#16266b" stroke-width="2.6"/>
 </pattern></defs>
@@ -209,7 +210,7 @@ html, body { margin:0; padding:0; background:#fff; color:#141414;
 <ellipse cx="56" cy="266" rx="17" ry="9" fill="#141414"/><ellipse cx="126" cy="266" rx="17" ry="9" fill="#141414"/>
 <g class="hatch"><line x1="30" y1="280" x2="58" y2="280"/><line x1="40" y1="288" x2="72" y2="288"/><line x1="112" y1="281" x2="146" y2="281"/><line x1="120" y1="289" x2="156" y2="289"/></g>
 </g></svg></div><div class="wide"><div class="mini-row">
-<div class="chip c-red">Crash fuzzer</div><div class="chip c-orange">Dup unifier</div><div class="chip c-green">Dead-code remover</div><div class="chip c-blue">Abstraction police</div></div><div class="arw">&#8595;</div><div class="chip c-blue big">388 pull requests in a few weeks</div><div class="cap c-green">180 of them merged after code review + human review</div></div></div></div></section><section class="page"><div class="badge">3/8</div><div class="bubbles"><div class="bubble b-q b-tail-l">Do I have to tell the loop every time how often it should&nbsp;run?</div><div class="bubble b-a b-tail-r"><p>Not necessarily. Without a time given, Claude picks the interval&nbsp;itself.</p><p>Short while things are actually happening &#8211; longer during quiet stretches. That&#8217;s exactly what makes running for days practical: nobody has to keep adjusting an interval.</p></div></div><div class="scene"><div class="scene-col"><div class="figrow"><svg class="fig" viewBox="0 0 190 300" style="--s:0.78">
+<div class="chip c-red">Crash fuzzer</div><div class="chip c-orange">Dup unifier</div><div class="chip c-green">Dead-code remover</div><div class="chip c-blue">Abstraction police</div></div><div class="arw">&#8595;</div><div class="chip c-blue big">388 pull requests in a few weeks</div><div class="cap c-green">180 of them merged after code review + human review</div></div></div></div></section><section class="page"><div class="badge">3/12</div><div class="bubbles"><div class="bubble b-q b-tail-l">Do I have to tell the loop every time how often it should&nbsp;run?</div><div class="bubble b-a b-tail-r"><p>Not necessarily. Without a time given, Claude picks the interval&nbsp;itself.</p><p>Short while things are actually happening &#8211; longer during quiet stretches. That&#8217;s exactly what makes running for days practical: nobody has to keep adjusting an interval.</p></div></div><div class="scene"><div class="scene-col"><div class="figrow"><svg class="fig" viewBox="0 0 190 300" style="--s:0.78">
 <defs><pattern id="jeans" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(58)">
 <rect width="7" height="7" fill="#2c49a8"/><line x1="0" y1="0" x2="0" y2="7" stroke="#16266b" stroke-width="2.6"/>
 </pattern></defs>
@@ -235,7 +236,30 @@ html, body { margin:0; padding:0; background:#fff; color:#141414;
 </g></svg></div><div class="wide"><div class="mini-row">
 <div class="chip c-orange">busy<span class="chip-sub">short interval</span></div>
 <div class="chip c-green">quiet stretch<span class="chip-sub">long interval</span></div>
-<div class="chip c-red">blocked<span class="chip-sub">fallback wake-up</span></div></div><div class="rewind">&#8635; &#8635; &#8635;</div><div class="cap">Claude decides for itself when the next run is worth it</div></div></div></div></section><section class="page"><div class="badge">4/8</div><div class="bubbles"><div class="bubble b-q b-tail-l">But if nobody&#8217;s watching &#8211; how am I supposed to trust the&nbsp;loop?</div><div class="bubble b-a b-tail-r"><p>That&#8217;s exactly where Loop Engineering stands or falls: the loop has to be able to verify its own work <b>itself</b>, end&#8209;to&#8209;end.</p><p>Run the tests, have a second model review it &#8211; automated code review and security review &#8211; and only then offer the change as a pull&nbsp;request.</p></div></div><div class="scene"><div class="scene-col"><div class="figrow"><svg class="fig" viewBox="0 0 190 300" style="--s:0.76">
+<div class="chip c-red">blocked<span class="chip-sub">fallback wake-up</span></div></div><div class="rewind">&#8635; &#8635; &#8635;</div><div class="cap">Claude decides for itself when the next run is worth it</div></div></div></div></section><section class="page"><div class="badge">4/12</div><div class="bubbles"><div class="bubble b-q b-tail-l">This loop that just keeps planning, doing, checking &#8211; does that have a&nbsp;name&nbsp;too?</div><div class="bubble b-a b-tail-r"><p>Yes &#8211; that&#8217;s called a <b>Ralph&#8209;loop</b>: plan, execute, check, from the&nbsp;top.</p><p>Robust, but crude &#8211; without a brake it keeps burning tokens even after it&#8217;s long since done. That&#8217;s exactly what auto-pacing is for, and the verification that comes&nbsp;next.</p></div></div><div class="scene"><div class="scene-col"><div class="figrow"><svg class="fig" viewBox="0 0 190 300" style="--s:0.76">
+<defs><pattern id="jeans" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(58)">
+<rect width="7" height="7" fill="#2c49a8"/><line x1="0" y1="0" x2="0" y2="7" stroke="#16266b" stroke-width="2.6"/>
+</pattern></defs>
+<g class="ink">
+<path d="M55 44 q4-16 18-22 q12-14 30-9 q20-4 28 12 q14 4 12 20 q-6-7-14-6 q-6-11-20-8 q-14-8-26 2 q-14-2-20 11 q-6 0-8 0z" fill="#141414"/><path d="M52 40 q-6 8-2 16 q4-8 10-10z" fill="#141414"/><path d="M116 30 q10 2 12 12 q-8-6-14-6z" fill="#141414"/>
+<circle cx="90" cy="72" r="34" class="sk"/>
+<circle cx="78" cy="64" r="5" fill="#141414"/><circle cx="101" cy="64" r="5" fill="#141414"/>
+<ellipse cx="90" cy="86" rx="8" ry="8" fill="#141414"/>
+<path d="M63 128 q-6 46 -2 76 l58 0 q6 -32 -2 -76 q-14 -12 -54 0z" class="sk"/>
+<path d="M117 128 q30 -6 44 -18" class="ln"/><path d="M158 108 q10 -2 14 2 q-4 5 -12 6" class="ln"/><path d="M63 130 q-18 14 -14 34" class="ln"/>
+<path d="M62 200 q-4 44 0 68 l24 0 q2 -34 4 -46 q4 14 5 46 l24 0 q4 -30 0 -68z" fill="url(#jeans)" stroke="#141414" stroke-width="3.4" stroke-linejoin="round"/>
+<ellipse cx="72" cy="277" rx="20" ry="10" class="sk"/><ellipse cx="112" cy="277" rx="20" ry="10" class="sk"/>
+<g class="hatch"><line x1="44" y1="290" x2="70" y2="290"/><line x1="52" y1="297" x2="80" y2="297"/><line x1="98" y1="291" x2="128" y2="291"/><line x1="106" y1="298" x2="140" y2="298"/></g>
+</g></svg><svg class="fig" viewBox="0 0 200 300" style="--s:0.76">
+<g class="ink">
+<path d="M40 148 q-26 4 -24 26 q10 6 20 -4" class="lnb"/><path d="M142 148 q26 4 24 26 q-10 6 -20 -4" class="lnb"/>
+<ellipse cx="92" cy="140" rx="58" ry="76" fill="#141414"/>
+<ellipse cx="72" cy="118" rx="11" ry="13" fill="#fff"/><ellipse cx="110" cy="118" rx="11" ry="13" fill="#fff"/>
+<path d="M64 158 q28 26 54 -2" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/>
+<path d="M70 214 q-8 30 -10 46" class="lnb"/><path d="M112 214 q8 30 10 46" class="lnb"/>
+<ellipse cx="56" cy="266" rx="17" ry="9" fill="#141414"/><ellipse cx="126" cy="266" rx="17" ry="9" fill="#141414"/>
+<g class="hatch"><line x1="30" y1="280" x2="58" y2="280"/><line x1="40" y1="288" x2="72" y2="288"/><line x1="112" y1="281" x2="146" y2="281"/><line x1="120" y1="289" x2="156" y2="289"/></g>
+</g></svg></div><div class="wide"><div class="chain"><div class="chip c-blue">Plan</div><div class="arw">&#8594;</div><div class="chip c-orange">Execute</div><div class="arw">&#8594;</div><div class="chip c-green">Check</div></div><div class="rewind">&#8635; from the top, until done</div><div class="chip c-red big">Ralph loop</div><div class="cap c-red">robust, but expensive in tokens without a brake</div></div></div></div></section><section class="page"><div class="badge">5/12</div><div class="bubbles"><div class="bubble b-q b-tail-l">But if nobody&#8217;s watching &#8211; how am I supposed to trust the&nbsp;loop?</div><div class="bubble b-a b-tail-r"><p>That&#8217;s exactly where Loop Engineering stands or falls: the loop has to be able to verify its own work <b>itself</b>, end&#8209;to&#8209;end.</p><p>Run the tests, have a second model review it &#8211; automated code review and security review &#8211; and only then offer the change as a pull&nbsp;request.</p></div></div><div class="scene"><div class="scene-col"><div class="figrow"><svg class="fig" viewBox="0 0 190 300" style="--s:0.76">
 <defs><pattern id="jeans" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(58)">
 <rect width="7" height="7" fill="#2c49a8"/><line x1="0" y1="0" x2="0" y2="7" stroke="#16266b" stroke-width="2.6"/>
 </pattern></defs>
@@ -258,7 +282,7 @@ html, body { margin:0; padding:0; background:#fff; color:#141414;
 <path d="M70 214 q-8 30 -10 46" class="lnb"/><path d="M112 214 q8 30 10 46" class="lnb"/>
 <ellipse cx="56" cy="266" rx="17" ry="9" fill="#141414"/><ellipse cx="126" cy="266" rx="17" ry="9" fill="#141414"/>
 <g class="hatch"><line x1="30" y1="280" x2="58" y2="280"/><line x1="40" y1="288" x2="72" y2="288"/><line x1="112" y1="281" x2="146" y2="281"/><line x1="120" y1="289" x2="156" y2="289"/></g>
-</g></svg></div><div class="wide"><div class="chain"><div class="chip c-blue">Change</div><div class="arw">&#8594;</div><div class="chip c-green">Tests</div><div class="arw">&#8594;</div><div class="chip c-orange">Code review</div><div class="arw">&#8594;</div><div class="chip c-red">Security review</div><div class="arw">&#8594;</div><div class="chip c-blue">Pull request</div></div><div class="cap c-red">if a check fails, there is no proposal &#8211; no human has to look at it beforehand</div></div></div></div></section><section class="page"><div class="badge">5/8</div><div class="bubbles"><div class="bubble b-q b-tail-l">And what if the loop makes a mess of it at&nbsp;first?</div><div class="bubble b-a b-tail-r"><p>Then you adjust the routine &#8211; or just ask Claude to improve it&nbsp;itself.</p><p>Sometimes one day is enough, sometimes it takes several attempts before the routine sits reliably. That&#8217;s expected, not a failure.</p></div></div><div class="scene"><div class="scene-col"><div class="figrow"><svg class="fig" viewBox="0 0 190 300" style="--s:0.76">
+</g></svg></div><div class="wide"><div class="chain"><div class="chip c-blue">Change</div><div class="arw">&#8594;</div><div class="chip c-green">Tests</div><div class="arw">&#8594;</div><div class="chip c-orange">Code review</div><div class="arw">&#8594;</div><div class="chip c-red">Security review</div><div class="arw">&#8594;</div><div class="chip c-blue">Pull request</div></div><div class="cap c-red">if a check fails, there is no proposal &#8211; no human has to look at it beforehand</div></div></div></div></section><section class="page"><div class="badge">6/12</div><div class="bubbles"><div class="bubble b-q b-tail-l">And what if the loop makes a mess of it at&nbsp;first?</div><div class="bubble b-a b-tail-r"><p>Then you adjust the routine &#8211; or just ask Claude to improve it&nbsp;itself.</p><p>Sometimes one day is enough, sometimes it takes several attempts before the routine sits reliably. That&#8217;s expected, not a failure.</p></div></div><div class="scene"><div class="scene-col"><div class="figrow"><svg class="fig" viewBox="0 0 190 300" style="--s:0.76">
 <defs><pattern id="jeans" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(58)">
 <rect width="7" height="7" fill="#2c49a8"/><line x1="0" y1="0" x2="0" y2="7" stroke="#16266b" stroke-width="2.6"/>
 </pattern></defs>
@@ -281,7 +305,30 @@ html, body { margin:0; padding:0; background:#fff; color:#141414;
 <path d="M70 214 q-8 30 -10 46" class="lnb"/><path d="M112 214 q8 30 10 46" class="lnb"/>
 <ellipse cx="56" cy="266" rx="17" ry="9" fill="#141414"/><ellipse cx="126" cy="266" rx="17" ry="9" fill="#141414"/>
 <g class="hatch"><line x1="30" y1="280" x2="58" y2="280"/><line x1="40" y1="288" x2="72" y2="288"/><line x1="112" y1="281" x2="146" y2="281"/><line x1="120" y1="289" x2="156" y2="289"/></g>
-</g></svg></div><div class="wide"><div class="chain"><div class="chip c-red">Day 1<span class="chip-sub">often misses</span></div><div class="arw">&#8594;</div><div class="chip c-orange">Sharpen the routine</div><div class="arw">&#8594;</div><div class="chip c-blue">Day 2<span class="chip-sub">already better</span></div><div class="arw">&#8594;</div><div class="chip c-green">Day 3+<span class="chip-sub">reliably solid</span></div></div><div class="cap">Claude gets feedback and tunes its own routine</div></div></div></div></section><section class="page"><div class="badge">6/8</div><div class="bubbles"><div class="bubble b-q b-tail-l">Don&#8217;t several loops in the same folder get in each other&#8217;s&nbsp;way?</div><div class="bubble b-a b-tail-r"><p>No &#8211; each routine works in its own copy of the project, a <b>worktree</b>.</p><p>That way parallel runs don&#8217;t interfere with each other, and a failed attempt doesn&#8217;t drag the main branch down with&nbsp;it.</p></div></div><div class="scene"><div class="scene-col"><div class="figrow"><svg class="fig" viewBox="0 0 190 300" style="--s:0.78">
+</g></svg></div><div class="wide"><div class="chain"><div class="chip c-red">Day 1<span class="chip-sub">often misses</span></div><div class="arw">&#8594;</div><div class="chip c-orange">Sharpen the routine</div><div class="arw">&#8594;</div><div class="chip c-blue">Day 2<span class="chip-sub">already better</span></div><div class="arw">&#8594;</div><div class="chip c-green">Day 3+<span class="chip-sub">reliably solid</span></div></div><div class="cap">Claude gets feedback and tunes its own routine</div></div></div></div></section><section class="page"><div class="badge">7/12</div><div class="bubbles"><div class="bubble b-q b-tail-l">Is that tuning from before systematic over time, or is it just guesswork?</div><div class="bubble b-a b-tail-r"><p>The systematic version is called <b>hill&nbsp;climbing</b>: you measure quality with a fixed checklist &#8211; an&nbsp;eval &#8211; and adjust the routine on purpose.</p><p>No guesswork: every change gets tested against the eval, only what actually scores better stays&nbsp;in.</p></div></div><div class="scene"><div class="scene-col"><div class="figrow"><svg class="fig" viewBox="0 0 190 300" style="--s:0.76">
+<defs><pattern id="jeans" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(58)">
+<rect width="7" height="7" fill="#2c49a8"/><line x1="0" y1="0" x2="0" y2="7" stroke="#16266b" stroke-width="2.6"/>
+</pattern></defs>
+<g class="ink">
+<path d="M55 44 q4-16 18-22 q12-14 30-9 q20-4 28 12 q14 4 12 20 q-6-7-14-6 q-6-11-20-8 q-14-8-26 2 q-14-2-20 11 q-6 0-8 0z" fill="#141414"/><path d="M52 40 q-6 8-2 16 q4-8 10-10z" fill="#141414"/><path d="M116 30 q10 2 12 12 q-8-6-14-6z" fill="#141414"/>
+<circle cx="90" cy="72" r="34" class="sk"/>
+<circle cx="78" cy="64" r="5" fill="#141414"/><circle cx="101" cy="64" r="5" fill="#141414"/>
+<ellipse cx="90" cy="86" rx="6" ry="8" fill="#141414"/>
+<path d="M63 128 q-6 46 -2 76 l58 0 q6 -32 -2 -76 q-14 -12 -54 0z" class="sk"/>
+<path d="M63 128 q-16 20 4 30 q14 6 22 -6" class="ln"/><path d="M117 130 q22 12 18 34" class="ln"/>
+<path d="M62 200 q-4 44 0 68 l24 0 q2 -34 4 -46 q4 14 5 46 l24 0 q4 -30 0 -68z" fill="url(#jeans)" stroke="#141414" stroke-width="3.4" stroke-linejoin="round"/>
+<ellipse cx="72" cy="277" rx="20" ry="10" class="sk"/><ellipse cx="112" cy="277" rx="20" ry="10" class="sk"/>
+<g class="hatch"><line x1="44" y1="290" x2="70" y2="290"/><line x1="52" y1="297" x2="80" y2="297"/><line x1="98" y1="291" x2="128" y2="291"/><line x1="106" y1="298" x2="140" y2="298"/></g>
+</g></svg><svg class="fig" viewBox="0 0 200 300" style="--s:0.76">
+<g class="ink">
+<path d="M40 150 q-24 -6 -30 8" class="lnb"/><circle cx="8" cy="160" r="7" fill="#141414"/><path d="M140 130 q26 -14 30 -40" class="lnb"/><path d="M166 86 q6 -8 12 -6 q0 8 -6 12z" fill="#141414"/>
+<ellipse cx="92" cy="140" rx="58" ry="76" fill="#141414"/>
+<ellipse cx="72" cy="118" rx="11" ry="13" fill="#fff"/><ellipse cx="110" cy="118" rx="11" ry="13" fill="#fff"/>
+<path d="M64 158 q28 26 54 -2" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/>
+<path d="M70 214 q-8 30 -10 46" class="lnb"/><path d="M112 214 q8 30 10 46" class="lnb"/>
+<ellipse cx="56" cy="266" rx="17" ry="9" fill="#141414"/><ellipse cx="126" cy="266" rx="17" ry="9" fill="#141414"/>
+<g class="hatch"><line x1="30" y1="280" x2="58" y2="280"/><line x1="40" y1="288" x2="72" y2="288"/><line x1="112" y1="281" x2="146" y2="281"/><line x1="120" y1="289" x2="156" y2="289"/></g>
+</g></svg></div><div class="wide"><div class="chain"><div class="chip c-blue">Define eval</div><div class="arw">&#8594;</div><div class="chip c-orange">Adjust routine</div><div class="arw">&#8594;</div><div class="chip c-green">Test against eval</div></div><div class="rewind">&#8599; step by step, uphill</div><div class="cap">keep only what the eval confirms &#8211; that&#8217;s hill climbing</div></div></div></div></section><section class="page"><div class="badge">8/12</div><div class="bubbles"><div class="bubble b-q b-tail-l">Don&#8217;t several loops in the same folder get in each other&#8217;s&nbsp;way?</div><div class="bubble b-a b-tail-r"><p>No &#8211; each routine works in its own copy of the project, a <b>worktree</b>.</p><p>That way parallel runs don&#8217;t interfere with each other, and a failed attempt doesn&#8217;t drag the main branch down with&nbsp;it.</p></div></div><div class="scene"><div class="scene-col"><div class="figrow"><svg class="fig" viewBox="0 0 190 300" style="--s:0.78">
 <defs><pattern id="jeans" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(58)">
 <rect width="7" height="7" fill="#2c49a8"/><line x1="0" y1="0" x2="0" y2="7" stroke="#16266b" stroke-width="2.6"/>
 </pattern></defs>
@@ -307,14 +354,63 @@ html, body { margin:0; padding:0; background:#fff; color:#141414;
 </g></svg></div><div class="wide"><div class="chip c-blue big">Main project</div>
 <div class="mini-row"><div class="arw">&#8594;</div><div class="arw">&#8594;</div><div class="arw">&#8594;</div></div>
 <div class="mini-row"><div class="doc c-red"><b>Worktree A</b><div class="lines"><i style="width:88%"></i><i style="width:70%"></i></div></div><div class="doc c-orange"><b>Worktree B</b><div class="lines"><i style="width:88%"></i><i style="width:70%"></i></div></div><div class="doc c-green"><b>Worktree C</b><div class="lines"><i style="width:88%"></i><i style="width:70%"></i></div></div></div>
-<div class="cap">each loop on its own, nothing overwrites anything else</div></div></div></div></section><section class="page"><div class="badge">7/8</div><div class="bubbles"><div class="bubble b-q b-tail-l">So when is all this craft actually worth it &#8211; isn&#8217;t <code>/loop</code> enough most of the&nbsp;time?</div><div class="bubble b-a b-tail-r"><p>For a single afternoon, <code>/loop</code> really is completely enough.</p><p>Loop Engineering pays off once several such routines are meant to run alongside each other permanently &#8211; then individual loops turn into a small workshop that maintains&nbsp;itself.</p></div></div><div class="scene"><div class="stage-wide">
+<div class="cap">each loop on its own, nothing overwrites anything else</div></div></div></div></section><section class="page"><div class="badge">9/12</div><div class="bubbles"><div class="bubble b-q b-tail-l">The worktrees from before &#8211; do they each run as their own, separate&nbsp;Claude?</div><div class="bubble b-a b-tail-r"><p>Mostly yes: each routine its own Claude &#8211; many of them at once is called a <b>fleet</b>.</p><p>But sometimes several Claudes work <b>together</b> on a single task, with roles split up &#8211; that&#8217;s a <b>squad</b>: one plans, one builds, one&nbsp;reviews.</p></div></div><div class="scene"><div class="stage-wide">
+<div class="half"><div class="half-title">Fleet</div>
+<div class="chip c-red">Crash fuzzer</div><div class="chip c-orange">Dup unifier</div><div class="chip c-green">Dead-code remover</div>
+<div class="cap">many, independent, parallel</div></div>
+<div class="divider"></div>
+<div class="half"><div class="half-title t-green">Squad</div>
+<div class="mini-row"><div class="chip c-blue">Planner</div><div class="arw">&#8594;</div><div class="chip c-orange">Builder</div><div class="arw">&#8594;</div><div class="chip c-green">Reviewer</div></div>
+<div class="cap c-green">a few, with split roles, on one task</div></div></div></div></section><section class="page"><div class="badge">10/12</div><div class="bubbles"><div class="bubble b-q b-tail-l">Auto-pacing, verification, tuning, isolation &#8211; does this whole scaffolding have a&nbsp;name&nbsp;too?</div><div class="bubble b-a b-tail-r"><p>Yes &#8211; the sum of tools, permissions, memory, and orchestration around the model is called a <b>harness</b>.</p><p>Loop Engineering is exactly that: building a harness Claude can work in, unattended, for&nbsp;days.</p></div></div><div class="scene"><svg class="fig" viewBox="0 0 190 300" style="--s:0.82">
+<defs><pattern id="jeans" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(58)">
+<rect width="7" height="7" fill="#2c49a8"/><line x1="0" y1="0" x2="0" y2="7" stroke="#16266b" stroke-width="2.6"/>
+</pattern></defs>
+<g class="ink">
+<path d="M55 44 q4-16 18-22 q12-14 30-9 q20-4 28 12 q14 4 12 20 q-6-7-14-6 q-6-11-20-8 q-14-8-26 2 q-14-2-20 11 q-6 0-8 0z" fill="#141414"/><path d="M52 40 q-6 8-2 16 q4-8 10-10z" fill="#141414"/><path d="M116 30 q10 2 12 12 q-8-6-14-6z" fill="#141414"/>
+<circle cx="90" cy="72" r="34" class="sk"/>
+<circle cx="78" cy="64" r="5" fill="#141414"/><circle cx="101" cy="64" r="5" fill="#141414"/>
+<ellipse cx="90" cy="86" rx="7" ry="9" fill="#141414"/>
+<path d="M63 128 q-6 46 -2 76 l58 0 q6 -32 -2 -76 q-14 -12 -54 0z" class="sk"/>
+<path d="M63 128 q-22 6 -30 -14 q-6 -16 6 -26" class="ln"/><path d="M117 130 q26 8 34 -2" class="ln"/><path d="M147 122 q10 2 12 8 q-6 3 -12 0" class="ln"/>
+<path d="M62 200 q-4 44 0 68 l24 0 q2 -34 4 -46 q4 14 5 46 l24 0 q4 -30 0 -68z" fill="url(#jeans)" stroke="#141414" stroke-width="3.4" stroke-linejoin="round"/>
+<ellipse cx="72" cy="277" rx="20" ry="10" class="sk"/><ellipse cx="112" cy="277" rx="20" ry="10" class="sk"/>
+<g class="hatch"><line x1="44" y1="290" x2="70" y2="290"/><line x1="52" y1="297" x2="80" y2="297"/><line x1="98" y1="291" x2="128" y2="291"/><line x1="106" y1="298" x2="140" y2="298"/></g>
+</g></svg>
+<div class="stage-mid">
+<div class="mini-row"><div class="chip c-blue">Tools</div><div class="chip c-orange">Permissions</div><div class="chip c-green">Memory</div><div class="chip c-red">Orchestration</div></div>
+<div class="arw">&#8595;</div>
+<svg class="machine" viewBox="0 0 300 200" style="width:273px">
+<g class="ink">
+<path d="M20 60 l40 -30 l224 0 l-40 30 z" class="sk"/>
+<path d="M284 30 l0 108 l-40 30 l0 -108 z" class="sk"/>
+<rect x="20" y="60" width="224" height="108" rx="8" class="sk"/>
+<circle cx="40" cy="80" r="5" fill="none" stroke="#2a7a3a" stroke-width="3"/>
+<circle cx="40" cy="98" r="5" fill="none" stroke="#d97b20" stroke-width="3"/>
+<circle cx="40" cy="116" r="5" fill="none" stroke="#c8322b" stroke-width="3"/>
+<circle cx="106" cy="96" r="6" fill="#141414"/><circle cx="150" cy="96" r="6" fill="#141414"/>
+<path d="M100 118 q28 22 56 0" class="ln" stroke-width="4"/>
+<text x="128" y="152" text-anchor="middle" class="mlabel">Claude</text>
+<rect x="256" y="76" width="14" height="46" rx="4" class="sk" transform="skewY(-37) translate(0,196)"/>
+<g class="hatch"><line x1="16" y1="178" x2="60" y2="178"/><line x1="30" y1="186" x2="80" y2="186"/><line x1="200" y1="178" x2="248" y2="178"/><line x1="212" y1="186" x2="266" y2="186"/></g>
+</g></svg>
+<div class="cap">all of it together: the <b>harness</b></div></div>
+<svg class="fig" viewBox="0 0 200 300" style="--s:0.82">
+<g class="ink">
+<path d="M140 140 q30 -4 44 -20" class="lnb"/><circle cx="186" cy="118" r="7" fill="#141414"/><path d="M40 152 q-22 8 -22 26" class="lnb"/><circle cx="18" cy="180" r="7" fill="#141414"/>
+<ellipse cx="92" cy="140" rx="58" ry="76" fill="#141414"/>
+<ellipse cx="72" cy="118" rx="11" ry="13" fill="#fff"/><ellipse cx="110" cy="118" rx="11" ry="13" fill="#fff"/>
+<path d="M64 158 q28 26 54 -2" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round"/>
+<path d="M70 214 q-8 30 -10 46" class="lnb"/><path d="M112 214 q8 30 10 46" class="lnb"/>
+<ellipse cx="56" cy="266" rx="17" ry="9" fill="#141414"/><ellipse cx="126" cy="266" rx="17" ry="9" fill="#141414"/>
+<g class="hatch"><line x1="30" y1="280" x2="58" y2="280"/><line x1="40" y1="288" x2="72" y2="288"/><line x1="112" y1="281" x2="146" y2="281"/><line x1="120" y1="289" x2="156" y2="289"/></g>
+</g></svg></div></section><section class="page"><div class="badge">11/12</div><div class="bubbles"><div class="bubble b-q b-tail-l">So when is all this craft actually worth it &#8211; isn&#8217;t <code>/loop</code> enough most of the&nbsp;time?</div><div class="bubble b-a b-tail-r"><p>For a single afternoon, <code>/loop</code> really is completely enough.</p><p>Loop Engineering pays off once several such routines are meant to run alongside each other permanently &#8211; then individual loops turn into a small workshop that maintains&nbsp;itself.</p></div></div><div class="scene"><div class="stage-wide">
 <div class="half"><div class="half-title">/loop</div>
 <div class="chip c-blue">one loop</div><div class="chip c-blue">for this afternoon</div>
 <div class="cap c-blue">usually enough</div></div>
 <div class="divider"></div>
 <div class="half"><div class="half-title t-green">Loop Engineering</div>
 <div class="chip c-green">several coordinated routines</div><div class="chip c-green">with verification, tuning, isolation</div>
-<div class="cap c-green">for permanent operation</div></div></div></div></section><section class="page"><div class="badge">8/8</div><div class="bubbles"><div class="bubble b-q b-tail-l">Now Boris&#8217; Slack channel finally makes&nbsp;sense.</div><div class="bubble b-a b-tail-r"><p>That&#8217;s exactly the point.</p></div></div><div class="scene"><div class="finale">
+<div class="cap c-green">for permanent operation</div></div></div></div></section><section class="page"><div class="badge">12/12</div><div class="bubbles"><div class="bubble b-q b-tail-l">Now Boris&#8217; Slack channel finally makes&nbsp;sense.</div><div class="bubble b-a b-tail-r"><p>That&#8217;s exactly the point.</p></div></div><div class="scene"><div class="finale">
 <div class="fin-figs"><svg class="fig" viewBox="0 0 190 300" style="--s:1.0">
 <defs><pattern id="jeans" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(58)">
 <rect width="7" height="7" fill="#2c49a8"/><line x1="0" y1="0" x2="0" y2="7" stroke="#16266b" stroke-width="2.6"/>
@@ -341,10 +437,13 @@ html, body { margin:0; padding:0; background:#fff; color:#141414;
 </g></svg></div>
 <div class="fin-box">
 <div class="fin-line"><b>/loop</b> &#8211; the building block, repeats a task</div>
+<div class="fin-line"><b>Ralph loop</b> &#8211; plan, execute, check, from the top</div>
 <div class="fin-line"><b>Auto-pacing</b> &#8211; Claude picks the interval itself</div>
 <div class="fin-line"><b>Verification</b> &#8211; tests, review, only then a proposal</div>
-<div class="fin-line"><b>Tuning</b> &#8211; a few days until the routine sits right</div>
+<div class="fin-line"><b>Hill climbing</b> &#8211; tuning with an eval instead of guesswork</div>
 <div class="fin-line"><b>Worktree isolation</b> &#8211; each loop on its own</div>
-<div class="fin-line"><b>Loop Engineering</b> &#8211; several of these as a workshop in permanent operation</div>
+<div class="fin-line"><b>Squad / fleet</b> &#8211; split roles, or many in parallel</div>
+<div class="fin-line"><b>Harness</b> &#8211; tools, permissions, memory, orchestration</div>
+<div class="fin-line"><b>Loop Engineering</b> &#8211; all of it as a workshop in permanent operation</div>
 </div></div></div></section>
 </body></html>

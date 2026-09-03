@@ -156,7 +156,8 @@ panel(
     <span class="q">?</span>
     {chip("Auto-Pacing","blue")}{chip("Crash-Fuzzer","red")}{chip("Verifikation","green")}
     {chip("Worktrees","orange")}{chip("Tuning","blue")}{chip("Dup-Unifier","red")}
-    {chip("Routinen-Werkstatt","orange")}
+    {chip("Routinen-Werkstatt","orange")}{chip("Ralph-Loop","red")}{chip("Squad","green")}
+    {chip("Harness","blue")}
   </div>
   <div class="right-of-stage">
     <div class="bubble b-tail-r">Das nennt man <b>Loop&nbsp;Engineering</b>. Komm&#8217;, ich zeig&#8217;s&nbsp;dir.</div>
@@ -203,6 +204,17 @@ panel("Selbst-Pacing",
     '<div class="rewind">&#8635; &#8635; &#8635;</div>',
     '<div class="cap">Claude wählt selbst, wann der nächste Durchlauf sich lohnt</div>'))
 
+# --- 4b ---
+panel("Ralph-Loop",
+  "Diese Schleife, die einfach immer wieder plant, macht, prüft &#8211; hat das auch einen&nbsp;Namen?",
+  ["Ja &#8211; das nennt man einen <b>Ralph&#8209;Loop</b>: planen, ausführen, prüfen, von&nbsp;vorn.",
+   "Robust, aber roh &#8211; ohne Bremse frisst er Token weiter, auch wenn er längst am&nbsp;Ziel&nbsp;ist. Genau dafür gibt's Auto-Pacing, und die Verifikation, die als Nächstes&nbsp;kommt."],
+  breit(human("point",0.76), bean("hips",0.76),
+    f'''<div class="chain">{chip("Planen","blue")}{AR}{chip("Ausführen","orange")}{AR}{chip("Prüfen","green")}</div>''',
+    '<div class="rewind">&#8635; von vorn, bis fertig</div>',
+    f'''{chip("Ralph-Loop","red",big=True)}''',
+    '<div class="cap c-red">robust, aber ohne Bremse teuer im Token-Verbrauch</div>'))
+
 # --- 5 ---
 panel("Verifikation",
   "Und wenn dabei niemand zuschaut &#8211; wie soll ich der Schleife dann&nbsp;trauen?",
@@ -221,6 +233,16 @@ panel("Tuning",
     f'''<div class="chain">{chip("Tag 1","red",sub="trifft oft daneben")}{AR}{chip("Routine schärfen","orange")}{AR}{chip("Tag 2","blue",sub="schon besser")}{AR}{chip("Tag 3+","green",sub="sitzt zuverlässig")}</div>''',
     '<div class="cap">Claude bekommt Rückmeldung und tunt den eigenen Ablauf nach</div>'))
 
+# --- 6b ---
+panel("Hill Climbing",
+  "Ist das Nachjustieren von eben auch mit der Zeit systematisch, oder rät man da nur&nbsp;rum?",
+  ["Systematisch heißt <b>Hill&nbsp;Climbing</b>: man misst die Qualität mit einer festen Prüfliste &#8211; einem&nbsp;Eval &#8211; und schraubt gezielt an der Routine.",
+   "Kein Rätselraten: jede Änderung wird gegen den Eval getestet, nur was wirklich besser abschneidet bleibt&nbsp;drin."],
+  breit(human("think",0.76), bean("point",0.76),
+    f'''<div class="chain">{chip("Eval definieren","blue")}{AR}{chip("Routine anpassen","orange")}{AR}{chip("gegen Eval testen","green")}</div>''',
+    '<div class="rewind">&#8599; Schritt für Schritt bergauf</div>',
+    '<div class="cap">nur behalten, was der Eval bestätigt &#8211; das ist Hill Climbing</div>'))
+
 # --- 7 ---
 panel("Isolation",
   "Laufen da nicht mehrere Schleifen im selben Ordner&nbsp;durcheinander?",
@@ -231,6 +253,33 @@ panel("Isolation",
 <div class="mini-row">{AR}{AR}{AR}</div>
 <div class="mini-row">{doc("Worktree A","red",2)}{doc("Worktree B","orange",2)}{doc("Worktree C","green",2)}</div>
 <div class="cap">jede Schleife für sich, nichts überschreibt sich gegenseitig</div>'''))
+
+# --- 7b ---
+panel("Squads & Fleets",
+  "Die Worktrees von eben &#8211; laufen die dann alle als eigene, einzelne&nbsp;Claudes?",
+  ["Meistens ja: jede Routine ihr eigener Claude &#8211; viele davon gleichzeitig nennt man eine <b>Fleet</b>.",
+   "Manchmal arbeiten mehrere Claudes aber auch <b>zusammen</b> an einer einzigen Aufgabe, mit verteilten Rollen &#8211; das ist ein <b>Squad</b>: einer plant, einer baut, einer&nbsp;prüft."],
+  f'''<div class="stage-wide">
+<div class="half"><div class="half-title">Fleet</div>
+{chip("Crash-Fuzzer","red")}{chip("Dup-Unifier","orange")}{chip("Dead-Code-Entferner","green")}
+<div class="cap">viele, unabhängig, parallel</div></div>
+<div class="divider"></div>
+<div class="half"><div class="half-title t-green">Squad</div>
+<div class="mini-row">{chip("Planer","blue")}{AR}{chip("Bauer","orange")}{AR}{chip("Prüfer","green")}</div>
+<div class="cap c-green">wenige, mit verteilten Rollen, an einer Aufgabe</div></div></div>''')
+
+# --- 7c ---
+panel("Harnesses",
+  "Auto-Pacing, Verifikation, Tuning, Isolation &#8211; hat dieses ganze Gerüst auch einen&nbsp;Namen?",
+  ["Ja &#8211; die Summe aus Werkzeugen, Rechten, Gedächtnis und Ablaufsteuerung um das Modell herum heißt <b>Harness</b>.",
+   "Loop Engineering ist genau das: einen Harness bauen, in dem Claude tagelang unbeaufsichtigt arbeiten&nbsp;darf."],
+  f'''{human("confused",0.82)}
+<div class="stage-mid">
+<div class="mini-row">{chip("Werkzeuge","blue")}{chip("Rechte","orange")}{chip("Gedächtnis","green")}{chip("Ablaufsteuerung","red")}</div>
+{AD}
+{machine("Claude", 210)}
+<div class="cap">alles zusammen: der <b>Harness</b></div></div>
+{bean("right",0.82)}''')
 
 # --- 8 ---
 panel("Die Leiter",
@@ -254,11 +303,14 @@ panel("Fazit",
 <div class="fin-figs">{human("happy")}<div class="bulb">&#128161;</div>{bean("thumbs")}</div>
 <div class="fin-box">
 <div class="fin-line"><b>/loop</b> &#8211; der Baustein, wiederholt einen Auftrag</div>
+<div class="fin-line"><b>Ralph-Loop</b> &#8211; planen, ausführen, prüfen, von vorn</div>
 <div class="fin-line"><b>Auto-Pacing</b> &#8211; Claude wählt den Abstand selbst</div>
 <div class="fin-line"><b>Verifikation</b> &#8211; Tests, Review, erst dann ein Vorschlag</div>
-<div class="fin-line"><b>Tuning</b> &#8211; ein paar Tage, bis die Routine sitzt</div>
+<div class="fin-line"><b>Hill Climbing</b> &#8211; Tuning mit Eval statt Rätselraten</div>
 <div class="fin-line"><b>Worktree-Isolation</b> &#8211; jede Schleife für sich</div>
-<div class="fin-line"><b>Loop Engineering</b> &#8211; mehrere davon als Werkstatt im Dauerbetrieb</div>
+<div class="fin-line"><b>Squad / Fleet</b> &#8211; verteilte Rollen oder viele parallel</div>
+<div class="fin-line"><b>Harness</b> &#8211; Werkzeuge, Rechte, Gedächtnis, Ablaufsteuerung</div>
+<div class="fin-line"><b>Loop Engineering</b> &#8211; all das als Werkstatt im Dauerbetrieb</div>
 </div></div>''')
 
 # ------------------------------------------------------------------- Bau ----
