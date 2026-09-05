@@ -204,6 +204,16 @@
   "verfuegbar": true
  },
  {
+  "name": "claude-code-docs",
+  "typ": "registriert",
+  "desc": "Answer questions about Claude Code itself: commands, flags, settings, hooks, skills, MCP servers, subagents, IDE integrations, sandboxing, deployment, and Claude Tag (Claude in Slack). Verifies against the running build before recommending any command, flag, or setting.",
+  "variabel": false,
+  "hint": "[question]",
+  "aliases": [],
+  "enabled": "true",
+  "verfuegbar": true
+ },
+ {
   "name": "claude-in-chrome",
   "typ": "registriert",
   "desc": "Automates your Chrome browser to interact with web pages - clicking elements, filling forms, capturing screenshots, reading console logs, and navigating sites. Opens pages in new tabs within your existing Chrome session. Requires site-level permissions before executing (configured in the extension).",
@@ -234,6 +244,18 @@
   "hint": "",
   "aliases": [],
   "enabled": "oJe()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
+  "verfuegbar": true
+ },
+ {
+  "name": "code-review",
+  "typ": "registriert",
+  "desc": "Review the current diff, or a PR number/branch/path target, for correctness bugs and reuse/simplification/efficiency cleanups at the given effort level (low/medium: fewer, high-confidence findings; high→max: broader coverage, may include uncertain findings…); with no level given, it reuses the level you typed last. Pass --comment to post findings as inline PR comments, or --fix to apply the findings to the working tree after the review.…",
+  "variabel": false,
+  "hint": "[…] [--fix] [--comment] [<pr#>|<branch>|<path>]",
+  "aliases": [
+   "review"
+  ],
+  "enabled": "true",
   "verfuegbar": true
  },
  {
@@ -439,6 +461,18 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
+  "enabled": "true",
+  "verfuegbar": true
+ },
+ {
+  "name": "exit",
+  "typ": "local-jsx",
+  "desc": "Exit the CLI",
+  "variabel": false,
+  "hint": "",
+  "aliases": [
+   "quit"
+  ],
   "enabled": "true",
   "verfuegbar": true
  },
@@ -1264,6 +1298,16 @@
   "hint": "<prompt>",
   "aliases": [],
   "enabled": "UD()",
+  "verfuegbar": true
+ },
+ {
+  "name": "ultrareview",
+  "typ": "local-jsx",
+  "desc": "Start a cloud agent that finds and verifies bugs in your branch (…, … USD) · Runs in Claude Code on the web. See …",
+  "variabel": false,
+  "hint": "",
+  "aliases": [],
+  "enabled": "NA()",
   "verfuegbar": true
  },
  {

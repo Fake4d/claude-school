@@ -252,6 +252,7 @@ SLASH = {
 "workflow-launch-exec": "Execute a workflow triggered by the server.",
 "workflows": "Look through running and finished workflows.",
 "claude-api": "Reference for the Claude API (models, prices, tools).",
+"claude-code-docs": "Answer questions about Claude Code itself (commands, flags, settings, hooks, skills), checked against the installed build.",
 "code-review": "Review changes for bugs and simplifications.",
 "dataviz": "Design charts and analytics pages properly.",
 "security-review": "Check the changes on the branch for security problems.",

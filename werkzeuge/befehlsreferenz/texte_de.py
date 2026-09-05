@@ -248,6 +248,7 @@ SLASH = {
 "workflow-launch-exec": "Vom Server angestoßenen Arbeitsablauf ausführen.",
 "workflows": "Laufende und abgeschlossene Arbeitsabläufe durchsehen.",
 "claude-api": "Nachschlagewerk zur Claude-Schnittstelle (Modelle, Preise, Werkzeuge).",
+"claude-code-docs": "Fragen zu Claude Code selbst beantworten (Befehle, Optionen, Einstellungen, Hooks, Skills), geprüft gegen die installierte Fassung.",
 "code-review": "Änderungen auf Fehler und Vereinfachungen durchsehen.",
 "dataviz": "Diagramme und Auswertungsseiten sauber gestalten.",
 "security-review": "Die Änderungen im Zweig auf Sicherheitsprobleme prüfen.",

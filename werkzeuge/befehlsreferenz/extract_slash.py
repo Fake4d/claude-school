@@ -8,9 +8,11 @@ per Klammerzaehlung bestimmt; Name und Beschreibung werden nur auf der obersten
 Ebene *dieses* Objekts gelesen. Das verhindert, dass Angaben aus Nachbarobjekten
 in einen Eintrag wandern (minifizierter Code liegt dicht an dicht).
 
-Die Beschreibung steht entweder als fester Text (`description:"..."`) oder als
-Getter (`get description(){...}`), der je nach Umgebung verschiedene Texte
-zurueckgibt — dann werden alle Textbausteine gesammelt.
+Die Beschreibung steht entweder als fester Text (`description:"..."`), als
+Pfeilfunktion, als Getter (`get description(){...}`), der je nach Umgebung
+verschiedene Texte zurueckgibt — dann werden alle Textbausteine gesammelt —
+oder als Verweis auf eine Variable bzw. Funktion im selben oder einem
+importierten Modul (siehe `_text_suchen` fuer die Liste der Bauformen).
 
 Aufruf:  python3 extract_slash.py [version]
 """
@@ -72,54 +74,178 @@ def feld_oberste_ebene(obj, muster):
     return None
 
 
-def getter_texte(obj):
-    """Textbausteine aus `get description(){ ... }` sammeln."""
+# --------------------------------------------------- Textbausteine lesen --
+# JavaScript kennt drei Schreibweisen fuer Text: "..." und '...' (Strings) und
+# `...` (Vorlagen mit eingebetteten Ausdruecken `${...}`). Regulaere Ausdruecke
+# reichen dafuer nicht: eine Vorlage kann in `${...}` weitere Vorlagen und
+# Strings mit Backticks enthalten, und Beschreibungen sind laenger als 200
+# Zeichen (die alte Grenze liess /code-review durchs Raster fallen). Deshalb ein
+# kleiner zeichenweiser Leser, der `${...}` als Ganzes ueberspringt und durch
+# "…" ersetzt - der Rest der Vorlage bleibt lesbar und vor allem von Fassung zu
+# Fassung stabil, egal was der Ausdruck zur Laufzeit ergaebe.
+IDENT = r'[A-Za-z_$][\w$]*'
+MAX_TEXT = 6000
+
+
+def _string_lesen(s, i):
+    """s[i] ist " oder ' -> (Inhalt, Index hinter dem Literal)."""
+    q, j, raus = s[i], i + 1, []
+    while j < len(s) and j - i < MAX_TEXT:
+        c = s[j]
+        if c == '\\':
+            raus.append(s[j:j + 2])
+            j += 2
+            continue
+        if c == q:
+            return "".join(raus), j + 1
+        raus.append(c)
+        j += 1
+    return None, i + 1
+
+
+def _template_lesen(s, i):
+    """s[i] ist ` -> (Inhalt mit `${...}` als "…", Index hinter der Vorlage)."""
+    j, raus = i + 1, []
+    while j < len(s) and j - i < MAX_TEXT:
+        c = s[j]
+        if c == '\\':
+            raus.append(s[j:j + 2])
+            j += 2
+            continue
+        if c == '`':
+            return "".join(raus), j + 1
+        if c == '$' and s[j + 1:j + 2] == '{':
+            tiefe, j = 1, j + 2
+            while j < len(s) and tiefe and j - i < MAX_TEXT:
+                c = s[j]
+                if c == '`':
+                    _, j = _template_lesen(s, j)
+                    continue
+                if c in '"\'':
+                    _, j = _string_lesen(s, j)
+                    continue
+                if c == '{':
+                    tiefe += 1
+                elif c == '}':
+                    tiefe -= 1
+                j += 1
+            # Als Escape-Folge, nicht als Zeichen: alle Texte laufen danach
+            # durch entschluesseln(), das ein echtes "…" zu Zeichensalat machte.
+            raus.append('\\u2026')
+            continue
+        raus.append(c)
+        j += 1
+    return None, i + 1
+
+
+def _funktions_koerper(feld, pos):
+    """`pos` steht direkt hinter der oeffnenden Klammer eines Rumpfs -> Inhalt.
+
+    Klammern innerhalb von Strings und Vorlagen zaehlen nicht mit.
+    """
+    tiefe, j = 1, pos
+    while j < len(feld) and tiefe and j - pos < 40000:
+        c = feld[j]
+        if c in '"\'':
+            _, j = _string_lesen(feld, j)
+            continue
+        if c == '`':
+            _, j = _template_lesen(feld, j)
+            continue
+        if c == '{':
+            tiefe += 1
+        elif c == '}':
+            tiefe -= 1
+        j += 1
+    return feld[pos:j - 1]
+
+
+def texte_aus(koerper):
+    """Alle Textbausteine eines JS-Stuecks in Reihenfolge, kurze und technische
+    (tengu_-Kennungen, Adressen) ausgesiebt."""
+    raus, j = [], 0
+    while j < len(koerper):
+        c = koerper[j]
+        if c in '"\'':
+            t, j = _string_lesen(koerper, j)
+        elif c == '`':
+            t, j = _template_lesen(koerper, j)
+        else:
+            j += 1
+            continue
+        if t is None:
+            continue
+        t = t.strip()
+        # Schwelle 8 statt frueher 12: "Exit the CLI" hat genau 12 Zeichen und
+        # fiel sonst heraus, uebrig blieb der Sonderfall "Detach from this
+        # background session". Vergleichswerte wie "live" bleiben draussen.
+        if len(t) >= 8 and not t.startswith(("tengu_", "http")):
+            raus.append(entschluesseln(t).strip())
+    return raus
+
+
+def getter_texte(obj, vor_position):
+    """Textbausteine aus `get description(){ ... }` sammeln.
+
+    Steht im Rumpf kein Text, sondern nur ein Aufruf (`return msr()`), liegt der
+    Text in dieser Hilfsfunktion - so bei /ultrareview und /exit (2.1.260), deren
+    Beschreibung je nach Umgebung wechselt. Dann der Funktion nachgehen.
+    """
     g = re.search(r'get description\(\)\s*\{', obj)
     if not g:
         return []
-    tiefe, j = 1, g.end()
-    while j < len(obj) and tiefe:
-        if obj[j] == '{':
-            tiefe += 1
-        elif obj[j] == '}':
-            tiefe -= 1
-        j += 1
-    koerper = obj[g.end():j - 1]
-    texte = re.findall(r'"((?:[^"\\]|\\.)*)"|`([^`]{0,200})`', koerper)
-    raus = []
-    for a, b in texte:
-        t = (a or b).strip()
-        if len(t) > 12 and not t.startswith(("tengu_", "http")):
-            try:
-                t = t.encode().decode("unicode_escape")
-            except Exception:
-                pass
-            raus.append(re.sub(r'\$\{[^}]*\}', '…', t).strip())
-    return raus
+    koerper = _funktions_koerper(obj, g.end())
+    texte = texte_aus(koerper)
+    if not texte:
+        for fn in dict.fromkeys(re.findall(r'(' + IDENT + r')\(\)', koerper)):
+            t = variable_aufloesen(fn, vor_position)
+            if t:
+                texte.append(t)
+    return texte
 
 
 VARCACHE = {}
 
 
-def _text_suchen(bezeichner, feld):
-    m = re.search(r'(?:var\s+|[,;{}\s])' + re.escape(bezeichner) +
-                  r'\s*=\s*(["\'])((?:[^\\]|\\.)*?)\1', feld)
-    if not m:
-        # Manche Beschreibungen liegen als Array mehrerer Textbausteine vor
-        # (Kurzbeschreibung + Trigger-/Skip-Hinweise). Dann zaehlt nur der
-        # erste String im Array als Kurzbeschreibung.
-        m = re.search(r'(?:var\s+|[,;{}\s])' + re.escape(bezeichner) +
-                      r'\s*=\s*\[\s*(["\'])((?:[^\\]|\\.)*?)\1', feld)
-    if not m:
-        return ""
-    try:
-        return m.group(2).encode().decode("unicode_escape").strip()
-    except Exception:
-        return m.group(2).strip()
+def _text_suchen(bezeichner, feld, tiefe=0):
+    """Text hinter einem Bezeichner in einem Modul-Ausschnitt finden.
+
+    Bekannte Bauformen, alle in echten Fassungen aufgetreten:
+      X="..."  /  X='...'          fester Text
+      X=["...", "..."]             Array - der erste Eintrag ist die Kurzfassung
+      X=`...${a}...`               Vorlage (Backticks), seit 2.1.260 bei /claude-code-docs
+      X=Y+`...`  /  X=Y            Aliaskette - dem ersten Bezeichner nachgehen
+      function X(){...return`...`} Funktion - der letzte Text im Rumpf (2.1.260:
+                                   /code-review, /ultrareview, /exit)
+    Mehrere Zuweisungen an denselben Bezeichner sind im Modul moeglich; die
+    erste, die einen Text hergibt, zaehlt.
+    """
+    b = re.escape(bezeichner)
+    for m in re.finditer(r'(?:var\s+|[,;{}\s])' + b + r'\s*=\s*(?!=)', feld):
+        j = m.end()
+        if feld[j:j + 1] == '[':
+            j += 1 + len(feld[j + 1:j + 20]) - len(feld[j + 1:j + 20].lstrip())
+        c = feld[j:j + 1]
+        if c in '"\'':
+            t, _ = _string_lesen(feld, j)
+        elif c == '`':
+            t, _ = _template_lesen(feld, j)
+        elif tiefe < 3:
+            w = re.match(IDENT + r'(?=\s*[+,;])', feld[j:j + 40])
+            t = _text_suchen(w.group(0), feld, tiefe + 1) if w else None
+        else:
+            t = None
+        if t and t.strip():
+            return entschluesseln(t).strip()
+    for m in re.finditer(r'function\s+' + b + r'\s*\([^)]{0,80}\)\s*\{', feld):
+        tx = texte_aus(_funktions_koerper(feld, m.end()))
+        if tx:
+            return tx[-1]
+    return ""
 
 
 def variable_aufloesen(bezeichner, vor_position):
-    """`description:kd` -> den Text hinter `kd='...'` suchen.
+    """`description:kd` -> den Text hinter `kd='...'` (oder `function kd(){}`) suchen.
 
     Wie bei den Namen gilt seit 2.1.243: erst im eigenen Modul suchen, sonst
     greift man bei einbuchstabigen Bezeichnern einen fremden Text ab. Steht der
@@ -370,8 +496,10 @@ VERWORFEN = []
 VERWORFEN_FEHLTREFFER = {"files_with_matches"}
 # Echte Befehle, deren Bauform der Auslesecode noch nicht beherrscht. Bekannt und
 # offen - sie werden gemeldet, aber als Altlast, nicht als Neuigkeit. Wer einen
-# davon auslesbar macht, nimmt ihn hier heraus.
-VERWORFEN_BEKANNT = {"code-review", "ultrareview", "exit", "claude-code-docs"}
+# davon auslesbar macht, nimmt ihn hier heraus. Seit 05.09.2026 leer: die vier
+# letzten (/code-review, /ultrareview, /exit, /claude-code-docs) lesen sich seit
+# dem Umbau von _text_suchen()/getter_texte() aus.
+VERWORFEN_BEKANNT = set()
 # Anker sind die Beschreibungen. Ein Objekt gilt als Slash-Befehl, wenn es auf
 # oberster Ebene einen kleingeschriebenen `name` und eine Beschreibung hat und
 # zusaetzlich mindestens ein befehlstypisches Feld (type / isEnabled / aliases /
@@ -411,7 +539,7 @@ for t in ANKER.finditer(data):
             desc, variabel = entschluesseln(pf.group(1)).strip(), False
             tx = []
         else:
-            tx = getter_texte(obj)
+            tx = getter_texte(obj, t.start())
             desc, variabel = (tx[-1] if tx else ""), len(tx) > 1
         if not desc:
             # description verweist auf eine Variable (so liegen die Skill-Texte vor)
@@ -435,17 +563,31 @@ for t in ANKER.finditer(data):
             if kand:
                 desc, variabel = max(kand, key=len), len(set(kand)) > 1
     if not desc:
+        # Letzter Rueckfall: der kurze Menuetext, den die Befehlsauswahl zeigt.
+        # Er ist immer ein festes Literal und macht das Verfahren unempfindlich
+        # gegen die naechste noch unbekannte Bauform der Langbeschreibung.
+        md = feld_oberste_ebene(obj, r'menuDescription:"((?:[^"\\]|\\.)*)"')
+        if md:
+            desc, variabel = entschluesseln(md.group(1)).strip(), False
+    if not desc:
         VERWORFEN.append(name)
         continue
 
     h = feld_oberste_ebene(obj, r'argumentHint:"((?:[^"\\]|\\.)*)"')
+    hint = h.group(1) if h else ""
+    if not hint:
+        # `argumentHint:Ei` - auch der Hinweis kann aus einer Variablen oder
+        # Funktion kommen (2.1.260: /code-review). Laufzeitteile werden zu "…".
+        hv = feld_oberste_ebene(obj, r'argumentHint:([A-Za-z_$][\w$]{0,6})\s*[,}]')
+        if hv:
+            hint = variable_aufloesen(hv.group(1), t.start())
     a = feld_oberste_ebene(obj, r'aliases:\[([^\]]{0,160})\]')
     e = feld_oberste_ebene(obj, r'isEnabled:\s*\(\)\s*=>\s*([^,}]{0,120})')
 
     eintrag = {
         "name": name, "typ": typ.group(1) if typ else "registriert",
         "desc": desc, "variabel": variabel,
-        "hint": h.group(1) if h else "",
+        "hint": hint,
         "aliases": [x.strip() for x in a.group(1).replace('"', '').split(",") if x.strip()] if a else [],
         "enabled": e.group(1).strip() if e else "true",
     }

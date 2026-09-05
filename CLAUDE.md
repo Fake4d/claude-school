@@ -271,3 +271,21 @@ reparierte Extraktor muss dort dieselben Befehle finden wie zuvor, nur eben mehr
 verlieren darf er keinen. Bei über Variablen aufgelöste Namen ist die
 Verwechslungsgefahr höher, deshalb fliegen Treffer mit einer Ein-Wort-Beschreibung
 (etwa `"method"`) wieder raus.
+
+Praktisch heißt Gegenprüfen: den Extraktor aus einem Scratch-Ordner heraus für die
+neue **und** die vorige Fassung laufen lassen und die erzeugten `slash-*.json` gegen
+die in `befehlsreferenz/` liegenden vergleichen — der Unterschied darf nur aus
+Ergänzungen bestehen, kein Feld eines bestehenden Eintrags (`desc`, `hint`,
+`aliases`, `verfuegbar`) darf sich ändern. Erst dann in Ort und Stelle auslesen.
+
+**Die Handbremse sieht nur, was zwischen zwei Fassungen verschwindet — nicht, was
+schon vorher fehlte.** So fehlten `/artifact-pr-review`, `/code-review`,
+`/ultrareview`, `/exit` und `/claude-code-docs` monatelang unbemerkt: Anker mit
+gültigem Namen, aus denen sich kein Beschreibungstext lesen ließ, wurden wortlos
+verworfen. Seit 05.09.2026 zählt `extract_slash.py` diese Fälle (`VERWORFEN`) und
+gibt eine Zeile `VERWORFEN: N neu · M bekannt offen` aus, die `refcheck.sh` loggt
+und bei `N>0` per Mail meldet. Die Beschreibung darf inzwischen fester Text,
+Pfeilfunktion, Getter, Array, Backtick-Vorlage, Aliaskette (`E=A+\`…\``) oder eine
+Hilfsfunktion (`get description(){return msr()}`, `description:_i` mit
+`function _i(){…}`) sein; Laufzeitteile `${…}` werden zu „…". Letzter Rückfall ist
+`menuDescription`. Die Liste der Bauformen steht im Docstring von `_text_suchen()`.
