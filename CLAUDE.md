@@ -158,10 +158,13 @@ vergleicht die installierte Claude-Fassung mit der zuletzt veröffentlichten. Nu
 einer neuen Fassung wird gearbeitet. **Verschwindet dabei ein Slash-Befehl, bricht es
 ab und fragt nach**, statt zu veröffentlichen — siehe den Abschnitt dazu weiter unten.
 
-**Chromium stempelt ein Erstellungsdatum ins PDF.** Die Comic-PDFs unterscheiden sich
-deshalb nach jedem Druck, auch wenn sich inhaltlich nichts geändert hat. Das Skript
-fängt das ab: Ist das HTML unverändert, behält es die alte PDF-Fassung, statt einen
-nichtssagenden Commit zu erzeugen.
+**Chromium stempelt ein Erstellungsdatum ins PDF — und WeasyPrint ebenfalls.** Alle
+PDFs unterscheiden sich deshalb nach jedem Druck um ein paar Bytes Metadaten, auch
+wenn sich inhaltlich nichts geändert hat. Das Skript fängt das für alle zwölf PDFs ab:
+Ist das HTML unverändert, behält es die alte PDF-Fassung, statt einen nichtssagenden
+Commit zu erzeugen. (Bis 05.09.2026 galt das nur für die Comics; die
+WeasyPrint-PDFs wurden fälschlich für byte-stabil gehalten, Commit 1e5ecb1 zeigt
+den Effekt.)
 
 ## Reproduzierbarkeit
 
