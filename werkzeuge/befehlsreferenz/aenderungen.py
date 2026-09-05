@@ -7,30 +7,32 @@ die andere mit. Reines HTML, wie es im Kasten steht (<p>…</p>).
 """
 
 DE = """
-<p>Gegenüber {vorg} gibt es eine inhaltliche Ergänzung bei <code>claude --help</code>: die neue
-Option <code>--permission-prompts &lt;target&gt;</code> legt fest, wer bei <code>--print</code> auf
-Berechtigungsabfragen antwortet — <code>host</code> (der SDK-Host bzw. <code>--permission-prompt-tool</code>)
-oder <code>none</code> (automatische Ablehnung; der Berechtigungsmodus entscheidet weiterhin über
-alles andere), Standard ist <code>host</code>. In der Hilfe der Unterbefehle hat sich eine Zahl
-geändert: Bei <code>claude ultrareview --timeout</code> stieg der Standardwert von 30 auf 45 Minuten,
-sonst blieb dieser Teil unverändert. Bei den Slash-Befehlen bleibt die Liste unverändert bei
-{n_slash} Einträgen — kein Befehl kam hinzu, keiner fiel weg. Inhaltlich geändert hat sich die
-Beschreibung von <code>/plugin-types</code>: der Befehl schreibt jetzt zusätzlich zur bisherigen
-Typdatei für die MCP-Werkzeuge auch die TypeScript-Deklarationen der Plugin-Schnittstelle selbst.
-Bei 34 weiteren Befehlen änderten sich lediglich rein interne Bezeichner, ohne Bedeutung für diese
+<p>Gegenüber {vorg} ist <code>claude --help</code> zeichengleich geblieben, ebenso die Hilfe der
+Unterbefehle. Geändert hat sich allein die Liste der Slash-Befehle, von 134 auf {n_slash} Einträge.
+Neu ist <code>/plugin-authoring</code>: Hilfe beim Schreiben und Prüfen eines Plugins, das aus
+Funktions-Hooks besteht. <code>/setup-cowork</code> heißt jetzt <code>/setup-claude</code> und führt
+nicht mehr nur durch die Cowork-Einrichtung, sondern durch die Einrichtung allgemein — der alte Name
+funktioniert als Alias weiter. Weggefallen ist <code>/whiteboard-mp</code>: Die
+Mehrspieler-Zeichenfläche ist in <code>/whiteboard</code> aufgegangen, das nun je nach Umgebung die
+Einzel- oder die Live-Fassung öffnet. Dazu eine Korrektur in eigener Sache:
+<code>/artifact-pr-review</code> steht ab dieser Fassung in der Liste. Den Befehl gibt es seit
+Langem — er fehlte hier, weil unser Ausleseverfahren seine Beschreibung nicht lesen konnte und ihn
+wortlos übersprang. Das ist ein Fehler auf unserer Seite gewesen, kein Zuwachs bei Claude Code. Bei
+38 weiteren Befehlen änderten sich lediglich rein interne Bezeichner, ohne Bedeutung für diese
 Liste.</p>
 """
 
 EN = """
-<p>Compared with {vorg} there is one substantive addition to <code>claude --help</code>: the new
-option <code>--permission-prompts &lt;target&gt;</code> sets who answers permission prompts with
-<code>--print</code> — <code>host</code> (the SDK host or <code>--permission-prompt-tool</code>) or
-<code>none</code> (auto-deny; the permission mode still decides everything else), default is
-<code>host</code>. In the subcommand help, one number changed: for
-<code>claude ultrareview --timeout</code> the default rose from 30 to 45 minutes; the rest of that
-section is unchanged. The slash command list stays unchanged at {n_slash} entries — none added,
-none dropped. One description changed in substance: <code>/plugin-types</code> now also writes the
-plugin API's own TypeScript declarations, in addition to the existing type file for the MCP tools.
-For 34 further commands only purely internal identifiers changed, of no consequence for this
-list.</p>
+<p>Compared with {vorg}, <code>claude --help</code> is unchanged down to the character, and so is
+the subcommand help. The only change is in the slash command list, which grew from 134 to
+{n_slash} entries. <code>/plugin-authoring</code> is new: help with writing and debugging a plugin
+made of function hooks. <code>/setup-cowork</code> is now called <code>/setup-claude</code> and no
+longer walks you through Cowork setup alone but through setup in general — the old name still works
+as an alias. <code>/whiteboard-mp</code> is gone: the multiplayer drawing surface has been folded
+into <code>/whiteboard</code>, which now opens either the solo or the live version depending on the
+environment. One correction on our own account: <code>/artifact-pr-review</code> appears in the list
+from this version on. The command has existed for a long time — it was missing here because our
+extraction could not read its description and skipped it without a word. That was a fault on our
+side, not an addition to Claude Code. For 38 further commands only purely internal identifiers
+changed, of no consequence for this list.</p>
 """

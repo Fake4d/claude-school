@@ -1,12 +1,12 @@
 [
  {
   "name": "add-dir",
-  "typ": "local-jsx",
+  "typ": "local",
   "desc": "Add a new working directory",
   "variabel": false,
   "hint": "<path>",
   "aliases": [],
-  "enabled": "true",
+  "enabled": "Ce()&&tor()",
   "verfuegbar": true
  },
  {
@@ -16,7 +16,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "vR()",
+  "enabled": "WH()",
   "verfuegbar": true
  },
  {
@@ -70,13 +70,23 @@
   "verfuegbar": true
  },
  {
+  "name": "artifact-pr-review",
+  "typ": "registriert",
+  "desc": "Create a PR review artifact - a structured review briefing for a GitHub pull request (synthesis title and bottom line, a recommendation, reviewer judgment calls, a visual explainer, signals, and blind spots), published as a shareable page. Use when the user asks to review a PR as an artifact, publish a PR review page, or share a review briefing. NOT a narrative walkthrough. Only for CREATING a new artifact; a published composed review page is updated ONLY through the acting loop's republish - never by editing its HTML directly.",
+  "variabel": true,
+  "hint": "[pr number or url]",
+  "aliases": [],
+  "enabled": "true",
+  "verfuegbar": true
+ },
+ {
   "name": "artifacts",
   "typ": "local-jsx",
   "desc": "Browse your published and shared artifacts",
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "kT()&&Dd()===null",
+  "enabled": "Jk()&&Fd()===null",
   "verfuegbar": true
  },
  {
@@ -86,7 +96,7 @@
   "variabel": false,
   "hint": "[--request-id <uuid>] (--wizard posture=\\u2026 scope=\\u2026 depth=\\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
   "aliases": [],
-  "enabled": "bvt()&&Le()",
+  "enabled": "Qbt()&&Ce()",
   "verfuegbar": true
  },
  {
@@ -96,7 +106,7 @@
   "variabel": false,
   "hint": "[auto|<tokens>]",
   "aliases": [],
-  "enabled": "!Le()",
+  "enabled": "!Ce()",
   "verfuegbar": true
  },
  {
@@ -106,7 +116,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Ssr()&&!Le()",
+  "enabled": "Lor()&&!Ce()",
   "verfuegbar": true
  },
  {
@@ -148,7 +158,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "i().enable_slash_command",
+  "enabled": "a().enable_slash_command",
   "verfuegbar": true
  },
  {
@@ -180,7 +190,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!Le()",
+  "enabled": "!Ce()&&MD()",
   "verfuegbar": true
  },
  {
@@ -190,7 +200,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!i",
+  "enabled": "!o",
   "verfuegbar": true
  },
  {
@@ -200,7 +210,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!e&&(nst()||Tt())",
+  "enabled": "!e&&(B5e()||vt())",
   "verfuegbar": true
  },
  {
@@ -223,7 +233,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "mQe()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
+  "enabled": "oJe()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
   "verfuegbar": true
  },
  {
@@ -243,7 +253,7 @@
   "variabel": false,
   "hint": "[guidance]",
   "aliases": [],
-  "enabled": "m3t()",
+  "enabled": "k9t()",
   "verfuegbar": true
  },
  {
@@ -263,7 +273,7 @@
   "variabel": false,
   "hint": "<optional custom summarization instructions>",
   "aliases": [],
-  "enabled": "!$e(process.env.DISABLE_COMPACT)",
+  "enabled": "!xe(process.env.DISABLE_COMPACT)",
   "verfuegbar": true
  },
  {
@@ -285,7 +295,7 @@
   "variabel": false,
   "hint": "[all]",
   "aliases": [],
-  "enabled": "!Le()",
+  "enabled": "!Ce()",
   "verfuegbar": true
  },
  {
@@ -345,7 +355,7 @@
   "variabel": false,
   "hint": "[sync|login|consent|revoke|import|export|status|<prompt>]",
   "aliases": [],
-  "enabled": "bSe()",
+  "enabled": "ebe()",
   "verfuegbar": true
  },
  {
@@ -355,7 +365,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "E5()",
+  "enabled": "b5()",
   "verfuegbar": true
  },
  {
@@ -365,7 +375,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "E5()",
+  "enabled": "b5()",
   "verfuegbar": true
  },
  {
@@ -375,7 +385,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "E5()",
+  "enabled": "b5()",
   "verfuegbar": true
  },
  {
@@ -459,7 +469,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "PS()&&!Le()",
+  "enabled": "tS()&&!Ce()",
   "verfuegbar": true
  },
  {
@@ -509,7 +519,7 @@
   "variabel": false,
   "hint": "<directive>",
   "aliases": [],
-  "enabled": "!xs()",
+  "enabled": "!Hi()",
   "verfuegbar": true
  },
  {
@@ -529,7 +539,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Ft(\"allow_heap_dump\")",
+  "enabled": "Lt(\"allow_heap_dump\")",
   "verfuegbar": true
  },
  {
@@ -629,7 +639,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "XF()",
+  "enabled": "PM()",
   "verfuegbar": true
  },
  {
@@ -639,7 +649,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "wt()&&tNe()",
+  "enabled": "gt()&&U$e()",
   "verfuegbar": true
  },
  {
@@ -651,7 +661,7 @@
   "aliases": [
    "peers"
   ],
-  "enabled": "Ko()",
+  "enabled": "Do()",
   "verfuegbar": true
  },
  {
@@ -703,7 +713,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "wt()&&(eB()||H$e())",
+  "enabled": "gt()&&(sF()||XPe())",
   "verfuegbar": true
  },
  {
@@ -733,7 +743,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ia()&&!j5()&&SEn()",
+  "enabled": "ia()&&!j5()&&ESn()",
   "verfuegbar": true
  },
  {
@@ -828,6 +838,16 @@
   "verfuegbar": true
  },
  {
+  "name": "plugin-authoring",
+  "typ": "registriert",
+  "desc": "Write or debug a Claude Code plugin made of function hooks (a hooks module exporting register(on, options), hooks ($, e, next) on events like tool.call, prompt.submit, ui.render, session.start). Load it before writing or changing such a plugin; it says where the exact types come from, how to run a plugin under development, and where the engine reports what it refused.",
+  "variabel": false,
+  "hint": "",
+  "aliases": [],
+  "enabled": "true",
+  "verfuegbar": true
+ },
+ {
   "name": "plugin-types",
   "typ": "local",
   "desc": "Write claude-code.d.ts and claude-code-mcp.d.ts: the plugin API's TypeScript declarations and the inputs of the connected MCP tools, for typing a hooks module against this session",
@@ -854,7 +874,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "XG()",
+  "enabled": "q2()",
   "verfuegbar": true
  },
  {
@@ -894,7 +914,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "wt()||!1",
+  "enabled": "gt()||!1",
   "verfuegbar": true
  },
  {
@@ -956,7 +976,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "wt()&&Ft(\"allow_remote_sessions\")",
+  "enabled": "gt()&&Lt(\"allow_remote_sessions\")",
   "verfuegbar": true
  },
  {
@@ -1045,7 +1065,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "{if(!xt())return!1;let e=Sl();return!(e?kU.includes(e.terminal??\"\"):LH.isJetBrainsIdeTerminal())",
+  "enabled": "{if(!ha())return!1;let e=sl();return!(e?BG.includes(e.terminal??\"\"):cw.isJetBrainsIdeTerminal())",
   "verfuegbar": true
  },
  {
@@ -1057,7 +1077,7 @@
   "aliases": [
    "remote"
   ],
-  "enabled": "Fn()",
+  "enabled": "Dn()",
   "verfuegbar": true
  },
  {
@@ -1071,12 +1091,14 @@
   "verfuegbar": true
  },
  {
-  "name": "setup-cowork",
+  "name": "setup-claude",
   "typ": "registriert",
-  "desc": "Guided Cowork setup — install a matching plugin, try a skill, connect tools. Use when: set up cowork, setup cowork, get started with cowork, cowork onboarding, configure cowork, personalize cowork.",
+  "desc": "Guided setup — pick a role, install a matching plugin, try a skill, connect tools. Use when: set up claude, setup claude, set up cowork, setup cowork, get started with claude, claude onboarding.",
   "variabel": false,
   "hint": "",
-  "aliases": [],
+  "aliases": [
+   "setup-cowork"
+  ],
   "enabled": "a.CLAUDE_CODE_ENTRYPOINT===\"remote_cowork\"",
   "verfuegbar": true
  },
@@ -1167,7 +1189,7 @@
   "variabel": false,
   "hint": "<task>",
   "aliases": [],
-  "enabled": "!xs()",
+  "enabled": "!Hi()",
   "verfuegbar": true
  },
  {
@@ -1189,7 +1211,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Ft(\"allow_team_onboarding\")",
+  "enabled": "Lt(\"allow_team_onboarding\")",
   "verfuegbar": true
  },
  {
@@ -1201,7 +1223,7 @@
   "aliases": [
    "tp"
   ],
-  "enabled": "wt()&&Ft(\"allow_remote_sessions\")",
+  "enabled": "gt()&&Lt(\"allow_remote_sessions\")",
   "verfuegbar": true
  },
  {
@@ -1241,7 +1263,7 @@
   "variabel": false,
   "hint": "<prompt>",
   "aliases": [],
-  "enabled": "S0()",
+  "enabled": "UD()",
   "verfuegbar": true
  },
  {
@@ -1276,7 +1298,7 @@
    "cost",
    "stats"
   ],
-  "enabled": "Le()",
+  "enabled": "Ce()",
   "verfuegbar": true
  },
  {
@@ -1286,7 +1308,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "PS()&&!Le()",
+  "enabled": "tS()&&!Ce()",
   "verfuegbar": true
  },
  {
@@ -1347,17 +1369,7 @@
   "name": "whiteboard",
   "typ": "registriert",
   "desc": "Create a whiteboard artifact - a shared sketch canvas for wireframe-fidelity diagrams (boxes, databases, decision diamonds, sticky notes, arrows, freehand pen, text) that you and the user both draw on. The user sketches and hits Publish; this session is woken, reads the board (scene data plus a picture of it), and answers by drawing back on the same canvas - or plans from what they drew. Use when the user asks for a whiteboard, wants to sketch a design or diagram to talk through, or wants to draw something and have you answer on the canvas or plan from it. Only for CREATING a new whiteboard; an existing one is read and answered through its published artifact.",
-  "variabel": false,
-  "hint": "",
-  "aliases": [],
-  "enabled": "true",
-  "verfuegbar": true
- },
- {
-  "name": "whiteboard-mp",
-  "typ": "registriert",
-  "desc": "Create a multiplayer whiteboard artifact - a live sketch canvas for wireframe-fidelity diagrams (boxes, databases, decision diamonds, sticky notes, arrows, freehand, text, pasted images) where everyone with it open sees each other's strokes and cursors as they happen, the board shows whether this session is present, and you can draw on it live as well as answer a Send. Use when the user asks for a multiplayer or live whiteboard, wants to sketch with other people watching, or wants to see you draw in real time. Only for CREATING a new board; an existing one is read and answered through its published artifact.",
-  "variabel": false,
+  "variabel": true,
   "hint": "",
   "aliases": [],
   "enabled": "true",
@@ -1380,7 +1392,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "xc()",
+  "enabled": "Ac()",
   "verfuegbar": true
  },
  {

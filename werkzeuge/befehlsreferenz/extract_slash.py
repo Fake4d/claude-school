@@ -357,6 +357,21 @@ def entschluesseln(s):
 
 
 befehle = {}
+# Wird ein Anker gefunden, dessen Name und Merkmale stimmen, aus dem sich aber
+# kein Beschreibungstext aufloesen laesst, faellt der Befehl still aus der Liste.
+# Genau so ist `/artifact-pr-review` seit mindestens 2.1.235 unbemerkt gefehlt:
+# Die Handbremse vergleicht nur zwei Fassungen und sieht deshalb nie, was schon
+# vorher verschwunden war. VERWORFEN sammelt diese Faelle, damit sie in der
+# Tagesmeldung auftauchen statt lautlos zu verschwinden.
+VERWORFEN = []
+# Kein Slash-Befehl, sondern ein zufaellig passendes Objekt (`files_with_matches`
+# ist ein Grep-Parameter). Bekannte Fehltreffer werden nicht gemeldet, sonst
+# gewoehnt man sich an die Meldung und liest sie nicht mehr.
+VERWORFEN_FEHLTREFFER = {"files_with_matches"}
+# Echte Befehle, deren Bauform der Auslesecode noch nicht beherrscht. Bekannt und
+# offen - sie werden gemeldet, aber als Altlast, nicht als Neuigkeit. Wer einen
+# davon auslesbar macht, nimmt ihn hier heraus.
+VERWORFEN_BEKANNT = {"code-review", "ultrareview", "exit", "claude-code-docs"}
 # Anker sind die Beschreibungen. Ein Objekt gilt als Slash-Befehl, wenn es auf
 # oberster Ebene einen kleingeschriebenen `name` und eine Beschreibung hat und
 # zusaetzlich mindestens ein befehlstypisches Feld (type / isEnabled / aliases /
@@ -404,6 +419,23 @@ for t in ANKER.finditer(data):
             if vr:
                 desc = variable_aufloesen(vr.group(1), t.start())
     if not desc:
+        # Seit 2.1.260 kann die Beschreibung eine Pfeilfunktion sein, die je nach
+        # Umgebung einen von mehreren Textbausteinen zurueckgibt:
+        # `description:()=>ze()==="live"?ds:cs` (so bei /whiteboard, seit die
+        # Mehrspieler-Fassung /whiteboard-mp darin aufgegangen ist). Anders als
+        # beim schon bekannten `description:()=>"fester Text"` steht hier kein
+        # Literal, sondern ein Ausdruck ueber Variablen. Alle darin genannten
+        # Bezeichner aufloesen und den laengsten Text nehmen - kurze Treffer sind
+        # Funktionsnamen und Vergleichswerte ("live"), keine Beschreibungen.
+        af = feld_oberste_ebene(obj, r'description:\(\)\s*=>\s*([^,}]{0,200})')
+        if af:
+            kand = [variable_aufloesen(b, t.start())
+                    for b in re.findall(r'[A-Za-z_$][\w$]{0,6}', af.group(1))]
+            kand = [k for k in kand if len(k) > 20]
+            if kand:
+                desc, variabel = max(kand, key=len), len(set(kand)) > 1
+    if not desc:
+        VERWORFEN.append(name)
         continue
 
     h = feld_oberste_ebene(obj, r'argumentHint:"((?:[^"\\]|\\.)*)"')
@@ -443,6 +475,15 @@ aus = [b for b in out if not b["verfuegbar"]]
 ohne = [b for b in out if not b["desc"]]
 print(f"{len(out)} Slash-Befehle · {len(aus)} abgeschaltet · {len(ohne)} ohne Text"
       f"  ->  slash-{VERSION}.json")
+
+# Nur melden, was es auch wirklich nicht in die Liste geschafft hat: derselbe
+# Name kann an einer Fundstelle scheitern und an einer anderen gelingen.
+fehlend = {n for n in VERWORFEN if n not in befehle} - VERWORFEN_FEHLTREFFER
+neu = sorted(fehlend - VERWORFEN_BEKANNT)
+offen = sorted(fehlend & VERWORFEN_BEKANNT)
+print(f"VERWORFEN: {len(neu)} neu · {len(offen)} bekannt offen"
+      + (f" · NEU: {', '.join('/' + n for n in neu)}" if neu else "")
+      + (f" · offen: {', '.join('/' + n for n in offen)}" if offen else ""))
 if len(sys.argv) > 2:
     for b in out:
         mark = "  << ABGESCHALTET" if not b["verfuegbar"] else ""
