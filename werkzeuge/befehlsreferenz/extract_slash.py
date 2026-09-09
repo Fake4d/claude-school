@@ -238,9 +238,25 @@ def _text_suchen(bezeichner, feld, tiefe=0):
         if t and t.strip():
             return entschluesseln(t).strip()
     for m in re.finditer(r'function\s+' + b + r'\s*\([^)]{0,80}\)\s*\{', feld):
-        tx = texte_aus(_funktions_koerper(feld, m.end()))
-        if tx:
-            return tx[-1]
+        koerper = _funktions_koerper(feld, m.end())
+        tx = texte_aus(koerper)
+        if not tx:
+            continue
+        if len(tx) == 1:
+            return tx[0]
+        # Mehrere Textstuecke im Rumpf sind entweder eine VERKETTUNG
+        # (`return "a"+X+"b"`, so bei /design seit 2.1.266: alle Stuecke
+        # gehoeren zu EINEM Satz) oder eine ALTERNATIVE (`return b?"a":"b"`,
+        # so bei /exit, /ultrareview seit 2.1.260: nur eins gilt zur
+        # Laufzeit). Ternary-Operator ausserhalb von Strings/Vorlagen
+        # unterscheidet die Faelle: kein "?" -> Verkettung, alle Stuecke
+        # gehoeren zusammen und werden wie bei einer Vorlage mit "…"
+        # verbunden; sonst bleibt es bei "letztes Stueck zaehlt".
+        ohne_text = re.sub(r'"(?:[^"\\]|\\.)*"|\'(?:[^\'\\]|\\.)*\'|`(?:[^`\\]|\\.)*`',
+                            '', koerper)
+        if '?' not in ohne_text:
+            return '…'.join(tx)
+        return tx[-1]
     return ""
 
 
@@ -557,11 +573,41 @@ for t in ANKER.finditer(data):
         # Funktionsnamen und Vergleichswerte ("live"), keine Beschreibungen.
         af = feld_oberste_ebene(obj, r'description:\(\)\s*=>\s*([^,}]{0,200})')
         if af:
-            kand = [variable_aufloesen(b, t.start())
-                    for b in re.findall(r'[A-Za-z_$][\w$]{0,6}', af.group(1))]
-            kand = [k for k in kand if len(k) > 20]
+            ausdruck = af.group(1)
+            kand = []
+            for bm in re.finditer(r'[A-Za-z_$][\w$]{0,6}', ausdruck):
+                # Bezeichner mit unmittelbar folgendem "(" oder vorangehendem "."
+                # sind Funktionsrufe/Objektzugriffe (`n().description()`, seit
+                # 2.1.266 bei /design), keine Textvariablen. Bar aufgeloest treffen
+                # sie im Bundle fast immer eine falsche, gleichbenannte Stelle -
+                # am haeufigsten bei einzeichigen Bezeichnern wie `n`.
+                if ausdruck[bm.end():bm.end() + 1] == '(' or ausdruck[:bm.start()].rstrip().endswith('.'):
+                    continue
+                tkand = variable_aufloesen(bm.group(0), t.start())
+                if tkand:
+                    kand.append(tkand)
+            # Aufgeloester Text mit geschweiften Klammern ist keine Beschreibung,
+            # sondern eine zufaellig getroffene Code-/Datenstelle - verwerfen statt
+            # als Beschreibung zu veroeffentlichen.
+            kand = [k for k in kand if len(k) > 20 and '{' not in k and '}' not in k]
             if kand:
                 desc, variabel = max(kand, key=len), len(set(kand)) > 1
+    if not desc:
+        # Hub-Befehle mit mehreren Modi (z.B. /design seit 2.1.266: types/hub/
+        # canvas/consent) loesen ihre description ueber eine Tabelle auf, die
+        # der obige Ausdrucks-Fallback nicht durchschauen kann (`n().description()`
+        # statt eines einfachen Bezeichners). Die Tabelle selbst steht aber im
+        # selben Modul und benennt ihre Standard-Auspraegung meist "hub" -
+        # dort direkt nachschauen.
+        if feld_oberste_ebene(obj, r'(subcommands):'):
+            i = modul_von(t.start())
+            if i is not None:
+                mstart, mende = modul_bereich(i)
+                hm = re.search(r'\bhub:\{description:([A-Za-z_$][\w$]{0,6})', data[mstart:mende])
+                if hm:
+                    tkand = variable_aufloesen(hm.group(1), t.start())
+                    if tkand and len(tkand) > 20:
+                        desc, variabel = tkand, False
     if not desc:
         # Letzter Rueckfall: der kurze Menuetext, den die Befehlsauswahl zeigt.
         # Er ist immer ein festes Literal und macht das Verfahren unempfindlich
@@ -581,6 +627,15 @@ for t in ANKER.finditer(data):
         hv = feld_oberste_ebene(obj, r'argumentHint:([A-Za-z_$][\w$]{0,6})\s*[,}]')
         if hv:
             hint = variable_aufloesen(hv.group(1), t.start())
+    if not hint and feld_oberste_ebene(obj, r'(subcommands):'):
+        # Derselbe Hub-Tabellen-Fallback wie bei der Beschreibung, fuer den
+        # Hinweistext (`argumentHint:()=>n().hint` bei /design seit 2.1.266).
+        i = modul_von(t.start())
+        if i is not None:
+            mstart, mende = modul_bereich(i)
+            hhm = re.search(r'\bhub:\{[^{}]{0,300}?hint:"((?:[^"\\]|\\.)*)"', data[mstart:mende])
+            if hhm:
+                hint = entschluesseln(hhm.group(1))
     a = feld_oberste_ebene(obj, r'aliases:\[([^\]]{0,160})\]')
     e = feld_oberste_ebene(obj, r'isEnabled:\s*\(\)\s*=>\s*([^,}]{0,120})')
 

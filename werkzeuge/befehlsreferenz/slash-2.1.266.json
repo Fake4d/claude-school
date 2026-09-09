@@ -6,7 +6,7 @@
   "variabel": false,
   "hint": "<path>",
   "aliases": [],
-  "enabled": "Ce()&&wcr()",
+  "enabled": "Re()&&dgr()",
   "verfuegbar": true
  },
  {
@@ -16,7 +16,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "aw()",
+  "enabled": "Uv()",
   "verfuegbar": true
  },
  {
@@ -86,7 +86,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "mT()&&Gd()===null",
+  "enabled": "iT()&&Jd()===null",
   "verfuegbar": true
  },
  {
@@ -96,7 +96,7 @@
   "variabel": false,
   "hint": "[--request-id <uuid>] (--wizard posture=\\u2026 scope=\\u2026 depth=\\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
   "aliases": [],
-  "enabled": "iEt()&&Ce()",
+  "enabled": "tEt()&&Re()",
   "verfuegbar": true
  },
  {
@@ -106,7 +106,7 @@
   "variabel": false,
   "hint": "[auto|<tokens>]",
   "aliases": [],
-  "enabled": "!Ce()",
+  "enabled": "!Re()",
   "verfuegbar": true
  },
  {
@@ -116,7 +116,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Pcr()&&!Ce()",
+  "enabled": "vpr()&&!Re()",
   "verfuegbar": true
  },
  {
@@ -190,7 +190,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!Ce()&&q0()",
+  "enabled": "!Re()&&KO()",
   "verfuegbar": true
  },
  {
@@ -220,7 +220,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!e&&(A3e()||vt())",
+  "enabled": "!e&&(JYe()||Pt())",
   "verfuegbar": true
  },
  {
@@ -243,7 +243,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "J7e()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
+  "enabled": "Ret()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
   "verfuegbar": true
  },
  {
@@ -275,7 +275,7 @@
   "variabel": false,
   "hint": "[guidance]",
   "aliases": [],
-  "enabled": "F8t()",
+  "enabled": "cXt()",
   "verfuegbar": true
  },
  {
@@ -295,7 +295,7 @@
   "variabel": false,
   "hint": "<optional custom summarization instructions>",
   "aliases": [],
-  "enabled": "!xe(process.env.DISABLE_COMPACT)",
+  "enabled": "!He(process.env.DISABLE_COMPACT)",
   "verfuegbar": true
  },
  {
@@ -317,7 +317,7 @@
   "variabel": false,
   "hint": "[all]",
   "aliases": [],
-  "enabled": "!Ce()",
+  "enabled": "!Re()",
   "verfuegbar": true
  },
  {
@@ -373,11 +373,11 @@
  {
   "name": "design",
   "typ": "registriert",
-  "desc": "Hub for Claude Design (claude.ai/design): routes `sync`/`login` to their dedicated commands and maps `import`/`export`/`status`/free-form prompts to the native `",
+  "desc": "Hub for Claude Design (claude.ai/design): routes `sync`/`login` to their dedicated commands and maps `import`/`export`/`status`/free-form prompts to the native `…` tool. Always fetches the live Claude Design instructions via `…get_claude_design_prompt…` rather than shipping a vendored copy.",
   "variabel": false,
   "hint": "[sync|login|consent|revoke|import|export|status|<prompt>]",
   "aliases": [],
-  "enabled": "nSe()",
+  "enabled": "o()!==null",
   "verfuegbar": true
  },
  {
@@ -387,7 +387,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "o8()",
+  "enabled": "lN()",
   "verfuegbar": true
  },
  {
@@ -397,7 +397,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "o8()",
+  "enabled": "lN()",
   "verfuegbar": true
  },
  {
@@ -407,7 +407,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "o8()",
+  "enabled": "lN()",
   "verfuegbar": true
  },
  {
@@ -503,7 +503,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "gS()&&!Ce()",
+  "enabled": "GS()&&!Re()",
   "verfuegbar": true
  },
  {
@@ -553,7 +553,7 @@
   "variabel": false,
   "hint": "<directive>",
   "aliases": [],
-  "enabled": "!vi()",
+  "enabled": "!xi()",
   "verfuegbar": true
  },
  {
@@ -573,7 +573,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Mt(\"allow_heap_dump\")",
+  "enabled": "$t(\"allow_heap_dump\")",
   "verfuegbar": true
  },
  {
@@ -611,7 +611,7 @@
   "typ": "local-jsx",
   "desc": "Import config from another AI coding agent",
   "variabel": false,
-  "hint": "[codex|gemini] [--dry-run]",
+  "hint": "[codex|gemini|cursor] [--dry-run]",
   "aliases": [],
   "enabled": "true",
   "verfuegbar": true
@@ -673,7 +673,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "QM()",
+  "enabled": "oN()",
   "verfuegbar": true
  },
  {
@@ -683,7 +683,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "gt()&&YMe()",
+  "enabled": "gt()&&pFe()",
   "verfuegbar": true
  },
  {
@@ -695,7 +695,7 @@
   "aliases": [
    "peers"
   ],
-  "enabled": "Mo()",
+  "enabled": "Bo()",
   "verfuegbar": true
  },
  {
@@ -747,7 +747,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "gt()&&(kF()||V0e())",
+  "enabled": "gt()&&(OU()||fLe())",
   "verfuegbar": true
  },
  {
@@ -777,7 +777,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ua()&&!T8()&&Pwn()",
+  "enabled": "ma()&&!j8()&&nCn()",
   "verfuegbar": true
  },
  {
@@ -843,17 +843,7 @@
   "typ": "local-jsx",
   "desc": "Enable plan mode or view the current session plan",
   "variabel": false,
-  "hint": "[open|share|<description>]",
-  "aliases": [],
-  "enabled": "true",
-  "verfuegbar": true
- },
- {
-  "name": "plan-artifact",
-  "typ": "registriert",
-  "desc": "Create or customize a shareable plan Artifact from an implementation plan, design doc, or RFC. Use when asked to publish a plan as an artifact, restyle or edit a plan artifact, or present a plan as a shareable page.",
-  "variabel": false,
-  "hint": "",
+  "hint": "[open|<description>]",
   "aliases": [],
   "enabled": "true",
   "verfuegbar": true
@@ -908,7 +898,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "bG()",
+  "enabled": "PW()",
   "verfuegbar": true
  },
  {
@@ -1010,7 +1000,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "gt()&&Mt(\"allow_remote_sessions\")",
+  "enabled": "gt()&&$t(\"allow_remote_sessions\")",
   "verfuegbar": true
  },
  {
@@ -1099,7 +1089,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "{if(!wa())return!1;let e=dl();return!(e?dz.includes(e.terminal??\"\"):Aw.isJetBrainsIdeTerminal())",
+  "enabled": "{if(!Ca())return!1;let e=hl();return!(e?CG.includes(e.terminal??\"\"):rE.isJetBrainsIdeTerminal())",
   "verfuegbar": true
  },
  {
@@ -1111,7 +1101,7 @@
   "aliases": [
    "remote"
   ],
-  "enabled": "On()",
+  "enabled": "Ln()",
   "verfuegbar": true
  },
  {
@@ -1223,7 +1213,7 @@
   "variabel": false,
   "hint": "<task>",
   "aliases": [],
-  "enabled": "!vi()",
+  "enabled": "!xi()",
   "verfuegbar": true
  },
  {
@@ -1245,7 +1235,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Mt(\"allow_team_onboarding\")",
+  "enabled": "$t(\"allow_team_onboarding\")",
   "verfuegbar": true
  },
  {
@@ -1257,7 +1247,7 @@
   "aliases": [
    "tp"
   ],
-  "enabled": "gt()&&Mt(\"allow_remote_sessions\")",
+  "enabled": "gt()&&$t(\"allow_remote_sessions\")",
   "verfuegbar": true
  },
  {
@@ -1297,7 +1287,7 @@
   "variabel": false,
   "hint": "<prompt>",
   "aliases": [],
-  "enabled": "Z0()",
+  "enabled": "eD()",
   "verfuegbar": true
  },
  {
@@ -1307,7 +1297,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "JA()",
+  "enabled": "CA()",
   "verfuegbar": true
  },
  {
@@ -1342,7 +1332,7 @@
    "cost",
    "stats"
   ],
-  "enabled": "Ce()",
+  "enabled": "Re()",
   "verfuegbar": true
  },
  {
@@ -1352,7 +1342,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "gS()&&!Ce()",
+  "enabled": "GS()&&!Re()",
   "verfuegbar": true
  },
  {
@@ -1436,7 +1426,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Lc()",
+  "enabled": "Bc()",
   "verfuegbar": true
  },
  {
