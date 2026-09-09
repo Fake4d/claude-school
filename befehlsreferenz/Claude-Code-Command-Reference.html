@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>Claude Code · Command Reference 2.1.266</title>
+<html lang="en"><head><meta charset="utf-8"><title>Claude Code · Command Reference 2.1.267</title>
 <style>
 @page { size: A4 portrait; margin: 17mm 15mm 15mm; }
 * { box-sizing: border-box; }
@@ -35,16 +35,16 @@ section { break-inside: auto; }
   padding-top: 2mm; }
 </style></head><body>
 
-<div class="kopfzeile">Complete reference · checked against version 2.1.266</div>
+<div class="kopfzeile">Complete reference · checked against version 2.1.267</div>
 <h1>Claude Code<br>Command Reference</h1>
 <p class="lead">Every terminal command, every option and every slash command inside a session — with an explanation of what it does.</p>
-<p class="meta">Compiled by Christian's virtual server · 9 September 2026 · Update of the edition of 8 September 2026 (2.1.263)</p>
+<p class="meta">Compiled by Christian's virtual server · 10 September 2026 · Update of the edition of 9 September 2026 (2.1.266)</p>
 
 <div class="kasten">
 <h3>How this list came about</h3>
 
 <p>Terminal commands and options (parts A and B) are read straight out of the installed
-version 2.1.266 — <code>claude --help</code> and the help of every subcommand.</p>
+version 2.1.267 — <code>claude --help</code> and the help of every subcommand.</p>
 <p>The slash commands (part C) come from the command definitions inside the program itself.
 The extraction also picks up commands whose description is only assembled at runtime or
 fetched from a variable, and since this edition equally those whose <i>name</i> sits in a
@@ -58,13 +58,10 @@ at the end, so that nothing appears available that is not.</p>
 <div class="kasten">
 <h3>What has changed since the last edition</h3>
 
-<p>Compared with 2.1.263: the <code>/plan-artifact</code> command is gone — its name no longer
-appears in either build, and the official changelog doesn't mention it either, so this is a real
-removal, not a misread. Among the options, <code>--plugin-dir</code> now also accepts a whole
-folder of plugins instead of just one, and <code>--fallback-model</code> no longer only works in
-headless mode (<code>--print</code>) but in interactive sessions too. Among the slash commands
-themselves, <code>/import</code> gained "cursor" as a third supported source, and <code>/plan</code>
-lost the "share" sub-option from its argument hint.</p>
+<p>Compared with 2.1.266: a no-op release. <code>claude --help</code> and the sub-command help
+came out byte-for-byte identical, and among the 138 slash commands nothing changed in substance —
+no additions, no removals, no description changes. 33 commands had only internal, non-visible
+identifiers renamed, which has no effect on anyone reading the reference.</p>
 
 </div>
 
@@ -76,5 +73,5 @@ lost the "share" sub-option from its argument hint.</p>
 
 <section><h2>Appendix · Present, but switched off</h2><p class="unter">These names exist in the program, but are disabled by a flag in this version and are not available inside a session.</p><div class="z "><div class="l"><code>/loops</code></div><div class="r">List, create and delete loops. <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/pause-memory <span class="zus">also /memory-pause, /toggle-memory</span></code></div><div class="r">Pause automatic memory for this session. <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/update <span class="zus">also /restart</span></code></div><div class="r">Move to the newest version. <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/version</code></div><div class="r">Show the version of this session. <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/wellbeing <span class="zus">also /breaks, /break-reminder, /downtime</span></code></div><div class="r">Set up break reminders and quiet hours. <span class="aus">present in the program, but switched off</span></div></div></section>
 
-<div class="fuss">Claude Code 2.1.266 · 64 options · 133 available slash commands · 5 switched off · as of 9 September 2026</div>
+<div class="fuss">Claude Code 2.1.267 · 64 options · 133 available slash commands · 5 switched off · as of 10 September 2026</div>
 </body></html>
