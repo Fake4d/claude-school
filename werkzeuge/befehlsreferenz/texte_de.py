@@ -189,6 +189,7 @@ SLASH = {
 "memory": "CLAUDE.md-Dateien und Gedächtnis-Einstellungen bearbeiten.",
 "mobile": "QR-Code für die Handy-App anzeigen.",
 "model": "Modell für Claude Code einstellen.",
+"output-style": "Ausgabestile auflisten oder zu einem wechseln.",
 "passes": "Eine Gratiswoche Claude Code verschenken.",
 "pause-memory": "Automatisches Gedächtnis für diese Sitzung anhalten.",
 "permissions": "Regeln für erlaubte und verbotene Werkzeuge verwalten.",

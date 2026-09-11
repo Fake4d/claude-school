@@ -193,6 +193,7 @@ SLASH = {
 "memory": "Edit CLAUDE.md files and the memory settings.",
 "mobile": "Show the QR code for the phone app.",
 "model": "Set the model for Claude Code.",
+"output-style": "List output styles or switch to one.",
 "passes": "Give away a free week of Claude Code.",
 "pause-memory": "Pause automatic memory for this session.",
 "permissions": "Manage the rules for allowed and forbidden tools.",
