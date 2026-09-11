@@ -6,7 +6,7 @@
   "variabel": false,
   "hint": "<path>",
   "aliases": [],
-  "enabled": "Re()&&ibr()",
+  "enabled": "Ce()&&eEr()",
   "verfuegbar": true
  },
  {
@@ -16,7 +16,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Zv()",
+  "enabled": "uE()",
   "verfuegbar": true
  },
  {
@@ -86,7 +86,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "zk()&&Bd()===null",
+  "enabled": "oA()&&Wd()===null",
   "verfuegbar": true
  },
  {
@@ -96,7 +96,7 @@
   "variabel": false,
   "hint": "[--request-id <uuid>] (--wizard posture=\\u2026 scope=\\u2026 depth=\\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
   "aliases": [],
-  "enabled": "HPt()&&Re()",
+  "enabled": "P0t()&&Ce()",
   "verfuegbar": true
  },
  {
@@ -106,7 +106,7 @@
   "variabel": false,
   "hint": "[auto|<tokens>]",
   "aliases": [],
-  "enabled": "!Re()",
+  "enabled": "!Ce()",
   "verfuegbar": true
  },
  {
@@ -116,7 +116,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Avr()&&!Re()",
+  "enabled": "Wxr()&&!Ce()",
   "verfuegbar": true
  },
  {
@@ -190,7 +190,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!Re()&&aD()",
+  "enabled": "!Ce()&&DD()",
   "verfuegbar": true
  },
  {
@@ -220,7 +220,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!e&&(RJe()||xt())",
+  "enabled": "!e&&(cQe()||It())",
   "verfuegbar": true
  },
  {
@@ -243,7 +243,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ont()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
+  "enabled": "Wrt()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
   "verfuegbar": true
  },
  {
@@ -275,7 +275,7 @@
   "variabel": false,
   "hint": "[guidance]",
   "aliases": [],
-  "enabled": "a7t()",
+  "enabled": "XZt()",
   "verfuegbar": true
  },
  {
@@ -317,7 +317,7 @@
   "variabel": false,
   "hint": "[all]",
   "aliases": [],
-  "enabled": "!Re()",
+  "enabled": "!Ce()",
   "verfuegbar": true
  },
  {
@@ -387,7 +387,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "RN()",
+  "enabled": "nF()",
   "verfuegbar": true
  },
  {
@@ -397,7 +397,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "RN()",
+  "enabled": "nF()",
   "verfuegbar": true
  },
  {
@@ -407,7 +407,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "RN()",
+  "enabled": "nF()",
   "verfuegbar": true
  },
  {
@@ -439,7 +439,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "!zme()",
+  "enabled": "!c1e()",
   "verfuegbar": true
  },
  {
@@ -503,7 +503,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ew()&&!Re()",
+  "enabled": "pw()&&!Ce()",
   "verfuegbar": true
  },
  {
@@ -553,7 +553,7 @@
   "variabel": false,
   "hint": "<directive>",
   "aliases": [],
-  "enabled": "!Oi()",
+  "enabled": "!Pi()",
   "verfuegbar": true
  },
  {
@@ -573,7 +573,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Nt(\"allow_heap_dump\")",
+  "enabled": "qt(\"allow_heap_dump\")",
   "verfuegbar": true
  },
  {
@@ -633,7 +633,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Nt(\"allow_insights\")",
+  "enabled": "qt(\"allow_insights\")",
   "verfuegbar": true
  },
  {
@@ -673,7 +673,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "AN()",
+  "enabled": "ZN()",
   "verfuegbar": true
  },
  {
@@ -683,7 +683,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "gt()&&FUe()",
+  "enabled": "ht()&&f1e()",
   "verfuegbar": true
  },
  {
@@ -695,7 +695,7 @@
   "aliases": [
    "peers"
   ],
-  "enabled": "jo()",
+  "enabled": "Go()",
   "verfuegbar": true
  },
  {
@@ -747,7 +747,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "gt()&&(tB()||R$e())",
+  "enabled": "ht()&&(HB()||VNe())",
   "verfuegbar": true
  },
  {
@@ -777,7 +777,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ya()&&!l9()&&Exn()",
+  "enabled": "va()&&!Y9()&&BHn()",
   "verfuegbar": true
  },
  {
@@ -898,7 +898,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ZW()",
+  "enabled": "OG()",
   "verfuegbar": true
  },
  {
@@ -938,7 +938,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "gt()||!1",
+  "enabled": "ht()||!1",
   "verfuegbar": true
  },
  {
@@ -1000,7 +1000,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "gt()&&Nt(\"allow_remote_sessions\")",
+  "enabled": "ht()&&qt(\"allow_remote_sessions\")",
   "verfuegbar": true
  },
  {
@@ -1089,7 +1089,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "{if(!Ha())return!1;let e=bl();return!(e?YG.includes(e.terminal??\"\"):hE.isJetBrainsIdeTerminal())",
+  "enabled": "{if(!Da())return!1;let e=Al();return!(e?Hq.includes(e.terminal??\"\"):RE.isJetBrainsIdeTerminal())",
   "verfuegbar": true
  },
  {
@@ -1101,7 +1101,7 @@
   "aliases": [
    "remote"
   ],
-  "enabled": "Fn()",
+  "enabled": "Bn()",
   "verfuegbar": true
  },
  {
@@ -1213,7 +1213,7 @@
   "variabel": false,
   "hint": "<task>",
   "aliases": [],
-  "enabled": "!Oi()",
+  "enabled": "!Pi()",
   "verfuegbar": true
  },
  {
@@ -1235,7 +1235,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Nt(\"allow_team_onboarding\")",
+  "enabled": "qt(\"allow_team_onboarding\")",
   "verfuegbar": true
  },
  {
@@ -1247,7 +1247,7 @@
   "aliases": [
    "tp"
   ],
-  "enabled": "gt()&&Nt(\"allow_remote_sessions\")",
+  "enabled": "ht()&&qt(\"allow_remote_sessions\")",
   "verfuegbar": true
  },
  {
@@ -1287,7 +1287,7 @@
   "variabel": false,
   "hint": "<prompt>",
   "aliases": [],
-  "enabled": "fD()",
+  "enabled": "BD()",
   "verfuegbar": true
  },
  {
@@ -1297,7 +1297,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "BA()",
+  "enabled": "rT()",
   "verfuegbar": true
  },
  {
@@ -1332,7 +1332,7 @@
    "cost",
    "stats"
   ],
-  "enabled": "Re()",
+  "enabled": "Ce()",
   "verfuegbar": true
  },
  {
@@ -1342,7 +1342,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ew()&&!Re()",
+  "enabled": "pw()&&!Ce()",
   "verfuegbar": true
  },
  {
@@ -1426,7 +1426,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "qc()",
+  "enabled": "Zc()",
   "verfuegbar": true
  },
  {
