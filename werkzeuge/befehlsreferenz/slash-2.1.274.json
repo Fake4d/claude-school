@@ -6,7 +6,7 @@
   "variabel": false,
   "hint": "<path>",
   "aliases": [],
-  "enabled": "Te()&&y2r()",
+  "enabled": "Te()&&n3r()",
   "verfuegbar": true
  },
  {
@@ -16,7 +16,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Kk()",
+  "enabled": "TA()",
   "verfuegbar": true
  },
  {
@@ -86,7 +86,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "VE()&&uu()===null",
+  "enabled": "Ak()&&cu()===null",
   "verfuegbar": true
  },
  {
@@ -96,7 +96,7 @@
   "variabel": false,
   "hint": "[--request-id <uuid>] (--wizard posture=\\u2026 scope=\\u2026 depth=\\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
   "aliases": [],
-  "enabled": "VCt()&&Te()",
+  "enabled": "Pht()&&Te()",
   "verfuegbar": true
  },
  {
@@ -116,7 +116,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "myr()&&!Te()",
+  "enabled": "gYn()&&!Te()",
   "verfuegbar": true
  },
  {
@@ -190,7 +190,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!Te()&&i$()",
+  "enabled": "!Te()&&tF()",
   "verfuegbar": true
  },
  {
@@ -220,7 +220,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!e&&(lat()||Lt())",
+  "enabled": "!e&&(out()||It())",
   "verfuegbar": true
  },
  {
@@ -243,13 +243,13 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Qpt()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
+  "enabled": "cht()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
   "verfuegbar": true
  },
  {
   "name": "code-review",
   "typ": "registriert",
-  "desc": "Review the current diff, or a PR number/branch/path target, for correctness bugs and reuse/simplification/efficiency cleanups at the given effort level (low/medium: fewer, high-confidence findings; high→max: broader coverage, may include uncertain findings…); with no level given, it reuses the level you typed last. Pass --comment to post findings as inline PR comments, or --fix to apply the findings to the working tree after the review.…",
+  "desc": "Review the current diff, or a PR number/branch/path target, for correctness bugs (plus reuse/simplification/efficiency cleanups where the model's review recipe covers them) at the given effort level (low/medium: fewer, high-confidence findings; high→max: broader coverage, may include uncertain findings…); with no level given, it reuses the level you typed last. Pass --comment to post findings as inline PR comments, or --fix to apply the findings to the working tree after the review.…",
   "variabel": false,
   "hint": "[…] [--fix] [--comment] [<pr#>|<branch>|<path>]",
   "aliases": [
@@ -275,7 +275,7 @@
   "variabel": false,
   "hint": "[guidance]",
   "aliases": [],
-  "enabled": "Zfn()",
+  "enabled": "abn()",
   "verfuegbar": true
  },
  {
@@ -295,7 +295,7 @@
   "variabel": false,
   "hint": "<optional custom summarization instructions>",
   "aliases": [],
-  "enabled": "!Oe(process.env.DISABLE_COMPACT)",
+  "enabled": "!Pe(process.env.DISABLE_COMPACT)",
   "verfuegbar": true
  },
  {
@@ -317,7 +317,7 @@
   "variabel": false,
   "hint": "[all]",
   "aliases": [],
-  "enabled": "!Te()&&!fxr()",
+  "enabled": "!Te()&&!PYn()",
   "verfuegbar": true
  },
  {
@@ -387,7 +387,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "mU()",
+  "enabled": "mB()",
   "verfuegbar": true
  },
  {
@@ -397,7 +397,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "mU()",
+  "enabled": "mB()",
   "verfuegbar": true
  },
  {
@@ -407,7 +407,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "mU()",
+  "enabled": "mB()",
   "verfuegbar": true
  },
  {
@@ -439,7 +439,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "!Gqe()",
+  "enabled": "!G4e()",
   "verfuegbar": true
  },
  {
@@ -503,7 +503,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Wv()&&!Te()",
+  "enabled": "bE()&&!Te()",
   "verfuegbar": true
  },
  {
@@ -553,7 +553,7 @@
   "variabel": false,
   "hint": "<directive>",
   "aliases": [],
-  "enabled": "!_i()",
+  "enabled": "!si()",
   "verfuegbar": true
  },
  {
@@ -569,7 +569,7 @@
  {
   "name": "heapdump",
   "typ": "local",
-  "desc": "Dump the JS heap to ~/Desktop",
+  "desc": "Dump the JS heap to the Desktop; on Linux with no Desktop folder, the home directory",
   "variabel": false,
   "hint": "",
   "aliases": [],
@@ -673,7 +673,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "pU()",
+  "enabled": "bB()",
   "verfuegbar": true
  },
  {
@@ -683,7 +683,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "_t()&&(tre()||jJ())",
+  "enabled": "St()&&(qoe()||TQ())",
   "verfuegbar": true
  },
  {
@@ -695,7 +695,7 @@
   "aliases": [
    "peers"
   ],
-  "enabled": "ls()",
+  "enabled": "ms()",
   "verfuegbar": true
  },
  {
@@ -747,7 +747,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "_t()&&(v0()||UWe())",
+  "enabled": "St()&&(fO()||zVe())",
   "verfuegbar": true
  },
  {
@@ -777,7 +777,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ia()&&!oK()&&lVn()",
+  "enabled": "ya()&&!p4()&&l8n()",
   "verfuegbar": true
  },
  {
@@ -810,7 +810,7 @@
   "variabel": false,
   "hint": "[style]",
   "aliases": [],
-  "enabled": "Te()||!gJ()",
+  "enabled": "Te()||!rQ()",
   "verfuegbar": true
  },
  {
@@ -908,7 +908,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "RK()",
+  "enabled": "M4()",
   "verfuegbar": true
  },
  {
@@ -948,7 +948,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "_t()||!1",
+  "enabled": "St()||!1",
   "verfuegbar": true
  },
  {
@@ -1010,7 +1010,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "_t()",
+  "enabled": "St()",
   "verfuegbar": true
  },
  {
@@ -1099,7 +1099,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "{if(!cl())return!1;let e=zl();return!(e?E4.includes(e.terminal??\"\"):fv.isJetBrainsIdeTerminal())",
+  "enabled": "{if(!Ba())return!1;let e=tc();return!(e?k3.includes(e.terminal??\"\"):Kv.isJetBrainsIdeTerminal())",
   "verfuegbar": true
  },
  {
@@ -1111,7 +1111,7 @@
   "aliases": [
    "remote"
   ],
-  "enabled": "Vn()",
+  "enabled": "Wn()",
   "verfuegbar": true
  },
  {
@@ -1223,7 +1223,7 @@
   "variabel": false,
   "hint": "<task>",
   "aliases": [],
-  "enabled": "!_i()",
+  "enabled": "!si()",
   "verfuegbar": true
  },
  {
@@ -1257,7 +1257,7 @@
   "aliases": [
    "tp"
   ],
-  "enabled": "_t()",
+  "enabled": "St()",
   "verfuegbar": true
  },
  {
@@ -1293,21 +1293,21 @@
  {
   "name": "ultraplan",
   "typ": "local-jsx",
-  "desc": "Draft an editable plan in Claude Code on the web (…) · See …",
+  "desc": "Draft an editable plan in a cloud session (…) · See …",
   "variabel": false,
   "hint": "<prompt>",
   "aliases": [],
-  "enabled": "a$()",
+  "enabled": "iL()",
   "verfuegbar": true
  },
  {
   "name": "ultrareview",
   "typ": "local-jsx",
-  "desc": "Start a cloud agent that finds and verifies bugs in your branch (…, … USD) · Runs in Claude Code on the web. See …",
+  "desc": "Start a cloud agent that finds and verifies bugs in your branch (…, … USD) · Runs in a cloud session. See …",
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "JC()",
+  "enabled": "AR()",
   "verfuegbar": true
  },
  {
@@ -1352,7 +1352,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Wv()&&!Te()",
+  "enabled": "bE()&&!Te()",
   "verfuegbar": true
  },
  {
@@ -1388,7 +1388,7 @@
  {
   "name": "web-setup",
   "typ": "local-jsx",
-  "desc": "Set up Claude Code on the web with your GitHub account",
+  "desc": "Set up cloud sessions with your GitHub account",
   "variabel": false,
   "hint": "",
   "aliases": [],
@@ -1436,7 +1436,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Nu()",
+  "enabled": "Mu()",
   "verfuegbar": true
  },
  {

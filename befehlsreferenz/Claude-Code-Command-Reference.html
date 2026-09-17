@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>Claude Code · Command Reference 2.1.273</title>
+<html lang="en"><head><meta charset="utf-8"><title>Claude Code · Command Reference 2.1.274</title>
 <style>
 @page { size: A4 portrait; margin: 17mm 15mm 15mm; }
 * { box-sizing: border-box; }
@@ -35,16 +35,16 @@ section { break-inside: auto; }
   padding-top: 2mm; }
 </style></head><body>
 
-<div class="kopfzeile">Complete reference · checked against version 2.1.273</div>
+<div class="kopfzeile">Complete reference · checked against version 2.1.274</div>
 <h1>Claude Code<br>Command Reference</h1>
 <p class="lead">Every terminal command, every option and every slash command inside a session — with an explanation of what it does.</p>
-<p class="meta">Compiled by Christian's virtual server · 17 September 2026 · Update of the edition of 15 September 2026 (2.1.271)</p>
+<p class="meta">Compiled by Christian's virtual server · 18 September 2026 · Update of the edition of 16 September 2026 (2.1.273)</p>
 
 <div class="kasten">
 <h3>How this list came about</h3>
 
 <p>Terminal commands and options (parts A and B) are read straight out of the installed
-version 2.1.273 — <code>claude --help</code> and the help of every subcommand.</p>
+version 2.1.274 — <code>claude --help</code> and the help of every subcommand.</p>
 <p>The slash commands (part C) come from the command definitions inside the program itself.
 The extraction also picks up commands whose description is only assembled at runtime or
 fetched from a variable, and since this edition equally those whose <i>name</i> sits in a
@@ -58,11 +58,19 @@ at the end, so that nothing appears available that is not.</p>
 <div class="kasten">
 <h3>What has changed since the last edition</h3>
 
-<p>Compared with 2.1.271: a no-op release. <code>claude --help</code> and the sub-command help came
-out byte-for-byte identical. The slash command count stayed at 139 — no command was added, none
-was removed, and no description changed in substance. 36 commands had only internal, non-visible
-identifiers renamed, which has no effect on anyone reading the reference. This edition therefore
-documents purely the version bump from 2.1.271 to 2.1.273, with no visible change to the content.</p>
+<p>Compared with 2.1.273: <code>claude --help</code> and the sub-command help came out
+byte-for-byte identical. The slash command count stayed at 139 — no command was added, none was
+removed. Four commands changed their description in substance: <code>/code-review</code> now
+states more precisely that the search for reuse/simplification/efficiency cleanups only applies
+where the model's review recipe covers them. <code>/heapdump</code> now also describes the
+behaviour on Linux when there is no Desktop folder: the heap dump then goes to the home directory
+instead. <code>/ultraplan</code> and <code>/ultrareview</code> now say "cloud session" instead of
+"Claude Code on the web" — a renaming with no change in function. For the same reason,
+<code>/web-setup</code> now reads "Set up cloud sessions with your GitHub account" instead of "Set
+up Claude Code on the web with your GitHub account". 34 further commands had only internal,
+non-visible identifiers renamed, which has no effect on anyone reading the reference. This edition
+therefore documents the version bump from 2.1.273 to 2.1.274 together with four description updates,
+most of which reflect the "Claude Code on the web" → "cloud session" renaming.</p>
 
 </div>
 
@@ -74,5 +82,5 @@ documents purely the version bump from 2.1.271 to 2.1.273, with no visible chang
 
 <section><h2>Appendix · Present, but switched off</h2><p class="unter">These names exist in the program, but are disabled by a flag in this version and are not available inside a session.</p><div class="z "><div class="l"><code>/loops</code></div><div class="r">List, create and delete loops. <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/pause-memory <span class="zus">also /memory-pause, /toggle-memory</span></code></div><div class="r">Pause automatic memory for this session. <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/update <span class="zus">also /restart</span></code></div><div class="r">Move to the newest version. <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/version</code></div><div class="r">Show the version of this session. <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/wellbeing <span class="zus">also /breaks, /break-reminder, /downtime</span></code></div><div class="r">Set up break reminders and quiet hours. <span class="aus">present in the program, but switched off</span></div></div></section>
 
-<div class="fuss">Claude Code 2.1.273 · 64 options · 134 available slash commands · 5 switched off · as of 17 September 2026</div>
+<div class="fuss">Claude Code 2.1.274 · 64 options · 134 available slash commands · 5 switched off · as of 18 September 2026</div>
 </body></html>
