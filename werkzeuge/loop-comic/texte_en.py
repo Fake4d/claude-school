@@ -213,4 +213,86 @@ TEXTE = {
 "<b>Loop Engineering</b> &#8211; all das als Werkstatt im Dauerbetrieb":
     "<b>Loop Engineering</b> &#8211; all of it as a workshop in permanent operation",
 
+# --- Titelseite: neue Chips ---
+"/goal": "/goal",
+"/schedule": "/schedule",
+"proaktive Schleife": "Proactive loop",
+
+# --- Die vier Schleifen ---
+"Ist <code>/loop</code> denn der einzige Weg, so etwas laufen zu&nbsp;lassen?":
+    "Is <code>/loop</code> the only way to run something like&nbsp;that?",
+"Nein &#8211; es gibt vier Arten von Schleifen. Sie unterscheiden sich darin, <b>was du aus der Hand&nbsp;gibst</b>.":
+    "No &#8211; there are four kinds of loop. They differ in <b>how much you hand&nbsp;off</b>.",
+"Erst nur die Prüfung, dann die Abbruchbedingung, dann den Auslöser, zuletzt den Auftrag selbst. Mit jeder Stufe schaust du&nbsp;weniger&nbsp;zu.":
+    "First just the check, then the stop condition, then the trigger, finally the task itself. Each step means less&nbsp;watching&nbsp;over&nbsp;it.",
+'Gespräch<span class="chip-sub">die Prüfung</span>':
+    'Conversation<span class="chip-sub">the check</span>',
+'/goal<span class="chip-sub">die Bedingung</span>':
+    '/goal<span class="chip-sub">the condition</span>',
+'/loop &middot; /schedule<span class="chip-sub">der Auslöser</span>':
+    '/loop &middot; /schedule<span class="chip-sub">the trigger</span>',
+'proaktiv<span class="chip-sub">der Auftrag</span>':
+    'proactive<span class="chip-sub">the task</span>',
+"dieses Heft geht die vier Stufen der Reihe nach durch":
+    "this booklet works through the four steps in order",
+
+# --- /goal ---
+"Und diesen Ralph-Loop &#8211; muss ich den selber&nbsp;bauen?":
+    "And that Ralph loop &#8211; do I have to build it&nbsp;myself?",
+"Nein, der ist eingebaut: <code>/goal</code>. Du sagst nicht, <i>wie oft</i> gelaufen wird, sondern <b>woran man merkt, dass es fertig&nbsp;ist</b>.":
+    "No, it&#8217;s built in: <code>/goal</code>. You don&#8217;t say <i>how often</i> it runs, you say <b>how to tell that it&#8217;s&nbsp;done</b>.",
+"Nach jeder Runde liest ein zweites, kleines Modell den Verlauf und fällt ein Urteil: noch nicht, erfüllt, oder gar nicht erreichbar. Nur beim ersten geht es weiter &#8211; das ist die Bremse, die dem Ralph-Loop&nbsp;fehlte.":
+    "After each round a second, small model reads the transcript and returns a verdict: not yet, met, or impossible. Only the first one keeps it going &#8211; that&#8217;s the brake the Ralph loop was&nbsp;missing.",
+'/goal alle Tests laufen durch<span class="chip-sub">oder nach 20 Runden Schluss</span>':
+    '/goal all tests pass<span class="chip-sub">or stop after 20 rounds</span>',
+"Bedingung": "Condition",
+"Claude arbeitet eine Runde": "Claude works a round",
+"Prüfer-Modell urteilt": "Evaluator model judges",
+"&#8635; noch nicht erfüllt": "&#8635; not met yet",
+"der Prüfer liest nur, was Claude selbst gezeigt hat":
+    "the evaluator only reads what Claude itself has shown",
+
+# --- /schedule ---
+"Das läuft ja alles auf meinem Rechner &#8211; und wenn ich den Laptop&nbsp;zuklappe?":
+    "This all runs on my machine &#8211; so what if I close the&nbsp;laptop?",
+"Dann ist Schluss. <code>/loop</code> lebt in der offenen Sitzung und endet spätestens nach sieben&nbsp;Tagen.":
+    "Then it&#8217;s over. <code>/loop</code> lives in the open session and ends after seven days at the&nbsp;latest.",
+"Für echten Dauerbetrieb schiebst du die Routine mit <code>/schedule</code> in die Cloud. Sie läuft dort weiter, ob dein Rechner an ist oder nicht &#8211; dafür ohne deine lokalen Dateien und ohne&nbsp;Rückfragen.":
+    "For real permanent operation you move the routine to the cloud with <code>/schedule</code>. It keeps running there whether your machine is on or not &#8211; but without your local files and without&nbsp;asking.",
+"auf deinem Rechner": "on your machine",
+"Sitzung muss offen sein": "session must stay open",
+"ab 1 Minute": "from 1 minute",
+"zum Danebensitzen": "for sitting alongside",
+"in der Cloud": "in the cloud",
+"Laptop darf zu sein": "laptop may be closed",
+"ab 1 Stunde": "from 1 hour",
+
+# --- Proaktive Schleife ---
+"Und die vierte Stufe &#8211; wenn niemand mehr etwas&nbsp;eintippt?":
+    "And the fourth step &#8211; when nobody types anything&nbsp;anymore?",
+"Dann startet die Arbeit von selbst: zur Uhrzeit, bei einem Ereignis auf GitHub, oder wenn ein anderes Programm an der Webhook-Adresse&nbsp;anklopft.":
+    "Then the work starts by itself: at a set time, on a GitHub event, or when another program knocks at the webhook&nbsp;address.",
+"<code>/schedule</code> liefert den Auslöser, <code>/goal</code> das Ziel, die Verifikation die Bremse, der Auto-Modus die Ruhe vor Rückfragen. Jede Aufgabe endet an ihrem Ziel &#8211; die Routine läuft, bis du sie&nbsp;abschaltest.":
+    "<code>/schedule</code> supplies the trigger, <code>/goal</code> the target, verification the brake, auto mode the freedom from prompts. Each task ends at its goal &#8211; the routine runs until you switch it&nbsp;off.",
+"Uhrzeit": "Set time",
+"GitHub": "GitHub",
+"Webhook": "Webhook",
+"/schedule + /goal + Verifikation + Auto-Modus":
+    "/schedule + /goal + verification + auto mode",
+"niemand tippt mehr etwas ein": "nobody types anything anymore",
+
+# --- Die Leiter (erweitert) ---
+"mit /goal und /schedule": "with /goal and /schedule",
+"Verifikation, Tuning, Isolation": "verification, tuning, isolation",
+
+# --- Fazit: neue Zeilen ---
+"<b>Vier Schleifen</b> &#8211; Prüfung, Bedingung, Auslöser, Auftrag":
+    "<b>Four loops</b> &#8211; check, condition, trigger, task",
+"<b>/goal</b> &#8211; die Bedingung statt des Intervalls":
+    "<b>/goal</b> &#8211; the condition instead of the interval",
+"<b>/schedule</b> &#8211; dieselbe Routine in der Cloud":
+    "<b>/schedule</b> &#8211; the same routine, in the cloud",
+"<b>Proaktiv</b> &#8211; Auslöser, Ziel, Bremse &#8211; ganz ohne dich":
+    "<b>Proactive</b> &#8211; trigger, target, brake &#8211; entirely without you",
+
 }

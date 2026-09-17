@@ -261,6 +261,17 @@ Das Special vertieft stattdessen ein einzelnes Thema *innerhalb* von Stufe 3
 Tuning, Worktree-Isolation) und wird auf der Webseite auch entsprechend als
 Bonusheft zu Comic 3 präsentiert, nicht als gleichrangiger vierter Punkt der Leiter.
 
+**Am 17.09.2026 auf 17 Seiten erweitert:** `/goal` und `/schedule` sind dazugekommen,
+weil die drei Befehle inzwischen als ein Paket auftreten. Roter Faden sind seitdem die
+**vier Arten von Schleifen** (Gespräch / `/goal` / `/loop` · `/schedule` / proaktiv),
+geordnet danach, wie viel man aus der Hand gibt — Prüfung, Bedingung, Auslöser,
+Auftrag. Die neuen Seiten wurden thematisch einsortiert, nicht angehängt: die
+Taxonomie vor „Selbst-Pacing“ als Landkarte, `/goal` direkt hinter „Ralph-Loop“ (weil
+es genau dieser eingebaute Ralph-Loop ist), `/schedule` und „Proaktive Schleife“ hinter
+„Squads & Fleets“, vor „Harnesses“. Das bleibt trotzdem ein Special und keine vierte
+Stufe: es geht weiter um ein Thema innerhalb von Stufe 3, nur ist das Thema jetzt
+größer als ein einzelner Befehl.
+
 ## Verschwundene Slash-Befehle sind fast immer ein Auslesefehler
 
 Am 14.08.2026 meldete der Abgleich, `/loop` sei entfallen. Tatsächlich war nur dessen

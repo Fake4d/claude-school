@@ -154,9 +154,10 @@ panel(
   {human("confused")}
   <div class="cloud">
     <span class="q">?</span>
-    {chip("Auto-Pacing","blue")}{chip("Crash-Fuzzer","red")}{chip("Verifikation","green")}
-    {chip("Worktrees","orange")}{chip("Tuning","blue")}{chip("Dup-Unifier","red")}
-    {chip("Routinen-Werkstatt","orange")}{chip("Ralph-Loop","red")}{chip("Squad","green")}
+    {chip("/goal","orange")}{chip("/schedule","green")}{chip("Auto-Pacing","blue")}
+    {chip("Crash-Fuzzer","red")}{chip("Verifikation","green")}{chip("Worktrees","orange")}
+    {chip("Tuning","blue")}{chip("Dup-Unifier","red")}{chip("Routinen-Werkstatt","orange")}
+    {chip("Ralph-Loop","red")}{chip("Squad","green")}{chip("proaktive Schleife","blue")}
     {chip("Harness","blue")}
   </div>
   <div class="right-of-stage">
@@ -191,6 +192,15 @@ panel("Ein Beispiel",
     f'''{chip("388 Pull Requests in wenigen Wochen","blue",big=True)}''',
     f'''<div class="cap c-green">180 davon nach Code-Review + Mensch gemerged</div>'''))
 
+# --- 3b ---
+panel("Die vier Schleifen",
+  "Ist <code>/loop</code> denn der einzige Weg, so etwas laufen zu&nbsp;lassen?",
+  ["Nein &#8211; es gibt vier Arten von Schleifen. Sie unterscheiden sich darin, <b>was du aus der Hand&nbsp;gibst</b>.",
+   "Erst nur die Prüfung, dann die Abbruchbedingung, dann den Auslöser, zuletzt den Auftrag selbst. Mit jeder Stufe schaust du&nbsp;weniger&nbsp;zu."],
+  breit(human("think",0.76), bean("point",0.76),
+    f'''<div class="chain">{chip("Gespräch","blue",sub="die Prüfung")}{AR}{chip("/goal","orange",sub="die Bedingung")}{AR}{chip("/loop &middot; /schedule","green",sub="der Auslöser")}{AR}{chip("proaktiv","red",sub="der Auftrag")}</div>''',
+    '<div class="cap">dieses Heft geht die vier Stufen der Reihe nach durch</div>'))
+
 # --- 4 ---
 panel("Selbst-Pacing",
   "Muss ich der Schleife jedes Mal sagen, wie oft sie&nbsp;laufen&nbsp;soll?",
@@ -214,6 +224,17 @@ panel("Ralph-Loop",
     '<div class="rewind">&#8635; von vorn, bis fertig</div>',
     f'''{chip("Ralph-Loop","red",big=True)}''',
     '<div class="cap c-red">robust, aber ohne Bremse teuer im Token-Verbrauch</div>'))
+
+# --- 4c ---
+panel("/goal",
+  "Und diesen Ralph-Loop &#8211; muss ich den selber&nbsp;bauen?",
+  ["Nein, der ist eingebaut: <code>/goal</code>. Du sagst nicht, <i>wie oft</i> gelaufen wird, sondern <b>woran man merkt, dass es fertig&nbsp;ist</b>.",
+   "Nach jeder Runde liest ein zweites, kleines Modell den Verlauf und fällt ein Urteil: noch nicht, erfüllt, oder gar nicht erreichbar. Nur beim ersten geht es weiter &#8211; das ist die Bremse, die dem Ralph-Loop&nbsp;fehlte."],
+  breit(human("point",0.76), bean("right",0.76),
+    f'''{chip("/goal alle Tests laufen durch","blue",sub="oder nach 20 Runden Schluss",big=True)}''',
+    f'''<div class="chain">{chip("Bedingung","blue")}{AR}{chip("Claude arbeitet eine Runde","orange")}{AR}{chip("Prüfer-Modell urteilt","green")}</div>''',
+    '<div class="rewind">&#8635; noch nicht erfüllt</div>',
+    '<div class="cap c-red">der Prüfer liest nur, was Claude selbst gezeigt hat</div>'))
 
 # --- 5 ---
 panel("Verifikation",
@@ -268,6 +289,33 @@ panel("Squads & Fleets",
 <div class="mini-row">{chip("Planer","blue")}{AR}{chip("Bauer","orange")}{AR}{chip("Prüfer","green")}</div>
 <div class="cap c-green">wenige, mit verteilten Rollen, an einer Aufgabe</div></div></div>''')
 
+# --- 7d ---
+panel("/schedule",
+  "Das läuft ja alles auf meinem Rechner &#8211; und wenn ich den Laptop&nbsp;zuklappe?",
+  ["Dann ist Schluss. <code>/loop</code> lebt in der offenen Sitzung und endet spätestens nach sieben&nbsp;Tagen.",
+   "Für echten Dauerbetrieb schiebst du die Routine mit <code>/schedule</code> in die Cloud. Sie läuft dort weiter, ob dein Rechner an ist oder nicht &#8211; dafür ohne deine lokalen Dateien und ohne&nbsp;Rückfragen."],
+  f'''<div class="stage-wide">
+<div class="half"><div class="half-title">/loop</div>
+{chip("auf deinem Rechner","blue")}{chip("Sitzung muss offen sein","blue")}{chip("ab 1 Minute","blue")}
+<div class="cap c-blue">zum Danebensitzen</div></div>
+<div class="divider"></div>
+<div class="half"><div class="half-title t-green">/schedule</div>
+{chip("in der Cloud","green")}{chip("Laptop darf zu sein","green")}{chip("ab 1 Stunde","green")}
+<div class="cap c-green">für Dauerbetrieb</div></div></div>''')
+
+# --- 7e ---
+panel("Proaktive Schleife",
+  "Und die vierte Stufe &#8211; wenn niemand mehr etwas&nbsp;eintippt?",
+  ["Dann startet die Arbeit von selbst: zur Uhrzeit, bei einem Ereignis auf GitHub, oder wenn ein anderes Programm an der Webhook-Adresse&nbsp;anklopft.",
+   "<code>/schedule</code> liefert den Auslöser, <code>/goal</code> das Ziel, die Verifikation die Bremse, der Auto-Modus die Ruhe vor Rückfragen. Jede Aufgabe endet an ihrem Ziel &#8211; die Routine läuft, bis du sie&nbsp;abschaltest."],
+  f'''{human("happy",0.82)}
+<div class="stage-mid">
+<div class="mini-row">{chip("Uhrzeit","blue")}{chip("GitHub","orange")}{chip("Webhook","red")}</div>
+{AD}
+{chip("/schedule + /goal + Verifikation + Auto-Modus","green",big=True)}
+<div class="cap c-green">niemand tippt mehr etwas ein</div></div>
+{bean("thumbs",0.82)}''')
+
 # --- 7c ---
 panel("Harnesses",
   "Auto-Pacing, Verifikation, Tuning, Isolation &#8211; hat dieses ganze Gerüst auch einen&nbsp;Namen?",
@@ -292,7 +340,7 @@ panel("Die Leiter",
 <div class="cap c-blue">reicht meistens</div></div>
 <div class="divider"></div>
 <div class="half"><div class="half-title t-green">Loop Engineering</div>
-{chip("mehrere abgestimmte Routinen","green")}{chip("mit Verifikation, Tuning, Isolation","green")}
+{chip("mehrere abgestimmte Routinen","green")}{chip("mit /goal und /schedule","green")}{chip("Verifikation, Tuning, Isolation","green")}
 <div class="cap c-green">für Dauerbetrieb</div></div></div>''')
 
 # --- 9: Fazit ---
@@ -302,7 +350,10 @@ panel("Fazit",
   f'''<div class="finale">
 <div class="fin-figs">{human("happy")}<div class="bulb">&#128161;</div>{bean("thumbs")}</div>
 <div class="fin-box">
+<div class="fin-line"><b>Vier Schleifen</b> &#8211; Prüfung, Bedingung, Auslöser, Auftrag</div>
 <div class="fin-line"><b>/loop</b> &#8211; der Baustein, wiederholt einen Auftrag</div>
+<div class="fin-line"><b>/goal</b> &#8211; die Bedingung statt des Intervalls</div>
+<div class="fin-line"><b>/schedule</b> &#8211; dieselbe Routine in der Cloud</div>
 <div class="fin-line"><b>Ralph-Loop</b> &#8211; planen, ausführen, prüfen, von vorn</div>
 <div class="fin-line"><b>Auto-Pacing</b> &#8211; Claude wählt den Abstand selbst</div>
 <div class="fin-line"><b>Verifikation</b> &#8211; Tests, Review, erst dann ein Vorschlag</div>
@@ -310,6 +361,7 @@ panel("Fazit",
 <div class="fin-line"><b>Worktree-Isolation</b> &#8211; jede Schleife für sich</div>
 <div class="fin-line"><b>Squad / Fleet</b> &#8211; verteilte Rollen oder viele parallel</div>
 <div class="fin-line"><b>Harness</b> &#8211; Werkzeuge, Rechte, Gedächtnis, Ablaufsteuerung</div>
+<div class="fin-line"><b>Proaktiv</b> &#8211; Auslöser, Ziel, Bremse &#8211; ganz ohne dich</div>
 <div class="fin-line"><b>Loop Engineering</b> &#8211; all das als Werkstatt im Dauerbetrieb</div>
 </div></div>''')
 

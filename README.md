@@ -11,14 +11,15 @@ The three comics follow one question: **how far do you let Claude at your things
 In the conversation everything passes through you. With the desktop app Claude works
 in your folders. In the terminal it works on the whole machine — and keeps running
 without you. The **Loop Engineering special** builds on stage 3 but isn't part of
-the ladder: it just goes deeper on one topic (`/loop` in permanent operation).
+the ladder: it just goes deeper on one topic (`/loop`, `/goal` and `/schedule` in
+permanent operation).
 
 | Guide | Length | Who for |
 |---|---|---|
 | [**Claude in conversation as a comic**](chat-comic/chat-comic-en.pdf) | 22 pages | Stage 1 — nothing to install: artifacts, projects, memory, research |
 | [**Claude Cowork as a comic**](cowork-comic/cowork-comic-en.pdf) | 23 pages | Stage 2 — desktop app: Claude works directly in your folders |
 | [**Claude Code as a comic**](claude-code-comic/claude-code-comic-en.pdf) | 34 pages | Stage 3 — terminal: the whole machine, your own tools, runs without you |
-| [**Loop Engineering as a comic**](loop-comic/loop-comic-en.pdf) | 13 pages | Special — bonus issue for stage 3: turning `/loop` into a workshop of routines in permanent operation |
+| [**Loop Engineering as a comic**](loop-comic/loop-comic-en.pdf) | 17 pages | Special — bonus issue for stage 3: `/loop`, `/goal` and `/schedule` as one package, up to the proactive loop |
 | [**Command reference**](befehlsreferenz/Claude-Code-Command-Reference.pdf) | 9 pages | Looking things up — every terminal command, option and slash command |
 | [**Your own AI server assistant**](server-setup/AI-Server-Assistant-Edition-3.pdf) | 10 pages | Building it yourself — from an empty rented server to Claude running around the clock |
 
