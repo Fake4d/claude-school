@@ -142,6 +142,7 @@ SLASH = {
 "cd": "Move the session to a different working folder.",
 "chrome": "Open the settings for Claude in Chrome.",
 "claude-in-chrome": "Drive the browser: click, type, read pages.",
+"claim-credit": "Open the page of the offer shown at start-up.",
 "clear": "New session with an empty context; the old one is kept.",
 "cloud-plugins": "Decide whether cloud sessions use the plugins enabled here.",
 "color": "Colour of the prompt box for this session.",

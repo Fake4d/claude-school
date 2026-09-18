@@ -138,6 +138,7 @@ SLASH = {
 "cd": "Die Sitzung in einen anderen Arbeitsordner umziehen.",
 "chrome": "Einstellungen für Claude in Chrome öffnen.",
 "claude-in-chrome": "Browser fernsteuern: klicken, tippen, Seiten auslesen.",
+"claim-credit": "Die Seite des beim Start angezeigten Angebots öffnen.",
 "clear": "Neue Sitzung mit leerem Kontext; die alte bleibt erhalten.",
 "cloud-plugins": "Festlegen, ob Cloud-Sitzungen die hier eingeschalteten Plugins mitbenutzen.",
 "color": "Farbe der Eingabezeile für diese Sitzung.",

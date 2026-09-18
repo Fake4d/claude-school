@@ -545,6 +545,10 @@ for t in ANKER.finditer(data):
         or None
     if not hat_merkmal:
         continue
+    # Bekannter Fehltreffer: nie aufnehmen, auch nicht, wenn sich (wie seit
+    # 2.1.277) zufaellig ein Beschreibungstext aufloesen laesst.
+    if name in VERWORFEN_FEHLTREFFER:
+        continue
 
     ds = feld_oberste_ebene(obj, r'description:"((?:[^"\\]|\\.)*)"')
     if ds:
