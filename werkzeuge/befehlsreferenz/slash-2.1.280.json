@@ -6,7 +6,7 @@
   "variabel": false,
   "hint": "<path>",
   "aliases": [],
-  "enabled": "Ae()&&Qeo()",
+  "enabled": "Te()&&vho()",
   "verfuegbar": true
  },
  {
@@ -16,7 +16,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "rS()",
+  "enabled": "qb()",
   "verfuegbar": true
  },
  {
@@ -86,7 +86,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "lA()&&ku()===null",
+  "enabled": "YA()&&Eu()===null",
   "verfuegbar": true
  },
  {
@@ -96,7 +96,7 @@
   "variabel": false,
   "hint": "[--request-id <uuid>] (--wizard posture=\\u2026 scope=\\u2026 depth=\\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
   "aliases": [],
-  "enabled": "I4e()&&Ae()",
+  "enabled": "bOe()&&Te()",
   "verfuegbar": true
  },
  {
@@ -106,7 +106,7 @@
   "variabel": false,
   "hint": "[auto|<tokens>]",
   "aliases": [],
-  "enabled": "!Ae()",
+  "enabled": "!Te()",
   "verfuegbar": true
  },
  {
@@ -116,7 +116,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Fan()&&!Ae()",
+  "enabled": "CNt()&&!Te()",
   "verfuegbar": true
  },
  {
@@ -190,7 +190,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!Ae()&&y1()",
+  "enabled": "!Te()&&CH()",
   "verfuegbar": true
  },
  {
@@ -200,7 +200,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "mt()&&!zF()&&Syn()!==null",
+  "enabled": "ft()&&!HD()&&b6t()!==null",
   "verfuegbar": true
  },
  {
@@ -230,7 +230,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!e&&(Cmt()||en())",
+  "enabled": "!e&&(Swt()||eo())",
   "verfuegbar": true
  },
  {
@@ -253,7 +253,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "nwt()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
+  "enabled": "kTt()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
   "verfuegbar": true
  },
  {
@@ -285,7 +285,7 @@
   "variabel": false,
   "hint": "[guidance]",
   "aliases": [],
-  "enabled": "VCn()",
+  "enabled": "UDn()",
   "verfuegbar": true
  },
  {
@@ -327,7 +327,7 @@
   "variabel": false,
   "hint": "[all]",
   "aliases": [],
-  "enabled": "!Ae()&&!Qan()",
+  "enabled": "!Te()&&!UNt()",
   "verfuegbar": true
  },
  {
@@ -387,7 +387,7 @@
   "variabel": false,
   "hint": "[sync|login|consent|revoke|import|export|status|<prompt>]",
   "aliases": [],
-  "enabled": "n()!==null",
+  "enabled": "o()!==null",
   "verfuegbar": true
  },
  {
@@ -397,7 +397,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "m0()",
+  "enabled": "cO()",
   "verfuegbar": true
  },
  {
@@ -407,7 +407,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "m0()",
+  "enabled": "cO()",
   "verfuegbar": true
  },
  {
@@ -417,7 +417,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "m0()",
+  "enabled": "cO()",
   "verfuegbar": true
  },
  {
@@ -449,7 +449,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "!pyn()",
+  "enabled": "!LEn()",
   "verfuegbar": true
  },
  {
@@ -513,7 +513,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "pk()&&!Ae()",
+  "enabled": "Vk()&&!Te()",
   "verfuegbar": true
  },
  {
@@ -563,7 +563,7 @@
   "variabel": false,
   "hint": "<directive>",
   "aliases": [],
-  "enabled": "!li()",
+  "enabled": "!hi()",
   "verfuegbar": true
  },
  {
@@ -683,7 +683,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "jj()",
+  "enabled": "GW()",
   "verfuegbar": true
  },
  {
@@ -693,7 +693,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "mt()&&(Zie()||lee())",
+  "enabled": "ft()&&(zle()||cX())",
   "verfuegbar": true
  },
  {
@@ -705,7 +705,7 @@
   "aliases": [
    "peers"
   ],
-  "enabled": "ks()",
+  "enabled": "Ts()",
   "verfuegbar": true
  },
  {
@@ -757,7 +757,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "mt()&&(gM()||w6e())",
+  "enabled": "ft()&&(mO()||Q1e())",
   "verfuegbar": true
  },
  {
@@ -787,7 +787,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "xa()&&!V3()&&Ntr()",
+  "enabled": "Ma()&&!l6()&&jmr()",
   "verfuegbar": true
  },
  {
@@ -820,7 +820,7 @@
   "variabel": false,
   "hint": "[style]",
   "aliases": [],
-  "enabled": "Ae()||!UZ()",
+  "enabled": "Te()||!Cte()",
   "verfuegbar": true
  },
  {
@@ -918,7 +918,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "H6()",
+  "enabled": "Z6()",
   "verfuegbar": true
  },
  {
@@ -958,7 +958,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "mt()||!1",
+  "enabled": "ft()||!1",
   "verfuegbar": true
  },
  {
@@ -1020,7 +1020,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "mt()",
+  "enabled": "ft()",
   "verfuegbar": true
  },
  {
@@ -1109,7 +1109,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "{if(!Fa())return!1;let e=yc();return!(e?p5.includes(e.terminal??\"\"):NE.isJetBrainsIdeTerminal())",
+  "enabled": "{if(!Va())return!1;let e=Pc();return!(e?N8.includes(e.terminal??\"\"):uk.isJetBrainsIdeTerminal())",
   "verfuegbar": true
  },
  {
@@ -1233,7 +1233,7 @@
   "variabel": false,
   "hint": "<task>",
   "aliases": [],
-  "enabled": "!li()",
+  "enabled": "!hi()",
   "verfuegbar": true
  },
  {
@@ -1267,7 +1267,7 @@
   "aliases": [
    "tp"
   ],
-  "enabled": "mt()",
+  "enabled": "ft()",
   "verfuegbar": true
  },
  {
@@ -1307,7 +1307,7 @@
   "variabel": false,
   "hint": "<prompt>",
   "aliases": [],
-  "enabled": "oN()",
+  "enabled": "o$()",
   "verfuegbar": true
  },
  {
@@ -1317,7 +1317,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "hx()",
+  "enabled": "tx()",
   "verfuegbar": true
  },
  {
@@ -1352,7 +1352,7 @@
    "cost",
    "stats"
   ],
-  "enabled": "Ae()",
+  "enabled": "Te()",
   "verfuegbar": true
  },
  {
@@ -1362,7 +1362,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "pk()&&!Ae()",
+  "enabled": "Vk()&&!Te()",
   "verfuegbar": true
  },
  {
@@ -1446,7 +1446,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Zu()",
+  "enabled": "zd()",
   "verfuegbar": true
  },
  {
