@@ -6,7 +6,7 @@
   "variabel": false,
   "hint": "<path>",
   "aliases": [],
-  "enabled": "Te()&&vho()",
+  "enabled": "Te()&&NAo()",
   "verfuegbar": true
  },
  {
@@ -16,7 +16,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "qb()",
+  "enabled": "kS()",
   "verfuegbar": true
  },
  {
@@ -86,7 +86,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "YA()&&Eu()===null",
+  "enabled": "nT()&&uc()===null",
   "verfuegbar": true
  },
  {
@@ -96,7 +96,7 @@
   "variabel": false,
   "hint": "[--request-id <uuid>] (--wizard posture=\\u2026 scope=\\u2026 depth=\\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
   "aliases": [],
-  "enabled": "bOe()&&Te()",
+  "enabled": "zDe()&&Te()",
   "verfuegbar": true
  },
  {
@@ -116,7 +116,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "CNt()&&!Te()",
+  "enabled": "pBt()&&!Te()",
   "verfuegbar": true
  },
  {
@@ -190,7 +190,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!Te()&&CH()",
+  "enabled": "!Te()&&CO()",
   "verfuegbar": true
  },
  {
@@ -200,7 +200,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ft()&&!HD()&&b6t()!==null",
+  "enabled": "pt()&&!HL()&&JJt()!==null",
   "verfuegbar": true
  },
  {
@@ -230,7 +230,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!e&&(Swt()||eo())",
+  "enabled": "!e&&(ZTt()||yo())",
   "verfuegbar": true
  },
  {
@@ -253,7 +253,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "kTt()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
+  "enabled": "mPt()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
   "verfuegbar": true
  },
  {
@@ -285,7 +285,7 @@
   "variabel": false,
   "hint": "[guidance]",
   "aliases": [],
-  "enabled": "UDn()",
+  "enabled": "xBn()",
   "verfuegbar": true
  },
  {
@@ -305,7 +305,7 @@
   "variabel": false,
   "hint": "<optional custom summarization instructions>",
   "aliases": [],
-  "enabled": "!Me(process.env.DISABLE_COMPACT)",
+  "enabled": "!Oe(process.env.DISABLE_COMPACT)",
   "verfuegbar": true
  },
  {
@@ -327,7 +327,7 @@
   "variabel": false,
   "hint": "[all]",
   "aliases": [],
-  "enabled": "!Te()&&!UNt()",
+  "enabled": "!Te()&&!xBt()",
   "verfuegbar": true
  },
  {
@@ -397,7 +397,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "cO()",
+  "enabled": "vO()",
   "verfuegbar": true
  },
  {
@@ -407,7 +407,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "cO()",
+  "enabled": "vO()",
   "verfuegbar": true
  },
  {
@@ -417,7 +417,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "cO()",
+  "enabled": "vO()",
   "verfuegbar": true
  },
  {
@@ -432,13 +432,11 @@
  },
  {
   "name": "desktop",
-  "typ": "local-jsx",
-  "desc": "Continue the current session in Claude Desktop",
+  "typ": "prompt",
+  "desc": "- …",
   "variabel": false,
-  "hint": "",
-  "aliases": [
-   "app"
-  ],
+  "hint": "whole",
+  "aliases": [],
   "enabled": "true",
   "verfuegbar": true
  },
@@ -449,7 +447,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "!LEn()",
+  "enabled": "!b8t()",
   "verfuegbar": true
  },
  {
@@ -513,7 +511,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Vk()&&!Te()",
+  "enabled": "kR()&&!Te()",
   "verfuegbar": true
  },
  {
@@ -548,12 +546,12 @@
  },
  {
   "name": "focus",
-  "typ": "local-jsx",
+  "typ": "local",
   "desc": "Toggle focus view: just your prompt, summary, and response",
   "variabel": false,
-  "hint": "",
+  "hint": "[on|off]",
   "aliases": [],
-  "enabled": "true",
+  "enabled": "Te()",
   "verfuegbar": true
  },
  {
@@ -563,7 +561,7 @@
   "variabel": false,
   "hint": "<directive>",
   "aliases": [],
-  "enabled": "!hi()",
+  "enabled": "!Ei()",
   "verfuegbar": true
  },
  {
@@ -683,7 +681,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "GW()",
+  "enabled": "mG()",
   "verfuegbar": true
  },
  {
@@ -693,7 +691,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "ft()&&(zle()||cX())",
+  "enabled": "pt()&&(lue()||JJ())",
   "verfuegbar": true
  },
  {
@@ -705,7 +703,7 @@
   "aliases": [
    "peers"
   ],
-  "enabled": "Ts()",
+  "enabled": "Os()",
   "verfuegbar": true
  },
  {
@@ -757,7 +755,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ft()&&(mO()||Q1e())",
+  "enabled": "pt()&&(fM()||OGe())",
   "verfuegbar": true
  },
  {
@@ -787,7 +785,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Ma()&&!l6()&&jmr()",
+  "enabled": "Va()&&!QG()&&Pwr()",
   "verfuegbar": true
  },
  {
@@ -820,7 +818,7 @@
   "variabel": false,
   "hint": "[style]",
   "aliases": [],
-  "enabled": "Te()||!Cte()",
+  "enabled": "Te()||!Cre()",
   "verfuegbar": true
  },
  {
@@ -918,7 +916,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Z6()",
+  "enabled": "P8()",
   "verfuegbar": true
  },
  {
@@ -958,7 +956,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ft()||!1",
+  "enabled": "pt()||!1",
   "verfuegbar": true
  },
  {
@@ -1020,7 +1018,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ft()",
+  "enabled": "pt()",
   "verfuegbar": true
  },
  {
@@ -1109,7 +1107,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "{if(!Va())return!1;let e=Pc();return!(e?N8.includes(e.terminal??\"\"):uk.isJetBrainsIdeTerminal())",
+  "enabled": "{if(!nl())return!1;let e=Jc();return!(e?E9.includes(e.terminal??\"\"):qk.isJetBrainsIdeTerminal())",
   "verfuegbar": true
  },
  {
@@ -1121,7 +1119,7 @@
   "aliases": [
    "remote"
   ],
-  "enabled": "Qn()",
+  "enabled": "Vn()",
   "verfuegbar": true
  },
  {
@@ -1233,7 +1231,7 @@
   "variabel": false,
   "hint": "<task>",
   "aliases": [],
-  "enabled": "!hi()",
+  "enabled": "!Ei()",
   "verfuegbar": true
  },
  {
@@ -1267,7 +1265,7 @@
   "aliases": [
    "tp"
   ],
-  "enabled": "ft()",
+  "enabled": "pt()",
   "verfuegbar": true
  },
  {
@@ -1307,7 +1305,7 @@
   "variabel": false,
   "hint": "<prompt>",
   "aliases": [],
-  "enabled": "o$()",
+  "enabled": "yF()",
   "verfuegbar": true
  },
  {
@@ -1317,7 +1315,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "tx()",
+  "enabled": "Qx()",
   "verfuegbar": true
  },
  {
@@ -1362,7 +1360,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Vk()&&!Te()",
+  "enabled": "kR()&&!Te()",
   "verfuegbar": true
  },
  {
@@ -1446,7 +1444,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "zd()",
+  "enabled": "ap()",
   "verfuegbar": true
  },
  {

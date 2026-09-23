@@ -7,26 +7,25 @@ die andere mit. Reines HTML, wie es im Kasten steht (<p>…</p>).
 """
 
 DE = """
-<p>Gegenüber {vorg}: Bei den Slash-Befehlen hat sich nichts geändert – keiner ist hinzugekommen
-oder weggefallen, und bei keinem hat sich die Beschreibung inhaltlich geändert. Bei 36 Befehlen
-wurden nur interne, minifizierte Bezeichner ausgetauscht; das betrifft niemanden, der die Referenz
-liest. Bei <code>claude --help</code> gibt es zwei Präzisierungen: Bei <code>--bare</code> steht
-jetzt dabei, dass mit „Hooks" die in Einstellungen und von installierten Plugins definierten Hooks
-gemeint sind – in Claude Code eingebaute Funktionen sind davon nicht betroffen. Bei
-<code>--safe-mode</code> heißt es nun ausdrücklich „installierte Plugins" statt nur „Plugins", und
-in der Zusicherung, was trotzdem normal funktioniert, ist jetzt auch von Plugins die Rede
-(„eingebaute Tools und Plugins" statt nur „eingebaute Tools"). Die Hilfe der Unterbefehle ist
-zeichengleich geblieben.</p>
+<p>Gegenüber {vorg}: Bei den Slash-Befehlen ist kein Befehl hinzugekommen oder weggefallen. Bei
+<code>/focus</code> zeigt der Vergleich einen Argument-Hinweis <code>[on|off]</code>, den es vorher
+nicht gab. Bei <code>/desktop</code> weichen die ausgelesenen Angaben ab (Beschreibung nur noch
+„- …", Alias <code>app</code> fehlt, Argument-Hinweis „whole"); das sieht nach einem Ausleseproblem
+aus und ist nicht als Änderung übernommen – die Beschreibung bleibt wie bisher. Bei 36 weiteren
+Befehlen wurden nur interne, minifizierte Bezeichner ausgetauscht; das betrifft niemanden, der die
+Referenz liest. Bei <code>claude --help</code> gibt es eine Präzisierung: <code>--agents</code>
+nimmt jetzt neben einem JSON-Objekt auch – zusammen mit <code>--print</code> – den Pfad zu einer
+Datei entgegen, die dieses JSON enthält. Die Hilfe der Unterbefehle ist zeichengleich geblieben.</p>
 """
 
 EN = """
-<p>Compared with {vorg}: nothing changed among the slash commands – none was added, none was
-removed, and no command's description changed in substance. 36 commands had only internal,
-minified identifiers renamed, which has no effect on anyone reading the reference.
-<code>claude --help</code> gained two clarifications: <code>--bare</code> now spells out that
-"hooks" means those defined in settings and by installed plugins – features built into Claude Code
-itself are unaffected. <code>--safe-mode</code> now says "installed plugins" explicitly instead of
-just "plugins", and the note about what still works normally now also mentions plugins ("built-in
-tools and plugins" instead of just "built-in tools"). The sub-command help came out byte-for-byte
-identical.</p>
+<p>Compared with {vorg}: no slash command was added or removed. For <code>/focus</code> the
+comparison shows an argument hint <code>[on|off]</code> that did not exist before. For
+<code>/desktop</code> the extracted values differ (description reduced to "- …", the
+<code>app</code> alias missing, argument hint "whole"); this looks like an extraction problem and
+has not been taken over as a change – the description stays as before. 36 further commands had only
+internal, minified identifiers renamed, which has no effect on anyone reading the reference.
+<code>claude --help</code> gained one clarification: <code>--agents</code> now accepts, besides a
+JSON object, also – together with <code>--print</code> – the path to a file that holds such JSON.
+The sub-command help came out byte-for-byte identical.</p>
 """
