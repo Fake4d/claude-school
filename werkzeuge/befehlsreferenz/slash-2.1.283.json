@@ -6,7 +6,7 @@
   "variabel": false,
   "hint": "<path>",
   "aliases": [],
-  "enabled": "Te()&&NAo()",
+  "enabled": "Te()&&DUo()",
   "verfuegbar": true
  },
  {
@@ -16,7 +16,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "kS()",
+  "enabled": "mw()",
   "verfuegbar": true
  },
  {
@@ -86,7 +86,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "nT()&&uc()===null",
+  "enabled": "zT()&&Rc()===null",
   "verfuegbar": true
  },
  {
@@ -96,7 +96,7 @@
   "variabel": false,
   "hint": "[--request-id <uuid>] (--wizard posture=\\u2026 scope=\\u2026 depth=\\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
   "aliases": [],
-  "enabled": "zDe()&&Te()",
+  "enabled": "rFe()&&Te()",
   "verfuegbar": true
  },
  {
@@ -116,7 +116,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "pBt()&&!Te()",
+  "enabled": "Ijt()&&!Te()",
   "verfuegbar": true
  },
  {
@@ -190,7 +190,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!Te()&&CO()",
+  "enabled": "!Te()&&WM()",
   "verfuegbar": true
  },
  {
@@ -200,7 +200,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "pt()&&!HL()&&JJt()!==null",
+  "enabled": "pt()&&!UD()&&Qon()!==null",
   "verfuegbar": true
  },
  {
@@ -230,7 +230,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!e&&(ZTt()||yo())",
+  "enabled": "!e&&(eOt()||ho())",
   "verfuegbar": true
  },
  {
@@ -253,7 +253,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "mPt()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
+  "enabled": "iLt()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
   "verfuegbar": true
  },
  {
@@ -285,7 +285,7 @@
   "variabel": false,
   "hint": "[guidance]",
   "aliases": [],
-  "enabled": "xBn()",
+  "enabled": "bKn()",
   "verfuegbar": true
  },
  {
@@ -305,7 +305,7 @@
   "variabel": false,
   "hint": "<optional custom summarization instructions>",
   "aliases": [],
-  "enabled": "!Oe(process.env.DISABLE_COMPACT)",
+  "enabled": "!Le(process.env.DISABLE_COMPACT)",
   "verfuegbar": true
  },
  {
@@ -327,7 +327,7 @@
   "variabel": false,
   "hint": "[all]",
   "aliases": [],
-  "enabled": "!Te()&&!xBt()",
+  "enabled": "!Te()&&!Yjt()",
   "verfuegbar": true
  },
  {
@@ -397,7 +397,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "vO()",
+  "enabled": "NM()",
   "verfuegbar": true
  },
  {
@@ -407,7 +407,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "vO()",
+  "enabled": "NM()",
   "verfuegbar": true
  },
  {
@@ -417,7 +417,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "vO()",
+  "enabled": "NM()",
   "verfuegbar": true
  },
  {
@@ -447,7 +447,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "!b8t()",
+  "enabled": "!ftn()",
   "verfuegbar": true
  },
  {
@@ -455,7 +455,7 @@
   "typ": "registriert",
   "desc": "Health-check the user's Claude Code setup and fix issues: diagnose installation health — what the `claude doctor` terminal diagnostics cover — from local data (duplicate or leftover installs, PATH, unparseable settings files, broken or colliding agent definitions, skills whose frontmatter fails to parse); find unused skills, MCP servers, and plugins versus their context cost and disable dead weight; deduplicate local CLAUDE.md files against checked-in ones; trim checked-in CLAUDE.md files by cutting content a session could derive from the codebase (directory layouts, tech-stack lists, architecture overviews) while keeping gotchas, rationale, and non-standard conventions; migrate always-loaded CLAUDE.md guidance into lazy skills and nested CLAUDE.md files; flag slow hooks and context-heavy extensions; check the installed version is current; make auto mode the default permission mode; and pre-approve frequently denied read-only commands. Use when the user asks for a doctor run, checkup, audit, tune-up, or cleanup of their Claude Code setup or configuration.",
   "variabel": false,
-  "hint": "",
+  "hint": "[prompt-audit [<path>]]",
   "aliases": [
    "checkup"
   ],
@@ -511,7 +511,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "kR()&&!Te()",
+  "enabled": "Ex()&&!Te()",
   "verfuegbar": true
  },
  {
@@ -561,7 +561,7 @@
   "variabel": false,
   "hint": "<directive>",
   "aliases": [],
-  "enabled": "!Ei()",
+  "enabled": "!Li()",
   "verfuegbar": true
  },
  {
@@ -681,7 +681,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "mG()",
+  "enabled": "yV()",
   "verfuegbar": true
  },
  {
@@ -691,7 +691,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "pt()&&(lue()||JJ())",
+  "enabled": "pt()&&(ume()||DZ())",
   "verfuegbar": true
  },
  {
@@ -703,7 +703,7 @@
   "aliases": [
    "peers"
   ],
-  "enabled": "Os()",
+  "enabled": "Ws()",
   "verfuegbar": true
  },
  {
@@ -755,7 +755,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "pt()&&(fM()||OGe())",
+  "enabled": "pt()&&(BD()||CKe())",
   "verfuegbar": true
  },
  {
@@ -785,7 +785,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Va()&&!QG()&&Pwr()",
+  "enabled": "ll()&&!QV()&&GOr()",
   "verfuegbar": true
  },
  {
@@ -818,7 +818,7 @@
   "variabel": false,
   "hint": "[style]",
   "aliases": [],
-  "enabled": "Te()||!Cre()",
+  "enabled": "Te()||!pie()",
   "verfuegbar": true
  },
  {
@@ -882,7 +882,7 @@
  {
   "name": "plugin-authoring",
   "typ": "registriert",
-  "desc": "Write or debug a Claude Code plugin made of function hooks (a hooks module exporting register(on, options), hooks ($, e, next) on events like tool.call, prompt.submit, ui.render, session.start). Load it before writing or changing such a plugin; it says where the exact types come from, how to run a plugin under development, and where the engine reports what it refused.",
+  "desc": "Make a mod: a live pane, band, status line, toast or hook inside Claude Code (terminal or desktop Code tab), written as a plugin of function hooks that hot-reloads in this session. Load before writing or debugging a hooks module.",
   "variabel": false,
   "hint": "",
   "aliases": [],
@@ -916,7 +916,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "P8()",
+  "enabled": "tJ()",
   "verfuegbar": true
  },
  {
@@ -1107,7 +1107,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "{if(!nl())return!1;let e=Jc();return!(e?E9.includes(e.terminal??\"\"):qk.isJetBrainsIdeTerminal())",
+  "enabled": "{if(!El())return!1;let e=md();return!(e?GJ.includes(e.terminal??\"\"):DT.isJetBrainsIdeTerminal())",
   "verfuegbar": true
  },
  {
@@ -1119,7 +1119,7 @@
   "aliases": [
    "remote"
   ],
-  "enabled": "Vn()",
+  "enabled": "Yn()",
   "verfuegbar": true
  },
  {
@@ -1231,7 +1231,7 @@
   "variabel": false,
   "hint": "<task>",
   "aliases": [],
-  "enabled": "!Ei()",
+  "enabled": "!Li()",
   "verfuegbar": true
  },
  {
@@ -1305,7 +1305,7 @@
   "variabel": false,
   "hint": "<prompt>",
   "aliases": [],
-  "enabled": "yF()",
+  "enabled": "oB()",
   "verfuegbar": true
  },
  {
@@ -1315,7 +1315,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Qx()",
+  "enabled": "nP()",
   "verfuegbar": true
  },
  {
@@ -1360,7 +1360,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "kR()&&!Te()",
+  "enabled": "Ex()&&!Te()",
   "verfuegbar": true
  },
  {
@@ -1444,7 +1444,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ap()",
+  "enabled": "Qp()",
   "verfuegbar": true
  },
  {
