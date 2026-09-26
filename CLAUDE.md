@@ -272,6 +272,14 @@ es genau dieser eingebaute Ralph-Loop ist), `/schedule` und „Proaktive Schleif
 Stufe: es geht weiter um ein Thema innerhalb von Stufe 3, nur ist das Thema jetzt
 größer als ein einzelner Befehl.
 
+**Am 26.09.2026 auf 18 Seiten** nach einem Abgleich mit der offiziellen Doku (Claude
+Code 2.1.283 — alle bisherigen Aussagen stimmten noch): neue Seite „/loop ohne Auftrag“
+hinter „Selbst-Pacing“ (eingebauter Wartungsauftrag, eigene Fassung per `loop.md`), die
+`/schedule`-Seite zeigt jetzt drei Spalten — `/loop`, **Desktop-Aufgaben** (lokal, ohne
+offene Sitzung, solange die App läuft), Cloud — und die Verifikations-Seite nennt „zwei
+unabhängige Wege“ für Arbeit ohne Tests (Anlass: Anthropic-Artikel „Yes, Claude can do
+Nine Loops“ vom 25.09.2026 — dort sind Feynman-Schleifen gemeint, keine Agenten-Schleifen).
+
 ## Verschwundene Slash-Befehle sind fast immer ein Auslesefehler
 
 Am 14.08.2026 meldete der Abgleich, `/loop` sei entfallen. Tatsächlich war nur dessen

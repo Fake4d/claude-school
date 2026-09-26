@@ -255,12 +255,15 @@ TEXTE = {
 # --- /schedule ---
 "Das läuft ja alles auf meinem Rechner &#8211; und wenn ich den Laptop&nbsp;zuklappe?":
     "This all runs on my machine &#8211; so what if I close the&nbsp;laptop?",
-"Dann ist Schluss. <code>/loop</code> lebt in der offenen Sitzung und endet spätestens nach sieben&nbsp;Tagen.":
-    "Then it&#8217;s over. <code>/loop</code> lives in the open session and ends after seven days at the&nbsp;latest.",
-"Für echten Dauerbetrieb schiebst du die Routine mit <code>/schedule</code> in die Cloud. Sie läuft dort weiter, ob dein Rechner an ist oder nicht &#8211; dafür ohne deine lokalen Dateien und ohne&nbsp;Rückfragen.":
-    "For real permanent operation you move the routine to the cloud with <code>/schedule</code>. It keeps running there whether your machine is on or not &#8211; but without your local files and without&nbsp;asking.",
-"auf deinem Rechner": "on your machine",
-"Sitzung muss offen sein": "session must stay open",
+"Dann ist Schluss. <code>/loop</code> braucht eine laufende Claude-Code-Sitzung und endet spätestens nach sieben&nbsp;Tagen.":
+    "Then it&#8217;s over. <code>/loop</code> needs a running Claude Code session and ends after seven days at the&nbsp;latest.",
+"Dazwischen liegen <b>Desktop-Aufgaben</b>: lokal, mit deinen Dateien, ohne offene Sitzung &#8211; solange die App läuft. Und <code>/schedule</code> schiebt die Routine in die Cloud &#8211; läuft bei zugeklapptem Laptop, dafür ohne lokale Dateien und ohne&nbsp;Rückfragen.":
+    "In between sit <b>Desktop tasks</b>: local, with your files, no open session needed &#8211; as long as the app is running. And <code>/schedule</code> moves the routine to the cloud &#8211; it runs with the laptop closed, but without local files and without&nbsp;asking.",
+"dein Rechner": "your machine",
+"Sitzung läuft": "session running",
+"Desktop": "Desktop",
+"App statt Sitzung": "app, no session",
+"mit deinen Dateien": "with your files",
 "ab 1 Minute": "from 1 minute",
 "zum Danebensitzen": "for sitting alongside",
 "in der Cloud": "in the cloud",
@@ -294,5 +297,29 @@ TEXTE = {
     "<b>/schedule</b> &#8211; the same routine, in the cloud",
 "<b>Proaktiv</b> &#8211; Auslöser, Ziel, Bremse &#8211; ganz ohne dich":
     "<b>Proactive</b> &#8211; trigger, target, brake &#8211; entirely without you",
+
+
+# --- /loop ohne Auftrag ---
+"loop.md": "loop.md",
+"Und wenn ich <code>/loop</code> ganz ohne Auftrag&nbsp;tippe?":
+    "And what if I type <code>/loop</code> with no task at&nbsp;all?",
+"Dann greift ein eingebauter <b>Wartungsauftrag</b>: Angefangenes fertig machen, den offenen Pull Request pflegen, und wenn nichts ansteht, Fehler suchen und&nbsp;vereinfachen.":
+    "Then a built-in <b>maintenance task</b> kicks in: finish what was started, tend the open pull request, and when nothing is pending, hunt bugs and&nbsp;simplify.",
+"Eigene Regeln schreibst du in eine Datei <code>loop.md</code> &#8211; dann macht ein nacktes <code>/loop</code> genau das. Boris&#8217; Wartungsidee, fertig&nbsp;eingebaut.":
+    "Put your own rules in a <code>loop.md</code> file &#8211; then a bare <code>/loop</code> does exactly that. Boris&#8217; maintenance idea, built&nbsp;in.",
+'/loop<span class="chip-sub">ohne Auftrag</span>':
+    '/loop<span class="chip-sub">no task given</span>',
+"Angefangenes fertig": "Finish what&#8217;s started",
+"Pull Request pflegen": "Tend the pull request",
+"Fehler suchen, vereinfachen": "Hunt bugs, simplify",
+"&#8635; im eigenen Takt": "&#8635; at its own pace",
+"eigene Fassung: <b>.claude/loop.md</b> im Projekt":
+    "your own version: <b>.claude/loop.md</b> in the project",
+"<b>/loop ohne Auftrag</b> &#8211; eingebaute Wartung, eigene per loop.md":
+    "<b>/loop with no task</b> &#8211; built-in maintenance, your own via loop.md",
+
+# --- Verifikation: zweiter Weg ---
+'keine Tests? Dann zwei unabhängige Wege<span class="chip-sub">so sicherte Claude 2026 eine Physik-Rechnung mit neun Schleifen ab</span>':
+    'no tests? Then two independent routes<span class="chip-sub">how Claude backed up a nine-loop physics calculation in 2026</span>',
 
 }

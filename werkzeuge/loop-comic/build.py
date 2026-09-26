@@ -158,7 +158,7 @@ panel(
     {chip("Crash-Fuzzer","red")}{chip("Verifikation","green")}{chip("Worktrees","orange")}
     {chip("Tuning","blue")}{chip("Dup-Unifier","red")}{chip("Routinen-Werkstatt","orange")}
     {chip("Ralph-Loop","red")}{chip("Squad","green")}{chip("proaktive Schleife","blue")}
-    {chip("Harness","blue")}
+    {chip("Harness","blue")}{chip("loop.md","green")}
   </div>
   <div class="right-of-stage">
     <div class="bubble b-tail-r">Das nennt man <b>Loop&nbsp;Engineering</b>. Komm&#8217;, ich zeig&#8217;s&nbsp;dir.</div>
@@ -214,6 +214,18 @@ panel("Selbst-Pacing",
     '<div class="rewind">&#8635; &#8635; &#8635;</div>',
     '<div class="cap">Claude wählt selbst, wann der nächste Durchlauf sich lohnt</div>'))
 
+# --- 4a ---
+panel("/loop ohne Auftrag",
+  "Und wenn ich <code>/loop</code> ganz ohne Auftrag&nbsp;tippe?",
+  ["Dann greift ein eingebauter <b>Wartungsauftrag</b>: Angefangenes fertig machen, den offenen Pull Request pflegen, und wenn nichts ansteht, Fehler suchen und&nbsp;vereinfachen.",
+   "Eigene Regeln schreibst du in eine Datei <code>loop.md</code> &#8211; dann macht ein nacktes <code>/loop</code> genau das. Boris&#8217; Wartungsidee, fertig&nbsp;eingebaut."],
+  breit(human("think",0.76), bean("point",0.76),
+    f'''{chip("/loop","blue",sub="ohne Auftrag",big=True)}''',
+    AD,
+    f'''<div class="chain">{chip("Angefangenes fertig","blue")}{AR}{chip("Pull Request pflegen","orange")}{AR}{chip("Fehler suchen, vereinfachen","green")}</div>''',
+    '<div class="rewind">&#8635; im eigenen Takt</div>',
+    '<div class="cap">eigene Fassung: <b>.claude/loop.md</b> im Projekt</div>'))
+
 # --- 4b ---
 panel("Ralph-Loop",
   "Diese Schleife, die einfach immer wieder plant, macht, prüft &#8211; hat das auch einen&nbsp;Namen?",
@@ -243,7 +255,8 @@ panel("Verifikation",
    "Tests laufen lassen, ein zweites Modell gegenlesen &#8211; automatisches Code-Review und Sicherheits-Review &#8211; und erst danach den Vorschlag als Pull Request&nbsp;anbieten."],
   breit(human("confused",0.76), bean("hips",0.76),
     f'''<div class="chain">{chip("Änderung","blue")}{AR}{chip("Tests","green")}{AR}{chip("Code-Review","orange")}{AR}{chip("Sicherheits-Review","red")}{AR}{chip("Pull Request","blue")}</div>''',
-    '<div class="cap c-red">fällt eine Prüfung durch, gibt es keinen Vorschlag &#8211; kein Mensch muss vorher draufschauen</div>'))
+    '<div class="cap c-red">fällt eine Prüfung durch, gibt es keinen Vorschlag &#8211; kein Mensch muss vorher draufschauen</div>',
+    f'''{chip("keine Tests? Dann zwei unabhängige Wege","green",sub="so sicherte Claude 2026 eine Physik-Rechnung mit neun Schleifen ab")}'''))
 
 # --- 6 ---
 panel("Tuning",
@@ -292,12 +305,16 @@ panel("Squads & Fleets",
 # --- 7d ---
 panel("/schedule",
   "Das läuft ja alles auf meinem Rechner &#8211; und wenn ich den Laptop&nbsp;zuklappe?",
-  ["Dann ist Schluss. <code>/loop</code> lebt in der offenen Sitzung und endet spätestens nach sieben&nbsp;Tagen.",
-   "Für echten Dauerbetrieb schiebst du die Routine mit <code>/schedule</code> in die Cloud. Sie läuft dort weiter, ob dein Rechner an ist oder nicht &#8211; dafür ohne deine lokalen Dateien und ohne&nbsp;Rückfragen."],
-  f'''<div class="stage-wide">
+  ["Dann ist Schluss. <code>/loop</code> braucht eine laufende Claude-Code-Sitzung und endet spätestens nach sieben&nbsp;Tagen.",
+   "Dazwischen liegen <b>Desktop-Aufgaben</b>: lokal, mit deinen Dateien, ohne offene Sitzung &#8211; solange die App läuft. Und <code>/schedule</code> schiebt die Routine in die Cloud &#8211; läuft bei zugeklapptem Laptop, dafür ohne lokale Dateien und ohne&nbsp;Rückfragen."],
+  f'''<div class="stage-wide three">
 <div class="half"><div class="half-title">/loop</div>
-{chip("auf deinem Rechner","blue")}{chip("Sitzung muss offen sein","blue")}{chip("ab 1 Minute","blue")}
+{chip("dein Rechner","blue")}{chip("Sitzung läuft","blue")}{chip("ab 1 Minute","blue")}
 <div class="cap c-blue">zum Danebensitzen</div></div>
+<div class="divider"></div>
+<div class="half"><div class="half-title t-orange">Desktop</div>
+{chip("dein Rechner","orange")}{chip("App statt Sitzung","orange")}{chip("ab 1 Minute","orange")}
+<div class="cap c-orange">mit deinen Dateien</div></div>
 <div class="divider"></div>
 <div class="half"><div class="half-title t-green">/schedule</div>
 {chip("in der Cloud","green")}{chip("Laptop darf zu sein","green")}{chip("ab 1 Stunde","green")}
@@ -352,6 +369,7 @@ panel("Fazit",
 <div class="fin-box">
 <div class="fin-line"><b>Vier Schleifen</b> &#8211; Prüfung, Bedingung, Auslöser, Auftrag</div>
 <div class="fin-line"><b>/loop</b> &#8211; der Baustein, wiederholt einen Auftrag</div>
+<div class="fin-line"><b>/loop ohne Auftrag</b> &#8211; eingebaute Wartung, eigene per loop.md</div>
 <div class="fin-line"><b>/goal</b> &#8211; die Bedingung statt des Intervalls</div>
 <div class="fin-line"><b>/schedule</b> &#8211; dieselbe Routine in der Cloud</div>
 <div class="fin-line"><b>Ralph-Loop</b> &#8211; planen, ausführen, prüfen, von vorn</div>
@@ -455,7 +473,7 @@ html, body {{ margin:0; padding:0; background:#fff; color:#141414;
 .c-red {{ border-color:#c8322b; color:#c8322b; }}
 .c-orange {{ border-color:#d97b20; color:#c26a12; }}
 .c-green {{ border-color:#2a7a3a; color:#2a7a3a; }}
-.t-red {{ color:#c8322b; }} .t-green {{ color:#2a7a3a; }}
+.t-red {{ color:#c8322b; }} .t-green {{ color:#2a7a3a; }} .t-orange {{ color:#c26a12; }}
 
 .doc {{ border:3px solid; border-radius:6px; background:#fff; padding:9px 12px 11px;
   min-width:142px; }}
@@ -464,7 +482,7 @@ html, body {{ margin:0; padding:0; background:#fff; color:#141414;
   margin-bottom:5px; border-radius:2px; }}
 .scatter {{ display:flex; gap:12px; flex-wrap:wrap; justify-content:center; }}
 .cap {{ font-size:23px; color:#555; }}
-.cap.c-blue {{ color:#1a3a8f; }} .cap.c-red {{ color:#c8322b; }} .cap.c-green {{ color:#2a7a3a; }}
+.cap.c-blue {{ color:#1a3a8f; }} .cap.c-red {{ color:#c8322b; }} .cap.c-green {{ color:#2a7a3a; }} .cap.c-orange {{ color:#c26a12; }}
 
 .cover {{ display:flex; flex-direction:column; height:100%; }}
 .cover-bubbles {{ display:flex; flex-direction:column; gap:22px; margin-bottom:7mm; }}
@@ -484,6 +502,8 @@ html, body {{ margin:0; padding:0; background:#fff; color:#141414;
   justify-content:center; gap:12px; }}
 .half-title {{ font-size:27px; border:3px solid currentColor; border-radius:8px; padding:4px 14px 6px; }}
 .divider {{ width:0; border-left:3px dashed #999; }}
+.three {{ gap:8px; }} .three .chip {{ font-size:21px; padding:6px 10px 8px; }}
+.three .half-title {{ font-size:24px; }} .three .cap {{ font-size:19px; text-align:center; }}
 .rewind {{ font-size:36px; color:#2a7a3a; letter-spacing:8px;
   font-family:'DejaVu Sans', sans-serif; }}
 .scene-col {{ flex:1; align-self:stretch; display:flex; flex-direction:column;
