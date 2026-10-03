@@ -10,12 +10,12 @@ mit einer anderen Programmversion auseinanderlaufen.
     python3 build_ref.py de         nur deutsch (zum schnellen Nachsehen)
     python3 build_ref.py --force    trotz fehlender Übersetzungen bauen
 """
-import json, pathlib, datetime, sys
+import json, pathlib, datetime, re, sys
 import texte_de, texte_en, aenderungen
 
-VERSION = "2.1.285"
-VORGAENGER = "2.1.284"
-VORGAENGER_DATUM = datetime.date(2026, 9, 29)   # Erscheinungstag der Vorfassung
+VERSION = "2.1.288"
+VORGAENGER = "2.1.285"
+VORGAENGER_DATUM = datetime.date(2026, 9, 30)   # Erscheinungstag der Vorfassung
 HERE = pathlib.Path(__file__).parent
 
 # Sprachkennung -> (Textmodul, Änderungskasten, Dateiname ohne Endung)
@@ -24,8 +24,47 @@ SPRACHEN = {
     "en": (texte_en, aenderungen.EN, "Claude-Code-Command-Reference"),
 }
 
-opts = json.loads((HERE / "opts.json").read_text())
-subs = json.loads((HERE / "subs.json").read_text())
+# Optionen und Unterbefehle kommen seit 03.10.2026 direkt aus der Hilfe der
+# jeweiligen Fassung (help-<V>.txt, help-subs-<V>.txt - beide schreibt
+# refcheck.sh). Vorher lagen sie als opts.json/subs.json fest im Ordner und
+# wurden nur sporadisch von Hand nachgezogen: Stand dort war ~2.1.250, und
+# Neuzugaenge wie --desktop oder `claude purge` fehlten in der Referenz,
+# obwohl der Aenderungskasten sie ankuendigte.
+def hilfe_abschnitt(zeilen, kopf):
+    """Eintraege [begriff, text] unter 'Options:'/'Commands:' (commander-Format)."""
+    out, drin, akt = [], False, None
+    for z in zeilen:
+        if z.strip() == kopf:
+            drin = True; continue
+        if not drin or not z.strip():
+            continue
+        if not z.startswith(" "):              # naechste Ueberschrift
+            break
+        m = re.match(r"^  (\S.*?)(?:\s{2,}(\S.*))?$", z)
+        if m and not z.startswith("   "):
+            akt = [m.group(1).strip(), (m.group(2) or "").strip()]
+            out.append(akt)
+        elif akt is not None:
+            akt[1] = (akt[1] + " " + z.strip()).strip()
+    return [e for e in out if not e[0].startswith("help ") and not e[0].endswith(":")]
+
+def hilfe_lesen(version):
+    haupt = (HERE / f"help-{version}.txt").read_text().split("\n")
+    teile = re.split(r"^########## (\S+) ##########$",
+                     (HERE / f"help-subs-{version}.txt").read_text(), flags=re.M)
+    einzeln = {teile[i]: teile[i + 1].split("\n") for i in range(1, len(teile), 2)}
+    subs = {}
+    for begriff, _ in hilfe_abschnitt(haupt, "Commands:"):
+        name = begriff.split(" ")[0]           # z.B. "plugin|plugins", "purge"
+        kurz = name.split("|")[0]
+        subs[name] = hilfe_abschnitt(einzeln[kurz], "Commands:") if kurz in einzeln else []
+    return hilfe_abschnitt(haupt, "Options:"), subs
+
+def gruppe_schluessel(name, T):
+    """Textschluessel einer Befehlsgruppe: voller Name mit Alias, sonst Kurzform."""
+    return name if name in T.UNTERBEFEHLE else name.split("|")[0]
+
+opts, subs = hilfe_lesen(VERSION)
 slash = json.loads((HERE / f"slash-{VERSION}.json").read_text())
 
 # ---------------------------------------------------------------- Abgleich --
@@ -42,6 +81,7 @@ def norm_opt(f, sprache):
              .replace("<format>", "<format>").replace("<mode>", "<modus>")
              .replace("<amount>", "<betrag>").replace("<specs...>", "<angaben...>")
              .replace("<value>", "<wert>").replace("<file-or-json>", "<datei-oder-json>")
+             .replace("<json-or-file>", "<json-oder-datei>")
              .replace("<sources>", "<quellen>").replace("<session>", "<sitzung>")
              .replace("<filter>", "<filter>").replace("<schema>", "<schema>")
              .replace("<betas...>", "<betas...>").replace("<prefix>", "<prefix>")
@@ -58,6 +98,15 @@ for sprache, (T, _, _) in SPRACHEN.items():
     for b in slash:
         if b["name"] not in T.SLASH:
             fehlt.append(f"[{sprache}] SLASH /" + b["name"])
+    # Unterbefehle wurden bis 03.10.2026 ohne Text stillschweigend weggelassen -
+    # so fehlte z.B. `claude purge`. Jetzt meldet der Bau jede Luecke.
+    for gruppe, eintraege in subs.items():
+        g = gruppe_schluessel(gruppe, T)
+        if g not in T.UNTERBEFEHLE:
+            fehlt.append(f"[{sprache}] UNTERBEFEHL {g}")
+        for name, _ in eintraege:
+            if f"{g} {name.split(' ')[0]}" not in T.UNTERBEFEHLE:
+                fehlt.append(f"[{sprache}] UNTERBEFEHL {g} {name.split(' ')[0]}")
 if fehlt:
     print("FEHLENDE ÜBERSETZUNGEN:")
     for f in fehlt:
@@ -95,6 +144,7 @@ def baue(sprache):
     # Teil B
     sub_html = ""
     for gruppe, eintraege in subs.items():
+        gruppe = gruppe_schluessel(gruppe, T)
         if gruppe not in T.UNTERBEFEHLE:
             continue
         sub_html += zeile(f"claude {gruppe}", T.UNTERBEFEHLE[gruppe], "kopf")

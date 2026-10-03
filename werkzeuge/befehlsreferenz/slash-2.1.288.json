@@ -6,7 +6,7 @@
   "variabel": false,
   "hint": "<path>",
   "aliases": [],
-  "enabled": "ke()&&Vzo()",
+  "enabled": "ke()&&GZo()",
   "verfuegbar": true
  },
  {
@@ -16,7 +16,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Lw()",
+  "enabled": "Lv()",
   "verfuegbar": true
  },
  {
@@ -86,7 +86,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "QC()&&hc()===null",
+  "enabled": "wx()&&qc()===null",
   "verfuegbar": true
  },
  {
@@ -96,7 +96,7 @@
   "variabel": false,
   "hint": "[--request-id <uuid>] (--wizard posture=\\u2026 scope=\\u2026 depth=\\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
   "aliases": [],
-  "enabled": "VBe()&&ke()",
+  "enabled": "bje()&&ke()",
   "verfuegbar": true
  },
  {
@@ -116,7 +116,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Kqt()&&!ke()",
+  "enabled": "i9t()&&!ke()",
   "verfuegbar": true
  },
  {
@@ -190,7 +190,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!ke()&&vH()",
+  "enabled": "!ke()&&bC()",
   "verfuegbar": true
  },
  {
@@ -200,7 +200,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ut()&&!bL()&&hln()!==null",
+  "enabled": "ft()&&!FN()&&Bfn()!==null",
   "verfuegbar": true
  },
  {
@@ -230,7 +230,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!e&&(NDt()||co())",
+  "enabled": "!e&&(DUe()||Eo())",
   "verfuegbar": true
  },
  {
@@ -253,15 +253,15 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "s$t()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
+  "enabled": "Vzt()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
   "verfuegbar": true
  },
  {
   "name": "code-review",
   "typ": "registriert",
-  "desc": "Review the current diff, or a PR number/branch/path target, for correctness bugs (plus reuse/simplification/efficiency cleanups where the model's review recipe covers them) at the given effort level (low/medium: fewer, high-confidence findings; high→max: broader coverage, may include uncertain findings…); with no level given, it reuses the level you typed last. Pass --comment to post findings as inline PR comments, or --fix to apply the findings to the working tree after the review.…",
+  "desc": "Review the current diff, or a PR number/branch/path target, for correctness bugs (plus reuse/simplification/efficiency cleanups where the model's review recipe covers them) at the given effort level (low/medium: fewer, high-confidence findings; high→max: broader coverage, may include uncertain findings…); with no level given, it reuses the level you typed last. Pass --comment to post findings as inline PR comments, or --fix to apply the findings to the working tree after the review. Pass --max-findings <n> to report up to n findings, or --max-findings all for every finding. The choice stays until you pass --max-findings default.…",
   "variabel": false,
-  "hint": "[…] [--fix] [--comment] [<pr#>|<branch>|<path>]",
+  "hint": "[…] [--fix] [--comment] [<pr#>|<branch>|<path>] [--max-findings <n>|all]",
   "aliases": [
    "review"
   ],
@@ -285,7 +285,7 @@
   "variabel": false,
   "hint": "[guidance]",
   "aliases": [],
-  "enabled": "y3n()",
+  "enabled": "Ntr()",
   "verfuegbar": true
  },
  {
@@ -327,7 +327,7 @@
   "variabel": false,
   "hint": "[all]",
   "aliases": [],
-  "enabled": "!ke()&&!aKt()",
+  "enabled": "!ke()&&!S9t()",
   "verfuegbar": true
  },
  {
@@ -347,7 +347,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "a.CLAUDE_CODE_ENTRYPOINT===\"remote_cowork\"",
+  "enabled": "DS()||_Ee()",
   "verfuegbar": true
  },
  {
@@ -397,7 +397,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "KM()",
+  "enabled": "CD()",
   "verfuegbar": true
  },
  {
@@ -407,7 +407,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "KM()",
+  "enabled": "CD()",
   "verfuegbar": true
  },
  {
@@ -417,7 +417,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "KM()",
+  "enabled": "CD()",
   "verfuegbar": true
  },
  {
@@ -449,7 +449,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "!irn()",
+  "enabled": "!Xun()",
   "verfuegbar": true
  },
  {
@@ -493,7 +493,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "true",
+  "enabled": "DS()||_Ee()",
   "verfuegbar": true
  },
  {
@@ -513,7 +513,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "fR()&&!ke()",
+  "enabled": "Nx()&&!ke()",
   "verfuegbar": true
  },
  {
@@ -563,7 +563,7 @@
   "variabel": false,
   "hint": "<directive>",
   "aliases": [],
-  "enabled": "!Zi()",
+  "enabled": "!Ta()",
   "verfuegbar": true
  },
  {
@@ -683,7 +683,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "tq()",
+  "enabled": "b4()",
   "verfuegbar": true
  },
  {
@@ -693,7 +693,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "ut()&&(dge()||See())",
+  "enabled": "ft()&&(D_e()||pre())",
   "verfuegbar": true
  },
  {
@@ -705,7 +705,7 @@
   "aliases": [
    "peers"
   ],
-  "enabled": "Gs()",
+  "enabled": "li()",
   "verfuegbar": true
  },
  {
@@ -757,7 +757,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ut()&&(SL()||V5e())",
+  "enabled": "ft()&&(UN()||T8e())",
   "verfuegbar": true
  },
  {
@@ -787,7 +787,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "pd()&&JDr()",
+  "enabled": "Kd()&&G2r()",
   "verfuegbar": true
  },
  {
@@ -820,7 +820,7 @@
   "variabel": false,
   "hint": "[style]",
   "aliases": [],
-  "enabled": "ke()||!iae()",
+  "enabled": "ke()||!lde()",
   "verfuegbar": true
  },
  {
@@ -836,8 +836,8 @@
  {
   "name": "pause-memory",
   "typ": "local",
-  "desc": "Pause automemory for this session",
-  "variabel": false,
+  "desc": "Pause account memory and local auto-memory for this session (run again to turn both back on)",
+  "variabel": true,
   "hint": "",
   "aliases": [
    "memory-pause",
@@ -892,16 +892,6 @@
   "verfuegbar": true
  },
  {
-  "name": "plugin-types",
-  "typ": "local",
-  "desc": "Write claude-code.d.ts, claude-code-plugins.d.ts and claude-code-mcp.d.ts: the plugin API's TypeScript declarations, the enabled plugins' type contracts and the inputs of the connected MCP tools, for typing a hooks module against this session",
-  "variabel": false,
-  "hint": "[dir]",
-  "aliases": [],
-  "enabled": "true",
-  "verfuegbar": true
- },
- {
   "name": "powerup",
   "typ": "local-jsx",
   "desc": "Discover Claude Code features through quick interactive lessons",
@@ -918,7 +908,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "jJ()",
+  "enabled": "LZ()",
   "verfuegbar": true
  },
  {
@@ -958,7 +948,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ut()||!1",
+  "enabled": "ft()||!1",
   "verfuegbar": true
  },
  {
@@ -1020,7 +1010,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ut()",
+  "enabled": "ft()",
   "verfuegbar": true
  },
  {
@@ -1031,6 +1021,18 @@
   "hint": "[name]",
   "aliases": [
    "name"
+  ],
+  "enabled": "true",
+  "verfuegbar": true
+ },
+ {
+  "name": "restart",
+  "typ": "local",
+  "desc": "Restart Claude Code and keep this session",
+  "variabel": true,
+  "hint": "",
+  "aliases": [
+   "update"
   ],
   "enabled": "true",
   "verfuegbar": true
@@ -1109,7 +1111,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "{if(!Jl())return!1;let e=hd();return!(e?x7.includes(e.terminal??\"\"):eA.isJetBrainsIdeTerminal())",
+  "enabled": "{if(!bc())return!1;let e=eu();return!(e?Tee.includes(e.terminal??\"\"):SC.isJetBrainsIdeTerminal())",
   "verfuegbar": true
  },
  {
@@ -1121,7 +1123,7 @@
   "aliases": [
    "remote"
   ],
-  "enabled": "Fn()",
+  "enabled": "jn()",
   "verfuegbar": true
  },
  {
@@ -1131,7 +1133,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "MJ(\"bedrock\")===void 0",
+  "enabled": "TZ(\"bedrock\")===void 0",
   "verfuegbar": true
  },
  {
@@ -1143,7 +1145,7 @@
   "aliases": [
    "setup-cowork"
   ],
-  "enabled": "a.CLAUDE_CODE_ENTRYPOINT===\"remote_cowork\"",
+  "enabled": "DS()||_Ee()",
   "verfuegbar": true
  },
  {
@@ -1153,7 +1155,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "MJ(\"vertex\")===void 0",
+  "enabled": "TZ(\"vertex\")===void 0",
   "verfuegbar": true
  },
  {
@@ -1233,7 +1235,7 @@
   "variabel": false,
   "hint": "<task>",
   "aliases": [],
-  "enabled": "!Zi()",
+  "enabled": "!Ta()",
   "verfuegbar": true
  },
  {
@@ -1267,7 +1269,7 @@
   "aliases": [
    "tp"
   ],
-  "enabled": "ut()",
+  "enabled": "ft()",
   "verfuegbar": true
  },
  {
@@ -1307,7 +1309,7 @@
   "variabel": false,
   "hint": "<prompt>",
   "aliases": [],
-  "enabled": "TB()",
+  "enabled": "kj()",
   "verfuegbar": true
  },
  {
@@ -1317,20 +1319,8 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "bP()",
+  "enabled": "AO()",
   "verfuegbar": true
- },
- {
-  "name": "update",
-  "typ": "local",
-  "desc": "Switch to the latest version (conversation continues)",
-  "variabel": false,
-  "hint": "",
-  "aliases": [
-   "restart"
-  ],
-  "enabled": "!1",
-  "verfuegbar": false
  },
  {
   "name": "upgrade",
@@ -1362,7 +1352,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "fR()&&!ke()",
+  "enabled": "Nx()&&!ke()",
   "verfuegbar": true
  },
  {
@@ -1446,7 +1436,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Tf()",
+  "enabled": "mm()",
   "verfuegbar": true
  },
  {
