@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>Claude Code · Command Reference 2.1.288</title>
+<html lang="en"><head><meta charset="utf-8"><title>Claude Code · Command Reference 2.1.289</title>
 <style>
 @page { size: A4 portrait; margin: 17mm 15mm 15mm; }
 * { box-sizing: border-box; }
@@ -35,16 +35,16 @@ section { break-inside: auto; }
   padding-top: 2mm; }
 </style></head><body>
 
-<div class="kopfzeile">Complete reference · checked against version 2.1.288</div>
+<div class="kopfzeile">Complete reference · checked against version 2.1.289</div>
 <h1>Claude Code<br>Command Reference</h1>
 <p class="lead">Every terminal command, every option and every slash command inside a session — with an explanation of what it does.</p>
-<p class="meta">Compiled by Christian's virtual server · 3 October 2026 · Update of the edition of 30 September 2026 (2.1.285)</p>
+<p class="meta">Compiled by Christian's virtual server · 5 October 2026 · Update of the edition of 3 October 2026 (2.1.288)</p>
 
 <div class="kasten">
 <h3>How this list came about</h3>
 
 <p>Terminal commands and options (parts A and B) are read straight out of the installed
-version 2.1.288 — <code>claude --help</code> and the help of every subcommand.</p>
+version 2.1.289 — <code>claude --help</code> and the help of every subcommand.</p>
 <p>The slash commands (part C) come from the command definitions inside the program itself.
 The extraction also picks up commands whose description is only assembled at runtime or
 fetched from a variable, and since this edition equally those whose <i>name</i> sits in a
@@ -58,27 +58,10 @@ at the end, so that nothing appears available that is not.</p>
 <div class="kasten">
 <h3>What has changed since the last edition</h3>
 
-<p>Compared with 2.1.285: <code>/update</code> is now called <code>/restart</code> ("Restart Claude
-Code and keep this session"). <code>update</code> still works as a second name. The command was
-previously turned off and is now available. <code>/plugin-types</code> was removed without
-replacement; the changelog does not mention it. The slash command count therefore drops from 140
-to 139, with 4 instead of 5 turned off. <code>/code-review</code> has the new option
-<code>--max-findings &lt;n&gt;|all</code> (how many findings to report; the choice stays until you
-pass <code>--max-findings default</code>). <code>/pause-memory</code> now pauses both account
-memory and local auto-memory; running it again turns both back on.</p>
-<p><code>claude --help</code> lost the option <code>--client-data-url</code>. New is the sub-command
-<code>claude purge</code>. It deletes all stored state of a project and replaces the former
-<code>claude project purge</code>. <code>claude plugin</code> gained <code>test [dir]</code>, which
-runs a mod's tests.</p>
-<p>A correction on our side: the automatic query for this version wrongly took both removed
-commands for a parsing error. The self-check now searches for the old description text instead of
-the name and recognises renames. In addition, the option and sub-command tables had been frozen at
-roughly 2.1.250; new entries were announced in this box but missing from the tables. They are now
-read straight from the program's help for every version. This adds <code>--desktop</code>,
-<code>--restricted</code>, the new form <code>--agents &lt;json-or-file&gt;</code> (with
-<code>--print</code> also a file path), <code>claude plugin configure</code> and <code>claude
-update</code>. The description of <code>claude plugin tag</code> was wrong: it creates a git tag
-for a plugin release.</p>
+<p>Compared with 2.1.288: nothing has changed in substance. <code>claude --help</code> and the help
+of all sub-commands are character-identical, and of the 139 slash commands none is new, none was
+removed and none changed in content. Only internal, minified identifiers changed for 34 commands;
+this means nothing to the reader. This edition only bumps the version stamp.</p>
 
 </div>
 
@@ -90,5 +73,5 @@ for a plugin release.</p>
 
 <section><h2>Appendix · Present, but switched off</h2><p class="unter">These names exist in the program, but are disabled by a flag in this version and are not available inside a session.</p><div class="z "><div class="l"><code>/loops</code></div><div class="r">List, create and delete loops. <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/pause-memory <span class="zus">also /memory-pause, /toggle-memory</span></code></div><div class="r">Pause account memory and local auto-memory for this session (run again to turn both back on). <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/version</code></div><div class="r">Show the version of this session. <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/wellbeing <span class="zus">also /breaks, /break-reminder, /downtime</span></code></div><div class="r">Set up break reminders and quiet hours. <span class="aus">present in the program, but switched off</span></div></div></section>
 
-<div class="fuss">Claude Code 2.1.288 · 66 options · 135 available slash commands · 4 switched off · as of 3 October 2026</div>
+<div class="fuss">Claude Code 2.1.289 · 66 options · 135 available slash commands · 4 switched off · as of 5 October 2026</div>
 </body></html>
