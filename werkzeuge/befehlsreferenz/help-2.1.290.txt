@@ -264,10 +264,11 @@ Options:
 
 Commands:
   agents [options]                      Manage background agents
-  attach <id>                           Open a background session in this
+  attach <id|name>                      Open a background session in this
                                         terminal. <id> is the short id that
                                         `claude --bg` prints and `claude agents`
-                                        lists
+                                        lists. Part of the session name works
+                                        too
   auth                                  Manage authentication
   auto-mode                             Inspect or reset auto mode classifier
                                         configuration
@@ -283,7 +284,7 @@ Commands:
   install [options] [target]            Install Claude Code native build. Use
                                         [target] to specify version (stable,
                                         latest, or specific version)
-  logs <id>                             Print a background session's recent
+  logs <id|name>                        Print a background session's recent
                                         terminal output
   mcp                                   Configure and manage MCP servers
   plugin|plugins                        Manage Claude Code plugins

@@ -45,9 +45,9 @@ Options:
                                         in dispatched sessions
 
 ########## attach ##########
-Usage: claude attach <id>
+Usage: claude attach <id|name>
 
-  Open the background session in this terminal. ← returns to agent view, Ctrl+Z drops back to your shell. The session keeps running either way.
+  Open the background session in this terminal. ← returns to agent view, Ctrl+Z drops back to your shell. The session keeps running either way. Part of the session name works in place of the id. Put a name with spaces in quotes.
 
 ########## auth ##########
 Usage: claude auth [options] [command]
@@ -125,9 +125,9 @@ Options:
   -h, --help  Display help for command
 
 ########## logs ##########
-Usage: claude logs <id>
+Usage: claude logs <id|name>
 
-  Print the background session's recent terminal output.
+  Print the background session's recent terminal output. Part of the session name works in place of the id. Put a name with spaces in quotes.
 
 ########## mcp ##########
 Usage: claude mcp [options] [command]

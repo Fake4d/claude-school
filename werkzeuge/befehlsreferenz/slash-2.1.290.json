@@ -6,7 +6,7 @@
   "variabel": false,
   "hint": "<path>",
   "aliases": [],
-  "enabled": "ke()&&Zes()",
+  "enabled": "Ee()&&_us()",
   "verfuegbar": true
  },
  {
@@ -16,7 +16,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "$v()",
+  "enabled": "yE()",
   "verfuegbar": true
  },
  {
@@ -86,7 +86,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Tx()&&Xc()===null",
+  "enabled": "mP()&&ud()===null",
   "verfuegbar": true
  },
  {
@@ -96,7 +96,7 @@
   "variabel": false,
   "hint": "[--request-id <uuid>] (--wizard posture=\\u2026 scope=\\u2026 depth=\\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
   "aliases": [],
-  "enabled": "Vje()&&ke()",
+  "enabled": "WLe()&&Ee()",
   "verfuegbar": true
  },
  {
@@ -106,7 +106,7 @@
   "variabel": false,
   "hint": "[auto|<tokens>]",
   "aliases": [],
-  "enabled": "!ke()",
+  "enabled": "!Ee()",
   "verfuegbar": true
  },
  {
@@ -116,7 +116,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "q9t()&&!ke()",
+  "enabled": "RAt()&&!Ee()",
   "verfuegbar": true
  },
  {
@@ -190,7 +190,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!ke()&&bC()",
+  "enabled": "!Ee()&&JC()",
   "verfuegbar": true
  },
  {
@@ -200,7 +200,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ft()&&!zN()&&gmn()!==null",
+  "enabled": "mt()&&!Z$()&&gwn()!==null",
   "verfuegbar": true
  },
  {
@@ -210,7 +210,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!o",
+  "enabled": "!r",
   "verfuegbar": true
  },
  {
@@ -230,7 +230,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!e&&(qUe()||Eo())",
+  "enabled": "!e&&(Efe()||eo())",
   "verfuegbar": true
  },
  {
@@ -253,13 +253,13 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "yGt()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
+  "enabled": "I4t()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
   "verfuegbar": true
  },
  {
   "name": "code-review",
   "typ": "registriert",
-  "desc": "Review the current diff, or a PR number/branch/path target, for correctness bugs (plus reuse/simplification/efficiency cleanups where the model's review recipe covers them) at the given effort level (low/medium: fewer, high-confidence findings; high→max: broader coverage, may include uncertain findings…); with no level given, it reuses the level you typed last. Pass --comment to post findings as inline PR comments, or --fix to apply the findings to the working tree after the review. Pass --max-findings <n> to report up to n findings, or --max-findings all for every finding. The choice stays until you pass --max-findings default.…",
+  "desc": "Review the current diff, or a PR number/branch/path target, for correctness bugs (plus reuse/simplification/efficiency cleanups where the model's review recipe covers them) at the given effort level (…: from few high-confidence findings up to many, some of them uncertain…); with no level given, it reuses the level you typed last. Pass --comment to post findings as inline PR comments, or --fix to apply the findings to the working tree after the review. Pass --max-findings <n> to report up to n findings, or --max-findings all for every finding. The choice stays until you pass --max-findings default.…",
   "variabel": false,
   "hint": "[…] [--fix] [--comment] [<pr#>|<branch>|<path>] [--max-findings <n>|all]",
   "aliases": [
@@ -285,7 +285,7 @@
   "variabel": false,
   "hint": "[guidance]",
   "aliases": [],
-  "enabled": "Hnr()",
+  "enabled": "Vcr()",
   "verfuegbar": true
  },
  {
@@ -327,7 +327,7 @@
   "variabel": false,
   "hint": "[all]",
   "aliases": [],
-  "enabled": "!ke()&&!i8t()",
+  "enabled": "!Ee()&&!YAt()",
   "verfuegbar": true
  },
  {
@@ -347,7 +347,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "NS()||AEe()",
+  "enabled": "JS()||ine()",
   "verfuegbar": true
  },
  {
@@ -397,7 +397,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "PD()",
+  "enabled": "DL()",
   "verfuegbar": true
  },
  {
@@ -407,7 +407,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "PD()",
+  "enabled": "DL()",
   "verfuegbar": true
  },
  {
@@ -417,7 +417,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "PD()",
+  "enabled": "DL()",
   "verfuegbar": true
  },
  {
@@ -449,7 +449,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "!Epn()",
+  "enabled": "!x_n()",
   "verfuegbar": true
  },
  {
@@ -493,7 +493,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "NS()||AEe()",
+  "enabled": "JS()||ine()",
   "verfuegbar": true
  },
  {
@@ -513,7 +513,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Bx()&&!ke()",
+  "enabled": "vP()&&!Ee()",
   "verfuegbar": true
  },
  {
@@ -553,7 +553,7 @@
   "variabel": false,
   "hint": "[on|off]",
   "aliases": [],
-  "enabled": "ke()",
+  "enabled": "Ee()",
   "verfuegbar": true
  },
  {
@@ -563,7 +563,7 @@
   "variabel": false,
   "hint": "<directive>",
   "aliases": [],
-  "enabled": "!Aa()",
+  "enabled": "!ra()",
   "verfuegbar": true
  },
  {
@@ -683,7 +683,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "R4()",
+  "enabled": "$3()",
   "verfuegbar": true
  },
  {
@@ -693,7 +693,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "ft()&&(G_e()||yre())",
+  "enabled": "mt()&&(RSe()||Ooe())",
   "verfuegbar": true
  },
  {
@@ -705,7 +705,7 @@
   "aliases": [
    "peers"
   ],
-  "enabled": "ci()",
+  "enabled": "yi()",
   "verfuegbar": true
  },
  {
@@ -757,7 +757,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ft()&&(GN()||W8e())",
+  "enabled": "mt()&&(PM()||jJe())",
   "verfuegbar": true
  },
  {
@@ -787,7 +787,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Xd()&&zVr()",
+  "enabled": "fu()&&j8r()",
   "verfuegbar": true
  },
  {
@@ -820,7 +820,7 @@
   "variabel": false,
   "hint": "[style]",
   "aliases": [],
-  "enabled": "ke()||!gde()",
+  "enabled": "Ee()||!wpe()",
   "verfuegbar": true
  },
  {
@@ -908,7 +908,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "jZ()",
+  "enabled": "cte()",
   "verfuegbar": true
  },
  {
@@ -948,7 +948,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ft()||!1",
+  "enabled": "mt()||!1",
   "verfuegbar": true
  },
  {
@@ -1010,7 +1010,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ft()",
+  "enabled": "mt()",
   "verfuegbar": true
  },
  {
@@ -1111,7 +1111,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "{if(!wc())return!1;let e=nu();return!(e?Pee.includes(e.terminal??\"\"):SC.isJetBrainsIdeTerminal())",
+  "enabled": "{if(!Oc())return!1;let e=Su();return!(e?ane.includes(e.terminal??\"\"):ZC.isJetBrainsIdeTerminal())",
   "verfuegbar": true
  },
  {
@@ -1133,7 +1133,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "IZ(\"bedrock\")===void 0",
+  "enabled": "sX(\"bedrock\")===void 0",
   "verfuegbar": true
  },
  {
@@ -1145,7 +1145,7 @@
   "aliases": [
    "setup-cowork"
   ],
-  "enabled": "NS()||AEe()",
+  "enabled": "JS()||ine()",
   "verfuegbar": true
  },
  {
@@ -1155,7 +1155,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "IZ(\"vertex\")===void 0",
+  "enabled": "sX(\"vertex\")===void 0",
   "verfuegbar": true
  },
  {
@@ -1235,7 +1235,7 @@
   "variabel": false,
   "hint": "<task>",
   "aliases": [],
-  "enabled": "!Aa()",
+  "enabled": "!ra()",
   "verfuegbar": true
  },
  {
@@ -1269,7 +1269,7 @@
   "aliases": [
    "tp"
   ],
-  "enabled": "ft()",
+  "enabled": "mt()",
   "verfuegbar": true
  },
  {
@@ -1309,7 +1309,7 @@
   "variabel": false,
   "hint": "<prompt>",
   "aliases": [],
-  "enabled": "xj()",
+  "enabled": "$W()",
   "verfuegbar": true
  },
  {
@@ -1319,7 +1319,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "xO()",
+  "enabled": "DM()",
   "verfuegbar": true
  },
  {
@@ -1342,7 +1342,7 @@
    "cost",
    "stats"
   ],
-  "enabled": "ke()",
+  "enabled": "Ee()",
   "verfuegbar": true
  },
  {
@@ -1352,7 +1352,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Bx()&&!ke()",
+  "enabled": "vP()&&!Ee()",
   "verfuegbar": true
  },
  {
@@ -1436,7 +1436,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "gm()",
+  "enabled": "Om()",
   "verfuegbar": true
  },
  {

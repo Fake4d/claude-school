@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>Claude Code · Command Reference 2.1.289</title>
+<html lang="en"><head><meta charset="utf-8"><title>Claude Code · Command Reference 2.1.290</title>
 <style>
 @page { size: A4 portrait; margin: 17mm 15mm 15mm; }
 * { box-sizing: border-box; }
@@ -35,16 +35,16 @@ section { break-inside: auto; }
   padding-top: 2mm; }
 </style></head><body>
 
-<div class="kopfzeile">Complete reference · checked against version 2.1.289</div>
+<div class="kopfzeile">Complete reference · checked against version 2.1.290</div>
 <h1>Claude Code<br>Command Reference</h1>
 <p class="lead">Every terminal command, every option and every slash command inside a session — with an explanation of what it does.</p>
-<p class="meta">Compiled by Christian's virtual server · 5 October 2026 · Update of the edition of 3 October 2026 (2.1.288)</p>
+<p class="meta">Compiled by Christian's virtual server · 6 October 2026 · Update of the edition of 5 October 2026 (2.1.289)</p>
 
 <div class="kasten">
 <h3>How this list came about</h3>
 
 <p>Terminal commands and options (parts A and B) are read straight out of the installed
-version 2.1.289 — <code>claude --help</code> and the help of every subcommand.</p>
+version 2.1.290 — <code>claude --help</code> and the help of every subcommand.</p>
 <p>The slash commands (part C) come from the command definitions inside the program itself.
 The extraction also picks up commands whose description is only assembled at runtime or
 fetched from a variable, and since this edition equally those whose <i>name</i> sits in a
@@ -58,10 +58,16 @@ at the end, so that nothing appears available that is not.</p>
 <div class="kasten">
 <h3>What has changed since the last edition</h3>
 
-<p>Compared with 2.1.288: nothing has changed in substance. <code>claude --help</code> and the help
-of all sub-commands are character-identical, and of the 139 slash commands none is new, none was
-removed and none changed in content. Only internal, minified identifiers changed for 34 commands;
-this means nothing to the reader. This edition only bumps the version stamp.</p>
+<p>Compared with 2.1.289: no commands were added or removed; the number of slash commands stays at 139.
+What changed:</p>
+<ul>
+<li><code>claude attach</code> and <code>claude logs</code> now accept the name of the background session
+instead of the ID (<code>&lt;id|name&gt;</code>); part of the name is enough. Names with spaces must be quoted.</li>
+<li>The description of <code>/code-review</code> words the effort levels more briefly (from few high-confidence
+findings up to many, some uncertain). The feature itself is unchanged.</li>
+</ul>
+<p>Nothing else: the remaining differences were only internal, minified identifiers for 42 commands and mean nothing
+to the reader.</p>
 
 </div>
 
@@ -73,5 +79,5 @@ this means nothing to the reader. This edition only bumps the version stamp.</p>
 
 <section><h2>Appendix · Present, but switched off</h2><p class="unter">These names exist in the program, but are disabled by a flag in this version and are not available inside a session.</p><div class="z "><div class="l"><code>/loops</code></div><div class="r">List, create and delete loops. <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/pause-memory <span class="zus">also /memory-pause, /toggle-memory</span></code></div><div class="r">Pause account memory and local auto-memory for this session (run again to turn both back on). <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/version</code></div><div class="r">Show the version of this session. <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/wellbeing <span class="zus">also /breaks, /break-reminder, /downtime</span></code></div><div class="r">Set up break reminders and quiet hours. <span class="aus">present in the program, but switched off</span></div></div></section>
 
-<div class="fuss">Claude Code 2.1.289 · 66 options · 135 available slash commands · 4 switched off · as of 5 October 2026</div>
+<div class="fuss">Claude Code 2.1.290 · 66 options · 135 available slash commands · 4 switched off · as of 6 October 2026</div>
 </body></html>
