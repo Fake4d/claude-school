@@ -318,8 +318,8 @@ TEXTE = {
     "It is part of the paid plans. If you already have one, it is simply there.",
 "Windows": "Windows",
 "Mac": "Mac",
-"in den bezahlten Zugängen enthalten – Stand August 2026":
-    "included in the paid plans – as of August 2026",
+"in den bezahlten Zugängen enthalten – Stand Oktober 2026":
+    "included in the paid plans – as of October 2026",
 
 # --- Schluss ---
 "Das klingt machbar. Ich probier&#8217;s aus.":

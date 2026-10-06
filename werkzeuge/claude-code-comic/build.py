@@ -312,7 +312,7 @@ panel("Slash-Befehle",
 # --- Berechtigungen ---
 panel("Berechtigungen",
   "Darf Claude einfach alles auf meinem Rechner?",
-  ["Auf den bezahlten Zugängen startet Claude Code inzwischen im <b>Auto-Modus</b>: Es arbeitet durch, und statt Dir schaut vor jeder Aktion ein zweites Modell drauf.",
+  ["Im Terminal und in VS Code startet Claude Code inzwischen im <b>Auto-Modus</b>: Es arbeitet durch, und statt Dir schaut vor jeder Aktion ein zweites Modell drauf.",
    "Umschalten kannst Du jederzeit mit <kbd>Shift</kbd>+<kbd>Tab</kbd>: <b>Manuell</b> fragt wieder vor jedem Eingriff, <b>Plan</b> schaut nur und legt Dir einen Vorschlag hin."],
   breit(human("confused",0.72), bean("hips",0.72),
     f'''<div class="ladder">
@@ -548,13 +548,13 @@ panel("Entwerfen",
 # --- 19 ---
 panel("Modelle",
   "Und welches Modell arbeitet da eigentlich?",
-  ["Stand August 2026: <b>Fable&nbsp;5</b> ist das stärkste und für lange Läufe gebaut, <b>Opus&nbsp;5</b> nimmt die schweren Sachen, <b>Sonnet&nbsp;5</b> den Alltag, <b>Haiku&nbsp;4.5</b> das Schnelle und Günstige.",
+  ["Stand Oktober 2026: <b>Fable&nbsp;5.1</b> ist das stärkste und für lange Läufe gebaut, <b>Opus&nbsp;5.5</b> ist voreingestellt und nimmt die schweren Sachen, <b>Sonnet&nbsp;5.5</b> den Alltag, <b>Haiku&nbsp;4.5</b> das Schnelle und Günstige.",
    "Umschalten mit <code>/model</code>. Mit <code>/fast</code> antwortet Opus schneller – es wird dabei nicht durch ein kleineres Modell ersetzt."],
   breit(human("think",0.74), bean("right",0.74),
     f'''<div class="models">
-<div class="model c-red"><b>Fable 5</b><span>lange Agentenläufe</span><i>1 Mio. Kontext</i></div>
-<div class="model c-blue"><b>Opus 5</b><span>die schweren Aufgaben</span><i>1 Mio. Kontext</i></div>
-<div class="model c-green"><b>Sonnet 5</b><span>der Alltag</span><i>1 Mio. Kontext</i></div>
+<div class="model c-red"><b>Fable 5.1</b><span>lange Agentenläufe</span><i>1 Mio. Kontext</i></div>
+<div class="model c-blue"><b>Opus 5.5</b><span>die Voreinstellung</span><i>1 Mio. Kontext</i></div>
+<div class="model c-green"><b>Sonnet 5.5</b><span>der Alltag</span><i>1 Mio. Kontext</i></div>
 <div class="model c-orange"><b>Haiku 4.5</b><span>schnell &amp; günstig</span><i>200 Tsd. Kontext</i></div>
 </div>''',
     '<div class="cap c-blue">wechseln mit /model</div>'))
@@ -563,12 +563,12 @@ panel("Modelle",
 panel("Denkaufwand",
   "Und wie gründlich es dabei arbeitet – kann ich das auch sagen?",
   ["Ja, das ist die zweite Stellschraube neben dem Modell: <code>/effort</code>. Erst das Modell nach der Schwierigkeit wählen, dann den Aufwand nach der gewünschten Gründlichkeit.",
-   "Voreingestellt ist <b>high</b>. Runter heißt schneller und sparsamer, hoch heißt mehr Nachdenken, mehr Werkzeug&shy;aufrufe, längere Läufe."],
+   "Voreingestellt ist meist <b>medium</b>. Runter heißt schneller und sparsamer, hoch heißt mehr Nachdenken, mehr Werkzeug&shy;aufrufe, längere Läufe."],
   breit(human("think",0.64), bean("point",0.64),
     f'''<div class="ladder">
 <div class="rung c-green"><b>low</b><span>kurze, einfache Aufgaben – am schnellsten</span></div>
-<div class="rung c-green"><b>medium</b><span>der sparsame Mittelweg</span></div>
-<div class="rung c-blue"><b>high</b><span>die Voreinstellung – für alles Anspruchsvolle</span></div>
+<div class="rung c-blue"><b>medium</b><span>die Voreinstellung</span></div>
+<div class="rung c-green"><b>high</b><span>für alles Anspruchsvolle</span></div>
 <div class="rung c-orange"><b>xhigh</b><span>Agentenläufe über Stunden</span></div>
 <div class="rung c-red"><b>max</b><span>alles geben, ohne Rücksicht auf den Verbrauch</span></div>
 </div>''',

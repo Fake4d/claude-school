@@ -92,4 +92,4 @@ nicht nur für diese Comics.
 
 Die Comics gehen auf einen englischen Instagram-Comic von *okaashish* zurück —
 Figuren und Dramaturgie sind übernommen, die Inhalte neu geschrieben und auf
-August 2026 gebracht. Schriften: *Patrick Hand* und *Caveat* (SIL Open Font License).
+Oktober 2026 gebracht. Schriften: *Patrick Hand* und *Caveat* (SIL Open Font License).

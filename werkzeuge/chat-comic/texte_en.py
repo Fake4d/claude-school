@@ -254,14 +254,14 @@ TEXTE = {
     "There&#8217;s a name at the top. Do I have to&nbsp;change it?",
 "Meistens nicht. Die Voreinstellung passt für fast alles.":
     "Usually not. The default fits almost everything.",
-"Wenn eine Aufgabe wirklich schwer ist, nimm ein stärkeres Modell. Wenn es nur schnell gehen soll, das kleine. Stand August 2026 heißen sie so:":
-    "If a job is genuinely hard, take a stronger model. If it just has to be quick, take the small one. As of August 2026 they are called:",
-"<b>Fable 5</b><span>das stärkste</span><i>nicht überall enthalten</i>":
-    "<b>Fable 5</b><span>the strongest</span><i>not on every plan</i>",
-"<b>Opus 5</b><span>die schweren Sachen</span><i>denkt gründlich</i>":
-    "<b>Opus 5</b><span>the heavy jobs</span><i>thinks thoroughly</i>",
-"<b>Sonnet 5</b><span>der Alltag</span><i>die Voreinstellung</i>":
-    "<b>Sonnet 5</b><span>everyday work</span><i>the default</i>",
+"Wenn eine Aufgabe wirklich schwer ist, nimm ein stärkeres Modell. Wenn es nur schnell gehen soll, das kleine. Stand Oktober 2026 heißen sie so:":
+    "If a job is genuinely hard, take a stronger model. If it just has to be quick, take the small one. As of October 2026 they are called:",
+"<b>Fable 5.1</b><span>das stärkste</span><i>nicht überall enthalten</i>":
+    "<b>Fable 5.1</b><span>the strongest</span><i>not on every plan</i>",
+"<b>Opus 5.5</b><span>die schweren Sachen</span><i>denkt gründlich</i>":
+    "<b>Opus 5.5</b><span>the heavy jobs</span><i>thinks thoroughly</i>",
+"<b>Sonnet 5.5</b><span>der Alltag</span><i>die Voreinstellung</i>":
+    "<b>Sonnet 5.5</b><span>everyday work</span><i>the default</i>",
 "<b>Haiku 4.5</b><span>schnell &amp; günstig</span><i>für Kurzes</i>":
     "<b>Haiku 4.5</b><span>fast &amp; cheap</span><i>for short things</i>",
 "im Zweifel: einfach lassen": "when in doubt: leave it alone",

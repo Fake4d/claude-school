@@ -179,8 +179,8 @@ TEXTE = {
 # --- Berechtigungen ---
 "Darf Claude einfach alles auf meinem Rechner?":
     "Is Claude allowed to do anything at all on my machine?",
-"Auf den bezahlten Zugängen startet Claude Code inzwischen im <b>Auto-Modus</b>: Es arbeitet durch, und statt Dir schaut vor jeder Aktion ein zweites Modell drauf.":
-    "On the paid plans Claude Code now starts in <b>auto mode</b>: it works straight through, and instead of you a second model reviews every action.",
+"Im Terminal und in VS Code startet Claude Code inzwischen im <b>Auto-Modus</b>: Es arbeitet durch, und statt Dir schaut vor jeder Aktion ein zweites Modell drauf.":
+    "In the terminal and in VS Code, Claude Code now starts in <b>auto mode</b>: it works straight through, and instead of you a second model reviews every action.",
 "Umschalten kannst Du jederzeit mit <kbd>Shift</kbd>+<kbd>Tab</kbd>: <b>Manuell</b> fragt wieder vor jedem Eingriff, <b>Plan</b> schaut nur und legt Dir einen Vorschlag hin.":
     "You can switch at any time with <kbd>Shift</kbd>+<kbd>Tab</kbd>: <b>manual</b> goes back to asking before every change, <b>plan</b> only looks and puts a proposal in front of you.",
 "<b>Manuell</b><span>liest von allein, fragt vor jedem Eingriff</span>":
@@ -399,16 +399,16 @@ TEXTE = {
 
 # --- Modelle ---
 "Und welches Modell arbeitet da eigentlich?": "And which model is actually doing the work?",
-"Stand August 2026: <b>Fable&nbsp;5</b> ist das stärkste und für lange Läufe gebaut, <b>Opus&nbsp;5</b> nimmt die schweren Sachen, <b>Sonnet&nbsp;5</b> den Alltag, <b>Haiku&nbsp;4.5</b> das Schnelle und Günstige.":
-    "As of August 2026: <b>Fable&nbsp;5</b> is the strongest and built for long runs, <b>Opus&nbsp;5</b> takes the heavy lifting, <b>Sonnet&nbsp;5</b> the everyday work, <b>Haiku&nbsp;4.5</b> the fast and cheap jobs.",
-"<b>Fable 5</b><span>lange Agentenläufe</span><i>1 Mio. Kontext</i>":
-    "<b>Fable 5</b><span>long agent runs</span><i>1M context</i>",
+"Stand Oktober 2026: <b>Fable&nbsp;5.1</b> ist das stärkste und für lange Läufe gebaut, <b>Opus&nbsp;5.5</b> ist voreingestellt und nimmt die schweren Sachen, <b>Sonnet&nbsp;5.5</b> den Alltag, <b>Haiku&nbsp;4.5</b> das Schnelle und Günstige.":
+    "As of October 2026: <b>Fable&nbsp;5.1</b> is the strongest and built for long runs, <b>Opus&nbsp;5.5</b> is the default and takes the heavy lifting, <b>Sonnet&nbsp;5.5</b> the everyday work, <b>Haiku&nbsp;4.5</b> the fast and cheap jobs.",
+"<b>Fable 5.1</b><span>lange Agentenläufe</span><i>1 Mio. Kontext</i>":
+    "<b>Fable 5.1</b><span>long agent runs</span><i>1M context</i>",
 "Umschalten mit <code>/model</code>. Mit <code>/fast</code> antwortet Opus schneller – es wird dabei nicht durch ein kleineres Modell ersetzt.":
     "Switch with <code>/model</code>. With <code>/fast</code> Opus answers more quickly – it is not swapped for a smaller model in the process.",
-"<b>Opus 5</b><span>die schweren Aufgaben</span><i>1 Mio. Kontext</i>":
-    "<b>Opus 5</b><span>the heavy jobs</span><i>1M context</i>",
-"<b>Sonnet 5</b><span>der Alltag</span><i>1 Mio. Kontext</i>":
-    "<b>Sonnet 5</b><span>everyday work</span><i>1M context</i>",
+"<b>Opus 5.5</b><span>die Voreinstellung</span><i>1 Mio. Kontext</i>":
+    "<b>Opus 5.5</b><span>the default</span><i>1M context</i>",
+"<b>Sonnet 5.5</b><span>der Alltag</span><i>1 Mio. Kontext</i>":
+    "<b>Sonnet 5.5</b><span>everyday work</span><i>1M context</i>",
 "<b>Haiku 4.5</b><span>schnell &amp; günstig</span><i>200 Tsd. Kontext</i>":
     "<b>Haiku 4.5</b><span>fast &amp; cheap</span><i>200K context</i>",
 "wechseln mit /model": "switch with /model",
@@ -418,14 +418,14 @@ TEXTE = {
     "And how thoroughly it works – can I say that too?",
 "Ja, das ist die zweite Stellschraube neben dem Modell: <code>/effort</code>. Erst das Modell nach der Schwierigkeit wählen, dann den Aufwand nach der gewünschten Gründlichkeit.":
     "Yes, that is the second dial next to the model: <code>/effort</code>. First pick the model by how hard the task is, then the effort by how thorough you want it.",
-"Voreingestellt ist <b>high</b>. Runter heißt schneller und sparsamer, hoch heißt mehr Nachdenken, mehr Werkzeug&shy;aufrufe, längere Läufe.":
-    "The default is <b>high</b>. Going down means faster and cheaper, going up means more thinking, more tool calls, longer runs.",
+"Voreingestellt ist meist <b>medium</b>. Runter heißt schneller und sparsamer, hoch heißt mehr Nachdenken, mehr Werkzeug&shy;aufrufe, längere Läufe.":
+    "The default is usually <b>medium</b>. Going down means faster and cheaper, going up means more thinking, more tool calls, longer runs.",
 "<b>low</b><span>kurze, einfache Aufgaben – am schnellsten</span>":
     "<b>low</b><span>short, simple jobs – the fastest</span>",
-"<b>medium</b><span>der sparsame Mittelweg</span>":
-    "<b>medium</b><span>the thrifty middle ground</span>",
-"<b>high</b><span>die Voreinstellung – für alles Anspruchsvolle</span>":
-    "<b>high</b><span>the default – for anything demanding</span>",
+"<b>medium</b><span>die Voreinstellung</span>":
+    "<b>medium</b><span>the default</span>",
+"<b>high</b><span>für alles Anspruchsvolle</span>":
+    "<b>high</b><span>for anything demanding</span>",
 "<b>xhigh</b><span>Agentenläufe über Stunden</span>":
     "<b>xhigh</b><span>agent runs lasting hours</span>",
 "<b>max</b><span>alles geben, ohne Rücksicht auf den Verbrauch</span>":

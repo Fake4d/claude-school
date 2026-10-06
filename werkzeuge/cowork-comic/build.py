@@ -426,7 +426,7 @@ panel("Wo es das gibt",
   breit(human("happy",0.78), bean("thumbs",0.78),
     f'''<div class="tabs"><div class="tab">Chat</div><div class="tab on">Cowork</div></div>''',
     f'''<div class="mini-row">{chip("Windows","blue")}{chip("Mac","blue")}{chip("Browser","green")}{chip("Handy","orange")}</div>''',
-    '<div class="cap">in den bezahlten Zugängen enthalten – Stand August 2026</div>'))
+    '<div class="cap">in den bezahlten Zugängen enthalten – Stand Oktober 2026</div>'))
 
 # --- Fazit ---
 panel("Fazit",

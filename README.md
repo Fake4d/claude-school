@@ -91,5 +91,5 @@ for any PDF with a fixed page size, not just these comics.
 ## Licence and credits
 
 The comics go back to an English Instagram comic by *okaashish* — characters and
-dramaturgy are borrowed, the content rewritten and brought up to August 2026.
+dramaturgy are borrowed, the content rewritten and brought up to October 2026.
 Fonts: *Patrick Hand* and *Caveat* (SIL Open Font License).
