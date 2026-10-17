@@ -399,8 +399,8 @@ TEXTE = {
 
 # --- Modelle ---
 "Und welches Modell arbeitet da eigentlich?": "And which model is actually doing the work?",
-"Stand Oktober 2026: <b>Fable&nbsp;5.1</b> ist das stärkste und für lange Läufe gebaut, <b>Opus&nbsp;5.5</b> ist voreingestellt und nimmt die schweren Sachen, <b>Sonnet&nbsp;5.5</b> den Alltag, <b>Haiku&nbsp;4.5</b> das Schnelle und Günstige.":
-    "As of October 2026: <b>Fable&nbsp;5.1</b> is the strongest and built for long runs, <b>Opus&nbsp;5.5</b> is the default and takes the heavy lifting, <b>Sonnet&nbsp;5.5</b> the everyday work, <b>Haiku&nbsp;4.5</b> the fast and cheap jobs.",
+"Stand Oktober 2026: <b>Fable&nbsp;5.1</b> ist das stärkste und für lange Läufe gebaut, <b>Opus&nbsp;5.5</b> ist voreingestellt und nimmt die schweren Sachen, <b>Sonnet&nbsp;5.5</b> den Alltag, <b>Haiku&nbsp;5.5</b> das Schnelle und Günstige.":
+    "As of October 2026: <b>Fable&nbsp;5.1</b> is the strongest and built for long runs, <b>Opus&nbsp;5.5</b> is the default and takes the heavy lifting, <b>Sonnet&nbsp;5.5</b> the everyday work, <b>Haiku&nbsp;5.5</b> the fast and cheap jobs.",
 "<b>Fable 5.1</b><span>lange Agentenläufe</span><i>1 Mio. Kontext</i>":
     "<b>Fable 5.1</b><span>long agent runs</span><i>1M context</i>",
 "Umschalten mit <code>/model</code>. Mit <code>/fast</code> antwortet Opus schneller – es wird dabei nicht durch ein kleineres Modell ersetzt.":
@@ -409,8 +409,8 @@ TEXTE = {
     "<b>Opus 5.5</b><span>the default</span><i>1M context</i>",
 "<b>Sonnet 5.5</b><span>der Alltag</span><i>1 Mio. Kontext</i>":
     "<b>Sonnet 5.5</b><span>everyday work</span><i>1M context</i>",
-"<b>Haiku 4.5</b><span>schnell &amp; günstig</span><i>200 Tsd. Kontext</i>":
-    "<b>Haiku 4.5</b><span>fast &amp; cheap</span><i>200K context</i>",
+"<b>Haiku 5.5</b><span>schnell &amp; günstig</span><i>1 Mio. Kontext</i>":
+    "<b>Haiku 5.5</b><span>fast &amp; cheap</span><i>1M context</i>",
 "wechseln mit /model": "switch with /model",
 
 # --- Denkaufwand ---

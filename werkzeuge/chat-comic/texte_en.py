@@ -262,8 +262,8 @@ TEXTE = {
     "<b>Opus 5.5</b><span>the heavy jobs</span><i>thinks thoroughly</i>",
 "<b>Sonnet 5.5</b><span>der Alltag</span><i>die Voreinstellung</i>":
     "<b>Sonnet 5.5</b><span>everyday work</span><i>the default</i>",
-"<b>Haiku 4.5</b><span>schnell &amp; günstig</span><i>für Kurzes</i>":
-    "<b>Haiku 4.5</b><span>fast &amp; cheap</span><i>for short things</i>",
+"<b>Haiku 5.5</b><span>schnell &amp; günstig</span><i>für Kurzes</i>":
+    "<b>Haiku 5.5</b><span>fast &amp; cheap</span><i>for short things</i>",
 "im Zweifel: einfach lassen": "when in doubt: leave it alone",
 
 # --- 16 Gut fragen ---
@@ -332,8 +332,8 @@ TEXTE = {
 "Und wenn ich mehr&nbsp;will?": "And if I want&nbsp;more?",
 "Dann geht es in Stufen weiter – die Frage ist immer, wie weit Du Claude an Deine Sachen lässt.":
     "Then it goes on in stages – the question is always how far you let Claude at your things.",
-"Hier, im Gespräch, geht alles durch Dich hindurch: Du gibst hinein, Du nimmst heraus. Das reicht für erstaunlich viel.":
-    "Here, in the conversation, everything passes through you: you put in, you take out. That covers an astonishing amount.",
+"Hier, im Gespräch, geht alles durch Dich hindurch: Du gibst hinein, Du nimmst heraus. Bei Pro und Max wachsen Stufe 1 und 2 gerade zusammen.":
+    "Here, in the conversation, everything passes through you: you put in, you take out. On Pro and Max, stages 1 and 2 are currently merging.",
 "<b>1 · Im Gespräch</b><span>nichts einzurichten – Du lädst hoch, Du lädst herunter</span>":
     "<b>1 · In the conversation</b><span>nothing to set up – you upload, you download</span>",
 "<b>2 · Cowork</b><span>Claude arbeitet direkt in Deinen Ordnern</span>":

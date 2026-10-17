@@ -53,12 +53,12 @@ TEXTE = {
 
 # --- Erste Schritte ---
 "Wie fange ich an?": "How do I get started?",
-"Vier Schritte. Im Eingabefeld schaltest Du von <b>Chat</b> auf <b>Cowork</b> um – das ist schon der schwierigste Teil.":
-    "Four steps. In the input box you switch from <b>Chat</b> to <b>Cowork</b> – and that is already the hardest part.",
+"Vier Schritte. Im Eingabefeld schaltest Du von <b>Chat</b> auf <b>Cowork</b> um. Fehlt der Umschalter, entfällt das – dann kann es jedes Gespräch.":
+    "Four steps. In the input box you switch from <b>Chat</b> to <b>Cowork</b>. If there is no switch, skip that – then every conversation can do it.",
 "Dann beschreibst Du, was herauskommen soll. Claude zeigt Dir seinen Plan. Du schaust drüber, und dann läuft es los.":
     "Then you describe what should come out. Claude shows you its plan. You look it over, and off it goes.",
-"<b>1 · Umschalten</b><span>von Chat auf Cowork</span>":
-    "<b>1 · Switch</b><span>from Chat to Cowork</span>",
+"<b>1 · Umschalten</b><span>von Chat auf Cowork, falls noch da</span>":
+    "<b>1 · Switch</b><span>from Chat to Cowork, if it is there</span>",
 "<b>2 · Beschreiben</b><span>„Sortiere meinen Download-Ordner“</span>":
     "<b>2 · Describe</b><span>&#8220;Sort out my downloads folder&#8221;</span>",
 "<b>3 · Plan ansehen</b><span>Claude zeigt, was es vorhat</span>":
@@ -154,24 +154,24 @@ TEXTE = {
 "dieselbe Sitzung, egal wo Du sie aufmachst":
     "the same session, wherever you open it",
 
-# --- Dispatch ---
+# --- Vom Handy ---
 "Du sagst Handy – kann ich auch von unterwegs etwas&nbsp;anstoßen?":
     "You say phone – can I kick something off&nbsp;while I&#8217;m out?",
-"Dafür gibt es <b>Dispatch</b>. Dein Handy wird zur Fernbedienung für den Claude, der zu Hause auf Deinem Rechner sitzt.":
-    "That is what <b>Dispatch</b> is for. Your phone becomes the remote control for the Claude sitting on your computer at home.",
-"In der Handy-App auf Cowork gehen, in der Seitenleiste <b>Dispatch</b> antippen, Aufgabe hinschreiben. Du bekommst eine Mitteilung, wenn es fertig ist – oder wenn Claude etwas von Dir wissen will.":
-    "In the phone app go to Cowork, tap <b>Dispatch</b> in the sidebar, write down the task. You get a notification when it is done – or when Claude needs something from you.",
+"Ja – tipp die Aufgabe einfach in die Handy-App. Die Arbeit läuft in der Cloud weiter, Dein Rechner darf dabei aus sein.":
+    "Yes – just type the task into the phone app. The work carries on in the cloud, your computer may be switched off.",
+"Nur wenn Claude an Deine Ordner auf dem Rechner muss, braucht es ihn wach und die Claude-App offen. Das frühere <b>Dispatch</b> bekommen Neue nicht mehr.":
+    "Only if Claude needs your folders on the computer does it have to be awake with the Claude app open. The former <b>Dispatch</b> is no longer offered to new users.",
 "Unterwegs": "On the go",
 "Auftrag tippen": "Type the task",
-"Rechner arbeitet": "Computer works",
-"Mitteilung zurück": "Notified back",
+"Claude arbeitet": "Claude works",
+"Ergebnis abholen": "Pick up the result",
 "Zum Beispiel unterwegs getippt:": "Typed on the go, for example:",
-"„Zieh die Zahlen aus der Quartalstabelle und leg mir eine Zusammenfassung auf den Schreibtisch.“":
-    "&#8220;Pull the numbers out of the quarterly spreadsheet and put a summary on my desktop.&#8221;",
-"Rechner muss wach sein<span class=\"chip-sub\">und die Claude-App offen</span>":
-    "Computer must be awake<span class=\"chip-sub\">and the Claude app open</span>",
-"Ein Gespräch<span class=\"chip-sub\">Handy und Rechner, ohne Bruch</span>":
-    "One conversation<span class=\"chip-sub\">phone and computer, no break</span>",
+"„Such mir drei Hotels in Lissabon fürs lange Wochenende raus und mach eine Vergleichstabelle.“":
+    "&#8220;Find me three hotels in Lisbon for the long weekend and make a comparison table.&#8221;",
+"In der Cloud<span class=\"chip-sub\">Rechner darf aus sein</span>":
+    "In the cloud<span class=\"chip-sub\">computer may be off</span>",
+"Deine Ordner<span class=\"chip-sub\">nur mit wachem Rechner + App</span>":
+    "Your folders<span class=\"chip-sub\">only with computer awake + app</span>",
 
 # --- Projekte ---
 "Kann ich das irgendwie ordnen?": "Can I bring some order to this?",
@@ -245,8 +245,8 @@ TEXTE = {
 
 # --- Zeitplan ---
 "Kann es auch regelmäßig von allein laufen?": "Can it run regularly on its own, too?",
-"Ja. Unter <b>Scheduled</b> in der Seitenleiste legst Du wiederkehrende Aufgaben an – jeden Montag der Bericht, jeden Morgen die Zusammenfassung.":
-    "Yes. Under <b>Scheduled</b> in the sidebar you set up recurring jobs – the report every Monday, the summary every morning.",
+"Ja. Unter <b>Scheduled</b> in der Seitenleiste legst Du wiederkehrende Aufgaben an. Sie laufen in der Cloud, auch wenn Dein Rechner schläft – außer sie brauchen Deine Ordner.":
+    "Yes. Under <b>Scheduled</b> in the sidebar you set up recurring jobs. They run in the cloud, even while your computer sleeps – unless they need your folders.",
 "Fang mit etwas Harmlosem an. Und schau ab und zu nach, was dabei herauskommt.":
     "Start with something harmless. And look in now and then to see what comes out.",
 "Jeden Montag: Wochenbericht aus dem Projektordner":
@@ -312,8 +312,8 @@ TEXTE = {
 
 # --- Wo finde ich es ---
 "Und wo finde ich das jetzt?": "And where do I find it?",
-"In der Claude-App – als Umschalter direkt neben dem Chat. Am Rechner für Windows und Mac, dazu im Browser und am Handy.":
-    "In the Claude app – as a switch right next to the chat. On the computer for Windows and Mac, plus in the browser and on your phone.",
+"In der Claude-App: am Rechner für Windows und Mac, im Browser und am Handy. Bei Pro und Max wird Cowork gerade Teil jedes Gesprächs – dann ohne Umschalter.":
+    "In the Claude app: on the computer for Windows and Mac, in the browser and on your phone. On Pro and Max, Cowork is becoming part of every conversation – then with no switch.",
 "Es gehört zu den bezahlten Zugängen. Wenn Du schon einen hast, ist es einfach da.":
     "It is part of the paid plans. If you already have one, it is simply there.",
 "Windows": "Windows",
@@ -326,8 +326,8 @@ TEXTE = {
     "That sounds doable. I&#8217;ll give it a try.",
 "Genau richtig. Fang mit dem Download-Ordner an.":
     "Just right. Start with the downloads folder.",
-"<b>Umschalten</b> &#8211; im Eingabefeld von Chat auf Cowork":
-    "<b>Switch</b> &#8211; from Chat to Cowork in the input box",
+"<b>Starten</b> &#8211; auf Cowork umschalten oder einfach lostippen":
+    "<b>Start</b> &#8211; switch to Cowork, or just start typing",
 "<b>Beschreiben</b> &#8211; sag, was herauskommen soll, nicht wie":
     "<b>Describe</b> &#8211; say what should come out, not how",
 "<b>Plan ansehen</b> &#8211; Claude zeigt erst, was es vorhat":
@@ -336,16 +336,16 @@ TEXTE = {
     "<b>Share a folder</b> &#8211; only the one it is about",
 "<b>Ergebnis</b> &#8211; fertige Tabellen, Folien, Dokumente":
     "<b>Result</b> &#8211; finished spreadsheets, slides, documents",
-"<b>Dispatch</b> &#8211; vom Handy aus anstoßen, Rechner muss wach sein":
-    "<b>Dispatch</b> &#8211; start it from your phone, computer must be awake",
+"<b>Vom Handy</b> &#8211; Aufgabe tippen, läuft in der Cloud weiter":
+    "<b>From your phone</b> &#8211; type the task, it carries on in the cloud",
 "<b>Projekte</b> &#8211; getrennte Arbeitsbereiche mit Gedächtnis":
     "<b>Projects</b> &#8211; separate workspaces with a memory",
 "<b>Verbindungen</b> &#8211; Drive, Slack und mehr unter „Customize“":
     "<b>Connections</b> &#8211; Drive, Slack and more under &#8220;Customize&#8221;",
 "<b>Berechtigungen</b> &#8211; drei Stufen, Du bestimmst":
     "<b>Permissions</b> &#8211; three levels, you decide",
-"<b>Nach Zeitplan</b> &#8211; wiederkehrende Aufgaben unter „Scheduled“":
-    "<b>On a schedule</b> &#8211; recurring jobs under &#8220;Scheduled&#8221;",
+"<b>Nach Zeitplan</b> &#8211; unter „Scheduled“, läuft in der Cloud":
+    "<b>On a schedule</b> &#8211; under &#8220;Scheduled&#8221;, runs in the cloud",
 "<b>Vorsicht</b> &#8211; fremde Inhalte, Finanzen, Zugangsdaten":
     "<b>Careful</b> &#8211; outside content, finances, credentials",
 # --- Chat oder Cowork (neu gefasst 18.08.2026: der Chat baut selbst Dateien) ---

@@ -548,14 +548,14 @@ panel("Entwerfen",
 # --- 19 ---
 panel("Modelle",
   "Und welches Modell arbeitet da eigentlich?",
-  ["Stand Oktober 2026: <b>Fable&nbsp;5.1</b> ist das stärkste und für lange Läufe gebaut, <b>Opus&nbsp;5.5</b> ist voreingestellt und nimmt die schweren Sachen, <b>Sonnet&nbsp;5.5</b> den Alltag, <b>Haiku&nbsp;4.5</b> das Schnelle und Günstige.",
+  ["Stand Oktober 2026: <b>Fable&nbsp;5.1</b> ist das stärkste und für lange Läufe gebaut, <b>Opus&nbsp;5.5</b> ist voreingestellt und nimmt die schweren Sachen, <b>Sonnet&nbsp;5.5</b> den Alltag, <b>Haiku&nbsp;5.5</b> das Schnelle und Günstige.",
    "Umschalten mit <code>/model</code>. Mit <code>/fast</code> antwortet Opus schneller – es wird dabei nicht durch ein kleineres Modell ersetzt."],
   breit(human("think",0.74), bean("right",0.74),
     f'''<div class="models">
 <div class="model c-red"><b>Fable 5.1</b><span>lange Agentenläufe</span><i>1 Mio. Kontext</i></div>
 <div class="model c-blue"><b>Opus 5.5</b><span>die Voreinstellung</span><i>1 Mio. Kontext</i></div>
 <div class="model c-green"><b>Sonnet 5.5</b><span>der Alltag</span><i>1 Mio. Kontext</i></div>
-<div class="model c-orange"><b>Haiku 4.5</b><span>schnell &amp; günstig</span><i>200 Tsd. Kontext</i></div>
+<div class="model c-orange"><b>Haiku 5.5</b><span>schnell &amp; günstig</span><i>1 Mio. Kontext</i></div>
 </div>''',
     '<div class="cap c-blue">wechseln mit /model</div>'))
 

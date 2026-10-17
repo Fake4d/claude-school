@@ -358,7 +358,7 @@ panel("Modelle",
 <div class="model c-red"><b>Fable 5.1</b><span>das stärkste</span><i>nicht überall enthalten</i></div>
 <div class="model c-blue"><b>Opus 5.5</b><span>die schweren Sachen</span><i>denkt gründlich</i></div>
 <div class="model c-green"><b>Sonnet 5.5</b><span>der Alltag</span><i>die Voreinstellung</i></div>
-<div class="model c-orange"><b>Haiku 4.5</b><span>schnell &amp; günstig</span><i>für Kurzes</i></div>
+<div class="model c-orange"><b>Haiku 5.5</b><span>schnell &amp; günstig</span><i>für Kurzes</i></div>
 </div>''',
     '<div class="cap">im Zweifel: einfach lassen</div>'))
 
@@ -411,7 +411,7 @@ panel("Deine Daten",
 panel("Die drei Stufen",
   "Und wenn ich mehr&nbsp;will?",
   ["Dann geht es in Stufen weiter – die Frage ist immer, wie weit Du Claude an Deine Sachen lässt.",
-   "Hier, im Gespräch, geht alles durch Dich hindurch: Du gibst hinein, Du nimmst heraus. Das reicht für erstaunlich viel."],
+   "Hier, im Gespräch, geht alles durch Dich hindurch: Du gibst hinein, Du nimmst heraus. Bei Pro und Max wachsen Stufe 1 und 2 gerade zusammen."],
   breit(human("point",0.78), bean("right",0.78),
     f'''<div class="ladder">
 <div class="rung c-green"><b>1 · Im Gespräch</b><span>nichts einzurichten – Du lädst hoch, Du lädst herunter</span></div>

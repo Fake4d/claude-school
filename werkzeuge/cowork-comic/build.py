@@ -198,12 +198,12 @@ panel("Chat oder Cowork",
 # --- Erste Schritte ---
 panel("Erste Schritte",
   "Wie fange ich an?",
-  ["Vier Schritte. Im Eingabefeld schaltest Du von <b>Chat</b> auf <b>Cowork</b> um – das ist schon der schwierigste Teil.",
+  ["Vier Schritte. Im Eingabefeld schaltest Du von <b>Chat</b> auf <b>Cowork</b> um. Fehlt der Umschalter, entfällt das – dann kann es jedes Gespräch.",
    "Dann beschreibst Du, was herauskommen soll. Claude zeigt Dir seinen Plan. Du schaust drüber, und dann läuft es los."],
   breit(human("point",0.78), bean("right",0.78),
     f'''<div class="tabs"><div class="tab">Chat</div><div class="tab on">Cowork</div></div>''',
     f'''<div class="ladder">
-<div class="rung c-blue"><b>1 · Umschalten</b><span>von Chat auf Cowork</span></div>
+<div class="rung c-blue"><b>1 · Umschalten</b><span>von Chat auf Cowork, falls noch da</span></div>
 <div class="rung c-green"><b>2 · Beschreiben</b><span>„Sortiere meinen Download-Ordner“</span></div>
 <div class="rung c-orange"><b>3 · Plan ansehen</b><span>Claude zeigt, was es vorhat</span></div>
 <div class="rung c-red"><b>4 · Laufen lassen</b><span>zuschauen – oder später wiederkommen</span></div>
@@ -279,16 +279,16 @@ panel("Läuft weiter",
     f'''<div class="mini-row">{chip("Desktop-App","blue")}{chip("Browser","green")}{chip("Handy","orange")}</div>''',
     '<div class="cap">dieselbe Sitzung, egal wo Du sie aufmachst</div>'))
 
-# --- Dispatch ---
-panel("Dispatch",
+# --- Vom Handy ---
+panel("Vom Handy",
   "Du sagst Handy – kann ich auch von unterwegs etwas&nbsp;anstoßen?",
-  ["Dafür gibt es <b>Dispatch</b>. Dein Handy wird zur Fernbedienung für den Claude, der zu Hause auf Deinem Rechner sitzt.",
-   "In der Handy-App auf Cowork gehen, in der Seitenleiste <b>Dispatch</b> antippen, Aufgabe hinschreiben. Du bekommst eine Mitteilung, wenn es fertig ist – oder wenn Claude etwas von Dir wissen will."],
+  ["Ja – tipp die Aufgabe einfach in die Handy-App. Die Arbeit läuft in der Cloud weiter, Dein Rechner darf dabei aus sein.",
+   "Nur wenn Claude an Deine Ordner auf dem Rechner muss, braucht es ihn wach und die Claude-App offen. Das frühere <b>Dispatch</b> bekommen Neue nicht mehr."],
   breit(human("point",0.78), bean("right",0.78),
-    f'''<div class="chain">{chip("Unterwegs","blue")}{AR}{chip("Auftrag tippen","green")}{AR}{chip("Rechner arbeitet","orange")}{AR}{chip("Mitteilung zurück","blue")}</div>''',
+    f'''<div class="chain">{chip("Unterwegs","blue")}{AR}{chip("Auftrag tippen","green")}{AR}{chip("Claude arbeitet","orange")}{AR}{chip("Ergebnis abholen","blue")}</div>''',
     f'''<div class="saybox c-green"><div class="say-label">Zum Beispiel unterwegs getippt:</div>
-<div class="say-text">„Zieh die Zahlen aus der Quartalstabelle und leg mir eine Zusammenfassung auf den Schreibtisch.“</div></div>''',
-    f'''<div class="mini-row">{chip("Rechner muss wach sein","red",sub="und die Claude-App offen")}{chip("Ein Gespräch","green",sub="Handy und Rechner, ohne Bruch")}</div>'''))
+<div class="say-text">„Such mir drei Hotels in Lissabon fürs lange Wochenende raus und mach eine Vergleichstabelle.“</div></div>''',
+    f'''<div class="mini-row">{chip("In der Cloud","green",sub="Rechner darf aus sein")}{chip("Deine Ordner","red",sub="nur mit wachem Rechner + App")}</div>'''))
 
 # --- Projekte ---
 panel("Projekte",
@@ -356,7 +356,7 @@ panel("Berechtigungen",
 # --- Nach Zeitplan ---
 panel("Nach Zeitplan",
   "Kann es auch regelmäßig von allein laufen?",
-  ["Ja. Unter <b>Scheduled</b> in der Seitenleiste legst Du wiederkehrende Aufgaben an – jeden Montag der Bericht, jeden Morgen die Zusammenfassung.",
+  ["Ja. Unter <b>Scheduled</b> in der Seitenleiste legst Du wiederkehrende Aufgaben an. Sie laufen in der Cloud, auch wenn Dein Rechner schläft – außer sie brauchen Deine Ordner.",
    "Fang mit etwas Harmlosem an. Und schau ab und zu nach, was dabei herauskommt."],
   breit(human("think",0.78), bean("point",0.78),
     f'''{chip("Jeden Montag: Wochenbericht aus dem Projektordner","blue",big=True)}''',
@@ -421,7 +421,7 @@ panel("Die drei Stufen",
 # --- Wo bekomme ich es ---
 panel("Wo es das gibt",
   "Und wo finde ich das jetzt?",
-  ["In der Claude-App – als Umschalter direkt neben dem Chat. Am Rechner für Windows und Mac, dazu im Browser und am Handy.",
+  ["In der Claude-App: am Rechner für Windows und Mac, im Browser und am Handy. Bei Pro und Max wird Cowork gerade Teil jedes Gesprächs – dann ohne Umschalter.",
    "Es gehört zu den bezahlten Zugängen. Wenn Du schon einen hast, ist es einfach da."],
   breit(human("happy",0.78), bean("thumbs",0.78),
     f'''<div class="tabs"><div class="tab">Chat</div><div class="tab on">Cowork</div></div>''',
@@ -435,16 +435,16 @@ panel("Fazit",
   f'''<div class="finale">
 <div class="fin-figs">{human("happy")}<div class="bulb">&#128161;</div>{bean("thumbs")}</div>
 <div class="fin-box">
-<div class="fin-line"><b>Umschalten</b> &#8211; im Eingabefeld von Chat auf Cowork</div>
+<div class="fin-line"><b>Starten</b> &#8211; auf Cowork umschalten oder einfach lostippen</div>
 <div class="fin-line"><b>Beschreiben</b> &#8211; sag, was herauskommen soll, nicht wie</div>
 <div class="fin-line"><b>Plan ansehen</b> &#8211; Claude zeigt erst, was es vorhat</div>
 <div class="fin-line"><b>Ordner freigeben</b> &#8211; nur den, um den es geht</div>
 <div class="fin-line"><b>Ergebnis</b> &#8211; fertige Tabellen, Folien, Dokumente</div>
-<div class="fin-line"><b>Dispatch</b> &#8211; vom Handy aus anstoßen, Rechner muss wach sein</div>
+<div class="fin-line"><b>Vom Handy</b> &#8211; Aufgabe tippen, läuft in der Cloud weiter</div>
 <div class="fin-line"><b>Projekte</b> &#8211; getrennte Arbeitsbereiche mit Gedächtnis</div>
 <div class="fin-line"><b>Verbindungen</b> &#8211; Drive, Slack und mehr unter „Customize“</div>
 <div class="fin-line"><b>Berechtigungen</b> &#8211; drei Stufen, Du bestimmst</div>
-<div class="fin-line"><b>Nach Zeitplan</b> &#8211; wiederkehrende Aufgaben unter „Scheduled“</div>
+<div class="fin-line"><b>Nach Zeitplan</b> &#8211; unter „Scheduled“, läuft in der Cloud</div>
 <div class="fin-line"><b>Vorsicht</b> &#8211; fremde Inhalte, Finanzen, Zugangsdaten</div>
 <div class="fin-line"><b>Die drei Stufen</b> &#8211; wie weit Claude an Deine Sachen darf</div>
 </div></div>''')
