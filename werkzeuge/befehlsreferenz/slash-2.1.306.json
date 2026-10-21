@@ -6,7 +6,7 @@
   "variabel": false,
   "hint": "<path>",
   "aliases": [],
-  "enabled": "we()&&QYs()",
+  "enabled": "_e()&&lei()",
   "verfuegbar": true
  },
  {
@@ -16,7 +16,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Ik()",
+  "enabled": "Qk()",
   "verfuegbar": true
  },
  {
@@ -86,7 +86,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "CM()&&Yc()===null",
+  "enabled": "gN()&&fu()===null",
   "verfuegbar": true
  },
  {
@@ -96,7 +96,7 @@
   "variabel": false,
   "hint": "[--request-id <uuid>] (--wizard posture=\\u2026 scope=\\u2026 depth=\\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
   "aliases": [],
-  "enabled": "m2e()&&we()",
+  "enabled": "_Ye()&&_e()",
   "verfuegbar": true
  },
  {
@@ -106,7 +106,7 @@
   "variabel": false,
   "hint": "[auto|<tokens>]",
   "aliases": [],
-  "enabled": "!we()",
+  "enabled": "!_e()",
   "verfuegbar": true
  },
  {
@@ -116,7 +116,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "DYt()&&!we()",
+  "enabled": "e3t()&&!_e()",
   "verfuegbar": true
  },
  {
@@ -190,7 +190,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!we()&&RA()",
+  "enabled": "!_e()&&sC()",
   "verfuegbar": true
  },
  {
@@ -200,7 +200,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "kt()&&!Zee()&&J1n()!==null",
+  "enabled": "wt()&&!dne()&&hzn()!==null",
   "verfuegbar": true
  },
  {
@@ -210,7 +210,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!r",
+  "enabled": "!n",
   "verfuegbar": true
  },
  {
@@ -230,7 +230,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!e&&(ive()||jt())",
+  "enabled": "!e&&(rEe()||Ht())",
   "verfuegbar": true
  },
  {
@@ -253,7 +253,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Win()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
+  "enabled": "qcn()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
   "verfuegbar": true
  },
  {
@@ -285,7 +285,7 @@
   "variabel": false,
   "hint": "[guidance]",
   "aliases": [],
-  "enabled": "HLr()",
+  "enabled": "i1r()",
   "verfuegbar": true
  },
  {
@@ -305,7 +305,7 @@
   "variabel": false,
   "hint": "<optional custom summarization instructions>",
   "aliases": [],
-  "enabled": "!Ne(process.env.DISABLE_COMPACT)",
+  "enabled": "!Fe(process.env.DISABLE_COMPACT)",
   "verfuegbar": true
  },
  {
@@ -327,7 +327,7 @@
   "variabel": false,
   "hint": "[all]",
   "aliases": [],
-  "enabled": "!we()&&!VYt()",
+  "enabled": "!_e()&&!m3t()",
   "verfuegbar": true
  },
  {
@@ -347,7 +347,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "j_()||jW()",
+  "enabled": "by()||HG()",
   "verfuegbar": true
  },
  {
@@ -397,7 +397,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "bU()",
+  "enabled": "wB()",
   "verfuegbar": true
  },
  {
@@ -407,7 +407,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "bU()",
+  "enabled": "wB()",
   "verfuegbar": true
  },
  {
@@ -417,7 +417,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "bU()",
+  "enabled": "wB()",
   "verfuegbar": true
  },
  {
@@ -449,7 +449,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "!iFn()",
+  "enabled": "!tWn()",
   "verfuegbar": true
  },
  {
@@ -493,7 +493,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "j_()||jW()",
+  "enabled": "by()||HG()",
   "verfuegbar": true
  },
  {
@@ -513,7 +513,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "LI()&&!we()",
+  "enabled": "rO()&&!_e()",
   "verfuegbar": true
  },
  {
@@ -553,7 +553,7 @@
   "variabel": false,
   "hint": "[on|off]",
   "aliases": [],
-  "enabled": "we()",
+  "enabled": "_e()",
   "verfuegbar": true
  },
  {
@@ -563,7 +563,7 @@
   "variabel": false,
   "hint": "<directive>",
   "aliases": [],
-  "enabled": "!da()",
+  "enabled": "!Sa()",
   "verfuegbar": true
  },
  {
@@ -683,7 +683,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "z9()",
+  "enabled": "tJ()",
   "verfuegbar": true
  },
  {
@@ -693,7 +693,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "kt()&&(Sxe()||ppe())",
+  "enabled": "wt()&&(Dpe()||Aee())",
   "verfuegbar": true
  },
  {
@@ -705,7 +705,7 @@
   "aliases": [
    "peers"
   ],
-  "enabled": "Yi()",
+  "enabled": "da()",
   "verfuegbar": true
  },
  {
@@ -715,7 +715,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "!a.DISABLE_LOGIN_COMMAND",
+  "enabled": "{let e=Qn();return!a.DISABLE_LOGIN_COMMAND&&(e===null||e.sessionId!==void 0)",
   "verfuegbar": true
  },
  {
@@ -757,7 +757,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "kt()&&(L0()||xmt())",
+  "enabled": "wt()&&(VI()||fyt())",
   "verfuegbar": true
  },
  {
@@ -787,7 +787,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "rp()&&STo()",
+  "enabled": "_f()&&HMo()",
   "verfuegbar": true
  },
  {
@@ -820,7 +820,7 @@
   "variabel": false,
   "hint": "[style]",
   "aliases": [],
-  "enabled": "we()||!GSe()",
+  "enabled": "_e()||!sve()",
   "verfuegbar": true
  },
  {
@@ -884,7 +884,7 @@
  {
   "name": "plugin-authoring",
   "typ": "registriert",
-  "desc": "Make a mod: a change to Claude's own interface or behaviour, such as a live pane or panel, a band above the prompt, a status line, a toast, a slash command, or a hook on tool calls or prompts. Use to make, change or debug a mod or its hooks module.",
+  "desc": "Make a mod: a change to Claude's own interface or behaviour, such as a panel or pane that stays beside the chat and updates, a band, status line, toast, slash command, or hook on tool calls. Use to make, change or debug a mod or its hooks module.",
   "variabel": false,
   "hint": "",
   "aliases": [],
@@ -908,7 +908,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "e3()",
+  "enabled": "e8()",
   "verfuegbar": true
  },
  {
@@ -948,7 +948,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "kt()||!1",
+  "enabled": "wt()||!1",
   "verfuegbar": true
  },
  {
@@ -1010,7 +1010,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "kt()||DFt()",
+  "enabled": "wt()||ejt()",
   "verfuegbar": true
  },
  {
@@ -1111,7 +1111,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "{if(!id())return!1;let e=Fc();return!(e?gde.includes(e.terminal??\"\"):HE.isJetBrainsIdeTerminal())",
+  "enabled": "{if(!Ml())return!1;let e=eu();return!(e?Bce.includes(e.terminal??\"\"):ZE.isJetBrainsIdeTerminal())",
   "verfuegbar": true
  },
  {
@@ -1123,7 +1123,7 @@
   "aliases": [
    "remote"
   ],
-  "enabled": "Bn()",
+  "enabled": "xn()",
   "verfuegbar": true
  },
  {
@@ -1133,7 +1133,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "mte(\"bedrock\")===void 0",
+  "enabled": "xne(\"bedrock\")===void 0",
   "verfuegbar": true
  },
  {
@@ -1145,7 +1145,7 @@
   "aliases": [
    "setup-cowork"
   ],
-  "enabled": "j_()||jW()",
+  "enabled": "by()||HG()",
   "verfuegbar": true
  },
  {
@@ -1155,7 +1155,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "mte(\"vertex\")===void 0",
+  "enabled": "xne(\"vertex\")===void 0",
   "verfuegbar": true
  },
  {
@@ -1225,7 +1225,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "$t()||tot()!==null",
+  "enabled": "Nt()||xpt()!==null",
   "verfuegbar": true
  },
  {
@@ -1235,7 +1235,7 @@
   "variabel": false,
   "hint": "<task>",
   "aliases": [],
-  "enabled": "!da()",
+  "enabled": "!Sa()",
   "verfuegbar": true
  },
  {
@@ -1269,7 +1269,7 @@
   "aliases": [
    "tp"
   ],
-  "enabled": "kt()||DFt()",
+  "enabled": "wt()||ejt()",
   "verfuegbar": true
  },
  {
@@ -1309,7 +1309,7 @@
   "variabel": false,
   "hint": "<prompt>",
   "aliases": [],
-  "enabled": "EK()",
+  "enabled": "_q()",
   "verfuegbar": true
  },
  {
@@ -1319,7 +1319,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "g0()",
+  "enabled": "G0()",
   "verfuegbar": true
  },
  {
@@ -1342,7 +1342,7 @@
    "cost",
    "stats"
   ],
-  "enabled": "we()",
+  "enabled": "_e()",
   "verfuegbar": true
  },
  {
@@ -1352,7 +1352,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "LI()&&!we()",
+  "enabled": "rO()&&!_e()",
   "verfuegbar": true
  },
  {
@@ -1410,16 +1410,6 @@
   "verfuegbar": false
  },
  {
-  "name": "whiteboard",
-  "typ": "registriert",
-  "desc": "Create a whiteboard artifact - a shared sketch canvas for wireframe-fidelity diagrams (boxes, databases, decision diamonds, sticky notes, arrows, freehand pen, text) that you and the user both draw on. The user sketches and hits Publish; this session is woken, reads the board (scene data plus a picture of it), and answers by drawing back on the same canvas - or plans from what they drew. Use when the user asks for a whiteboard, wants to sketch a design or diagram to talk through, or wants to draw something and have you answer on the canvas or plan from it. Only for CREATING a new whiteboard; an existing one is read and answered through its published artifact.",
-  "variabel": true,
-  "hint": "",
-  "aliases": [],
-  "enabled": "true",
-  "verfuegbar": true
- },
- {
   "name": "workflow-launch-exec",
   "typ": "local",
   "desc": "Execute a server-launched workflow handoff (workflow_launch event sessions only)",
@@ -1436,7 +1426,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Wg()",
+  "enabled": "Sm()",
   "verfuegbar": true
  },
  {

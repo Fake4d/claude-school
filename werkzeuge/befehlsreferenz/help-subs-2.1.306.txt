@@ -296,7 +296,8 @@ Options:
 ########## update ##########
 Usage: claude update|upgrade [options]
 
-Check for updates and install if available
+Check for updates and install if available; package-manager installs update
+through the package manager
 
 Options:
   -h, --help  Display help for command
