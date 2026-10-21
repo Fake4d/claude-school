@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de"><head><meta charset="utf-8"><title>Claude Code · Befehlsreferenz 2.1.306</title>
+<html lang="de"><head><meta charset="utf-8"><title>Claude Code · Befehlsreferenz 2.1.307</title>
 <style>
 @page { size: A4 portrait; margin: 17mm 15mm 15mm; }
 * { box-sizing: border-box; }
@@ -35,16 +35,16 @@ section { break-inside: auto; }
   padding-top: 2mm; }
 </style></head><body>
 
-<div class="kopfzeile">Vollständige Referenz · geprüft gegen Version 2.1.306</div>
+<div class="kopfzeile">Vollständige Referenz · geprüft gegen Version 2.1.307</div>
 <h1>Claude Code<br>Befehlsreferenz</h1>
 <p class="lead">Alle Terminal-Befehle, alle Optionen und alle Slash-Befehle innerhalb einer Sitzung — mit einer Erklärung, was sie tun.</p>
-<p class="meta">Zusammengestellt von Christians virtuellem Server · 21.10.2026 · Aktualisierung der Fassung vom 19. Oktober 2026 (2.1.303)</p>
+<p class="meta">Zusammengestellt von Christians virtuellem Server · 22.10.2026 · Aktualisierung der Fassung vom 21. Oktober 2026 (2.1.306)</p>
 
 <div class="kasten">
 <h3>Wie diese Liste entstanden ist</h3>
 
 <p>Terminal-Befehle und Optionen (Teil A und B) sind direkt aus der installierten Fassung
-2.1.306 ausgelesen — <code>claude --help</code> und die Hilfe jedes Unterbefehls.</p>
+2.1.307 ausgelesen — <code>claude --help</code> und die Hilfe jedes Unterbefehls.</p>
 <p>Die Slash-Befehle (Teil C) stammen aus den Befehlsdefinitionen im Programm selbst. Das
 Ausleseverfahren erkennt auch Befehle, deren Beschreibung erst zur Laufzeit gebildet oder
 aus einer Variablen geholt wird, und seit dieser Fassung ebenso solche, deren <i>Name</i>
@@ -58,19 +58,10 @@ gesondert am Ende, damit nichts als verfügbar erscheint, was es nicht ist.</p>
 <div class="kasten">
 <h3>Was sich seit der letzten Fassung geändert hat</h3>
 
-<p>Gegenüber 2.1.303: Ein Slash-Befehl ist weggefallen, die Zahl sinkt von 139 auf 138. <code>/whiteboard</code>
-(gemeinsame Zeichenfläche als Artifact) ist nicht mehr als Befehl angemeldet. Anthropic hat ihn still entfernt, der
-offizielle Changelog erwähnt es nicht. Neue Befehle gibt es keine. Die interne Beschreibung von
-<code>/plugin-authoring</code> wurde umformuliert, ohne dass sich der Zweck ändert.</p>
-<p>In <code>claude --help</code> sind mehrere Optionstexte präziser geworden: <code>--resume</code> findet eine
-Unterhaltung jetzt auch über ihren Namen. <code>--json-schema</code> wirkt nur zusammen mit <code>--print</code>.
-<code>--disable-slash-commands</code> schaltet Skills und Befehle ab. <code>--debug</code> zeigt neue Filterbeispiele
-(<code>--debug=hooks,mcp</code>, <code>--debug='!hooks,!mcp'</code>). <code>--system-prompt-snapshot</code> ist
-unter <code>--bare</code> außerhalb von Cloud- und Hintergrundsitzungen standardmäßig aus. Bei
-<code>claude update</code> steht jetzt, dass Installationen per Paketmanager über diesen aktualisiert werden.</p>
-<p>Korrektur in eigener Sache: Der Kurztext zu <code>--system-prompt-snapshot</code> behauptete bisher, ein eigener
-<code>--system-prompt</code> schalte die Aufzeichnung ab. Laut Hilfe wird er mit aufgezeichnet. Das ist jetzt
-richtiggestellt.</p>
+<p>Gegenüber 2.1.306: Nullrunde. Inhaltlich hat sich nichts geändert. Die Hilfe von <code>claude --help</code> und die
+Hilfe der Unterbefehle sind zeichengleich. Die Zahl der Slash-Befehle bleibt bei 138, es gibt keine neuen, keine
+weggefallenen und keine, deren Beschreibung sich geändert hat. Bei 42 Befehlen wurden lediglich interne,
+minifizierte Bezeichner getauscht – für den Leser ohne Bedeutung.</p>
 <p>Hinweis zum Auslesen: Der Befehl <code>/shell_expansion</code> existiert, ließ sich aber nicht auslesen und fehlt
 deshalb in dieser Referenz. Das ist ein Ausleseproblem, kein Wegfall.</p>
 
@@ -84,5 +75,5 @@ deshalb in dieser Referenz. Das ist ein Ausleseproblem, kein Wegfall.</p>
 
 <section><h2>Anhang · Angelegt, aber abgeschaltet</h2><p class="unter">Diese Namen existieren im Programm, sind in dieser Fassung aber per Schalter deaktiviert und stehen in einer Sitzung nicht zur Verfügung.</p><div class="z "><div class="l"><code>/loops</code></div><div class="r">Wiederholungen auflisten, anlegen und löschen. <span class="aus">im Programm angelegt, aber abgeschaltet</span></div></div><div class="z "><div class="l"><code>/pause-memory <span class="zus">auch /memory-pause, /toggle-memory</span></code></div><div class="r">Konto-Gedächtnis und lokales Auto-Gedächtnis für diese Sitzung anhalten (erneut aufrufen schaltet beide wieder ein). <span class="aus">im Programm angelegt, aber abgeschaltet</span></div></div><div class="z "><div class="l"><code>/version</code></div><div class="r">Version dieser Sitzung anzeigen. <span class="aus">im Programm angelegt, aber abgeschaltet</span></div></div><div class="z "><div class="l"><code>/wellbeing <span class="zus">auch /breaks, /break-reminder, /downtime</span></code></div><div class="r">Pausenerinnerungen und Ruhezeiten einstellen. <span class="aus">im Programm angelegt, aber abgeschaltet</span></div></div></section>
 
-<div class="fuss">Claude Code 2.1.306 · 66 Optionen · 134 verfügbare Slash-Befehle · 4 abgeschaltet · Stand 21.10.2026</div>
+<div class="fuss">Claude Code 2.1.307 · 66 Optionen · 134 verfügbare Slash-Befehle · 4 abgeschaltet · Stand 22.10.2026</div>
 </body></html>
