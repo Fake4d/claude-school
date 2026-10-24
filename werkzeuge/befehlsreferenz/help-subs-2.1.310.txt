@@ -276,7 +276,7 @@ Usage: claude stop <id>
   Stop a background session. Its conversation is kept; resume it later with `claude attach <id>`.
 
 ########## ultrareview ##########
-Usage: claude ultrareview [options] [target]
+Usage: claude ultrareview [target] [options]
 
 Run a cloud-hosted multi-agent code review of the current branch (or a PR number
 / base branch) and print the findings
@@ -292,6 +292,11 @@ Options:
                        targets only; one plain comment, not a review)
   --timeout <minutes>  Maximum minutes to wait for the review to finish
                        (default: 45)
+  --trust-workspace    Trust the current folder for this run only, without
+                       asking (for scripts and CI). Takes no value: put a PR
+                       number or base branch before it. Use it only on folders
+                       you trust: the folder's git configuration and Claude Code
+                       project settings can run programs
 
 ########## update ##########
 Usage: claude update|upgrade [options]

@@ -507,9 +507,10 @@ befehle = {}
 # Tagesmeldung auftauchen statt lautlos zu verschwinden.
 VERWORFEN = []
 # Kein Slash-Befehl, sondern ein zufaellig passendes Objekt (`files_with_matches`
-# ist ein Grep-Parameter). Bekannte Fehltreffer werden nicht gemeldet, sonst
+# ist ein Grep-Parameter, `shell_expansion` seit 2.1.307 ein Prueftyp der
+# Shell-Sicherheitspruefung). Bekannte Fehltreffer werden nicht gemeldet, sonst
 # gewoehnt man sich an die Meldung und liest sie nicht mehr.
-VERWORFEN_FEHLTREFFER = {"files_with_matches"}
+VERWORFEN_FEHLTREFFER = {"files_with_matches", "shell_expansion"}
 # Echte Befehle, deren Bauform der Auslesecode noch nicht beherrscht. Bekannt und
 # offen - sie werden gemeldet, aber als Altlast, nicht als Neuigkeit. Wer einen
 # davon auslesbar macht, nimmt ihn hier heraus. Seit 05.09.2026 leer: die vier

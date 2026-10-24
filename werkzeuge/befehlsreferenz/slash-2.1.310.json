@@ -6,7 +6,7 @@
   "variabel": false,
   "hint": "<path>",
   "aliases": [],
-  "enabled": "_e()&&_si()",
+  "enabled": "ye()&&Mfi()",
   "verfuegbar": true
  },
  {
@@ -16,7 +16,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "fT()",
+  "enabled": "UT()",
   "verfuegbar": true
  },
  {
@@ -70,23 +70,13 @@
   "verfuegbar": true
  },
  {
-  "name": "artifact-pr-review",
-  "typ": "registriert",
-  "desc": "Create a PR review artifact - a structured review briefing for a GitHub pull request (synthesis title and bottom line, a recommendation, reviewer judgment calls, a visual explainer, signals, and blind spots), published as a shareable page. Use when the user asks to review a PR as an artifact, publish a PR review page, or share a review briefing. NOT a narrative walkthrough. Only for CREATING a new artifact; a published composed review page is updated ONLY through the acting loop's republish - never by editing its HTML directly.",
-  "variabel": true,
-  "hint": "[pr number or url]",
-  "aliases": [],
-  "enabled": "true",
-  "verfuegbar": true
- },
- {
   "name": "artifacts",
   "typ": "local-jsx",
   "desc": "Browse your published and shared artifacts",
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "CN()&&pu()===null",
+  "enabled": "oR()&&Zc()===null",
   "verfuegbar": true
  },
  {
@@ -96,7 +86,7 @@
   "variabel": false,
   "hint": "[--request-id <uuid>] (--wizard posture=\\u2026 scope=\\u2026 depth=\\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
   "aliases": [],
-  "enabled": "g4e()&&_e()",
+  "enabled": "K6e()&&ye()",
   "verfuegbar": true
  },
  {
@@ -106,7 +96,7 @@
   "variabel": false,
   "hint": "[auto|<tokens>]",
   "aliases": [],
-  "enabled": "!_e()",
+  "enabled": "!ye()",
   "verfuegbar": true
  },
  {
@@ -116,7 +106,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "P9t()&&!_e()",
+  "enabled": "E7t()&&!ye()",
   "verfuegbar": true
  },
  {
@@ -158,7 +148,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "a().enable_slash_command",
+  "enabled": "i().enable_slash_command",
   "verfuegbar": true
  },
  {
@@ -190,7 +180,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!_e()&&_C()",
+  "enabled": "!ye()&&GC()",
   "verfuegbar": true
  },
  {
@@ -200,7 +190,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "vt()&&!Fne()&&aVn()!==null",
+  "enabled": "Et()&&!Ere()&&NYn()!==null",
   "verfuegbar": true
  },
  {
@@ -230,7 +220,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!e&&(XEe()||Gt())",
+  "enabled": "!e&&(STe()||Ht())",
   "verfuegbar": true
  },
  {
@@ -253,7 +243,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Xfn()&&!a.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
+  "enabled": "Whn()&&!i.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
   "verfuegbar": true
  },
  {
@@ -285,7 +275,7 @@
   "variabel": false,
   "hint": "[guidance]",
   "aliases": [],
-  "enabled": "ozr()",
+  "enabled": "Fqr()",
   "verfuegbar": true
  },
  {
@@ -305,7 +295,7 @@
   "variabel": false,
   "hint": "<optional custom summarization instructions>",
   "aliases": [],
-  "enabled": "!$e(process.env.DISABLE_COMPACT)",
+  "enabled": "!Ne(process.env.DISABLE_COMPACT)",
   "verfuegbar": true
  },
  {
@@ -327,7 +317,7 @@
   "variabel": false,
   "hint": "[all]",
   "aliases": [],
-  "enabled": "!_e()&&!z9t()",
+  "enabled": "!ye()&&!H7t()",
   "verfuegbar": true
  },
  {
@@ -347,7 +337,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Ty()||az()",
+  "enabled": "Uy()||cW()",
   "verfuegbar": true
  },
  {
@@ -397,7 +387,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "GB()",
+  "enabled": "$1()",
   "verfuegbar": true
  },
  {
@@ -407,7 +397,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "GB()",
+  "enabled": "$1()",
   "verfuegbar": true
  },
  {
@@ -417,7 +407,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "GB()",
+  "enabled": "$1()",
   "verfuegbar": true
  },
  {
@@ -449,7 +439,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "!Fzn()",
+  "enabled": "!wqn()",
   "verfuegbar": true
  },
  {
@@ -461,7 +451,7 @@
   "aliases": [
    "checkup"
   ],
-  "enabled": "!a.DISABLE_DOCTOR_COMMAND",
+  "enabled": "!i.DISABLE_DOCTOR_COMMAND",
   "verfuegbar": true
  },
  {
@@ -493,7 +483,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Ty()||az()",
+  "enabled": "Uy()||cW()",
   "verfuegbar": true
  },
  {
@@ -513,7 +503,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "UC()&&!_e()",
+  "enabled": "cR()&&!ye()",
   "verfuegbar": true
  },
  {
@@ -553,7 +543,7 @@
   "variabel": false,
   "hint": "[on|off]",
   "aliases": [],
-  "enabled": "_e()",
+  "enabled": "ye()",
   "verfuegbar": true
  },
  {
@@ -563,7 +553,7 @@
   "variabel": false,
   "hint": "<directive>",
   "aliases": [],
-  "enabled": "!Ca()",
+  "enabled": "!Pa()",
   "verfuegbar": true
  },
  {
@@ -663,7 +653,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!a.DISABLE_INSTALL_GITHUB_APP_COMMAND",
+  "enabled": "!i.DISABLE_INSTALL_GITHUB_APP_COMMAND",
   "verfuegbar": true
  },
  {
@@ -683,7 +673,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "HJ()",
+  "enabled": "xQ()",
   "verfuegbar": true
  },
  {
@@ -693,7 +683,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "vt()&&(Eme()||ste())",
+  "enabled": "Et()&&(Uge()||mne())",
   "verfuegbar": true
  },
  {
@@ -705,7 +695,7 @@
   "aliases": [
    "peers"
   ],
-  "enabled": "ma()",
+  "enabled": "ha()",
   "verfuegbar": true
  },
  {
@@ -715,7 +705,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "{let e=Zn();return!a.DISABLE_LOGIN_COMMAND&&(e===null||e.sessionId!==void 0)",
+  "enabled": "{let e=tr();return!i.DISABLE_LOGIN_COMMAND&&(e===null||e.sessionId!==void 0)",
   "verfuegbar": true
  },
  {
@@ -725,7 +715,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!a.DISABLE_LOGOUT_COMMAND",
+  "enabled": "!i.DISABLE_LOGOUT_COMMAND",
   "verfuegbar": true
  },
  {
@@ -757,7 +747,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "vt()&&(lO()||T_t())",
+  "enabled": "Et()&&(UO()||cbt())",
   "verfuegbar": true
  },
  {
@@ -787,7 +777,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Rf()&&T0o()",
+  "enabled": "jf()&&ZBo()",
   "verfuegbar": true
  },
  {
@@ -820,7 +810,7 @@
   "variabel": false,
   "hint": "[style]",
   "aliases": [],
-  "enabled": "_e()||!Qve()||G9t()",
+  "enabled": "ye()||!kke()||B7t()",
   "verfuegbar": true
  },
  {
@@ -908,7 +898,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "$8()",
+  "enabled": "O$()",
   "verfuegbar": true
  },
  {
@@ -948,7 +938,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "vt()||!1",
+  "enabled": "Et()||!1",
   "verfuegbar": true
  },
  {
@@ -1010,7 +1000,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "vt()||KWt()",
+  "enabled": "Et()||SKt()",
   "verfuegbar": true
  },
  {
@@ -1111,7 +1101,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "{if(!Bl())return!1;let e=ru();return!(e?Iue.includes(e.terminal??\"\"):dk.isJetBrainsIdeTerminal())",
+  "enabled": "{if(!Zl())return!1;let e=ku();return!(e?Xfe.includes(e.terminal??\"\"):BT.isJetBrainsIdeTerminal())",
   "verfuegbar": true
  },
  {
@@ -1123,7 +1113,7 @@
   "aliases": [
    "remote"
   ],
-  "enabled": "On()",
+  "enabled": "Pn()",
   "verfuegbar": true
  },
  {
@@ -1133,7 +1123,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "cre(\"bedrock\")===void 0",
+  "enabled": "Eoe(\"bedrock\")===void 0",
   "verfuegbar": true
  },
  {
@@ -1145,7 +1135,7 @@
   "aliases": [
    "setup-cowork"
   ],
-  "enabled": "Ty()||az()",
+  "enabled": "Uy()||cW()",
   "verfuegbar": true
  },
  {
@@ -1155,7 +1145,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "cre(\"vertex\")===void 0",
+  "enabled": "Eoe(\"vertex\")===void 0",
   "verfuegbar": true
  },
  {
@@ -1225,7 +1215,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "$t()||zmt()!==null",
+  "enabled": "Ut()||xyt()!==null",
   "verfuegbar": true
  },
  {
@@ -1235,7 +1225,7 @@
   "variabel": false,
   "hint": "<task>",
   "aliases": [],
-  "enabled": "!Ca()",
+  "enabled": "!Pa()",
   "verfuegbar": true
  },
  {
@@ -1269,7 +1259,7 @@
   "aliases": [
    "tp"
   ],
-  "enabled": "vt()||KWt()",
+  "enabled": "Et()||SKt()",
   "verfuegbar": true
  },
  {
@@ -1309,7 +1299,7 @@
   "variabel": false,
   "hint": "<prompt>",
   "aliases": [],
-  "enabled": "qq()",
+  "enabled": "X4()",
   "verfuegbar": true
  },
  {
@@ -1319,7 +1309,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "oN()",
+  "enabled": "t$()",
   "verfuegbar": true
  },
  {
@@ -1342,7 +1332,7 @@
    "cost",
    "stats"
   ],
-  "enabled": "_e()",
+  "enabled": "ye()",
   "verfuegbar": true
  },
  {
@@ -1352,7 +1342,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "UC()&&!_e()",
+  "enabled": "cR()&&!ye()",
   "verfuegbar": true
  },
  {
@@ -1426,7 +1416,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Cm()",
+  "enabled": "jm()",
   "verfuegbar": true
  },
  {
