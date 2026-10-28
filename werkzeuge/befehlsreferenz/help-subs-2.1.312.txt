@@ -239,8 +239,8 @@ Commands:
 ########## purge ##########
 Usage: claude purge [options] [path]
 
-Delete all Claude Code state for a project (transcripts, tasks, file history,
-config entry)
+Delete a project's Claude Code data (transcripts, tasks, file history, and its
+entry in ~/.claude.json) from this computer only
 
 Options:
   --all              Purge state for every project (mutually exclusive with
