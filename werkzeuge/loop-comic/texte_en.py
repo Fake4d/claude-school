@@ -93,8 +93,8 @@ TEXTE = {
     "But if nobody&#8217;s watching &#8211; how am I supposed to trust the&nbsp;loop?",
 "Genau da steht oder fällt Loop Engineering: die Schleife muss ihre eigene Arbeit <b>selbst</b> prüfen können, end&#8209;to&#8209;end.":
     "That&#8217;s exactly where Loop Engineering stands or falls: the loop has to be able to verify its own work <b>itself</b>, end&#8209;to&#8209;end.",
-"Tests laufen lassen, ein zweites Modell gegenlesen &#8211; automatisches Code-Review und Sicherheits-Review &#8211; und erst danach den Vorschlag als Pull Request&nbsp;anbieten.":
-    "Run the tests, have a second model review it &#8211; automated code review and security review &#8211; and only then offer the change as a pull&nbsp;request.",
+"Tests laufen lassen, ein zweites Modell gegenlesen &#8211; automatisches Code-Review und Sicherheits-Review &#8211; und erst danach den Vorschlag als Pull Request&nbsp;anbieten. Wie geprüft wird, hältst du in eigenen Prüf-Skills&nbsp;fest.":
+    "Run the tests, have a second model review it &#8211; automated code review and security review &#8211; and only then offer the change as a pull&nbsp;request. You spell out how to check in your own verification&nbsp;skills.",
 "Änderung": "Change",
 "Tests": "Tests",
 "Code-Review": "Code review",
@@ -233,8 +233,8 @@ TEXTE = {
     '/loop &middot; /schedule<span class="chip-sub">the trigger</span>',
 'proaktiv<span class="chip-sub">der Auftrag</span>':
     'proactive<span class="chip-sub">the task</span>',
-"dieses Heft geht die vier Stufen der Reihe nach durch":
-    "this booklet works through the four steps in order",
+"Anthropic nennt sie <i>turn-based &middot; goal-based &middot; time-based &middot; proactive</i> &#8211; dieses Heft geht sie der Reihe nach durch":
+    "Anthropic calls them <i>turn-based &middot; goal-based &middot; time-based &middot; proactive</i> &#8211; this booklet works through them in order",
 
 # --- /goal ---
 "Und diesen Ralph-Loop &#8211; muss ich den selber&nbsp;bauen?":

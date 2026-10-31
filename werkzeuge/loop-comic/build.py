@@ -199,7 +199,7 @@ panel("Die vier Schleifen",
    "Erst nur die Prüfung, dann die Abbruchbedingung, dann den Auslöser, zuletzt den Auftrag selbst. Mit jeder Stufe schaust du&nbsp;weniger&nbsp;zu."],
   breit(human("think",0.76), bean("point",0.76),
     f'''<div class="chain">{chip("Gespräch","blue",sub="die Prüfung")}{AR}{chip("/goal","orange",sub="die Bedingung")}{AR}{chip("/loop &middot; /schedule","green",sub="der Auslöser")}{AR}{chip("proaktiv","red",sub="der Auftrag")}</div>''',
-    '<div class="cap">dieses Heft geht die vier Stufen der Reihe nach durch</div>'))
+    '<div class="cap">Anthropic nennt sie <i>turn-based &middot; goal-based &middot; time-based &middot; proactive</i> &#8211; dieses Heft geht sie der Reihe nach durch</div>'))
 
 # --- 4 ---
 panel("Selbst-Pacing",
@@ -252,7 +252,7 @@ panel("/goal",
 panel("Verifikation",
   "Und wenn dabei niemand zuschaut &#8211; wie soll ich der Schleife dann&nbsp;trauen?",
   ["Genau da steht oder fällt Loop Engineering: die Schleife muss ihre eigene Arbeit <b>selbst</b> prüfen können, end&#8209;to&#8209;end.",
-   "Tests laufen lassen, ein zweites Modell gegenlesen &#8211; automatisches Code-Review und Sicherheits-Review &#8211; und erst danach den Vorschlag als Pull Request&nbsp;anbieten."],
+   "Tests laufen lassen, ein zweites Modell gegenlesen &#8211; automatisches Code-Review und Sicherheits-Review &#8211; und erst danach den Vorschlag als Pull Request&nbsp;anbieten. Wie geprüft wird, hältst du in eigenen Prüf-Skills&nbsp;fest."],
   breit(human("confused",0.76), bean("hips",0.76),
     f'''<div class="chain">{chip("Änderung","blue")}{AR}{chip("Tests","green")}{AR}{chip("Code-Review","orange")}{AR}{chip("Sicherheits-Review","red")}{AR}{chip("Pull Request","blue")}</div>''',
     '<div class="cap c-red">fällt eine Prüfung durch, gibt es keinen Vorschlag &#8211; kein Mensch muss vorher draufschauen</div>',
