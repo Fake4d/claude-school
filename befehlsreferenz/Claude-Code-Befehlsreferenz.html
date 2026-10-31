@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de"><head><meta charset="utf-8"><title>Claude Code · Befehlsreferenz 2.1.312</title>
+<html lang="de"><head><meta charset="utf-8"><title>Claude Code · Befehlsreferenz 2.1.314</title>
 <style>
 @page { size: A4 portrait; margin: 17mm 15mm 15mm; }
 * { box-sizing: border-box; }
@@ -35,16 +35,16 @@ section { break-inside: auto; }
   padding-top: 2mm; }
 </style></head><body>
 
-<div class="kopfzeile">Vollständige Referenz · geprüft gegen Version 2.1.312</div>
+<div class="kopfzeile">Vollständige Referenz · geprüft gegen Version 2.1.314</div>
 <h1>Claude Code<br>Befehlsreferenz</h1>
 <p class="lead">Alle Terminal-Befehle, alle Optionen und alle Slash-Befehle innerhalb einer Sitzung — mit einer Erklärung, was sie tun.</p>
-<p class="meta">Zusammengestellt von Christians virtuellem Server · 28.10.2026 · Aktualisierung der Fassung vom 24. Oktober 2026 (2.1.310)</p>
+<p class="meta">Zusammengestellt von Christians virtuellem Server · 31.10.2026 · Aktualisierung der Fassung vom 28. Oktober 2026 (2.1.312)</p>
 
 <div class="kasten">
 <h3>Wie diese Liste entstanden ist</h3>
 
 <p>Terminal-Befehle und Optionen (Teil A und B) sind direkt aus der installierten Fassung
-2.1.312 ausgelesen — <code>claude --help</code> und die Hilfe jedes Unterbefehls.</p>
+2.1.314 ausgelesen — <code>claude --help</code> und die Hilfe jedes Unterbefehls.</p>
 <p>Die Slash-Befehle (Teil C) stammen aus den Befehlsdefinitionen im Programm selbst. Das
 Ausleseverfahren erkennt auch Befehle, deren Beschreibung erst zur Laufzeit gebildet oder
 aus einer Variablen geholt wird, und seit dieser Fassung ebenso solche, deren <i>Name</i>
@@ -58,13 +58,11 @@ gesondert am Ende, damit nichts als verfügbar erscheint, was es nicht ist.</p>
 <div class="kasten">
 <h3>Was sich seit der letzten Fassung geändert hat</h3>
 
-<p>Gegenüber 2.1.310: <b>Weggefallen sind <code>/artifact-components</code>, <code>/prototype</code> und
-<code>/workshop</code></b>, drei eingebaute Hilfen zum Bauen von Artifact-Seiten (Bausteinkasten, Prototyp aus einer Idee,
-gemeinsamer Entwurf Schritt für Schritt). Sie fehlen seit 2.1.312 ersatzlos und stehen auch nicht mehr im Programm. Der
-Changelog erwähnt das nicht. Die übrigen Artifact-Befehle bleiben.</p>
-<p><b>Genauer beschrieben:</b> <code>claude purge</code> löscht laut Hilfe die Daten eines Projekts nur auf diesem
-Rechner, samt Eintrag in <code>~/.claude.json</code>. <code>/limit-reset</code> und <code>/low-priority</code> sprechen jetzt
-vom 5-Stunden-Limit statt vom Sitzungslimit. Gemeint ist dasselbe. Sonst gibt es keine neuen Befehle oder Optionen.</p>
+<p>Gegenüber 2.1.312: <b>Inhaltlich hat sich nichts geändert.</b> Es gibt keine neuen und keine weggefallenen
+Befehle, Optionen oder Unterbefehle; auch die Beschreibungen der Slash-Befehle sind unverändert.</p>
+<p><b>Einzige Abweichung:</b> In der Hilfe heißt <code>claude auto-mode</code> jetzt „Inspect or reset auto mode
+configuration“ statt „… auto mode classifier configuration“. Gemeint ist dasselbe, nur das Wort „classifier“ ist aus dem
+Hilfetext verschwunden.</p>
 
 </div>
 
@@ -76,5 +74,5 @@ vom 5-Stunden-Limit statt vom Sitzungslimit. Gemeint ist dasselbe. Sonst gibt es
 
 <section><h2>Anhang · Angelegt, aber abgeschaltet</h2><p class="unter">Diese Namen existieren im Programm, sind in dieser Fassung aber per Schalter deaktiviert und stehen in einer Sitzung nicht zur Verfügung.</p><div class="z "><div class="l"><code>/loops</code></div><div class="r">Wiederholungen auflisten, anlegen und löschen. <span class="aus">im Programm angelegt, aber abgeschaltet</span></div></div><div class="z "><div class="l"><code>/pause-memory <span class="zus">auch /memory-pause, /toggle-memory</span></code></div><div class="r">Konto-Gedächtnis und lokales Auto-Gedächtnis für diese Sitzung anhalten (erneut aufrufen schaltet beide wieder ein). <span class="aus">im Programm angelegt, aber abgeschaltet</span></div></div><div class="z "><div class="l"><code>/version</code></div><div class="r">Version dieser Sitzung anzeigen. <span class="aus">im Programm angelegt, aber abgeschaltet</span></div></div><div class="z "><div class="l"><code>/wellbeing <span class="zus">auch /breaks, /break-reminder, /downtime</span></code></div><div class="r">Pausenerinnerungen und Ruhezeiten einstellen. <span class="aus">im Programm angelegt, aber abgeschaltet</span></div></div></section>
 
-<div class="fuss">Claude Code 2.1.312 · 66 Optionen · 130 verfügbare Slash-Befehle · 4 abgeschaltet · Stand 28.10.2026</div>
+<div class="fuss">Claude Code 2.1.314 · 66 Optionen · 130 verfügbare Slash-Befehle · 4 abgeschaltet · Stand 31.10.2026</div>
 </body></html>

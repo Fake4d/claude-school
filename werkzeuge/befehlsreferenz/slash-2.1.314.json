@@ -6,7 +6,7 @@
   "variabel": false,
   "hint": "<path>",
   "aliases": [],
-  "enabled": "be()&&hwi()",
+  "enabled": "_e()&&aIi()",
   "verfuegbar": true
  },
  {
@@ -16,7 +16,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "eA()",
+  "enabled": "_A()",
   "verfuegbar": true
  },
  {
@@ -66,7 +66,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "IH()&&sc()===null",
+  "enabled": "hL()&&gc()===null",
   "verfuegbar": true
  },
  {
@@ -76,7 +76,7 @@
   "variabel": false,
   "hint": "[--request-id <uuid>] (--wizard posture=\\u2026 scope=\\u2026 depth=\\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
   "aliases": [],
-  "enabled": "e6e()&&be()",
+  "enabled": "$6e()&&_e()",
   "verfuegbar": true
  },
  {
@@ -86,7 +86,7 @@
   "variabel": false,
   "hint": "[auto|<tokens>]",
   "aliases": [],
-  "enabled": "!be()",
+  "enabled": "!_e()",
   "verfuegbar": true
  },
  {
@@ -96,7 +96,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "a7t()&&!be()",
+  "enabled": "wJt()&&!_e()",
   "verfuegbar": true
  },
  {
@@ -170,7 +170,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!be()&&yR()",
+  "enabled": "!_e()&&BR()",
   "verfuegbar": true
  },
  {
@@ -180,7 +180,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "kt()&&!Koe()&&R9n()!==null",
+  "enabled": "kt()&&!wie()&&XZn()!==null",
   "verfuegbar": true
  },
  {
@@ -210,7 +210,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!e&&(dCe()||Lt())",
+  "enabled": "!e&&(NRe()||Ot())",
   "verfuegbar": true
  },
  {
@@ -233,7 +233,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "gSn()&&!i.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
+  "enabled": "Nkn()&&!i.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
   "verfuegbar": true
  },
  {
@@ -265,7 +265,7 @@
   "variabel": false,
   "hint": "[guidance]",
   "aliases": [],
-  "enabled": "q8r()",
+  "enabled": "zeo()",
   "verfuegbar": true
  },
  {
@@ -285,7 +285,7 @@
   "variabel": false,
   "hint": "<optional custom summarization instructions>",
   "aliases": [],
-  "enabled": "!Le(process.env.DISABLE_COMPACT)",
+  "enabled": "!He(process.env.DISABLE_COMPACT)",
   "verfuegbar": true
  },
  {
@@ -307,7 +307,7 @@
   "variabel": false,
   "hint": "[all]",
   "aliases": [],
-  "enabled": "!be()&&!v7t()",
+  "enabled": "!_e()&&!WJt()",
   "verfuegbar": true
  },
  {
@@ -327,7 +327,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "o_()||YW()",
+  "enabled": "by()||FG()",
   "verfuegbar": true
  },
  {
@@ -377,7 +377,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Tj()",
+  "enabled": "bW()",
   "verfuegbar": true
  },
  {
@@ -387,7 +387,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Tj()",
+  "enabled": "bW()",
   "verfuegbar": true
  },
  {
@@ -397,7 +397,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Tj()",
+  "enabled": "bW()",
   "verfuegbar": true
  },
  {
@@ -429,7 +429,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "!o3n()",
+  "enabled": "!kQn()",
   "verfuegbar": true
  },
  {
@@ -473,7 +473,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "o_()||YW()",
+  "enabled": "by()||FG()",
   "verfuegbar": true
  },
  {
@@ -493,7 +493,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "UR()&&!be()",
+  "enabled": "ux()&&!_e()",
   "verfuegbar": true
  },
  {
@@ -533,7 +533,7 @@
   "variabel": false,
   "hint": "[on|off]",
   "aliases": [],
-  "enabled": "be()",
+  "enabled": "_e()",
   "verfuegbar": true
  },
  {
@@ -543,7 +543,7 @@
   "variabel": false,
   "hint": "<directive>",
   "aliases": [],
-  "enabled": "!Oa()",
+  "enabled": "!Fa()",
   "verfuegbar": true
  },
  {
@@ -663,7 +663,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "X7()",
+  "enabled": "fee()",
   "verfuegbar": true
  },
  {
@@ -673,7 +673,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "kt()&&(Aye()||Hre())",
+  "enabled": "kt()&&(X_e()||sse())",
   "verfuegbar": true
  },
  {
@@ -685,7 +685,7 @@
   "aliases": [
    "peers"
   ],
-  "enabled": "Sa()",
+  "enabled": "Ia()",
   "verfuegbar": true
  },
  {
@@ -695,7 +695,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "{let e=tr();return!i.DISABLE_LOGIN_COMMAND&&(e===null||e.sessionId!==void 0)",
+  "enabled": "{let e=Xn();return!i.DISABLE_LOGIN_COMMAND&&(e===null||e.sessionId!==void 0)",
   "verfuegbar": true
  },
  {
@@ -737,7 +737,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "kt()&&(SM()||avt())",
+  "enabled": "kt()&&(qM()||ETt())",
   "verfuegbar": true
  },
  {
@@ -767,7 +767,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "np()&&cVo()",
+  "enabled": "hp()&&c9o()",
   "verfuegbar": true
  },
  {
@@ -800,7 +800,7 @@
   "variabel": false,
   "hint": "[style]",
   "aliases": [],
-  "enabled": "be()||!lAe()||T7t()",
+  "enabled": "_e()||!NCe()||BJt()",
   "verfuegbar": true
  },
  {
@@ -888,7 +888,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "iW()",
+  "enabled": "JW()",
   "verfuegbar": true
  },
  {
@@ -980,7 +980,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "kt()||U4t()",
+  "enabled": "kt()||Y3t()",
   "verfuegbar": true
  },
  {
@@ -1081,7 +1081,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "{if(!ad())return!1;let e=$u();return!(e?Lme.includes(e.terminal??\"\"):tA.isJetBrainsIdeTerminal())",
+  "enabled": "{if(!gd())return!1;let e=_u();return!(e?mhe.includes(e.terminal??\"\"):bA.isJetBrainsIdeTerminal())",
   "verfuegbar": true
  },
  {
@@ -1093,7 +1093,7 @@
   "aliases": [
    "remote"
   ],
-  "enabled": "Mn()",
+  "enabled": "In()",
   "verfuegbar": true
  },
  {
@@ -1103,7 +1103,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Kse(\"bedrock\")===void 0",
+  "enabled": "Eae(\"bedrock\")===void 0",
   "verfuegbar": true
  },
  {
@@ -1115,7 +1115,7 @@
   "aliases": [
    "setup-cowork"
   ],
-  "enabled": "o_()||YW()",
+  "enabled": "by()||FG()",
   "verfuegbar": true
  },
  {
@@ -1125,7 +1125,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Kse(\"vertex\")===void 0",
+  "enabled": "Eae(\"vertex\")===void 0",
   "verfuegbar": true
  },
  {
@@ -1195,7 +1195,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "$t()||bSt()!==null",
+  "enabled": "Ft()||Mvt()!==null",
   "verfuegbar": true
  },
  {
@@ -1205,7 +1205,7 @@
   "variabel": false,
   "hint": "<task>",
   "aliases": [],
-  "enabled": "!Oa()",
+  "enabled": "!Fa()",
   "verfuegbar": true
  },
  {
@@ -1239,7 +1239,7 @@
   "aliases": [
    "tp"
   ],
-  "enabled": "kt()||U4t()",
+  "enabled": "kt()||Y3t()",
   "verfuegbar": true
  },
  {
@@ -1279,7 +1279,7 @@
   "variabel": false,
   "hint": "<prompt>",
   "aliases": [],
-  "enabled": "JY()",
+  "enabled": "Y5()",
   "verfuegbar": true
  },
  {
@@ -1289,7 +1289,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "P$()",
+  "enabled": "xF()",
   "verfuegbar": true
  },
  {
@@ -1312,7 +1312,7 @@
    "cost",
    "stats"
   ],
-  "enabled": "be()",
+  "enabled": "_e()",
   "verfuegbar": true
  },
  {
@@ -1322,7 +1322,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "UR()&&!be()",
+  "enabled": "ux()&&!_e()",
   "verfuegbar": true
  },
  {
@@ -1396,7 +1396,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "tg()",
+  "enabled": "pg()",
   "verfuegbar": true
  }
 ]
