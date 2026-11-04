@@ -508,9 +508,10 @@ befehle = {}
 VERWORFEN = []
 # Kein Slash-Befehl, sondern ein zufaellig passendes Objekt (`files_with_matches`
 # ist ein Grep-Parameter, `shell_expansion` seit 2.1.307 ein Prueftyp der
-# Shell-Sicherheitspruefung). Bekannte Fehltreffer werden nicht gemeldet, sonst
+# Shell-Sicherheitspruefung, `text` seit 2.1.317 ein Inhaltsblock-Typ in der
+# Routine, die Memory-Tags aus Text-/Thinking-Bloecken entfernt). Bekannte Fehltreffer werden nicht gemeldet, sonst
 # gewoehnt man sich an die Meldung und liest sie nicht mehr.
-VERWORFEN_FEHLTREFFER = {"files_with_matches", "shell_expansion"}
+VERWORFEN_FEHLTREFFER = {"files_with_matches", "shell_expansion", "text"}
 # Echte Befehle, deren Bauform der Auslesecode noch nicht beherrscht. Bekannt und
 # offen - sie werden gemeldet, aber als Altlast, nicht als Neuigkeit. Wer einen
 # davon auslesbar macht, nimmt ihn hier heraus. Seit 05.09.2026 leer: die vier
