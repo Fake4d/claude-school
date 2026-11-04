@@ -208,6 +208,7 @@ SLASH = {
 "plugin-types": "Write two type files: the plugin API's TypeScript declarations and the inputs of the connected MCP tools, for typing a hooks module against this session.",
 "powerup": "Get to know Claude Code's features in short lessons.",
 "privacy-settings": "View and change the privacy settings.",
+"project": "Set the claude.ai Project for this session's usage reports.",
 "pro-trial-expired": "Your options once the Pro trial has run out.",
 "radio": "Turn on the lo-fi radio.",
 "rate-limit-options": "Show the options once the usage limit is reached.",

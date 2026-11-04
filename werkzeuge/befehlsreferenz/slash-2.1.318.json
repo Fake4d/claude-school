@@ -6,7 +6,7 @@
   "variabel": false,
   "hint": "<path>",
   "aliases": [],
-  "enabled": "he()&&BAr()",
+  "enabled": "ye()&&wDr()",
   "verfuegbar": true
  },
  {
@@ -16,7 +16,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "VA()",
+  "enabled": "WC()",
   "verfuegbar": true
  },
  {
@@ -66,7 +66,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "sC()&&vc()===null",
+  "enabled": "tR()&&Xc()===null",
   "verfuegbar": true
  },
  {
@@ -76,7 +76,7 @@
   "variabel": false,
   "hint": "[--request-id <uuid>] (--wizard posture=\\u2026 scope=\\u2026 depth=\\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
   "aliases": [],
-  "enabled": "c9e()&&he()",
+  "enabled": "XXe()&&ye()",
   "verfuegbar": true
  },
  {
@@ -86,7 +86,7 @@
   "variabel": false,
   "hint": "[auto|<tokens>]",
   "aliases": [],
-  "enabled": "!he()",
+  "enabled": "!ye()",
   "verfuegbar": true
  },
  {
@@ -96,7 +96,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "knn()&&!he()",
+  "enabled": "qrn()&&!ye()",
   "verfuegbar": true
  },
  {
@@ -170,7 +170,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!he()&&px()",
+  "enabled": "!ye()&&hP()",
   "verfuegbar": true
  },
  {
@@ -180,7 +180,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "vt()&&!jae()&&vir()!==null",
+  "enabled": "vt()&&!nce()&&ppr()!==null",
   "verfuegbar": true
  },
  {
@@ -210,7 +210,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!e&&(yPe()||$t())",
+  "enabled": "!e&&(RMe()||$t())",
   "verfuegbar": true
  },
  {
@@ -233,7 +233,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "uPn()&&!i.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
+  "enabled": "$Hn()&&!i.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
   "verfuegbar": true
  },
  {
@@ -265,7 +265,7 @@
   "variabel": false,
   "hint": "[guidance]",
   "aliases": [],
-  "enabled": "ido()",
+  "enabled": "Uyo()",
   "verfuegbar": true
  },
  {
@@ -285,7 +285,7 @@
   "variabel": false,
   "hint": "<optional custom summarization instructions>",
   "aliases": [],
-  "enabled": "!Ie(process.env.DISABLE_COMPACT)",
+  "enabled": "!Oe(process.env.DISABLE_COMPACT)",
   "verfuegbar": true
  },
  {
@@ -307,7 +307,7 @@
   "variabel": false,
   "hint": "[all]",
   "aliases": [],
-  "enabled": "!he()&&!Fnn()",
+  "enabled": "!ye()&&!ksn()",
   "verfuegbar": true
  },
  {
@@ -327,7 +327,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Km()||jv()",
+  "enabled": "Np()||uE()",
   "verfuegbar": true
  },
  {
@@ -377,7 +377,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "EG()",
+  "enabled": "Lz()",
   "verfuegbar": true
  },
  {
@@ -387,7 +387,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "EG()",
+  "enabled": "Lz()",
   "verfuegbar": true
  },
  {
@@ -397,7 +397,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "EG()",
+  "enabled": "Lz()",
   "verfuegbar": true
  },
  {
@@ -429,7 +429,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "!Urr()",
+  "enabled": "!Fcr()",
   "verfuegbar": true
  },
  {
@@ -473,7 +473,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Km()||jv()",
+  "enabled": "Np()||uE()",
   "verfuegbar": true
  },
  {
@@ -493,7 +493,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Bx()&&!he()",
+  "enabled": "zP()&&!ye()",
   "verfuegbar": true
  },
  {
@@ -533,7 +533,7 @@
   "variabel": false,
   "hint": "[on|off]",
   "aliases": [],
-  "enabled": "he()",
+  "enabled": "ye()",
   "verfuegbar": true
  },
  {
@@ -543,7 +543,7 @@
   "variabel": false,
   "hint": "<directive>",
   "aliases": [],
-  "enabled": "!Ka()",
+  "enabled": "!Ga()",
   "verfuegbar": true
  },
  {
@@ -663,7 +663,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "gte()",
+  "enabled": "Sre()",
   "verfuegbar": true
  },
  {
@@ -673,7 +673,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "vt()&&(SSe()||Sie())",
+  "enabled": "vt()&&(nve()||Tle())",
   "verfuegbar": true
  },
  {
@@ -685,7 +685,7 @@
   "aliases": [
    "peers"
   ],
-  "enabled": "Da()",
+  "enabled": "Ja()",
   "verfuegbar": true
  },
  {
@@ -695,7 +695,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "{let e=Xn();return!i.DISABLE_LOGIN_COMMAND&&(e===null||e.sessionId!==void 0)",
+  "enabled": "{let e=tr();return!i.DISABLE_LOGIN_COMMAND&&(e===null||e.sessionId!==void 0)",
   "verfuegbar": true
  },
  {
@@ -737,7 +737,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "vt()&&(BD()||ZRt())",
+  "enabled": "vt()&&(qL()||AMt())",
   "verfuegbar": true
  },
  {
@@ -767,7 +767,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "wp()&&nos()",
+  "enabled": "Jp()&&gms()",
   "verfuegbar": true
  },
  {
@@ -800,7 +800,7 @@
   "variabel": false,
   "hint": "[style]",
   "aliases": [],
-  "enabled": "he()||!wxe()||Nnn()",
+  "enabled": "ye()||!OOe()||gsn()",
   "verfuegbar": true
  },
  {
@@ -888,7 +888,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "nz()",
+  "enabled": "_2()",
   "verfuegbar": true
  },
  {
@@ -899,6 +899,16 @@
   "hint": "",
   "aliases": [],
   "enabled": "true",
+  "verfuegbar": true
+ },
+ {
+  "name": "project",
+  "typ": "local",
+  "desc": "Set the claude.ai Project for this session's usage reports",
+  "variabel": false,
+  "hint": "[Project ID or claude.ai address] [--save] | clear [--save]",
+  "aliases": [],
+  "enabled": "Oas()&&v(wYo",
   "verfuegbar": true
  },
  {
@@ -980,7 +990,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "vt()||YJt()",
+  "enabled": "vt()||ynn()",
   "verfuegbar": true
  },
  {
@@ -1081,7 +1091,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "{if(!kd())return!1;let e=xu();return!(e?Hye.includes(e.terminal??\"\"):qA.isJetBrainsIdeTerminal())",
+  "enabled": "{if(!Nd())return!1;let e=df();return!(e?mSe.includes(e.terminal??\"\"):GC.isJetBrainsIdeTerminal())",
   "verfuegbar": true
  },
  {
@@ -1093,7 +1103,7 @@
   "aliases": [
    "remote"
   ],
-  "enabled": "In()",
+  "enabled": "Pn()",
   "verfuegbar": true
  },
  {
@@ -1103,7 +1113,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Kle(\"bedrock\")===void 0",
+  "enabled": "due(\"bedrock\")===void 0",
   "verfuegbar": true
  },
  {
@@ -1115,7 +1125,7 @@
   "aliases": [
    "setup-cowork"
   ],
-  "enabled": "Km()||jv()",
+  "enabled": "Np()||uE()",
   "verfuegbar": true
  },
  {
@@ -1125,7 +1135,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Kle(\"vertex\")===void 0",
+  "enabled": "due(\"vertex\")===void 0",
   "verfuegbar": true
  },
  {
@@ -1195,7 +1205,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Ut()||eCt()!==null",
+  "enabled": "jt()||hIt()!==null",
   "verfuegbar": true
  },
  {
@@ -1205,7 +1215,7 @@
   "variabel": false,
   "hint": "<task>",
   "aliases": [],
-  "enabled": "!Ka()",
+  "enabled": "!Ga()",
   "verfuegbar": true
  },
  {
@@ -1239,7 +1249,7 @@
   "aliases": [
    "tp"
   ],
-  "enabled": "vt()||YJt()",
+  "enabled": "vt()||ynn()",
   "verfuegbar": true
  },
  {
@@ -1279,7 +1289,7 @@
   "variabel": false,
   "hint": "<prompt>",
   "aliases": [],
-  "enabled": "N6()",
+  "enabled": "y8()",
   "verfuegbar": true
  },
  {
@@ -1289,7 +1299,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "EU()",
+  "enabled": "X$()",
   "verfuegbar": true
  },
  {
@@ -1312,7 +1322,7 @@
    "cost",
    "stats"
   ],
-  "enabled": "he()",
+  "enabled": "ye()",
   "verfuegbar": true
  },
  {
@@ -1322,7 +1332,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Bx()&&!he()",
+  "enabled": "zP()&&!ye()",
   "verfuegbar": true
  },
  {
@@ -1332,7 +1342,7 @@
   "variabel": false,
   "hint": "[use case]",
   "aliases": [],
-  "enabled": "lL()&&!ht()",
+  "enabled": "_D()&&!Tt()",
   "verfuegbar": true
  },
  {
@@ -1406,7 +1416,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Np()",
+  "enabled": "qp()",
   "verfuegbar": true
  }
 ]

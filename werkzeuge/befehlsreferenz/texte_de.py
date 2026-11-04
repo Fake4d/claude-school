@@ -204,6 +204,7 @@ SLASH = {
 "plugin-types": "Zwei Typdateien schreiben: die TypeScript-Deklarationen der Plugin-Schnittstelle und die Eingaben der verbundenen MCP-Werkzeuge, zum Typisieren eines Hook-Moduls gegen diese Sitzung.",
 "powerup": "Funktionen von Claude Code in kurzen Lektionen kennenlernen.",
 "privacy-settings": "Datenschutz-Einstellungen ansehen und ändern.",
+"project": "Das claude.ai-Projekt festlegen, dem die Nutzungsberichte dieser Sitzung zugeordnet werden.",
 "pro-trial-expired": "Auswahl nach Ablauf der Pro-Testphase.",
 "radio": "Lo-Fi-Radio einschalten.",
 "rate-limit-options": "Möglichkeiten anzeigen, wenn das Nutzungslimit erreicht ist.",
