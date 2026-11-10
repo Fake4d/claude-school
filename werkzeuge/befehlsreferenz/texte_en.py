@@ -114,6 +114,7 @@ UNTERBEFEHLE = {
 "plugin list": "List the installed plugins.",
 "plugin marketplace": "Manage marketplaces.",
 "plugin prune|autoremove": "Remove plugins that are no longer needed.",
+"plugin restore-set-aside": "Restore a plugin's set-aside options and secrets.",
 "plugin tag": "Create a git tag for a plugin release, checking the manifests.",
 "plugin test": "Run a mod's tests.",
 "plugin uninstall|remove": "Uninstall a plugin.",

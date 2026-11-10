@@ -109,6 +109,7 @@ UNTERBEFEHLE = {
 "plugin list": "Installierte Plugins auflisten.",
 "plugin marketplace": "Marktplätze verwalten.",
 "plugin prune|autoremove": "Nicht mehr benötigte Plugins entfernen.",
+"plugin restore-set-aside": "Beiseitegelegte Optionen und Geheimnisse eines Plugins wiederherstellen.",
 "plugin tag": "Git-Tag für eine Plugin-Veröffentlichung anlegen und dabei die Manifeste prüfen.",
 "plugin test": "Die Tests eines Mods ausführen.",
 "plugin uninstall|remove": "Plugin deinstallieren.",
