@@ -7,17 +7,13 @@ die andere mit. Reines HTML, wie es im Kasten steht (<p>…</p>).
 """
 
 DE = """
-<p>Gegenüber {vorg}: <b>ein neuer Unterbefehl, sonst nichts.</b> Die Hilfe von <code>claude</code> ist zeichengleich.
-In der Hilfe der Unterbefehle ist unter <code>claude plugin</code> neu: <code>restore-set-aside &lt;plugin&gt;</code>
-(gibt einer Plugin-Kennung die Optionen und Geheimnisse zurück, die beiseitegelegt wurden, als ein von Ihrer Organisation
-vorgegebener Marktplatz eine andere Quelle ersetzt hat).</p>
-<p>Slash-Befehle: keine neuen, keine weggefallenen, und bei keinem hat sich die Beschreibung inhaltlich geändert.</p>
+<p>Gegenüber {vorg}: <b>keine inhaltliche Änderung.</b> Die Hilfe von <code>claude</code> und die Hilfe der Unterbefehle
+sind zeichengleich. Slash-Befehle: keine neuen, keine weggefallenen, und bei keinem hat sich die Beschreibung inhaltlich
+geändert. Nur der Versionsstempel ist neu.</p>
 """
 
 EN = """
-<p>Compared with {vorg}: <b>one new subcommand, nothing else.</b> The help of <code>claude</code> is character-for-character identical.
-In the help of the subcommands, <code>claude plugin</code> gains <code>restore-set-aside &lt;plugin&gt;</code>
-(gives a plugin id back the options and secrets that were set aside when a marketplace your organization declares replaced
-another source).</p>
-<p>Slash commands: none new, none removed, and no command’s description changed in substance.</p>
+<p>Compared with {vorg}: <b>no change in substance.</b> The help of <code>claude</code> and the help of the subcommands
+are character-for-character identical. Slash commands: none new, none removed, and no command’s description changed in
+substance. Only the version stamp is new.</p>
 """

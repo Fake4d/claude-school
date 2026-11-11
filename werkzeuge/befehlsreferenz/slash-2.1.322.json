@@ -6,7 +6,7 @@
   "variabel": false,
   "hint": "<path>",
   "aliases": [],
-  "enabled": "ye()&&fjr()",
+  "enabled": "ye()&&hjr()",
   "verfuegbar": true
  },
  {
@@ -76,7 +76,7 @@
   "variabel": false,
   "hint": "[--request-id <uuid>] (--wizard posture=\\u2026 scope=\\u2026 depth=\\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
   "aliases": [],
-  "enabled": "vnt()&&ye()",
+  "enabled": "Tnt()&&ye()",
   "verfuegbar": true
  },
  {
@@ -96,7 +96,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Xgn()&&!ye()",
+  "enabled": "Qgn()&&!ye()",
   "verfuegbar": true
  },
  {
@@ -200,7 +200,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!e&&(bHe()||Dt())",
+  "enabled": "!e&&(SHe()||Dt())",
   "verfuegbar": true
  },
  {
@@ -223,7 +223,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Cjn()&&!i.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
+  "enabled": "Rjn()&&!i.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
   "verfuegbar": true
  },
  {
@@ -255,7 +255,7 @@
   "variabel": false,
   "hint": "[guidance]",
   "aliases": [],
-  "enabled": "NRo()",
+  "enabled": "FRo()",
   "verfuegbar": true
  },
  {
@@ -297,7 +297,7 @@
   "variabel": false,
   "hint": "[all]",
   "aliases": [],
-  "enabled": "!ye()&&!ghn()",
+  "enabled": "!ye()&&!hhn()",
   "verfuegbar": true
  },
  {
@@ -317,7 +317,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Qp()||J_()||i.CLAUDE_CODE_COWORK_PLUGIN_SKILL&&!use()",
+  "enabled": "Qp()||J_()||i.CLAUDE_CODE_COWORK_PLUGIN_SKILL&&!fse()",
   "verfuegbar": true
  },
  {
@@ -419,7 +419,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "!Xio()",
+  "enabled": "!eao()",
   "verfuegbar": true
  },
  {
@@ -653,7 +653,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Tse()",
+  "enabled": "Ase()",
   "verfuegbar": true
  },
  {
@@ -663,7 +663,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "At()&&(BTe()||Wce())",
+  "enabled": "At()&&(zTe()||zce())",
   "verfuegbar": true
  },
  {
@@ -727,7 +727,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "At()&&(u0()||ANt())",
+  "enabled": "At()&&(u0()||CNt())",
   "verfuegbar": true
  },
  {
@@ -780,7 +780,7 @@
   "variabel": false,
   "hint": "[style]",
   "aliases": [],
-  "enabled": "ye()||!kLe()||mhn()",
+  "enabled": "ye()||!vLe()||ghn()",
   "verfuegbar": true
  },
  {
@@ -888,7 +888,7 @@
   "variabel": false,
   "hint": "[Project ID or claude.ai address] [--save] | clear [--save]",
   "aliases": [],
-  "enabled": "Mks()&&E(gwr",
+  "enabled": "Lks()&&E(cwr",
   "verfuegbar": true
  },
  {
@@ -970,7 +970,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "At()||odn()",
+  "enabled": "At()||sdn()",
   "verfuegbar": true
  },
  {
@@ -1071,7 +1071,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "{if(!Xd())return!1;let e=vf();return!(e?WEe.includes(e.terminal??\"\"):LR.isJetBrainsIdeTerminal())",
+  "enabled": "{if(!Xd())return!1;let e=vf();return!(e?KEe.includes(e.terminal??\"\"):LR.isJetBrainsIdeTerminal())",
   "verfuegbar": true
  },
  {
@@ -1093,7 +1093,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Mpe(\"bedrock\")===void 0",
+  "enabled": "Lpe(\"bedrock\")===void 0",
   "verfuegbar": true
  },
  {
@@ -1115,7 +1115,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Mpe(\"vertex\")===void 0",
+  "enabled": "Lpe(\"vertex\")===void 0",
   "verfuegbar": true
  },
  {
@@ -1185,7 +1185,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "zt()||CHt()!==null",
+  "enabled": "zt()||RHt()!==null",
   "verfuegbar": true
  },
  {
@@ -1229,7 +1229,7 @@
   "aliases": [
    "tp"
   ],
-  "enabled": "At()||odn()",
+  "enabled": "At()||sdn()",
   "verfuegbar": true
  },
  {
