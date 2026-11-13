@@ -295,8 +295,10 @@ Commands:
   respawn [options] [id]                Restart a background session, or all of
                                         them with --all, so it runs the current
                                         Claude Code version
-  rm <id>                               Delete a background session, and its
-                                        worktree when that is safe. Works on
+  rm <id>                               If it's safe, remove a background
+                                        session from the list and delete its
+                                        worktree. Its conversation is kept:
+                                        `claude --resume` lists it. Works on
                                         sessions that have already exited
   setup-token                           Set up a long-lived authentication token
                                         (requires Claude subscription)
