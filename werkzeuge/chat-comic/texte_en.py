@@ -12,6 +12,22 @@ sides — it carries the layout.
 
 TEXTE = {
 
+# --- 13.11.2026: Docs, Slides, Design in jedem Gespräch ---
+"Und wenn ich ein richtiges Dokument oder Folien&nbsp;brauche?":
+    "And what if I need a proper document or&nbsp;slides?",
+"Dann sag es einfach. Claude legt Dir ein <b>Dokument</b>, einen <b>Foliensatz</b> oder einen <b>Entwurf</b> neben das Gespräch – Du änderst daran mit Claude weiter oder direkt selbst.":
+    "Then just say so. Claude puts a <b>document</b>, a <b>slide deck</b> or a <b>design</b> next to the conversation – you keep changing it with Claude or directly yourself.",
+"Dokumente bearbeitet Ihr auch zu mehreren, Folien gibt es als PowerPoint oder PDF. Das geht in jedem Zugang, auch im kostenlosen.":
+    "Documents can be edited by several people at once, slides come as PowerPoint or PDF. It works on every plan, including the free one.",
+'Docs<span class="chip-sub">gemeinsam schreiben</span>': 'Docs<span class="chip-sub">write together</span>',
+'Slides<span class="chip-sub">PowerPoint oder PDF</span>': 'Slides<span class="chip-sub">PowerPoint or PDF</span>',
+'Design<span class="chip-sub">Entwürfe zum Anklicken</span>': 'Design<span class="chip-sub">clickable drafts</span>',
+"Mit Claude ändern": "Change it with Claude",
+"Selbst anfassen": "Edit it yourself",
+"Link zum Teilen": "Link to share",
+"alles liegt im Gespräch – nicht in Deinen Ordnern": "everything stays in the conversation – not in your folders",
+
+
 # --- Titelseite ---
 "Alle reden davon, was Claude alles&nbsp;kann.":
     "Everyone keeps talking about what Claude&nbsp;can do.",
@@ -336,8 +352,8 @@ TEXTE = {
     "Here, in the conversation, everything passes through you: you put in, you take out. On the paid plans, stages 1 and 2 are now one conversation – the difference is whether Claude may get at your folders.",
 "<b>1 · Im Gespräch</b><span>nichts einzurichten – Du lädst hoch, Du lädst herunter</span>":
     "<b>1 · In the conversation</b><span>nothing to set up – you upload, you download</span>",
-"<b>2 · Cowork</b><span>Claude arbeitet direkt in Deinen Ordnern</span>":
-    "<b>2 · Cowork</b><span>Claude works directly in your folders</span>",
+"<b>2 · Arbeiten lassen</b><span>(früher Cowork) in Deinen Ordnern</span>":
+    "<b>2 · Letting it work</b><span>(formerly Cowork) in your folders</span>",
 "<b>3 · Claude Code</b><span>Terminal: Claude arbeitet auf dem ganzen Rechner – und läuft ohne Dich weiter</span>":
     "<b>3 · Claude Code</b><span>terminal: Claude works on the whole machine – and keeps running without you</span>",
 "für Stufe 2 und 3 gibt es je ein eigenes Heft":
@@ -348,7 +364,7 @@ TEXTE = {
 "Eben. Fang mit einer echten Aufgabe an, nicht mit einem Test.":
     "Exactly. Start with a real job, not with a test.",
 """
-<b>Artifacts</b> &#8211; wenn Claude etwas baut statt es zu beschreiben<br>
+<b>Artifacts</b> &#8211; Claude baut: Docs, Folien, Entwürfe<br>
 <b>Dateien</b> &#8211; hineinziehen, und echte Dateien zurückbekommen<br>
 <b>Gespräche</b> &#8211; neues Thema, neues Gespräch<br>
 <b>Gedächtnis</b> &#8211; merkt sich Dinge, Du kannst es abschalten<br>
@@ -360,10 +376,10 @@ TEXTE = {
 <b>Nachprüfen</b> &#8211; überzeugend klingen heißt nicht richtig liegen<br>
 <b>Fremde Inhalte</b> &#8211; werden gelesen, nicht befolgt<br>
 <b>Weiterlernen</b> &#8211; kostenlose Kurse auf academy.claude.com<br>
-<b>Weiter geht&#8217;s</b> &#8211; Cowork für Deine Ordner, Code für den ganzen Rechner
+<b>Weiter geht&#8217;s</b> &#8211; arbeiten lassen in Deinen Ordnern, Code für den ganzen Rechner
 """:
 """
-<b>Artifacts</b> &#8211; when Claude builds something instead of describing it<br>
+<b>Artifacts</b> &#8211; Claude builds: docs, slides, designs<br>
 <b>Files</b> &#8211; drag them in, get real files back<br>
 <b>Conversations</b> &#8211; new topic, new conversation<br>
 <b>Memory</b> &#8211; it remembers things, and you can switch it off<br>
@@ -375,7 +391,7 @@ TEXTE = {
 <b>Checking</b> &#8211; sounding certain is not the same as being right<br>
 <b>Outside content</b> &#8211; it gets read, not obeyed<br>
 <b>Keep learning</b> &#8211; free courses at academy.claude.com<br>
-<b>What&#8217;s next</b> &#8211; Cowork for your folders, Code for the whole machine
+<b>What&#8217;s next</b> &#8211; letting it work in your folders, Code for the whole machine
 """,
 }
 

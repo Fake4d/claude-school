@@ -16,12 +16,12 @@ permanent operation).
 
 | Guide | Length | Who for |
 |---|---|---|
-| [**Claude in conversation as a comic**](chat-comic/chat-comic-en.pdf) | 22 pages | Stage 1 — nothing to install: artifacts, projects, memory, research |
-| [**Claude Cowork as a comic**](cowork-comic/cowork-comic-en.pdf) | 23 pages | Stage 2 — desktop app: Claude works directly in your folders |
+| [**Claude in conversation as a comic**](chat-comic/chat-comic-en.pdf) | 23 pages | Stage 1 — nothing to install: artifacts, docs/slides/designs, projects, memory, research |
+| [**Letting Claude work as a comic**](cowork-comic/cowork-comic-en.pdf) (formerly Cowork) | 23 pages | Stage 2 — Claude works directly in your folders (desktop app) |
 | [**Claude Code as a comic**](claude-code-comic/claude-code-comic-en.pdf) | 34 pages | Stage 3 — terminal: the whole machine, your own tools, runs without you |
 | [**Loop Engineering as a comic**](loop-comic/loop-comic-en.pdf) | 18 pages | Special — bonus issue for stage 3: `/loop`, `/goal` and `/schedule` as one package, up to the proactive loop |
 | [**Command reference**](befehlsreferenz/Claude-Code-Command-Reference.pdf) | 9 pages | Looking things up — every terminal command, option and slash command |
-| [**Your own AI server assistant**](server-setup/AI-Server-Assistant-Edition-3.pdf) | 10 pages | Building it yourself — from an empty rented server to Claude running around the clock |
+| [**Your own AI server assistant**](server-setup/AI-Server-Assistant-Edition-4.pdf) | 10 pages | Building it yourself — from an empty rented server to Claude running around the clock |
 
 The German editions live next to them in the same folders; the
 [German README](README.de.md) lists them.

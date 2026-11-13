@@ -548,16 +548,16 @@ TEXTE = {
 "<b>/design</b> &#8211; erst entwerfen, dann bauen lassen":
     "<b>/design</b> &#8211; draft it first, then have it built",
 # --- Cowork und die drei Stufen (neu gefasst 18.08.2026) ---
-"Dieselbe Technik wie Claude Code – nur in der ganz normalen Claude-App statt im Terminal, ohne Einrichten.":
-    "The same machinery as Claude Code – only in the ordinary Claude app instead of the terminal, with nothing to set up.",
+"Dieselbe Technik wie Claude Code – nur in der ganz normalen Claude-App, ohne Einrichten. Heute steckt es in jedem Gespräch.":
+    "The same machinery as Claude Code – only in the ordinary Claude app, with nothing to set up. Today it is part of every conversation.",
 "Die Frage ist immer, wie weit Claude an Deine Sachen darf. Cowork bekommt einzelne Ordner, läuft abgeschottet und braucht keine Einrichtung.":
     "The question is always how far Claude may go into your things. Cowork gets individual folders, runs sealed off and needs no setting up.",
 "Claude Code bekommt den ganzen Rechner. Nur hier kannst Du ihm eigene Werkzeuge beibringen – und nur hier läuft er weiter, wenn Du weg bist.":
     "Claude Code gets the whole machine. Only here can you teach it tools of your own – and only here does it keep going when you are away.",
 "<b>1 · Im Gespräch</b><span>nichts einzurichten – Du lädst hoch, Du lädst herunter</span>":
     "<b>1 · In the conversation</b><span>nothing to set up – you upload, you download</span>",
-"<b>2 · Cowork</b><span>Desktop-App: Claude arbeitet in Deinen Ordnern</span>":
-    "<b>2 · Cowork</b><span>desktop app: Claude works in your folders</span>",
+"<b>2 · Arbeiten lassen</b><span>früher Cowork: Claude arbeitet in Deinen Ordnern</span>":
+    "<b>2 · Letting it work</b><span>formerly Cowork: Claude works in your folders</span>",
 "<b>3 · Claude Code</b><span>hier bist Du: der ganze Rechner, eigene Werkzeuge, läuft ohne Dich</span>":
     "<b>3 · Claude Code</b><span>you are here: the whole machine, your own tools, runs without you</span>",
 "erledigen lassen → Cowork · Werkzeuge bauen, die von allein laufen → Code":

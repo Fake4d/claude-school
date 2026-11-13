@@ -246,6 +246,17 @@ panel("Echte Dateien",
     f'''<div class="mini-row">{chip("Du lädst sie herunter","blue")}</div>''',
     '<div class="cap c-red">an Deine eigenen Ordner kommt Claude hier noch nicht</div>'))
 
+# --- 6b Docs, Folien, Entwuerfe (13.11.2026: seit 16.09.2026 in jedem Gespraech) ---
+panel("Docs, Folien, Entwürfe",
+  "Und wenn ich ein richtiges Dokument oder Folien&nbsp;brauche?",
+  ["Dann sag es einfach. Claude legt Dir ein <b>Dokument</b>, einen <b>Foliensatz</b> oder einen <b>Entwurf</b> neben das Gespräch – Du änderst daran mit Claude weiter oder direkt selbst.",
+   "Dokumente bearbeitet Ihr auch zu mehreren, Folien gibt es als PowerPoint oder PDF. Das geht in jedem Zugang, auch im kostenlosen."],
+  breit(human("point",0.78), bean("right",0.78),
+    f'''<div class="mini-row">{chip("Docs","blue",sub="gemeinsam schreiben")}{chip("Slides","orange",sub="PowerPoint oder PDF")}{chip("Design","green",sub="Entwürfe zum Anklicken")}</div>''',
+    AD,
+    f'''<div class="mini-row">{chip("Mit Claude ändern","blue")}{chip("Selbst anfassen","green")}{chip("Link zum Teilen","orange")}</div>''',
+    '<div class="cap">alles liegt im Gespräch – nicht in Deinen Ordnern</div>'))
+
 # --- 7 Unterhaltungen ---
 panel("Unterhaltungen",
   "Soll ich alles in ein Gespräch schreiben?",
@@ -415,7 +426,7 @@ panel("Die drei Stufen",
   breit(human("point",0.78), bean("right",0.78),
     f'''<div class="ladder">
 <div class="rung c-green"><b>1 · Im Gespräch</b><span>nichts einzurichten – Du lädst hoch, Du lädst herunter</span></div>
-<div class="rung c-blue"><b>2 · Cowork</b><span>Claude arbeitet direkt in Deinen Ordnern</span></div>
+<div class="rung c-blue"><b>2 · Arbeiten lassen</b><span>(früher Cowork) in Deinen Ordnern</span></div>
 <div class="rung c-orange"><b>3 · Claude Code</b><span>Terminal: Claude arbeitet auf dem ganzen Rechner – und läuft ohne Dich weiter</span></div>
 </div>''',
     '<div class="cap c-blue">für Stufe 2 und 3 gibt es je ein eigenes Heft</div>'))
@@ -427,7 +438,7 @@ panel("Fazit",
   f'''<div class="finale">
 <div class="fin-figs">{human("happy",0.9)}<div class="bulb">💡</div>{bean("thumbs",0.9)}</div>
 <div class="fin-box"><div class="fin-line">
-<b>Artifacts</b> &#8211; wenn Claude etwas baut statt es zu beschreiben<br>
+<b>Artifacts</b> &#8211; Claude baut: Docs, Folien, Entwürfe<br>
 <b>Dateien</b> &#8211; hineinziehen, und echte Dateien zurückbekommen<br>
 <b>Gespräche</b> &#8211; neues Thema, neues Gespräch<br>
 <b>Gedächtnis</b> &#8211; merkt sich Dinge, Du kannst es abschalten<br>
@@ -439,7 +450,7 @@ panel("Fazit",
 <b>Nachprüfen</b> &#8211; überzeugend klingen heißt nicht richtig liegen<br>
 <b>Fremde Inhalte</b> &#8211; werden gelesen, nicht befolgt<br>
 <b>Weiterlernen</b> &#8211; kostenlose Kurse auf academy.claude.com<br>
-<b>Weiter geht&#8217;s</b> &#8211; Cowork für Deine Ordner, Code für den ganzen Rechner
+<b>Weiter geht&#8217;s</b> &#8211; arbeiten lassen in Deinen Ordnern, Code für den ganzen Rechner
 </div></div></div>''')
 # ------------------------------------------------------------------- Bau ----
 

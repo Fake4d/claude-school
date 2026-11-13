@@ -34,9 +34,9 @@ if fehlt:
 # Was ausserhalb der Textelemente steht: Sprachkennung, Titel, Seitenfusszeile.
 ersetzungen = [
     ('<html lang="de">', '<html lang="en">'),
-    ("<title>Dein eigener KI-Server-Assistent — Ausgabe 3</title>",
+    ("<title>Dein eigener KI-Server-Assistent — Ausgabe 4</title>",
      f"<title>{texte_en.TITEL}</title>"),
-    ('content: "Dein eigener KI-Server-Assistent · Ausgabe 3";',
+    ('content: "Dein eigener KI-Server-Assistent · Ausgabe 4";',
      f'content: "{texte_en.FUSS_MITTE}";'),
     ('content: "Seite " counter(page) " / " counter(pages);',
      f"content: {texte_en.FUSS_RECHTS};"),

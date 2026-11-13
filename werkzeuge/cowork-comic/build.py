@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Baut die Claude-Cowork-Comic-Anleitung als HTML (danach -> PDF).
+"""Baut die Comic-Anleitung „Claude arbeiten lassen“ (früher Cowork) als HTML (danach -> PDF).
 
 Erzeugt beide Sprachfassungen in einem Lauf: die deutsche direkt, die englische,
 indem die fertige Seite durch i18n.uebersetze() mit dem Wörterbuch aus
@@ -171,13 +171,13 @@ panel(
 
 # --- Was ist Cowork ---
 panel("Was ist Cowork",
-  "Also – was ist Cowork überhaupt?",
+  "Also – was heißt „Claude arbeiten lassen“?",
   ["Dieselbe Technik, die hinter Claude Code steckt – aber Du bedienst sie in der ganz normalen Claude-App. Kein Terminal, nichts einzurichten.",
-   "Sie ist für Büroarbeit gedacht: recherchieren, auswerten, Dokumente erstellen. Alles, was aus mehreren Schritten besteht."],
+   "Früher hieß das <b>Cowork</b> und war ein eigener Modus. Heute entscheidet Claude im Gespräch selbst, ob es nur antwortet oder losarbeitet: recherchieren, auswerten, Dokumente bauen."],
   breit(human("think",0.78), bean("right",0.78),
     f'''<div class="mini-row">{chip("Recherche","blue")}{chip("Auswertung","green")}{chip("Dokumente","orange")}{chip("Aufräumen","red")}</div>''',
     AD,
-    f'''{chip("COWORK","green",big=True)}''',
+    f'''{chip("CLAUDE ARBEITET","green",big=True)}''',
     AD,
     '<div class="cap c-green">dieselbe Technik wie Claude Code – nur ohne Terminal</div>'))
 
@@ -185,25 +185,24 @@ panel("Was ist Cowork",
 panel("Chat oder Cowork",
   "Aber ich kann Claude doch jetzt schon Fragen&nbsp;stellen?",
   ["Klar – und im Chat bekommst Du sogar fertige Dateien. Gebaut werden sie aber in einem abgeschotteten Bereich, und Du lädst sie Dir herunter.",
-   "In Cowork arbeitet Claude <b>direkt in Deinen Ordnern</b>: liest, was dort liegt, und legt das Ergebnis daneben. Kein Hochladen, kein Herunterladen."],
+   "Lässt Du Claude arbeiten, geht das auch <b>direkt in Deinen Ordnern</b>: Es liest, was dort liegt, und legt das Ergebnis daneben. Kein Hochladen, kein Herunterladen."],
   f'''<div class="stage-wide">
-<div class="half"><div class="half-title">Im Chat</div>
+<div class="half"><div class="half-title">Nur im Gespräch</div>
 {chip("Du lädst hoch","blue")}{AD}{chip("Claude baut","blue")}{AD}{chip("Du lädst herunter","blue")}
 <div class="cap">alles geht durch Dich hindurch</div></div>
 <div class="divider"></div>
-<div class="half"><div class="half-title t-green">In Cowork</div>
+<div class="half"><div class="half-title t-green">In Deinen Ordnern</div>
 {chip("Dein Ordner","green")}{AD}{chip("Claude arbeitet darin","green")}{AD}{doc("Ergebnis liegt da","green",3)}
 <div class="cap c-green">nichts hoch, nichts herunter</div></div></div>''')
 
 # --- Erste Schritte ---
 panel("Erste Schritte",
   "Wie fange ich an?",
-  ["Vier Schritte. Im Eingabefeld schaltest Du von <b>Chat</b> auf <b>Cowork</b> um. Fehlt der Umschalter, entfällt das – dann kann es jedes Gespräch.",
+  ["Vier Schritte. Einen Umschalter brauchst Du meist nicht mehr – Du tippst einfach los. Nur manche Firmenkonten haben ihn noch: dann auf <b>Cowork</b> stellen.",
    "Dann beschreibst Du, was herauskommen soll. Claude zeigt Dir seinen Plan. Du schaust drüber, und dann läuft es los."],
   breit(human("point",0.78), bean("right",0.78),
-    f'''<div class="tabs"><div class="tab">Chat</div><div class="tab on">Cowork</div></div>''',
     f'''<div class="ladder">
-<div class="rung c-blue"><b>1 · Umschalten</b><span>von Chat auf Cowork, falls noch da</span></div>
+<div class="rung c-blue"><b>1 · Lostippen</b><span>im ganz normalen Gespräch – kein Modus nötig</span></div>
 <div class="rung c-green"><b>2 · Beschreiben</b><span>„Sortiere meinen Download-Ordner“</span></div>
 <div class="rung c-orange"><b>3 · Plan ansehen</b><span>Claude zeigt, was es vorhat</span></div>
 <div class="rung c-red"><b>4 · Laufen lassen</b><span>zuschauen – oder später wiederkommen</span></div>
@@ -312,7 +311,7 @@ panel("Verbindungen",
   breit(human("point",0.78), bean("right",0.78),
     f'''<div class="mini-row">{chip("Google Drive","blue")}{chip("Slack","green")}{chip("weitere Dienste","orange")}</div>''',
     AD,
-    f'''{chip("COWORK","green",big=True)}''',
+    f'''{chip("CLAUDE ARBEITET","green",big=True)}''',
     AD,
     f'''{doc("Dein fertiges Ergebnis","blue",2)}'''))
 
@@ -408,12 +407,12 @@ panel("Sicher arbeiten",
 # --- Cowork oder Code ---
 panel("Die drei Stufen",
   "Und wann nehme ich das andere – Claude Code?",
-  ["Das hängt daran, wie weit Du Claude an Deine Sachen lässt. Cowork ist die mittlere Stufe: Deine Ordner, sonst nichts.",
+  ["Das hängt daran, wie weit Du Claude an Deine Sachen lässt. Arbeiten lassen ist die mittlere Stufe: Deine Ordner, sonst nichts.",
    "Claude Code darf auf den ganzen Rechner. Dafür kannst Du ihm eigene Werkzeuge beibringen – und es läuft auch weiter, wenn Du nicht dabei bist."],
   breit(human("think",0.78), bean("point",0.78),
     f'''<div class="ladder">
 <div class="rung c-blue"><b>1 · Im Gespräch</b><span>nichts einzurichten – Du lädst hoch, Du lädst herunter</span></div>
-<div class="rung c-green"><b>2 · Cowork</b><span>hier bist Du: Claude arbeitet in Deinen Ordnern</span></div>
+<div class="rung c-green"><b>2 · Arbeiten lassen</b><span>hier bist Du: Claude arbeitet in Deinen Ordnern</span></div>
 <div class="rung c-orange"><b>3 · Claude Code</b><span>Terminal: der ganze Rechner, eigene Werkzeuge, läuft ohne Dich</span></div>
 </div>''',
     '<div class="cap c-blue">für Stufe 1 und 3 gibt es je ein eigenes Heft</div>'))
@@ -421,10 +420,9 @@ panel("Die drei Stufen",
 # --- Wo bekomme ich es ---
 panel("Wo es das gibt",
   "Und wo finde ich das jetzt?",
-  ["In der Claude-App: am Rechner für Windows und Mac (Linux als Beta), im Browser und am Handy. In den bezahlten Zugängen ist Cowork inzwischen Teil jedes Gesprächs – ohne Umschalter.",
-   "Es gehört zu den bezahlten Zugängen. Wenn Du schon einen hast, ist es einfach da."],
+  ["In der Claude-App: am Rechner für Windows und Mac (Linux als Beta), im Browser und am Handy – in jedem Gespräch, ohne Umschalter. An Deine Ordner kommt Claude aber nur über die Desktop-App.",
+   "Es gehört zu den bezahlten Zugängen. In Firmenkonten schaltet es der Admin frei – bis dahin heißt es dort noch Cowork."],
   breit(human("happy",0.78), bean("thumbs",0.78),
-    f'''<div class="tabs"><div class="tab">Chat</div><div class="tab on">Cowork</div></div>''',
     f'''<div class="mini-row">{chip("Windows","blue")}{chip("Mac","blue")}{chip("Browser","green")}{chip("Handy","orange")}</div>''',
     '<div class="cap">in den bezahlten Zugängen enthalten – Stand November 2026</div>'))
 
@@ -435,7 +433,7 @@ panel("Fazit",
   f'''<div class="finale">
 <div class="fin-figs">{human("happy")}<div class="bulb">&#128161;</div>{bean("thumbs")}</div>
 <div class="fin-box">
-<div class="fin-line"><b>Starten</b> &#8211; auf Cowork umschalten oder einfach lostippen</div>
+<div class="fin-line"><b>Starten</b> &#8211; einfach lostippen, kein Modus nötig</div>
 <div class="fin-line"><b>Beschreiben</b> &#8211; sag, was herauskommen soll, nicht wie</div>
 <div class="fin-line"><b>Plan ansehen</b> &#8211; Claude zeigt erst, was es vorhat</div>
 <div class="fin-line"><b>Ordner freigeben</b> &#8211; nur den, um den es geht</div>
@@ -473,7 +471,7 @@ for p in P:
 
 HTML = f'''<!doctype html>
 <html lang="de"><head><meta charset="utf-8">
-<title>Claude Cowork – die Anleitung</title>
+<title>Claude arbeiten lassen – die Anleitung (früher Cowork)</title>
 <style>
 @font-face {{ font-family:'PH'; src:url(data:font/ttf;base64,{PATRICK}) format('truetype'); }}
 @font-face {{ font-family:'CV'; font-weight:400; src:url(data:font/ttf;base64,{CAVEAT}) format('truetype'); }}
@@ -649,7 +647,7 @@ if "en" in gewuenscht:
             print("   ", repr(f))
         sys.exit(1)
     en = en.replace('<html lang="de">', '<html lang="en">', 1)
-    en = en.replace("<title>Claude Cowork – die Anleitung</title>",
+    en = en.replace("<title>Claude arbeiten lassen – die Anleitung (früher Cowork)</title>",
                     f"<title>{texte_en.TITEL}</title>", 1)
     out = HERE / "cowork-comic-en.html"
     out.write_text(en, encoding="utf-8")

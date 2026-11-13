@@ -22,7 +22,7 @@ selbst ist die Quelle und wird direkt bearbeitet. Sie liegt unter
 `~/claude/server-setup-quelle/anleitung-v3.html` (bis 28.08.2026 `~/claude/florian/` —
 die erste Ausgabe war für einen Bekannten geschrieben, der Ordner trug lange dessen
 Namen; beim Aufräumen umbenannt). Beim Veröffentlichen wird sie in
-`KI-Server-Assistent-Ausgabe-3.*` umbenannt; die Umbenennung erledigt
+`KI-Server-Assistent-Ausgabe-4.*` umbenannt (Ausgabe 4 seit 13.11.2026; die Quelldatei heißt weiter `anleitung-v3.html`); die Umbenennung erledigt
 `zielname_von()` im Veröffentlichungsskript.
 
 **Bei einer neuen Ausgabe** sind es fünf Stellen: `<title>`, die Fußzeile in `@page`,
@@ -116,7 +116,8 @@ dem sie entsteht. Daraus folgt zweierlei.
 
 **Was hier gelernt wird, gehört hinein.** Beispiel: Dass dem Systemdienst
 `--continue` fehlte und er nach jedem Neustart bei null anfing, fiel im Alltag auf —
-in Ausgabe 3 steht es. Wer am Setup etwas verbessert, sollte prüfen, ob die Anleitung
+in Ausgabe 3 steht es. Ebenso Ausgabe 4: Der Mailcheck dieses Servers lief bis 13.11.2026
+mit `python3` und unbeschränktem Lesen — jetzt zeigt Teil 6, wie man den Lauf hart begrenzt. Wer am Setup etwas verbessert, sollte prüfen, ob die Anleitung
 nachzuziehen ist.
 
 **Nichts Persönliches darf hinein.** Vor jeder Veröffentlichung prüfen: echte
@@ -210,7 +211,7 @@ Zwei Dinge, die beim Umbau aufgefallen sind:
 Die englischen Dateinamen sind fest und werden von `zielname_von()` im
 Veröffentlichungsskript vergeben: `Claude-Code-Command-Reference.*`,
 `claude-code-comic-en.*`, `cowork-comic-en.*`, `loop-comic-en.*`,
-`AI-Server-Assistant-Edition-3.*`, `setup-prompt-en.txt`. Auf der Webseite liegen sie **im selben Ordner** wie die
+`AI-Server-Assistant-Edition-4.*`, `setup-prompt-en.txt`. Auf der Webseite liegen sie **im selben Ordner** wie die
 deutschen; die Projektseiten bleiben deutsch und bekommen nur eine Zeile mit dem
 Verweis darauf.
 
@@ -227,7 +228,7 @@ ist: **wie weit lässt Du Claude an Deine Sachen?**
 | Stufe | Heft | Claude arbeitet … |
 |---|---|---|
 | 1 | `chat-comic/` | … im Gespräch. Alles geht durch Dich: hochladen, herunterladen. |
-| 2 | `cowork-comic/` | … in Deinen Ordnern (Desktop-App). |
+| 2 | `cowork-comic/` | … in Deinen Ordnern (Desktop-App). Seit 13.11.2026 heißt das Heft „Claude arbeiten lassen (früher Cowork)“. |
 | 3 | `claude-code-comic/` | … auf dem ganzen Rechner, mit eigenen Werkzeugen, auch ohne Dich. |
 
 Zwei Dinge, die man dabei falsch machen kann und die hier schon geprüft sind:
@@ -240,6 +241,14 @@ Zwei Dinge, die man dabei falsch machen kann und die hier schon geprüft sind:
   Zugriff auf den ganzen Rechner plus zwei Dinge, die es nur dort gibt — Claude eigene
   Werkzeuge beibringen (CLAUDE.md, Skills, MCP, Hooks) und dauerhaft ohne Dich laufen
   lassen.
+
+**Seit 13.11.2026: Chat und Cowork sind eins.** Anthropic hat beides zusammengelegt (Pro/Max/Ultra ab
+16.09.2026, Enterprise GA 23.10., Team GA 12.11.; in Firmenkonten erst, wenn der Admin „Chat and Cowork
+unified“ einschaltet). Die Leiter bleibt trotzdem richtig, weil ihre Achse der **Zugriff** ist, nicht der
+Produktmodus: Ordner gibt es weiterhin nur über die Desktop-App. Heft 2 heißt deshalb „Claude arbeiten
+lassen (früher Cowork)“; Ordnername, Dateinamen und URLs bleiben `cowork-*`, damit keine Links brechen.
+Das Chat-Heft hat dafür eine Seite zu Docs, Slides und Design bekommen (seit 16.09.2026 in jedem Gespräch,
+alle Pläne inkl. Free) – das sind Artifacts und bleiben damit Stufe 1.
 
 Die Faustregel für den Leser: *etwas erledigen lassen* → Cowork. *Werkzeuge bauen, die
 danach von allein laufen* → Code.

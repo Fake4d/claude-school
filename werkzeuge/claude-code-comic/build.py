@@ -441,7 +441,7 @@ panel("Großer Umbau",
 # --- Cowork: was ist das ---
 panel("Cowork",
   "Und was ist dann Cowork?",
-  ["Dieselbe Technik wie Claude Code – nur in der ganz normalen Claude-App statt im Terminal, ohne Einrichten.",
+  ["Dieselbe Technik wie Claude Code – nur in der ganz normalen Claude-App, ohne Einrichten. Heute steckt es in jedem Gespräch.",
    "Du gibst Ordner frei, beschreibst das Ziel, und Claude arbeitet los: Tabellen mit echten Formeln, Präsentationen, fertige Dokumente."],
   breit(human("think",0.78), bean("right",0.78),
     f'''<div class="mini-row">{chip("Deine Ordner","blue")}{chip("Deine Zugänge","blue")}</div>''',
@@ -472,7 +472,7 @@ panel("Die drei Stufen",
   breit(human("think",0.78), bean("point",0.78),
     f'''<div class="ladder">
 <div class="rung c-blue"><b>1 · Im Gespräch</b><span>nichts einzurichten – Du lädst hoch, Du lädst herunter</span></div>
-<div class="rung c-green"><b>2 · Cowork</b><span>Desktop-App: Claude arbeitet in Deinen Ordnern</span></div>
+<div class="rung c-green"><b>2 · Arbeiten lassen</b><span>früher Cowork: Claude arbeitet in Deinen Ordnern</span></div>
 <div class="rung c-orange"><b>3 · Claude Code</b><span>hier bist Du: der ganze Rechner, eigene Werkzeuge, läuft ohne Dich</span></div>
 </div>''',
     '<div class="cap c-blue">erledigen lassen → Cowork · Werkzeuge bauen, die von allein laufen → Code</div>'))
