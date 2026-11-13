@@ -343,12 +343,12 @@ panel("Im Browser",
 # --- Berechtigungen ---
 panel("Berechtigungen",
   "Darf es dann einfach alles machen?",
-  ["Du entscheidest, wie weit die Leine ist. Es gibt drei Stufen, und Cowork fängt bei der vorsichtigsten an: <b>Manuell</b> ist die Voreinstellung.",
+  ["Du entscheidest, wie weit die Leine ist. Es gibt drei Stufen. Bei Pro, Max und Team steht sie anfangs auf <b>Automatisch</b>, bei Enterprise auf <b>Manuell</b>.",
    "Umschalten kannst Du im Chatfenster. Die unterste Stufe schaltet <i>alle</i> Kontrollen ab – die würde ich nur nehmen, wenn Du genau weißt, warum."],
   breit(human("confused",0.78), bean("hips",0.78),
     f'''<div class="ladder">
-<div class="rung c-blue"><b>Manuell</b><span>fragt vor jedem Schritt, Voreinstellung</span></div>
-<div class="rung c-green"><b>Automatisch</b><span>arbeitet durch, prüft sich dabei selbst auf Sicherheit</span></div>
+<div class="rung c-blue"><b>Manuell</b><span>fragt vor jedem Schritt – Voreinstellung bei Enterprise</span></div>
+<div class="rung c-green"><b>Automatisch</b><span>arbeitet durch, prüft sich selbst auf Sicherheit – Voreinstellung bei Pro, Max, Team</span></div>
 <div class="rung c-red"><b>Ohne Rückfrage</b><span>fragt nie, nichts prüft mit – nur mit gutem Grund</span></div>
 </div>''',
     '<div class="cap c-green">Endgültig löschen darf Claude nie ohne Dein ausdrückliches Ja – in jeder Stufe</div>'))
@@ -421,12 +421,12 @@ panel("Die drei Stufen",
 # --- Wo bekomme ich es ---
 panel("Wo es das gibt",
   "Und wo finde ich das jetzt?",
-  ["In der Claude-App: am Rechner für Windows und Mac, im Browser und am Handy. Bei Pro und Max wird Cowork gerade Teil jedes Gesprächs – dann ohne Umschalter.",
+  ["In der Claude-App: am Rechner für Windows und Mac (Linux als Beta), im Browser und am Handy. In den bezahlten Zugängen ist Cowork inzwischen Teil jedes Gesprächs – ohne Umschalter.",
    "Es gehört zu den bezahlten Zugängen. Wenn Du schon einen hast, ist es einfach da."],
   breit(human("happy",0.78), bean("thumbs",0.78),
     f'''<div class="tabs"><div class="tab">Chat</div><div class="tab on">Cowork</div></div>''',
     f'''<div class="mini-row">{chip("Windows","blue")}{chip("Mac","blue")}{chip("Browser","green")}{chip("Handy","orange")}</div>''',
-    '<div class="cap">in den bezahlten Zugängen enthalten – Stand Oktober 2026</div>'))
+    '<div class="cap">in den bezahlten Zugängen enthalten – Stand November 2026</div>'))
 
 # --- Fazit ---
 panel("Fazit",

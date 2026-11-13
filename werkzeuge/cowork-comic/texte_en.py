@@ -230,14 +230,14 @@ TEXTE = {
 
 # --- Berechtigungen ---
 "Darf es dann einfach alles machen?": "So may it simply do anything?",
-"Du entscheidest, wie weit die Leine ist. Es gibt drei Stufen, und Cowork fängt bei der vorsichtigsten an: <b>Manuell</b> ist die Voreinstellung.":
-    "You decide how long the leash is. There are three levels, and Cowork starts on the most careful one: <b>Manual</b> is the default.",
+"Du entscheidest, wie weit die Leine ist. Es gibt drei Stufen. Bei Pro, Max und Team steht sie anfangs auf <b>Automatisch</b>, bei Enterprise auf <b>Manuell</b>.":
+    "You decide how long the leash is. There are three levels. On Pro, Max and Team it starts on <b>Automatic</b>, on Enterprise on <b>Manual</b>.",
 "Umschalten kannst Du im Chatfenster. Die unterste Stufe schaltet <i>alle</i> Kontrollen ab – die würde ich nur nehmen, wenn Du genau weißt, warum.":
     "You switch levels in the chat box. The bottom level switches <i>all</i> the checks off – I would only use that one if you know exactly why.",
-"<b>Manuell</b><span>fragt vor jedem Schritt, Voreinstellung</span>":
-    "<b>Manual</b><span>asks before every step, the default</span>",
-"<b>Automatisch</b><span>arbeitet durch, prüft sich dabei selbst auf Sicherheit</span>":
-    "<b>Automatic</b><span>works straight through, checking itself for safety</span>",
+"<b>Manuell</b><span>fragt vor jedem Schritt – Voreinstellung bei Enterprise</span>":
+    "<b>Manual</b><span>asks before every step – the default on Enterprise</span>",
+"<b>Automatisch</b><span>arbeitet durch, prüft sich selbst auf Sicherheit – Voreinstellung bei Pro, Max, Team</span>":
+    "<b>Automatic</b><span>works straight through, checking itself for safety – the default on Pro, Max, Team</span>",
 "<b>Ohne Rückfrage</b><span>fragt nie, nichts prüft mit – nur mit gutem Grund</span>":
     "<b>No questions</b><span>never asks, nothing checks along – only with good reason</span>",
 "Endgültig löschen darf Claude nie ohne Dein ausdrückliches Ja – in jeder Stufe":
@@ -312,14 +312,14 @@ TEXTE = {
 
 # --- Wo finde ich es ---
 "Und wo finde ich das jetzt?": "And where do I find it?",
-"In der Claude-App: am Rechner für Windows und Mac, im Browser und am Handy. Bei Pro und Max wird Cowork gerade Teil jedes Gesprächs – dann ohne Umschalter.":
-    "In the Claude app: on the computer for Windows and Mac, in the browser and on your phone. On Pro and Max, Cowork is becoming part of every conversation – then with no switch.",
+"In der Claude-App: am Rechner für Windows und Mac (Linux als Beta), im Browser und am Handy. In den bezahlten Zugängen ist Cowork inzwischen Teil jedes Gesprächs – ohne Umschalter.":
+    "In the Claude app: on the computer for Windows and Mac (Linux in beta), in the browser and on your phone. On the paid plans Cowork is now part of every conversation – with no switch.",
 "Es gehört zu den bezahlten Zugängen. Wenn Du schon einen hast, ist es einfach da.":
     "It is part of the paid plans. If you already have one, it is simply there.",
 "Windows": "Windows",
 "Mac": "Mac",
-"in den bezahlten Zugängen enthalten – Stand Oktober 2026":
-    "included in the paid plans – as of October 2026",
+"in den bezahlten Zugängen enthalten – Stand November 2026":
+    "included in the paid plans – as of November 2026",
 
 # --- Schluss ---
 "Das klingt machbar. Ich probier&#8217;s aus.":

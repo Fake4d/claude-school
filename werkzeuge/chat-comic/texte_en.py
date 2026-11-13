@@ -196,15 +196,15 @@ TEXTE = {
 # --- 11 Research ---
 "Und wenn ich es richtig genau wissen&nbsp;will?":
     "And if I want to know it&nbsp;properly?",
-"Dann nimm <b>Research</b>. Claude sucht dann selbstständig weiter, folgt Spuren, prüft mehrere Quellen gegeneinander – ein bis drei Minuten lang.":
-    "Then use <b>research</b>. Claude keeps searching on its own, follows leads and checks several sources against each other – for one to three minutes.",
+"Dann nimm <b>Research</b>. Claude sucht dann selbstständig weiter, folgt Spuren, prüft mehrere Quellen gegeneinander – meist ein paar Minuten, bei großen Fragen auch länger.":
+    "Then use <b>Research</b>. Claude keeps searching on its own, follows leads and checks several sources against each other – usually for a few minutes, longer for big questions.",
 "Am Ende steht ein Bericht mit Belegen, keine schnelle Antwort. Für Vergleiche, Marktüberblicke, Entscheidungsvorlagen.":
     "What comes out is a report with evidence, not a quick answer. For comparisons, market overviews, decision papers.",
 "sucht": "searches",
 "liest": "reads",
 "prüft nach": "checks",
 "Bericht": "Report",
-"dauert 1–3 Minuten": "takes 1–3 minutes",
+"dauert ein paar Minuten": "takes a few minutes",
 "mit Quellen zum Nachschlagen": "with sources you can look up",
 "für die Fragen, bei denen eine schnelle Antwort nichts taugt":
     "for the questions where a quick answer is no use",
@@ -225,18 +225,18 @@ TEXTE = {
 
 # --- 13 Antwortstil ---
 "Mir ist das immer zu&nbsp;lang.": "It&#8217;s always too&nbsp;long for me.",
-"Dann stell den Stil um. Es gibt fertige – knapp, förmlich, erklärend – und Du kannst einen eigenen bauen.":
-    "Then change the style. There are ready-made ones – concise, formal, explanatory – and you can build your own.",
-"Für einen eigenen gibst Du Claude einfach ein paar Zeilen, die klingen wie Du. Ab dann schreibt es so.":
-    "For your own you simply give Claude a few lines that sound like you. From then on it writes that way.",
-"<b>Knapp</b><span>kommt sofort zum Punkt</span>":
-    "<b>Concise</b><span>gets to the point straight away</span>",
-"<b>Erklärend</b><span>nimmt Dich mit, wenn Du es lernen willst</span>":
-    "<b>Explanatory</b><span>takes you along when you want to learn</span>",
-"<b>Förmlich</b><span>für alles, was nach draußen geht</span>":
-    "<b>Formal</b><span>for anything that goes outside the house</span>",
-"<b>Dein eigener</b><span>klingt wie Du – aus Deinen Beispielen gebaut</span>":
-    "<b>Your own</b><span>sounds like you – built from your examples</span>",
+"Dann sag es ihm – am besten einmal für alle Gespräche: In den Einstellungen hinterlegst Du, wie Claude antworten soll.":
+    "Then tell it – ideally once for all conversations: in the settings you note down how Claude should answer.",
+"Und für Deinen eigenen Ton baust Du aus ein paar Beispielen einen Skill. Den rufst Du dann einfach auf.":
+    "And for your own tone you build a skill from a few examples. Then you simply call it up.",
+"<b>Einstellungen</b><span>„Antworte kurz, ohne Einleitung“ – gilt überall</span>":
+    "<b>Settings</b><span>&#8220;Keep it short, no preamble&#8221; – applies everywhere</span>",
+"<b>Im Gespräch</b><span>„Kürzer, bitte“ – gilt ab sofort</span>":
+    "<b>In the conversation</b><span>&#8220;Shorter, please&#8221; – applies from now on</span>",
+"<b>Projekt</b><span>eigene Anweisungen für einen Arbeitsbereich</span>":
+    "<b>Project</b><span>its own instructions for one workspace</span>",
+"<b>Eigener Skill</b><span>klingt wie Du – aus Deinen Beispielen gebaut</span>":
+    "<b>Your own skill</b><span>sounds like you – built from your examples</span>",
 
 # --- 14 Handy und Sprache ---
 "Und unterwegs?": "And when I&#8217;m out?",
@@ -254,10 +254,10 @@ TEXTE = {
     "There&#8217;s a name at the top. Do I have to&nbsp;change it?",
 "Meistens nicht. Die Voreinstellung passt für fast alles.":
     "Usually not. The default fits almost everything.",
-"Wenn eine Aufgabe wirklich schwer ist, nimm ein stärkeres Modell. Wenn es nur schnell gehen soll, das kleine. Stand Oktober 2026 heißen sie so:":
-    "If a job is genuinely hard, take a stronger model. If it just has to be quick, take the small one. As of October 2026 they are called:",
-"<b>Fable 5.1</b><span>das stärkste</span><i>nicht überall enthalten</i>":
-    "<b>Fable 5.1</b><span>the strongest</span><i>not on every plan</i>",
+"Wenn eine Aufgabe wirklich schwer ist, nimm ein stärkeres Modell. Wenn es nur schnell gehen soll, das kleine. Stand November 2026 heißen sie so:":
+    "If a job is genuinely hard, take a stronger model. If it just has to be quick, take the small one. As of November 2026 they are called:",
+"<b>Fable 5.2</b><span>das stärkste</span><i>nicht überall enthalten</i>":
+    "<b>Fable 5.2</b><span>the strongest</span><i>not on every plan</i>",
 "<b>Opus 5.5</b><span>die schweren Sachen</span><i>denkt gründlich</i>":
     "<b>Opus 5.5</b><span>the heavy jobs</span><i>thinks thoroughly</i>",
 "<b>Sonnet 5.5</b><span>der Alltag</span><i>die Voreinstellung</i>":
@@ -332,8 +332,8 @@ TEXTE = {
 "Und wenn ich mehr&nbsp;will?": "And if I want&nbsp;more?",
 "Dann geht es in Stufen weiter – die Frage ist immer, wie weit Du Claude an Deine Sachen lässt.":
     "Then it goes on in stages – the question is always how far you let Claude at your things.",
-"Hier, im Gespräch, geht alles durch Dich hindurch: Du gibst hinein, Du nimmst heraus. Bei Pro und Max wachsen Stufe 1 und 2 gerade zusammen.":
-    "Here, in the conversation, everything passes through you: you put in, you take out. On Pro and Max, stages 1 and 2 are currently merging.",
+"Hier, im Gespräch, geht alles durch Dich hindurch: Du gibst hinein, Du nimmst heraus. In den bezahlten Zugängen sind Stufe 1 und 2 inzwischen ein Gespräch – den Unterschied macht, ob Claude an Deine Ordner darf.":
+    "Here, in the conversation, everything passes through you: you put in, you take out. On the paid plans, stages 1 and 2 are now one conversation – the difference is whether Claude may get at your folders.",
 "<b>1 · Im Gespräch</b><span>nichts einzurichten – Du lädst hoch, Du lädst herunter</span>":
     "<b>1 · In the conversation</b><span>nothing to set up – you upload, you download</span>",
 "<b>2 · Cowork</b><span>Claude arbeitet direkt in Deinen Ordnern</span>":
@@ -355,7 +355,7 @@ TEXTE = {
 <b>Projekte</b> &#8211; getrennte Arbeitsbereiche mit eigenen Regeln<br>
 <b>Suchen &amp; Research</b> &#8211; der kurze Griff und der lange Bericht<br>
 <b>Verbindungen</b> &#8211; Drive, Kalender, Mail unter „Customize“<br>
-<b>Stil</b> &#8211; knapp, förmlich, erklärend oder Dein eigener<br>
+<b>Stil</b> &#8211; einmal sagen, wie Claude schreiben soll<br>
 <b>Gut fragen</b> &#8211; das Ziel sagen, nicht die Schritte<br>
 <b>Nachprüfen</b> &#8211; überzeugend klingen heißt nicht richtig liegen<br>
 <b>Fremde Inhalte</b> &#8211; werden gelesen, nicht befolgt<br>
@@ -370,7 +370,7 @@ TEXTE = {
 <b>Projects</b> &#8211; separate workspaces with their own rules<br>
 <b>Search &amp; research</b> &#8211; the quick grab and the long report<br>
 <b>Connectors</b> &#8211; Drive, calendar, mail under &#8220;Customize&#8221;<br>
-<b>Style</b> &#8211; concise, formal, explanatory or your own<br>
+<b>Style</b> &#8211; say once how Claude should write<br>
 <b>Asking well</b> &#8211; state the goal, not the steps<br>
 <b>Checking</b> &#8211; sounding certain is not the same as being right<br>
 <b>Outside content</b> &#8211; it gets read, not obeyed<br>

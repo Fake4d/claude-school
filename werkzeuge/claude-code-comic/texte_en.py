@@ -13,6 +13,10 @@ line-break hints and are usually not needed in English.
 
 TEXTE = {
 
+# --- Desktop (13.11.2026: Chat und Cowork sind eins) ---
+"Chat · Cowork": "Chat · Cowork",
+
+
 # --- Titelseite ---
 "Alle bauen gerade krasse Sachen mit&nbsp;Claude.":
     "Everyone is building amazing things with&nbsp;Claude right now.",
@@ -273,8 +277,8 @@ TEXTE = {
 
 # --- Desktop: drei Reiter ---
 "Es gibt das alles auch zum Anklicken?": "Is there a version of all this to click on?",
-"Ja. Die Claude-App für den Rechner hat drei Reiter: <b>Chat</b> ist das Gespräch, <b>Cowork</b> erledigt Büroarbeit, <b>Code</b> ist Claude Code mit Oberfläche.":
-    "Yes. The Claude desktop app has three tabs: <b>Chat</b> is the conversation, <b>Cowork</b> does office work, <b>Code</b> is Claude Code with a user interface.",
+"Ja. In der Claude-App für den Rechner sind <b>Chat</b> und <b>Cowork</b> inzwischen eins – reden oder arbeiten lassen, im selben Gespräch. Daneben liegt der Reiter <b>Code</b>: Claude Code mit Oberfläche.":
+    "Yes. In the Claude desktop app, <b>Chat</b> and <b>Cowork</b> are now one – talk or let it work, in the same conversation. Next to it sits the <b>Code</b> tab: Claude Code with a user interface.",
 "Es gibt sie für Mac und Windows, für Linux als Beta.":
     "It is available for Mac and Windows, and as a beta for Linux.",
 "Chat": "Chat",
@@ -338,8 +342,8 @@ TEXTE = {
 # --- Routinen ---
 "Und wenn etwas regelmäßig von allein laufen soll?":
     "And what if something should run regularly on its own?",
-"Dann legst Du eine Routine an: Auftrag, Projekt und Zugänge einmal gespeichert – danach läuft sie ohne Dich.":
-    "Then you create a routine: task, project and accounts saved once – after that it runs without you.",
+"Dann legst Du eine geplante Aufgabe an – früher hieß das Routine: Auftrag, Projekt und Zugänge einmal gespeichert, danach läuft sie ohne Dich.":
+    "Then you create a scheduled task – it used to be called a routine: task, project and accounts saved once, after that it runs without you.",
 "Und zwar in der Cloud. Dein Rechner darf ausgeschaltet sein. Angelegt wird sie mit <code>/schedule</code>, in der App oder im Browser.":
     "And it does so in the cloud. Your machine may be switched off. You create it with <code>/schedule</code>, in the app or in the browser.",
 "/schedule täglich um 9 Uhr die neuen Pull Requests durchsehen":
@@ -368,8 +372,8 @@ TEXTE = {
     "And if it&#8217;s only meant for the next hour?",
 "Dann nimm <code>/loop</code>. Der wiederholt einen Auftrag in der offenen Sitzung – auf Deinem Rechner, mit Deinen Dateien.":
     "Then use <code>/loop</code>. It repeats a task inside the open session – on your machine, with your files.",
-"Lässt Du die Zeitangabe weg, sucht sich Claude den Abstand selbst: kurz, solange sich etwas tut, länger, wenn Ruhe ist. <kbd>Esc</kbd> beendet die Schleife.":
-    "Leave out the interval and Claude picks it itself: short while something is happening, longer when things are quiet. <kbd>Esc</kbd> ends the loop.",
+"Lässt Du die Zeitangabe weg, sucht sich Claude den Abstand selbst: kurz, solange sich etwas tut, länger, wenn Ruhe ist. <kbd>Esc</kbd> beendet so eine Schleife; eine mit fester Zeit stoppst Du, indem Du Claude darum bittest.":
+    "Leave out the interval and Claude picks it itself: short while something is happening, longer when things are quiet. <kbd>Esc</kbd> ends a loop like that; one with a fixed interval you stop by asking Claude to.",
 "/loop 5m schau nach, ob der Bau durch ist":
     "/loop 5m check whether the build has finished",
 "mit Zeitangabe<span class=\"chip-sub\">alle 5 Minuten</span>":
@@ -399,12 +403,12 @@ TEXTE = {
 
 # --- Modelle ---
 "Und welches Modell arbeitet da eigentlich?": "And which model is actually doing the work?",
-"Stand Oktober 2026: <b>Fable&nbsp;5.1</b> ist das stärkste und für lange Läufe gebaut, <b>Opus&nbsp;5.5</b> ist voreingestellt und nimmt die schweren Sachen, <b>Sonnet&nbsp;5.5</b> den Alltag, <b>Haiku&nbsp;5.5</b> das Schnelle und Günstige.":
-    "As of October 2026: <b>Fable&nbsp;5.1</b> is the strongest and built for long runs, <b>Opus&nbsp;5.5</b> is the default and takes the heavy lifting, <b>Sonnet&nbsp;5.5</b> the everyday work, <b>Haiku&nbsp;5.5</b> the fast and cheap jobs.",
-"<b>Fable 5.1</b><span>lange Agentenläufe</span><i>1 Mio. Kontext</i>":
-    "<b>Fable 5.1</b><span>long agent runs</span><i>1M context</i>",
-"Umschalten mit <code>/model</code>. Mit <code>/fast</code> antwortet Opus schneller – es wird dabei nicht durch ein kleineres Modell ersetzt.":
-    "Switch with <code>/model</code>. With <code>/fast</code> Opus answers more quickly – it is not swapped for a smaller model in the process.",
+"Stand November 2026: <b>Fable&nbsp;5.2</b> ist das stärkste und für lange Läufe gebaut, <b>Opus&nbsp;5.5</b> ist voreingestellt und nimmt die schweren Sachen, <b>Sonnet&nbsp;5.5</b> den Alltag, <b>Haiku&nbsp;5.5</b> das Schnelle und Günstige.":
+    "As of November 2026: <b>Fable&nbsp;5.2</b> is the strongest and built for long runs, <b>Opus&nbsp;5.5</b> is the default and takes the heavy lifting, <b>Sonnet&nbsp;5.5</b> the everyday work, <b>Haiku&nbsp;5.5</b> the fast and cheap jobs.",
+"<b>Fable 5.2</b><span>lange Agentenläufe</span><i>1 Mio. Kontext</i>":
+    "<b>Fable 5.2</b><span>long agent runs</span><i>1M context</i>",
+"Umschalten mit <code>/model</code>. Mit <code>/fast</code> antworten Opus und Fable bis zu 2,5-mal schneller – gleiches Modell, aber es kostet extra.":
+    "Switch with <code>/model</code>. With <code>/fast</code> Opus and Fable answer up to 2.5 times faster – same model, but it costs extra.",
 "<b>Opus 5.5</b><span>die Voreinstellung</span><i>1 Mio. Kontext</i>":
     "<b>Opus 5.5</b><span>the default</span><i>1M context</i>",
 "<b>Sonnet 5.5</b><span>der Alltag</span><i>1 Mio. Kontext</i>":
@@ -418,8 +422,8 @@ TEXTE = {
     "And how thoroughly it works – can I say that too?",
 "Ja, das ist die zweite Stellschraube neben dem Modell: <code>/effort</code>. Erst das Modell nach der Schwierigkeit wählen, dann den Aufwand nach der gewünschten Gründlichkeit.":
     "Yes, that is the second dial next to the model: <code>/effort</code>. First pick the model by how hard the task is, then the effort by how thorough you want it.",
-"Voreingestellt ist meist <b>medium</b>. Runter heißt schneller und sparsamer, hoch heißt mehr Nachdenken, mehr Werkzeug&shy;aufrufe, längere Läufe.":
-    "The default is usually <b>medium</b>. Going down means faster and cheaper, going up means more thinking, more tool calls, longer runs.",
+"Voreingestellt ist <b>medium</b>. Runter heißt schneller und sparsamer, hoch heißt mehr Nachdenken, mehr Werkzeug&shy;aufrufe, längere Läufe.":
+    "The default is <b>medium</b>. Going down means faster and cheaper, going up means more thinking, more tool calls, longer runs.",
 "<b>low</b><span>kurze, einfache Aufgaben – am schnellsten</span>":
     "<b>low</b><span>short, simple jobs – the fastest</span>",
 "<b>medium</b><span>die Voreinstellung</span>":
@@ -533,8 +537,8 @@ TEXTE = {
     "<b>Context window</b> &#8211; the working memory",
 "<b>Checkpoints &amp; Memory</b> &#8211; zurückspulen und behalten":
     "<b>Checkpoints &amp; memory</b> &#8211; rewind and remember",
-"<b>Routinen</b> &#8211; laufen nach Plan in der Cloud":
-    "<b>Routines</b> &#8211; run to a schedule in the cloud",
+"<b>Geplante Aufgaben</b> &#8211; laufen nach Plan in der Cloud":
+    "<b>Scheduled tasks</b> &#8211; run to a schedule in the cloud",
 "<b>Berechtigungen</b> &#8211; heute automatisch, jederzeit strenger":
     "<b>Permissions</b> &#8211; automatic today, stricter whenever you want",
 "<b>Denkaufwand</b> &#8211; wie gründlich gearbeitet werden soll":

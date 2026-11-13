@@ -400,10 +400,10 @@ panel("Überall",
 # --- Desktop: drei Reiter ---
 panel("Desktop",
   "Es gibt das alles auch zum Anklicken?",
-  ["Ja. Die Claude-App für den Rechner hat drei Reiter: <b>Chat</b> ist das Gespräch, <b>Cowork</b> erledigt Büroarbeit, <b>Code</b> ist Claude Code mit Oberfläche.",
+  ["Ja. In der Claude-App für den Rechner sind <b>Chat</b> und <b>Cowork</b> inzwischen eins – reden oder arbeiten lassen, im selben Gespräch. Daneben liegt der Reiter <b>Code</b>: Claude Code mit Oberfläche.",
    "Es gibt sie für Mac und Windows, für Linux als Beta."],
   breit(human("think",0.78), bean("right",0.78),
-    '<div class="tabs"><div class="tab">Chat</div><div class="tab">Cowork</div><div class="tab on">Code</div></div>',
+    '<div class="tabs"><div class="tab">Chat · Cowork</div><div class="tab on">Code</div></div>',
     f'''<div class="mini-row">
 {chip("Reden","blue",sub="Fragen, Entwürfe, Ideen")}
 {chip("Arbeiten lassen","green",sub="Dokumente und Ordner")}
@@ -480,7 +480,7 @@ panel("Die drei Stufen",
 # --- Routinen ---
 panel("Routinen",
   "Und wenn etwas regelmäßig von allein laufen soll?",
-  ["Dann legst Du eine Routine an: Auftrag, Projekt und Zugänge einmal gespeichert – danach läuft sie ohne Dich.",
+  ["Dann legst Du eine geplante Aufgabe an – früher hieß das Routine: Auftrag, Projekt und Zugänge einmal gespeichert, danach läuft sie ohne Dich.",
    "Und zwar in der Cloud. Dein Rechner darf ausgeschaltet sein. Angelegt wird sie mit <code>/schedule</code>, in der App oder im Browser."],
   breit(human("think",0.78), bean("point",0.78),
     f'''{chip("/schedule täglich um 9 Uhr die neuen Pull Requests durchsehen","blue")}''',
@@ -508,7 +508,7 @@ panel("Auslöser",
 panel("Schleife",
   "Und wenn es nur für die nächste Stunde sein soll?",
   ["Dann nimm <code>/loop</code>. Der wiederholt einen Auftrag in der offenen Sitzung – auf Deinem Rechner, mit Deinen Dateien.",
-   "Lässt Du die Zeitangabe weg, sucht sich Claude den Abstand selbst: kurz, solange sich etwas tut, länger, wenn Ruhe ist. <kbd>Esc</kbd> beendet die Schleife."],
+   "Lässt Du die Zeitangabe weg, sucht sich Claude den Abstand selbst: kurz, solange sich etwas tut, länger, wenn Ruhe ist. <kbd>Esc</kbd> beendet so eine Schleife; eine mit fester Zeit stoppst Du, indem Du Claude darum bittest."],
   breit(human("think",0.76), bean("point",0.76),
     f'''{chip("/loop 5m schau nach, ob der Bau durch ist","blue")}''',
     '<div class="rewind">&#8635; &#8635; &#8635;</div>',
@@ -548,11 +548,11 @@ panel("Entwerfen",
 # --- 19 ---
 panel("Modelle",
   "Und welches Modell arbeitet da eigentlich?",
-  ["Stand Oktober 2026: <b>Fable&nbsp;5.1</b> ist das stärkste und für lange Läufe gebaut, <b>Opus&nbsp;5.5</b> ist voreingestellt und nimmt die schweren Sachen, <b>Sonnet&nbsp;5.5</b> den Alltag, <b>Haiku&nbsp;5.5</b> das Schnelle und Günstige.",
-   "Umschalten mit <code>/model</code>. Mit <code>/fast</code> antwortet Opus schneller – es wird dabei nicht durch ein kleineres Modell ersetzt."],
+  ["Stand November 2026: <b>Fable&nbsp;5.2</b> ist das stärkste und für lange Läufe gebaut, <b>Opus&nbsp;5.5</b> ist voreingestellt und nimmt die schweren Sachen, <b>Sonnet&nbsp;5.5</b> den Alltag, <b>Haiku&nbsp;5.5</b> das Schnelle und Günstige.",
+   "Umschalten mit <code>/model</code>. Mit <code>/fast</code> antworten Opus und Fable bis zu 2,5-mal schneller – gleiches Modell, aber es kostet extra."],
   breit(human("think",0.74), bean("right",0.74),
     f'''<div class="models">
-<div class="model c-red"><b>Fable 5.1</b><span>lange Agentenläufe</span><i>1 Mio. Kontext</i></div>
+<div class="model c-red"><b>Fable 5.2</b><span>lange Agentenläufe</span><i>1 Mio. Kontext</i></div>
 <div class="model c-blue"><b>Opus 5.5</b><span>die Voreinstellung</span><i>1 Mio. Kontext</i></div>
 <div class="model c-green"><b>Sonnet 5.5</b><span>der Alltag</span><i>1 Mio. Kontext</i></div>
 <div class="model c-orange"><b>Haiku 5.5</b><span>schnell &amp; günstig</span><i>1 Mio. Kontext</i></div>
@@ -563,7 +563,7 @@ panel("Modelle",
 panel("Denkaufwand",
   "Und wie gründlich es dabei arbeitet – kann ich das auch sagen?",
   ["Ja, das ist die zweite Stellschraube neben dem Modell: <code>/effort</code>. Erst das Modell nach der Schwierigkeit wählen, dann den Aufwand nach der gewünschten Gründlichkeit.",
-   "Voreingestellt ist meist <b>medium</b>. Runter heißt schneller und sparsamer, hoch heißt mehr Nachdenken, mehr Werkzeug&shy;aufrufe, längere Läufe."],
+   "Voreingestellt ist <b>medium</b>. Runter heißt schneller und sparsamer, hoch heißt mehr Nachdenken, mehr Werkzeug&shy;aufrufe, längere Läufe."],
   breit(human("think",0.64), bean("point",0.64),
     f'''<div class="ladder">
 <div class="rung c-green"><b>low</b><span>kurze, einfache Aufgaben – am schnellsten</span></div>
@@ -626,7 +626,7 @@ panel("Fazit",
 <div class="fin-line"><b>Kontextfenster</b> &#8211; das Arbeitsgedächtnis</div>
 <div class="fin-line"><b>Checkpoints &amp; Memory</b> &#8211; zurückspulen und behalten</div>
 <div class="fin-line"><b>Cowork</b> &#8211; dasselbe in Deinen Ordnern, ohne Terminal</div>
-<div class="fin-line"><b>Routinen</b> &#8211; laufen nach Plan in der Cloud</div>
+<div class="fin-line"><b>Geplante Aufgaben</b> &#8211; laufen nach Plan in der Cloud</div>
 <div class="fin-line"><b>Berechtigungen</b> &#8211; heute automatisch, jederzeit strenger</div>
 <div class="fin-line"><b>Denkaufwand</b> &#8211; wie gründlich gearbeitet werden soll</div>
 <div class="fin-line"><b>/loop &amp; /batch</b> &#8211; wiederholen, oder auf viele aufteilen</div>

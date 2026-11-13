@@ -304,12 +304,12 @@ panel("Suchen und Nachdenken",
 # --- 11 Research ---
 panel("Research",
   "Und wenn ich es richtig genau wissen&nbsp;will?",
-  ["Dann nimm <b>Research</b>. Claude sucht dann selbstständig weiter, folgt Spuren, prüft mehrere Quellen gegeneinander – ein bis drei Minuten lang.",
+  ["Dann nimm <b>Research</b>. Claude sucht dann selbstständig weiter, folgt Spuren, prüft mehrere Quellen gegeneinander – meist ein paar Minuten, bei großen Fragen auch länger.",
    "Am Ende steht ein Bericht mit Belegen, keine schnelle Antwort. Für Vergleiche, Marktüberblicke, Entscheidungsvorlagen."],
   breit(human("point",0.78), bean("right",0.78),
     f'''<div class="chain">{chip("Deine Frage","blue")}{AR}{chip("sucht","green")}{AR}{chip("liest","green")}{AR}{chip("prüft nach","green")}{AR}{doc("Bericht","orange",3)}</div>''',
     AD,
-    f'''<div class="mini-row">{chip("dauert 1–3 Minuten","orange")}{chip("mit Quellen zum Nachschlagen","blue")}</div>''',
+    f'''<div class="mini-row">{chip("dauert ein paar Minuten","orange")}{chip("mit Quellen zum Nachschlagen","blue")}</div>''',
     '<div class="cap">für die Fragen, bei denen eine schnelle Antwort nichts taugt</div>'))
 
 # --- 12 Verbindungen ---
@@ -327,14 +327,14 @@ panel("Verbindungen",
 # --- 13 Antwortstil ---
 panel("Antwortstil",
   "Mir ist das immer zu&nbsp;lang.",
-  ["Dann stell den Stil um. Es gibt fertige – knapp, förmlich, erklärend – und Du kannst einen eigenen bauen.",
-   "Für einen eigenen gibst Du Claude einfach ein paar Zeilen, die klingen wie Du. Ab dann schreibt es so."],
+  ["Dann sag es ihm – am besten einmal für alle Gespräche: In den Einstellungen hinterlegst Du, wie Claude antworten soll.",
+   "Und für Deinen eigenen Ton baust Du aus ein paar Beispielen einen Skill. Den rufst Du dann einfach auf."],
   breit(human("confused",0.78), bean("point",0.78),
     f'''<div class="ladder">
-<div class="rung c-blue"><b>Knapp</b><span>kommt sofort zum Punkt</span></div>
-<div class="rung c-green"><b>Erklärend</b><span>nimmt Dich mit, wenn Du es lernen willst</span></div>
-<div class="rung c-orange"><b>Förmlich</b><span>für alles, was nach draußen geht</span></div>
-<div class="rung c-red"><b>Dein eigener</b><span>klingt wie Du – aus Deinen Beispielen gebaut</span></div>
+<div class="rung c-blue"><b>Einstellungen</b><span>„Antworte kurz, ohne Einleitung“ – gilt überall</span></div>
+<div class="rung c-green"><b>Im Gespräch</b><span>„Kürzer, bitte“ – gilt ab sofort</span></div>
+<div class="rung c-orange"><b>Projekt</b><span>eigene Anweisungen für einen Arbeitsbereich</span></div>
+<div class="rung c-red"><b>Eigener Skill</b><span>klingt wie Du – aus Deinen Beispielen gebaut</span></div>
 </div>'''))
 
 # --- 14 Handy und Sprache ---
@@ -352,10 +352,10 @@ panel("Handy und Sprache",
 panel("Modelle",
   "Da steht oben ein Name. Muss ich den&nbsp;ändern?",
   ["Meistens nicht. Die Voreinstellung passt für fast alles.",
-   "Wenn eine Aufgabe wirklich schwer ist, nimm ein stärkeres Modell. Wenn es nur schnell gehen soll, das kleine. Stand Oktober 2026 heißen sie so:"],
+   "Wenn eine Aufgabe wirklich schwer ist, nimm ein stärkeres Modell. Wenn es nur schnell gehen soll, das kleine. Stand November 2026 heißen sie so:"],
   breit(human("think",0.74), bean("right",0.74),
     f'''<div class="models">
-<div class="model c-red"><b>Fable 5.1</b><span>das stärkste</span><i>nicht überall enthalten</i></div>
+<div class="model c-red"><b>Fable 5.2</b><span>das stärkste</span><i>nicht überall enthalten</i></div>
 <div class="model c-blue"><b>Opus 5.5</b><span>die schweren Sachen</span><i>denkt gründlich</i></div>
 <div class="model c-green"><b>Sonnet 5.5</b><span>der Alltag</span><i>die Voreinstellung</i></div>
 <div class="model c-orange"><b>Haiku 5.5</b><span>schnell &amp; günstig</span><i>für Kurzes</i></div>
@@ -411,7 +411,7 @@ panel("Deine Daten",
 panel("Die drei Stufen",
   "Und wenn ich mehr&nbsp;will?",
   ["Dann geht es in Stufen weiter – die Frage ist immer, wie weit Du Claude an Deine Sachen lässt.",
-   "Hier, im Gespräch, geht alles durch Dich hindurch: Du gibst hinein, Du nimmst heraus. Bei Pro und Max wachsen Stufe 1 und 2 gerade zusammen."],
+   "Hier, im Gespräch, geht alles durch Dich hindurch: Du gibst hinein, Du nimmst heraus. In den bezahlten Zugängen sind Stufe 1 und 2 inzwischen ein Gespräch – den Unterschied macht, ob Claude an Deine Ordner darf."],
   breit(human("point",0.78), bean("right",0.78),
     f'''<div class="ladder">
 <div class="rung c-green"><b>1 · Im Gespräch</b><span>nichts einzurichten – Du lädst hoch, Du lädst herunter</span></div>
@@ -434,7 +434,7 @@ panel("Fazit",
 <b>Projekte</b> &#8211; getrennte Arbeitsbereiche mit eigenen Regeln<br>
 <b>Suchen &amp; Research</b> &#8211; der kurze Griff und der lange Bericht<br>
 <b>Verbindungen</b> &#8211; Drive, Kalender, Mail unter „Customize“<br>
-<b>Stil</b> &#8211; knapp, förmlich, erklärend oder Dein eigener<br>
+<b>Stil</b> &#8211; einmal sagen, wie Claude schreiben soll<br>
 <b>Gut fragen</b> &#8211; das Ziel sagen, nicht die Schritte<br>
 <b>Nachprüfen</b> &#8211; überzeugend klingen heißt nicht richtig liegen<br>
 <b>Fremde Inhalte</b> &#8211; werden gelesen, nicht befolgt<br>
