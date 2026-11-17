@@ -126,6 +126,7 @@ UNTERBEFEHLE = {
 
 # Slash-Befehle: Schluessel = Name ohne Schraegstrich
 SLASH = {
+"send-to-project": "Nachricht aus dieser Sitzung an ein Claude Project schicken.",
 "add-dir": "Weiteren Arbeitsordner hinzufügen.",
 "advisor": "Claude an wichtigen Stellen ein stärkeres Modell befragen lassen.",
 "agents": "Entfernt. Unteragenten liegen jetzt in .claude/agents/.",

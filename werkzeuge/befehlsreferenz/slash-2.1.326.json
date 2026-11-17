@@ -2,11 +2,11 @@
  {
   "name": "add-dir",
   "typ": "local",
-  "desc": "Add a new working directory",
+  "desc": "Add a working directory",
   "variabel": false,
   "hint": "<path>",
   "aliases": [],
-  "enabled": "ge()&&HYr()",
+  "enabled": "ge()&&Kao()",
   "verfuegbar": true
  },
  {
@@ -16,7 +16,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Mx()",
+  "enabled": "lI()",
   "verfuegbar": true
  },
  {
@@ -66,7 +66,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "lE()&&lu()===null",
+  "enabled": "hE()&&Iu()===null",
   "verfuegbar": true
  },
  {
@@ -76,7 +76,7 @@
   "variabel": false,
   "hint": "[--request-id <uuid>] (--wizard posture=\\u2026 scope=\\u2026 depth=\\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
   "aliases": [],
-  "enabled": "Wdt()&&ge()",
+  "enabled": "hht()&&ge()",
   "verfuegbar": true
  },
  {
@@ -96,7 +96,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "IRn()&&!ge()",
+  "enabled": "NNn()&&!ge()",
   "verfuegbar": true
  },
  {
@@ -144,7 +144,7 @@
  {
   "name": "btw",
   "typ": "local-jsx",
-  "desc": "Ask a quick side question without interrupting the main conversation",
+  "desc": "Ask a side question without interrupting Claude",
   "variabel": false,
   "hint": "[question]",
   "aliases": [],
@@ -154,7 +154,7 @@
  {
   "name": "bug",
   "typ": "local-jsx",
-  "desc": "Report a bug or share your conversation",
+  "desc": "Report a bug or share your session",
   "variabel": false,
   "hint": "[report]",
   "aliases": [
@@ -170,7 +170,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!ge()&&VO()",
+  "enabled": "!ge()&&v0()",
   "verfuegbar": true
  },
  {
@@ -200,7 +200,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!e&&(U$e()||Nt())",
+  "enabled": "!e&&(Fje()||Nt())",
   "verfuegbar": true
  },
  {
@@ -223,7 +223,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Z5n()&&!i.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
+  "enabled": "Gtr()&&!s.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
   "verfuegbar": true
  },
  {
@@ -255,7 +255,7 @@
   "variabel": false,
   "hint": "[guidance]",
   "aliases": [],
-  "enabled": "lWo()",
+  "enabled": "aXo()",
   "verfuegbar": true
  },
  {
@@ -275,7 +275,7 @@
   "variabel": false,
   "hint": "<optional custom summarization instructions>",
   "aliases": [],
-  "enabled": "!Pe(process.env.DISABLE_COMPACT)",
+  "enabled": "!Ce(process.env.DISABLE_COMPACT)",
   "verfuegbar": true
  },
  {
@@ -293,17 +293,17 @@
  {
   "name": "context",
   "typ": "local-jsx",
-  "desc": "Visualize current context usage as a colored grid",
+  "desc": "Show what fills the context",
   "variabel": false,
   "hint": "[all]",
   "aliases": [],
-  "enabled": "!ge()&&!JRn()",
+  "enabled": "!ge()&&!tFn()",
   "verfuegbar": true
  },
  {
   "name": "copy",
   "typ": "local-jsx",
-  "desc": "Copy Claude's last response to clipboard (or /copy N for the Nth-latest)",
+  "desc": "Copy the last response to clipboard (/copy 2 for the one before)",
   "variabel": false,
   "hint": "",
   "aliases": [],
@@ -317,7 +317,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "am()||J_()||i.CLAUDE_CODE_COWORK_PLUGIN_SKILL&&!nY()",
+  "enabled": "Up()||Dy()||s.CLAUDE_CODE_COWORK_PLUGIN_SKILL&&!kX()",
   "verfuegbar": true
  },
  {
@@ -367,7 +367,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "fK()",
+  "enabled": "j6()",
   "verfuegbar": true
  },
  {
@@ -377,7 +377,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "fK()",
+  "enabled": "j6()",
   "verfuegbar": true
  },
  {
@@ -387,7 +387,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "fK()",
+  "enabled": "j6()",
   "verfuegbar": true
  },
  {
@@ -409,7 +409,7 @@
   "aliases": [
    "app"
   ],
-  "enabled": "GFe()||z5n()!==null",
+  "enabled": "W1e()||Htr()!==null",
   "verfuegbar": true
  },
  {
@@ -419,7 +419,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "!Nbo()",
+  "enabled": "!jMo()",
   "verfuegbar": true
  },
  {
@@ -431,13 +431,13 @@
   "aliases": [
    "checkup"
   ],
-  "enabled": "!i.DISABLE_DOCTOR_COMMAND",
+  "enabled": "!s.DISABLE_DOCTOR_COMMAND",
   "verfuegbar": true
  },
  {
   "name": "effort",
   "typ": "local-jsx",
-  "desc": "Set effort level for model usage",
+  "desc": "Set the model's effort level",
   "variabel": false,
   "hint": "",
   "aliases": [],
@@ -463,13 +463,13 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "am()||J_()",
+  "enabled": "Up()||Dy()",
   "verfuegbar": true
  },
  {
   "name": "export",
   "typ": "local-jsx",
-  "desc": "Export the current conversation to a file or clipboard",
+  "desc": "Export this session to a file or clipboard",
   "variabel": false,
   "hint": "[filename]",
   "aliases": [],
@@ -483,7 +483,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "UI()&&!ge()",
+  "enabled": "uM()&&!ge()",
   "verfuegbar": true
  },
  {
@@ -529,11 +529,11 @@
  {
   "name": "fork",
   "typ": "local-jsx",
-  "desc": "Spawn a background agent that inherits the full conversation",
+  "desc": "Start a background agent with the full conversation",
   "variabel": false,
   "hint": "<directive>",
   "aliases": [],
-  "enabled": "!ba()",
+  "enabled": "!Ta()",
   "verfuegbar": true
  },
  {
@@ -561,7 +561,7 @@
   "typ": "local-jsx",
   "desc": "Show help and available commands",
   "variabel": false,
-  "hint": "",
+  "hint": "[command]",
   "aliases": [],
   "enabled": "true",
   "verfuegbar": true
@@ -633,7 +633,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!i.DISABLE_INSTALL_GITHUB_APP_COMMAND",
+  "enabled": "!s.DISABLE_INSTALL_GITHUB_APP_COMMAND",
   "verfuegbar": true
  },
  {
@@ -653,7 +653,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "ede()",
+  "enabled": "Kue()",
   "verfuegbar": true
  },
  {
@@ -663,7 +663,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "Dt()&&($xe()||_me())",
+  "enabled": "Mt()&&(RMe()||I_e())",
   "verfuegbar": true
  },
  {
@@ -675,7 +675,7 @@
   "aliases": [
    "peers"
   ],
-  "enabled": "fd()",
+  "enabled": "xd()",
   "verfuegbar": true
  },
  {
@@ -685,7 +685,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "{let e=mr();return!i.DISABLE_LOGIN_COMMAND&&(e===null||e.sessionId!==void 0)",
+  "enabled": "{let e=sr();return!s.DISABLE_LOGIN_COMMAND&&(e===null||e.sessionId!==void 0)",
   "verfuegbar": true
  },
  {
@@ -695,7 +695,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!i.DISABLE_LOGOUT_COMMAND",
+  "enabled": "!s.DISABLE_LOGOUT_COMMAND",
   "verfuegbar": true
  },
  {
@@ -727,7 +727,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Dt()&&(V0()||QWt())",
+  "enabled": "Mt()&&(yL()||u6t())",
   "verfuegbar": true
  },
  {
@@ -780,7 +780,7 @@
   "variabel": false,
   "hint": "[style]",
   "aliases": [],
-  "enabled": "ge()||!zFe()||QRn()",
+  "enabled": "ge()||!G1e()||eFn()",
   "verfuegbar": true
  },
  {
@@ -821,7 +821,7 @@
  {
   "name": "plan",
   "typ": "local-jsx",
-  "desc": "Enable plan mode or view the current session plan",
+  "desc": "Turn on plan mode or view the plan",
   "variabel": false,
   "hint": "[open|<description>]",
   "aliases": [],
@@ -854,7 +854,7 @@
  {
   "name": "powerup",
   "typ": "local-jsx",
-  "desc": "Discover Claude Code features through quick interactive lessons",
+  "desc": "Learn Claude Code features in short lessons",
   "variabel": false,
   "hint": "",
   "aliases": [],
@@ -868,7 +868,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "BI()",
+  "enabled": "dx()",
   "verfuegbar": true
  },
  {
@@ -888,7 +888,7 @@
   "variabel": false,
   "hint": "[Project ID or claude.ai address] [--save] | clear [--save]",
   "aliases": [],
-  "enabled": "W$s()&&S(J1r",
+  "enabled": "U5s()&&S(h8r",
   "verfuegbar": true
  },
  {
@@ -908,7 +908,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Dt()||!1",
+  "enabled": "Mt()||!1",
   "verfuegbar": true
  },
  {
@@ -970,7 +970,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Dt()||kyn()",
+  "enabled": "Mt()||mCn()",
   "verfuegbar": true
  },
  {
@@ -1000,7 +1000,7 @@
  {
   "name": "resume",
   "typ": "local-jsx",
-  "desc": "Resume a previous conversation",
+  "desc": "Resume a previous session",
   "variabel": false,
   "hint": "",
   "aliases": [
@@ -1012,7 +1012,7 @@
  {
   "name": "rewind",
   "typ": "local",
-  "desc": "Restore the code and/or conversation to a previous point",
+  "desc": "Restore earlier code, conversation, or both",
   "variabel": false,
   "hint": "",
   "aliases": [
@@ -1071,7 +1071,17 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "{if(!dc())return!1;let e=sp();return!(e?qAe.includes(e.terminal??\"\"):Lx.isJetBrainsIdeTerminal())",
+  "enabled": "{if(!fu())return!1;let e=uu();return!(e?kPe.includes(e.terminal??\"\"):jR.isJetBrainsIdeTerminal())",
+  "verfuegbar": true
+ },
+ {
+  "name": "send-to-project",
+  "typ": "local",
+  "desc": "Send a message from this session to a Claude Project",
+  "variabel": false,
+  "hint": "",
+  "aliases": [],
+  "enabled": "true",
   "verfuegbar": true
  },
  {
@@ -1089,11 +1099,11 @@
  {
   "name": "setup-bedrock",
   "typ": "local-jsx",
-  "desc": "Reconfigure Amazon Bedrock authentication, region, or model pins",
+  "desc": "Change Amazon Bedrock authentication, region, or pinned models",
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Dce(\"bedrock\")===void 0&&!0",
+  "enabled": "Upe(\"bedrock\")===void 0&&!0",
   "verfuegbar": true
  },
  {
@@ -1105,17 +1115,17 @@
   "aliases": [
    "setup-cowork"
   ],
-  "enabled": "am()||J_()",
+  "enabled": "Up()||Dy()",
   "verfuegbar": true
  },
  {
   "name": "setup-vertex",
   "typ": "local-jsx",
-  "desc": "Reconfigure Google Vertex AI authentication, project, region, or model pins",
+  "desc": "Change Google Vertex AI authentication, project, region, or pinned models",
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Dce(\"vertex\")===void 0&&!0",
+  "enabled": "Upe(\"vertex\")===void 0&&!0",
   "verfuegbar": true
  },
  {
@@ -1151,7 +1161,7 @@
  {
   "name": "status",
   "typ": "local-jsx",
-  "desc": "Show Claude Code status including version, model, account, API connectivity, and tool statuses",
+  "desc": "Show version, account, model, MCP servers and setup warnings",
   "variabel": false,
   "hint": "",
   "aliases": [],
@@ -1185,7 +1195,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Xt()||ABt()!==null",
+  "enabled": "Xt()||IKt()!==null",
   "verfuegbar": true
  },
  {
@@ -1195,7 +1205,7 @@
   "variabel": false,
   "hint": "<task>",
   "aliases": [],
-  "enabled": "!ba()",
+  "enabled": "!Ta()",
   "verfuegbar": true
  },
  {
@@ -1229,13 +1239,13 @@
   "aliases": [
    "tp"
   ],
-  "enabled": "Dt()||kyn()",
+  "enabled": "Mt()||mCn()",
   "verfuegbar": true
  },
  {
   "name": "terminal-setup",
   "typ": "local-jsx",
-  "desc": "Install Shift+Enter key binding for newlines",
+  "desc": "Set up Shift+Enter for newlines",
   "variabel": true,
   "hint": "",
   "aliases": [],
@@ -1269,7 +1279,7 @@
   "variabel": false,
   "hint": "<prompt>",
   "aliases": [],
-  "enabled": "YJ()",
+  "enabled": "aee()",
   "verfuegbar": true
  },
  {
@@ -1279,7 +1289,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "gB()",
+  "enabled": "yW()",
   "verfuegbar": true
  },
  {
@@ -1312,7 +1322,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "UI()&&!ge()",
+  "enabled": "uM()&&!ge()",
   "verfuegbar": true
  },
  {
@@ -1322,7 +1332,7 @@
   "variabel": false,
   "hint": "[use case]",
   "aliases": [],
-  "enabled": "gH()&&!wt()",
+  "enabled": "QN()&&!bt()",
   "verfuegbar": true
  },
  {
@@ -1396,7 +1406,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "th()",
+  "enabled": "Rh()",
   "verfuegbar": true
  }
 ]

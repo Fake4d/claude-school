@@ -7,8 +7,7 @@ Arguments:
   prompt                                Your prompt
 
 Options:
-  --add-dir <directories...>            Additional directories to allow tool
-                                        access to
+  --add-dir <directories...>            More directories Claude can access
   --agent <agent>                       Agent for the current session. Overrides
                                         the 'agent' setting.
   --agents <json-or-file>               JSON object defining custom agents, or
@@ -23,7 +22,7 @@ Options:
   --allowedTools, --allowed-tools <tools...>
       Comma or space-separated list of tool names to allow (e.g. "Bash(git *)
       Edit")
-  --append-system-prompt <prompt>       Append a system prompt to the default
+  --append-system-prompt <prompt>       Add text to the end of the default
                                         system prompt
   --autocompact <auto|tokens>           Auto-compact window size (auto, or
                                         100k–1M tokens)
@@ -40,27 +39,29 @@ Options:
                                         the session is already running
   --bare                                Minimal mode: skip hooks (those defined
                                         in settings and by installed plugins;
-                                        features built into Claude Code are
-                                        unaffected), LSP, plugin sync,
-                                        attribution, auto-memory, background
-                                        prefetches, keychain reads, and
-                                        CLAUDE.md auto-discovery. Sets
+                                        features built into Claude Code and the
+                                        hooks of your organization's managed
+                                        plugins are unaffected), LSP, plugin
+                                        sync, attribution, auto-memory,
+                                        background prefetches, keychain reads,
+                                        and CLAUDE.md auto-discovery. Sets
                                         CLAUDE_CODE_SIMPLE=1. Anthropic auth is
                                         strictly ANTHROPIC_API_KEY or
                                         apiKeyHelper via --settings (OAuth and
-                                        keychain are never read). 3P providers
-                                        (Bedrock/Vertex/Foundry) use their own
-                                        credentials. Skills still resolve via
-                                        /skill-name. Explicitly provide context
-                                        via: --system-prompt[-file],
+                                        keychain are never read). Third-party
+                                        providers (Bedrock/Vertex/Foundry) use
+                                        their own credentials. Skills still
+                                        resolve via /skill-name. Explicitly
+                                        provide context via:
+                                        --system-prompt[-file],
                                         --append-system-prompt[-file], --add-dir
                                         (CLAUDE.md dirs), --mcp-config,
                                         --settings, --agents, --plugin-dir.
   --betas <betas...>                    Beta headers to include in API requests
                                         (API key users only)
-  --brief                               Enable SendUserMessage tool for
-                                        agent-to-user communication
-  --chrome                              Enable Claude in Chrome integration
+  --brief                               Turn on the SendUserMessage tool, which
+                                        Claude uses to message you
+  --chrome                              Turn on Claude in Chrome
   --cloud [description|session_id|url]  Create a cloud session with the given
                                         description, or attach to an existing
                                         one by session ID or claude.ai/code URL
@@ -91,16 +92,14 @@ Options:
       the system prompt into the first user message. Improves cross-user
       prompt-cache reuse. Only applies with the default system prompt (ignored
       with --system-prompt). (default: false)
-  --fallback-model <model>              Enable automatic fallback to specified
-                                        model(s) when the default model is
-                                        overloaded or not available. Accepts a
-                                        comma-separated list to try each in
-                                        order. Re-tries the primary at the start
-                                        of each user turn.
-  --file <specs...>                     File resources to download at startup.
-                                        Format: file_id:relative_path (e.g.,
-                                        --file file_abc:doc.txt
-                                        file_def:img.png)
+  --fallback-model <model>              Models to fall back to when the main
+                                        model is busy or unavailable
+                                        (comma-separated, in order). The main
+                                        model is tried again at the start of
+                                        each turn.
+  --file <specs...>                     Files to download at startup. Format:
+                                        file_id:relative_path (e.g., --file
+                                        file_abc:doc.txt file_def:img.png)
   --fork-session                        When resuming, create a new session ID
                                         instead of reusing the original (use
                                         with --resume or --continue)
@@ -108,9 +107,9 @@ Options:
                                         blocks as assistant/user messages with
                                         parent_tool_use_id set (only works with
                                         --print and --output-format=stream-json)
-  --from-pr [value]                     Resume a session linked to a PR by PR
-                                        number/URL, or open interactive picker
-                                        with optional search term
+  --from-pr [value]                     Resume a session linked to a PR by
+                                        number or URL, or pick from a list
+                                        (optionally with a search term)
   -h, --help                            Display help for command
   --ide                                 Automatically connect to IDE on startup
                                         if exactly one valid IDE is available
@@ -132,17 +131,16 @@ Options:
                                         calls (only works with --print)
   --mcp-config <configs...>             Load MCP servers from JSON files or
                                         strings (space-separated)
-  --model <model>                       Model for the current session. Provide
-                                        an alias for the latest model (e.g.
+  --model <model>                       Model for the current session. Use an
+                                        alias for the latest model (e.g.
                                         'fable', 'opus', or 'sonnet') or a
                                         model's full name.
   -n, --name <name>                     Set a display name for this session
                                         (shown in the prompt box, /resume
                                         picker, and terminal title)
-  --no-chrome                           Disable Claude in Chrome integration
-  --no-session-persistence              Disable session persistence - sessions
-                                        will not be saved to disk and cannot be
-                                        resumed (only works with --print)
+  --no-chrome                           Turn off Claude in Chrome
+  --no-session-persistence              Don't save sessions to disk; they can't
+                                        be resumed (only works with --print)
   --output-format <format>              Output format (only works with --print):
                                         "text" (default), "json" (single
                                         result), or "stream-json" (realtime
@@ -178,8 +176,8 @@ Options:
                                         that fail validation are silently
                                         ignored in this mode (no error dialog is
                                         shown).
-  --prompt-suggestions [value]          Enable prompt suggestions. In print/SDK
-                                        mode, emits a prompt_suggestion message
+  --prompt-suggestions [value]          Turn on prompt suggestions. In print/SDK
+                                        mode, sends a prompt_suggestion message
                                         after each turn with a predicted next
                                         user prompt (choices: "true", "false",
                                         "1", "0", "yes", "no", "on", "off",
@@ -208,8 +206,8 @@ Options:
                                         settings, git and tool-configuration
                                         files.
   -r, --resume [value]                  Resume a conversation by session ID or
-                                        name, or open interactive picker with
-                                        optional search term
+                                        name, or pick from a list (optionally
+                                        with a search term)
   --safe-mode                           Start with all customizations
                                         (CLAUDE.md, skills, installed plugins,
                                         hooks, MCP servers, custom commands and
@@ -217,7 +215,8 @@ Options:
                                         themes, keybindings, and more) disabled
                                         — useful for troubleshooting a broken
                                         configuration. Admin-managed (policy)
-                                        settings still apply. Auth, model
+                                        settings and the hooks of managed
+                                        plugins still apply. Auth, model
                                         selection, built-in tools and plugins,
                                         and permissions work normally. Sets
                                         CLAUDE_CODE_SAFE_MODE=1.
@@ -225,8 +224,8 @@ Options:
                                         conversation (must be a valid UUID)
   --setting-sources <sources>           Comma-separated list of setting sources
                                         to load (user, project, local).
-  --settings <file-or-json>             Path to a settings JSON file or a JSON
-                                        string to load additional settings from
+  --settings <file-or-json>             Settings file or JSON string to load
+                                        more settings from
   --strict-mcp-config                   Only use MCP servers from --mcp-config,
                                         ignoring all other MCP configurations
   --system-prompt <prompt>              System prompt to use for the session
@@ -252,16 +251,13 @@ Options:
                                         (requires --worktree). Uses iTerm2
                                         native panes when available; use
                                         --tmux=classic for traditional tmux.
-  --tools <tools...>                    Specify the list of available tools from
-                                        the built-in set. Use "" to disable all
-                                        tools, "default" to use the default set,
-                                        or specify tool names (e.g.
-                                        "Bash,Edit,Read").
-  --verbose                             Override verbose mode setting from
-                                        config
+  --tools <tools...>                    Built-in tools to make available: "" for
+                                        none, "default" for the default set, or
+                                        tool names (e.g. "Bash,Edit,Read")
+  --verbose                             Override the verbose setting
   -v, --version                         Output the version number
-  -w, --worktree [name]                 Create a new git worktree for this
-                                        session (optionally specify a name)
+  -w, --worktree [name]                 Create a git worktree for this session
+                                        (optionally named)
 
 Commands:
   agents [options]                      Manage background agents
@@ -281,9 +277,9 @@ Commands:
                                         gateway
   import [options] [source]             Import config from another AI coding
                                         agent into Claude Code
-  install [options] [target]            Install Claude Code native build. Use
-                                        [target] to specify version (stable,
-                                        latest, or specific version)
+  install [options] [target]            Install the Claude Code native build.
+                                        Use [target] to pick a version (stable,
+                                        latest, or a version number)
   logs <id|name>                        Print a background session's recent
                                         terminal output
   mcp                                   Configure and manage MCP servers

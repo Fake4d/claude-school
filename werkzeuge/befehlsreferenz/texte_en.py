@@ -130,6 +130,7 @@ UNTERBEFEHLE = {
 }
 
 SLASH = {
+"send-to-project": "Send a message from this session to a Claude Project.",
 "add-dir": "Add another working folder.",
 "advisor": "Let a stronger model weigh in at the important moments.",
 "agents": "Removed. Subagents now live in .claude/agents/.",

@@ -4,9 +4,8 @@ Usage: claude agents [options]
 Manage background agents
 
 Options:
-  --add-dir <directory>                 Additional directory to allow tool
-                                        access to in dispatched sessions
-                                        (repeatable)
+  --add-dir <directory>                 Another directory Claude can access in
+                                        dispatched sessions (repeatable)
   --agent <agent>                       Default agent for sessions dispatched
                                         from agent view. Overrides the 'agent'
                                         setting.
@@ -24,17 +23,17 @@ Options:
   -h, --help                            Display help for command
   --json                                Print active sessions (interactive and
                                         background) as a JSON array and exit
-                                        (for scripting; does not require a TTY)
+                                        (for scripts; works without a terminal)
   --mcp-config <config>                 MCP server configuration to apply to
                                         dispatched sessions (repeatable)
   --model <model>                       Default model for sessions dispatched
                                         from agent view
   --permission-mode <mode>              Default permission mode for sessions
                                         dispatched from agent view
-  --plugin-dir <path>                   Load plugins from specified directory
-                                        for the agent view and dispatched
-                                        sessions; a folder of plugins loads each
-                                        child (repeatable)
+  --plugin-dir <path>                   Load plugins from this directory for the
+                                        agent view and dispatched sessions; a
+                                        folder of plugins loads each child
+                                        (repeatable)
   --restricted                          Start dispatched sessions in restricted
                                         mode
   --setting-sources <sources>           Comma-separated list of setting sources
@@ -72,14 +71,14 @@ Options:
   -h, --help          Display help for command
 
 Commands:
-  config              Print the effective auto mode config as JSON: your
-                      settings where set, defaults otherwise
+  config              Print the auto mode config in use as JSON: your settings
+                      where set, defaults otherwise
   critique [options]  Get AI feedback on your custom auto mode rules
   defaults [options]  Print the default auto mode environment, allow, soft_deny,
                       and hard_deny rules as JSON
   help [command]      display help for command
-  reset [options]     Reset auto mode configuration to the shipped defaults by
-                      removing the autoMode section from your user settings file
+  reset [options]     Reset auto mode to its defaults by removing the autoMode
+                      section from your user settings file
 
 ########## doctor ##########
 Usage: claude doctor [options]
@@ -111,17 +110,17 @@ Arguments:
 Options:
   --dry-run   Show what would be imported without writing anything
   -h, --help  Display help for command
-  --yes       Skip the interactive picker. On headless surfaces, pass
+  --yes       Skip the interactive picker. In non-interactive mode, pass
               --yes=<digest> from the `/import` preview.
 
 ########## install ##########
 Usage: claude install [options] [target]
 
-Install Claude Code native build. Use [target] to specify version (stable,
-latest, or specific version)
+Install the Claude Code native build. Use [target] to pick a version (stable,
+latest, or a version number)
 
 Options:
-  --force     Force installation even if already installed
+  --force     Install even if already installed
   -h, --help  Display help for command
 
 ########## logs ##########
@@ -235,11 +234,10 @@ Delete a project's Claude Code data (transcripts, tasks, file history, and its
 entry in ~/.claude.json) from this computer only
 
 Options:
-  --all              Purge state for every project (mutually exclusive with
-                     [path])
+  --all              Delete data for every project (can't be used with [path])
   --dry-run          List what would be deleted without deleting anything
   -h, --help         Display help for command
-  -i, --interactive  Prompt for each item before deleting
+  -i, --interactive  Ask before deleting each item
   -y, --yes          Skip confirmation prompt
 
 ########## respawn ##########
@@ -277,9 +275,7 @@ Options:
   -h, --help           Display help for command
   --json               Print the raw bugs.json payload instead of formatted
                        findings
-  --no-post            Do not post the findings to the PR (the default; accepted
-                       for parity with the /ultrareview and /code-review ultra
-                       flags)
+  --no-post            Don't post the findings to the PR (the default)
   --post               Post the finished review's findings to the PR as you (PR
                        targets only; one plain comment, not a review)
   --timeout <minutes>  Maximum minutes to wait for the review to finish
