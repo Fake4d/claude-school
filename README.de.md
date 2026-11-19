@@ -21,13 +21,13 @@ Leiter: es vertieft nur ein einzelnes Thema (`/loop` im Dauerbetrieb).
 | [**Claude Code als Comic**](claude-code-comic/claude-anleitung.pdf) | 34 Seiten | Stufe 3 — Terminal: der ganze Rechner, eigene Werkzeuge, läuft ohne Dich | [PDF](claude-code-comic/claude-code-comic-en.pdf) |
 | [**Loop Engineering als Comic**](loop-comic/loop-anleitung.pdf) | 18 Seiten | Special — Bonusheft zu Stufe 3: `/loop`, `/goal` und `/schedule` als ein Paket, bis hin zur proaktiven Schleife | [PDF](loop-comic/loop-comic-en.pdf) |
 | [**Befehlsreferenz**](befehlsreferenz/Claude-Code-Befehlsreferenz.pdf) | 9 Seiten | Nachschlagen — alle Terminal-Befehle, Optionen und Slash-Befehle | [PDF](befehlsreferenz/Claude-Code-Command-Reference.pdf) |
-| [**Dein eigener KI-Server-Assistent**](server-setup/KI-Server-Assistent-Ausgabe-4.pdf) | 10 Seiten | Selbst aufsetzen — vom leeren Mietserver zum Claude im Dauerbetrieb | [PDF](server-setup/AI-Server-Assistant-Edition-3.pdf) |
+| [**Dein eigener KI-Server-Assistent**](server-setup/KI-Server-Assistent-Ausgabe-4.pdf) | 10 Seiten | Selbst aufsetzen — vom leeren Mietserver zum Claude im Dauerbetrieb | [PDF](server-setup/AI-Server-Assistant-Edition-4.pdf) |
 
 ## Woher die Inhalte stammen
 
 Die **Befehlsreferenz** ist nicht abgeschrieben, sondern direkt aus der installierten
 Fassung ausgelesen: `claude --help`, die Hilfe jedes Unterbefehls und die
-Befehlsdefinitionen im Programm selbst. Stand: Version 2.1.326 — 66 Optionen,
+Befehlsdefinitionen im Programm selbst. Stand: Version 2.1.327 — 66 Optionen,
 131 verfügbare Slash-Befehle, 4 angelegt aber abgeschaltet. Ein Zeitplan-Auftrag hält
 sie bei jeder neuen Programmfassung von selbst aktuell.
 

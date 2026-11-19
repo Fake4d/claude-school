@@ -142,7 +142,8 @@ Commands:
   add-from-claude-desktop [options]     Import MCP servers from Claude Desktop
                                         (Mac and WSL only)
   add-json [options] <name> <json>      Add an MCP server (stdio, SSE, HTTP, or
-                                        WebSocket) with a JSON string
+                                        WebSocket) with a JSON string, or - to
+                                        read it from stdin
   get <name>                            Get details about an MCP server.
                                         Unapproved .mcp.json servers are shown
                                         as ⏸ Pending approval and not connected

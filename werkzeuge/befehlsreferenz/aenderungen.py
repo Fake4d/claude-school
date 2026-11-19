@@ -7,23 +7,25 @@ die andere mit. Reines HTML, wie es im Kasten steht (<p>…</p>).
 """
 
 DE = """
-<p>Gegenüber {vorg}: <b>ein neuer Slash-Befehl, keiner weggefallen; sonst vor allem umformulierte Beschreibungen.</b></p>
+<p>Gegenüber {vorg}: <b>keine neuen und keine weggefallenen Befehle; nur kleine Änderungen an Beschreibungen und einem Argument-Wert.</b></p>
 <ul>
-<li>Neu: <code>/send-to-project</code> – schickt eine Nachricht aus dieser Sitzung an ein Claude Project („Send a message from this session to a Claude Project“).</li>
-<li><code>/help</code> hat jetzt einen Argument-Hinweis: <code>[command]</code>.</li>
-<li>Beschreibung im Wortlaut geändert (Bedeutung im Kern gleich, meist kürzer gefasst): <code>/add-dir</code>, <code>/btw</code>, <code>/bug</code>, <code>/context</code> („Show what fills the context“), <code>/copy</code>, <code>/effort</code>, <code>/export</code>, <code>/fork</code>, <code>/plan</code>, <code>/powerup</code>, <code>/resume</code>, <code>/rewind</code>, <code>/setup-bedrock</code>, <code>/setup-vertex</code>, <code>/status</code>, <code>/terminal-setup</code>.</li>
-<li><code>claude --help</code> und die Hilfe der Unterbefehle: Es sind keine Optionen oder Unterbefehle dazugekommen oder weggefallen, nur Beschreibungstexte sind umformuliert. Einzige inhaltliche Ergänzung: Bei <code>--bare</code> und <code>--safe-mode</code> wird nun erwähnt, dass die Hooks von Managed-Plugins der Organisation weiterhin gelten.</li>
+<li><code>/tui</code>: Die Werte heißen jetzt <code>classic</code> | <code>fullscreen</code> (vorher <code>default</code> | <code>fullscreen</code>); der Argument-Hinweis lautet <code>[classic|fullscreen]</code>.</li>
+<li><code>/model</code>: Der Argument-Hinweis ist jetzt <code>&lt;model&gt;</code> statt <code>[model]</code>; die Beschreibung nennt nicht mehr das aktuelle Modell.</li>
+<li>Beschreibung nur umformuliert: <code>/status</code> (Komma-Setzung) und <code>/statusline</code> („Set up the status line“).</li>
+<li><code>claude --help</code>: <code>--autocompact</code> – das Fenster beträgt „mindestens 100k Token“ statt „100k–1M Token“.</li>
+<li>Hilfe der Unterbefehle: Eine Option, die einen JSON-String erwartet, akzeptiert nun auch <code>-</code>, um ihn von stdin zu lesen.</li>
 </ul>
-<p>Slash-Befehle: 135 statt 134, keine weggefallen.</p>
+<p>Slash-Befehle: weiterhin 135, keine neu, keine weggefallen.</p>
 """
 
 EN = """
-<p>Compared with {vorg}: <b>one new slash command, none removed; otherwise mostly reworded descriptions.</b></p>
+<p>Compared with {vorg}: <b>no new and no removed commands; only small changes to descriptions and one argument value.</b></p>
 <ul>
-<li>New: <code>/send-to-project</code> – sends a message from this session to a Claude Project (“Send a message from this session to a Claude Project”).</li>
-<li><code>/help</code> now has an argument hint: <code>[command]</code>.</li>
-<li>Description wording changed (same meaning at heart, mostly shorter): <code>/add-dir</code>, <code>/btw</code>, <code>/bug</code>, <code>/context</code> (“Show what fills the context”), <code>/copy</code>, <code>/effort</code>, <code>/export</code>, <code>/fork</code>, <code>/plan</code>, <code>/powerup</code>, <code>/resume</code>, <code>/rewind</code>, <code>/setup-bedrock</code>, <code>/setup-vertex</code>, <code>/status</code>, <code>/terminal-setup</code>.</li>
-<li><code>claude --help</code> and the subcommand help: no options or subcommands were added or removed, only description texts were reworded. The one substantive addition: for <code>--bare</code> and <code>--safe-mode</code> it now says the hooks of your organization's managed plugins still apply.</li>
+<li><code>/tui</code>: the values are now <code>classic</code> | <code>fullscreen</code> (previously <code>default</code> | <code>fullscreen</code>); the argument hint is <code>[classic|fullscreen]</code>.</li>
+<li><code>/model</code>: the argument hint is now <code>&lt;model&gt;</code> instead of <code>[model]</code>; the description no longer mentions the current model.</li>
+<li>Description merely reworded: <code>/status</code> (comma placement) and <code>/statusline</code> (“Set up the status line”).</li>
+<li><code>claude --help</code>: <code>--autocompact</code> – the window is “at least 100k tokens” instead of “100k–1M tokens”.</li>
+<li>Subcommand help: an option that takes a JSON string now also accepts <code>-</code> to read it from stdin.</li>
 </ul>
-<p>Slash commands: 135 instead of 134, none removed.</p>
+<p>Slash commands: still 135, none new, none removed.</p>
 """
