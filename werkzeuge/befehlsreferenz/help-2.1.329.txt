@@ -137,7 +137,8 @@ Options:
                                         model's full name.
   -n, --name <name>                     Set a display name for this session
                                         (shown in the prompt box, /resume
-                                        picker, and terminal title)
+                                        picker, and terminal title). Also names
+                                        a new cloud session.
   --no-chrome                           Turn off Claude in Chrome
   --no-session-persistence              Don't save sessions to disk; they can't
                                         be resumed (only works with --print)
@@ -198,8 +199,9 @@ Options:
                                         local settings files (managed settings
                                         and --settings still apply; add
                                         --strict-mcp-config to skip MCP servers
-                                        too). Also confines the file tools to
-                                        the working directories (--add-dir
+                                        too). Also starts no plugin language
+                                        servers, confines the file tools to the
+                                        working directories (--add-dir
                                         included), refuses bypassPermissions,
                                         and lets only a person or the configured
                                         permission handler approve writes to

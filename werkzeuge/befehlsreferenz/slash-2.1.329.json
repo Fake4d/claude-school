@@ -6,7 +6,7 @@
   "variabel": false,
   "hint": "<path>",
   "aliases": [],
-  "enabled": "_e()&&Bfo()",
+  "enabled": "Se()&&lfn()",
   "verfuegbar": true
  },
  {
@@ -16,7 +16,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "YI()",
+  "enabled": "SM()",
   "verfuegbar": true
  },
  {
@@ -66,7 +66,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "jA()&&Bu()===null",
+  "enabled": "QE()&&af()===null",
   "verfuegbar": true
  },
  {
@@ -76,7 +76,7 @@
   "variabel": false,
   "hint": "[--request-id <uuid>] (--wizard posture=\\u2026 scope=\\u2026 depth=\\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
   "aliases": [],
-  "enabled": "Vyt()&&_e()",
+  "enabled": "FCt()&&Se()",
   "verfuegbar": true
  },
  {
@@ -86,7 +86,7 @@
   "variabel": false,
   "hint": "[auto|<tokens>]",
   "aliases": [],
-  "enabled": "!_e()",
+  "enabled": "!Se()",
   "verfuegbar": true
  },
  {
@@ -96,7 +96,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "IHn()&&!_e()",
+  "enabled": "M8n()&&!Se()",
   "verfuegbar": true
  },
  {
@@ -170,7 +170,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!_e()&&fD()",
+  "enabled": "!Se()&&V0()",
   "verfuegbar": true
  },
  {
@@ -200,13 +200,13 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!e&&(C2e()||$t())",
+  "enabled": "!e&&(i4e()||Xt())",
   "verfuegbar": true
  },
  {
   "name": "clear",
   "typ": "local",
-  "desc": "Start a new session with empty context; previous session stays on disk (resumable with /resume)",
+  "desc": "Start a new session with empty context; loops carry over, and the old one stays in /resume",
   "variabel": false,
   "hint": "[name]",
   "aliases": [
@@ -223,13 +223,13 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "$sr()&&!s.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
+  "enabled": "wyr()&&!s.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
   "verfuegbar": true
  },
  {
   "name": "code-review",
   "typ": "registriert",
-  "desc": "Review the current diff, or a PR number/branch/path target, for correctness bugs (plus reuse/simplification/efficiency cleanups where the model's recipe covers them) at the effort level given first, before any target (…: from few high-confidence findings to many, some uncertain…); with no level given, it reuses the level you typed last. Pass --comment to post findings as inline PR comments, or --fix to apply them to the working tree after the review. Pass --max-findings <n> to report up to n findings, or --max-findings all for every finding. The choice stays until you pass --max-findings default.…",
+  "desc": "Review the current diff, or a PR number/branch/path target, for correctness bugs (plus broken CLAUDE.md rules and cleanups where the model's recipe covers them; see /…) at the effort level given first, before any target (…: from few high-confidence findings to many, some uncertain…); with no level given, it reuses the level you typed last. Pass --comment to post findings as inline PR comments, or --fix to apply them to the working tree after the review. Pass --max-findings <n> to report up to n findings, or --max-findings all for every finding. The choice stays until you pass --max-findings default.…",
   "variabel": false,
   "hint": "[…] [--fix] [--comment] [<pr#>|<branch>|<path>] [--max-findings <n>|all]",
   "aliases": [
@@ -255,7 +255,7 @@
   "variabel": false,
   "hint": "[guidance]",
   "aliases": [],
-  "enabled": "ins()",
+  "enabled": "bys()",
   "verfuegbar": true
  },
  {
@@ -275,7 +275,7 @@
   "variabel": false,
   "hint": "<optional custom summarization instructions>",
   "aliases": [],
-  "enabled": "!Re(process.env.DISABLE_COMPACT)",
+  "enabled": "!Pe(process.env.DISABLE_COMPACT)",
   "verfuegbar": true
  },
  {
@@ -297,7 +297,7 @@
   "variabel": false,
   "hint": "[all]",
   "aliases": [],
-  "enabled": "!_e()&&!JHn()",
+  "enabled": "!Se()&&!Y8n()",
   "verfuegbar": true
  },
  {
@@ -317,7 +317,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "dm()||qS()||s.CLAUDE_CODE_COWORK_PLUGIN_SKILL&&!UJ()",
+  "enabled": "Dm()||Uy()||s.CLAUDE_CODE_COWORK_PLUGIN_SKILL&&!gq()",
   "verfuegbar": true
  },
  {
@@ -367,7 +367,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "G3()",
+  "enabled": "mY()",
   "verfuegbar": true
  },
  {
@@ -377,7 +377,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "G3()",
+  "enabled": "mY()",
   "verfuegbar": true
  },
  {
@@ -387,7 +387,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "G3()",
+  "enabled": "mY()",
   "verfuegbar": true
  },
  {
@@ -409,7 +409,7 @@
   "aliases": [
    "app"
   ],
-  "enabled": "xWe()||Isr()!==null",
+  "enabled": "fqe()||myr()!==null",
   "verfuegbar": true
  },
  {
@@ -419,7 +419,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "!iFo()",
+  "enabled": "!T8r()",
   "verfuegbar": true
  },
  {
@@ -463,7 +463,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "dm()||qS()",
+  "enabled": "Dm()||Uy()",
   "verfuegbar": true
  },
  {
@@ -483,7 +483,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "e0()&&!_e()",
+  "enabled": "CL()&&!Se()",
   "verfuegbar": true
  },
  {
@@ -523,7 +523,7 @@
   "variabel": false,
   "hint": "[on|off]",
   "aliases": [],
-  "enabled": "_e()",
+  "enabled": "Se()",
   "verfuegbar": true
  },
  {
@@ -533,7 +533,7 @@
   "variabel": false,
   "hint": "<directive>",
   "aliases": [],
-  "enabled": "!ja()",
+  "enabled": "!rl()",
   "verfuegbar": true
  },
  {
@@ -653,7 +653,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Epe()",
+  "enabled": "m_e()",
   "verfuegbar": true
  },
  {
@@ -663,7 +663,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "Pt()&&(_De()||abe())",
+  "enabled": "It()&&(W$e()||Nve())",
   "verfuegbar": true
  },
  {
@@ -675,7 +675,7 @@
   "aliases": [
    "peers"
   ],
-  "enabled": "qd()",
+  "enabled": "Nl()",
   "verfuegbar": true
  },
  {
@@ -685,7 +685,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "{let e=cr();return!s.DISABLE_LOGIN_COMMAND&&(e===null||e.sessionId!==void 0)",
+  "enabled": "{let e=gr();return!s.DISABLE_LOGIN_COMMAND&&(e===null||e.sessionId!==void 0)",
   "verfuegbar": true
  },
  {
@@ -711,23 +711,13 @@
   "verfuegbar": true
  },
  {
-  "name": "loops",
-  "typ": "local-jsx",
-  "desc": "List, create, and delete loops",
-  "variabel": false,
-  "hint": "",
-  "aliases": [],
-  "enabled": "!1",
-  "verfuegbar": false
- },
- {
   "name": "low-priority",
   "typ": "local",
   "desc": "Continue now at lower priority after reaching your 5-hour limit; run again to stop",
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Pt()&&(gH()||t8t())",
+  "enabled": "It()&&(QN()||Nen())",
   "verfuegbar": true
  },
  {
@@ -770,7 +760,7 @@
   "variabel": false,
   "hint": "<model>",
   "aliases": [],
-  "enabled": "_e()",
+  "enabled": "Se()",
   "verfuegbar": true
  },
  {
@@ -780,7 +770,7 @@
   "variabel": false,
   "hint": "[style]",
   "aliases": [],
-  "enabled": "_e()||!PWe()||QHn()",
+  "enabled": "Se()||!pqe()||V8n()",
   "verfuegbar": true
  },
  {
@@ -868,7 +858,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "oP()",
+  "enabled": "qC()",
   "verfuegbar": true
  },
  {
@@ -888,7 +878,7 @@
   "variabel": false,
   "hint": "[Project ID or claude.ai address] [--save] | clear [--save]",
   "aliases": [],
-  "enabled": "SQs()&&S(Kes",
+  "enabled": "dvi()&&b(WPs",
   "verfuegbar": true
  },
  {
@@ -908,7 +898,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Pt()||!1",
+  "enabled": "It()||!1",
   "verfuegbar": true
  },
  {
@@ -970,7 +960,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Pt()||QPn()",
+  "enabled": "It()||LUn()",
   "verfuegbar": true
  },
  {
@@ -1071,7 +1061,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "{if(!Mu())return!1;let e=qu();return!(e?mOe.includes(e.terminal??\"\"):MA.isJetBrainsIdeTerminal())",
+  "enabled": "{if(!wf())return!1;let e=Ju();return!(e?$He.includes(e.terminal??\"\"):DT.isJetBrainsIdeTerminal())",
   "verfuegbar": true
  },
  {
@@ -1093,7 +1083,7 @@
   "aliases": [
    "remote"
   ],
-  "enabled": "xn()",
+  "enabled": "In()",
   "verfuegbar": true
  },
  {
@@ -1103,7 +1093,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Ehe(\"bedrock\")===void 0&&!0",
+  "enabled": "Y2(\"bedrock\")===void 0&&!0",
   "verfuegbar": true
  },
  {
@@ -1115,7 +1105,7 @@
   "aliases": [
    "setup-cowork"
   ],
-  "enabled": "dm()||qS()",
+  "enabled": "Dm()||Uy()",
   "verfuegbar": true
  },
  {
@@ -1125,7 +1115,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Ehe(\"vertex\")===void 0&&!0",
+  "enabled": "Y2(\"vertex\")===void 0&&!0",
   "verfuegbar": true
  },
  {
@@ -1195,7 +1185,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Zt()||E6t()!==null",
+  "enabled": "Zt()||nQt()!==null",
   "verfuegbar": true
  },
  {
@@ -1205,13 +1195,13 @@
   "variabel": false,
   "hint": "<task>",
   "aliases": [],
-  "enabled": "!ja()",
+  "enabled": "!rl()",
   "verfuegbar": true
  },
  {
   "name": "tasks",
   "typ": "local-jsx",
-  "desc": "View and manage everything running in the background",
+  "desc": "View and manage this session's background work",
   "variabel": false,
   "hint": "",
   "aliases": [
@@ -1233,13 +1223,13 @@
  {
   "name": "teleport",
   "typ": "local-jsx",
-  "desc": "Send this session to the cloud, or resume one from claude.ai",
+  "desc": "Resume a cloud session here",
   "variabel": false,
   "hint": "",
   "aliases": [
    "tp"
   ],
-  "enabled": "Pt()||QPn()",
+  "enabled": "It()||LUn()",
   "verfuegbar": true
  },
  {
@@ -1279,7 +1269,7 @@
   "variabel": false,
   "hint": "<prompt>",
   "aliases": [],
-  "enabled": "vte()",
+  "enabled": "Woe()",
   "verfuegbar": true
  },
  {
@@ -1289,7 +1279,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "E2()",
+  "enabled": "uz()",
   "verfuegbar": true
  },
  {
@@ -1312,7 +1302,7 @@
    "cost",
    "stats"
   ],
-  "enabled": "_e()",
+  "enabled": "Se()",
   "verfuegbar": true
  },
  {
@@ -1322,7 +1312,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "e0()&&!_e()",
+  "enabled": "CL()&&!Se()",
   "verfuegbar": true
  },
  {
@@ -1332,7 +1322,7 @@
   "variabel": false,
   "hint": "[use case]",
   "aliases": [],
-  "enabled": "ZF()&&!kt()",
+  "enabled": "VU()&&!bt()",
   "verfuegbar": true
  },
  {
@@ -1406,7 +1396,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Qh()",
+  "enabled": "Og()",
   "verfuegbar": true
  }
 ]
