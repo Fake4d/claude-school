@@ -1,12 +1,22 @@
 [
  {
+  "name": "access",
+  "typ": "local-jsx",
+  "desc": "View the verification programs your account is in",
+  "variabel": false,
+  "hint": "",
+  "aliases": [],
+  "enabled": "b(\"tengu_gentle_sky\"",
+  "verfuegbar": true
+ },
+ {
   "name": "add-dir",
   "typ": "local",
   "desc": "Add a working directory",
   "variabel": false,
   "hint": "<path>",
   "aliases": [],
-  "enabled": "Se()&&lfn()",
+  "enabled": "Se()&&B_n()",
   "verfuegbar": true
  },
  {
@@ -16,7 +26,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "SM()",
+  "enabled": "TD()",
   "verfuegbar": true
  },
  {
@@ -66,7 +76,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "QE()&&af()===null",
+  "enabled": "LT()&&kf()===null",
   "verfuegbar": true
  },
  {
@@ -76,7 +86,7 @@
   "variabel": false,
   "hint": "[--request-id <uuid>] (--wizard posture=\\u2026 scope=\\u2026 depth=\\u2026 --propose | --expect-sha256 <64-hex> --apply-file <path>)",
   "aliases": [],
-  "enabled": "FCt()&&Se()",
+  "enabled": "cPt()&&Se()",
   "verfuegbar": true
  },
  {
@@ -96,7 +106,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "M8n()&&!Se()",
+  "enabled": "MZn()&&!Se()",
   "verfuegbar": true
  },
  {
@@ -170,7 +180,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!Se()&&V0()",
+  "enabled": "!Se()&&rN()",
   "verfuegbar": true
  },
  {
@@ -200,7 +210,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "!e&&(i4e()||Xt())",
+  "enabled": "!e&&(J5e()||Jt())",
   "verfuegbar": true
  },
  {
@@ -223,7 +233,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "wyr()&&!s.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
+  "enabled": "NTr()&&!s.CLAUDE_CODE_DISABLE_PLUGIN_FORWARDING",
   "verfuegbar": true
  },
  {
@@ -255,7 +265,7 @@
   "variabel": false,
   "hint": "[guidance]",
   "aliases": [],
-  "enabled": "bys()",
+  "enabled": "hCs()",
   "verfuegbar": true
  },
  {
@@ -275,7 +285,7 @@
   "variabel": false,
   "hint": "<optional custom summarization instructions>",
   "aliases": [],
-  "enabled": "!Pe(process.env.DISABLE_COMPACT)",
+  "enabled": "!He(process.env.DISABLE_COMPACT)",
   "verfuegbar": true
  },
  {
@@ -297,7 +307,7 @@
   "variabel": false,
   "hint": "[all]",
   "aliases": [],
-  "enabled": "!Se()&&!Y8n()",
+  "enabled": "!Se()&&!YZn()",
   "verfuegbar": true
  },
  {
@@ -317,7 +327,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Dm()||Uy()||s.CLAUDE_CODE_COWORK_PLUGIN_SKILL&&!gq()",
+  "enabled": "Gm()||hS()||s.CLAUDE_CODE_COWORK_PLUGIN_SKILL&&!qj()",
   "verfuegbar": true
  },
  {
@@ -367,7 +377,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "mY()",
+  "enabled": "e7()",
   "verfuegbar": true
  },
  {
@@ -377,7 +387,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "mY()",
+  "enabled": "e7()",
   "verfuegbar": true
  },
  {
@@ -387,13 +397,13 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "mY()",
+  "enabled": "e7()",
   "verfuegbar": true
  },
  {
   "name": "design-sync",
   "typ": "registriert",
-  "desc": "Push a React design system to claude.ai/design. This runs a converter that bundles the real component code (from Storybook or a bare package) and uploads it. Use when the user runs /design-sync or says \"sync my design system to Claude Design\".",
+  "desc": "Sync a React design system to Claude Design. Bundles the real component code (from Storybook or a bare package) and uploads it. Use when the user runs /design-sync or says \"sync my design system to Claude Design.\"",
   "variabel": false,
   "hint": "",
   "aliases": [],
@@ -409,7 +419,7 @@
   "aliases": [
    "app"
   ],
-  "enabled": "fqe()||myr()!==null",
+  "enabled": "e5e()||PTr()!==null",
   "verfuegbar": true
  },
  {
@@ -419,7 +429,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "!T8r()",
+  "enabled": "!peo()",
   "verfuegbar": true
  },
  {
@@ -463,7 +473,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Dm()||Uy()",
+  "enabled": "Gm()||hS()",
   "verfuegbar": true
  },
  {
@@ -483,7 +493,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "CL()&&!Se()",
+  "enabled": "F0()&&!Se()",
   "verfuegbar": true
  },
  {
@@ -533,7 +543,7 @@
   "variabel": false,
   "hint": "<directive>",
   "aliases": [],
-  "enabled": "!rl()",
+  "enabled": "!dl()",
   "verfuegbar": true
  },
  {
@@ -653,7 +663,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "m_e()",
+  "enabled": "vSe()",
   "verfuegbar": true
  },
  {
@@ -663,7 +673,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "It()&&(W$e()||Nve())",
+  "enabled": "Ct()&&(p1e()||ZTe())",
   "verfuegbar": true
  },
  {
@@ -675,7 +685,7 @@
   "aliases": [
    "peers"
   ],
-  "enabled": "Nl()",
+  "enabled": "Dl()",
   "verfuegbar": true
  },
  {
@@ -685,7 +695,7 @@
   "variabel": true,
   "hint": "",
   "aliases": [],
-  "enabled": "{let e=gr();return!s.DISABLE_LOGIN_COMMAND&&(e===null||e.sessionId!==void 0)",
+  "enabled": "{let e=br();return!s.DISABLE_LOGIN_COMMAND&&(e===null||e.sessionId!==void 0)",
   "verfuegbar": true
  },
  {
@@ -717,7 +727,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "It()&&(QN()||Nen())",
+  "enabled": "Ct()&&(t$()||sin())",
   "verfuegbar": true
  },
  {
@@ -770,7 +780,7 @@
   "variabel": false,
   "hint": "[style]",
   "aliases": [],
-  "enabled": "Se()||!pqe()||V8n()",
+  "enabled": "Se()||!t5e()||VZn()",
   "verfuegbar": true
  },
  {
@@ -858,7 +868,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "qC()",
+  "enabled": "FR()",
   "verfuegbar": true
  },
  {
@@ -878,7 +888,7 @@
   "variabel": false,
   "hint": "[Project ID or claude.ai address] [--save] | clear [--save]",
   "aliases": [],
-  "enabled": "dvi()&&b(WPs",
+  "enabled": "$Mi()&&b(kLs",
   "verfuegbar": true
  },
  {
@@ -898,7 +908,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "It()||!1",
+  "enabled": "Ct()||!1",
   "verfuegbar": true
  },
  {
@@ -960,7 +970,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "It()||LUn()",
+  "enabled": "Ct()||Z2n()",
   "verfuegbar": true
  },
  {
@@ -1061,7 +1071,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "{if(!wf())return!1;let e=Ju();return!(e?$He.includes(e.terminal??\"\"):DT.isJetBrainsIdeTerminal())",
+  "enabled": "{if(!Mf())return!1;let e=pf();return!(e?o$e.includes(e.terminal??\"\"):_A.isJetBrainsIdeTerminal())",
   "verfuegbar": true
  },
  {
@@ -1083,7 +1093,7 @@
   "aliases": [
    "remote"
   ],
-  "enabled": "In()",
+  "enabled": "Dn()",
   "verfuegbar": true
  },
  {
@@ -1093,7 +1103,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Y2(\"bedrock\")===void 0&&!0",
+  "enabled": "yz(\"bedrock\")===void 0&&!0",
   "verfuegbar": true
  },
  {
@@ -1105,7 +1115,7 @@
   "aliases": [
    "setup-cowork"
   ],
-  "enabled": "Dm()||Uy()",
+  "enabled": "Gm()||hS()",
   "verfuegbar": true
  },
  {
@@ -1115,7 +1125,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Y2(\"vertex\")===void 0&&!0",
+  "enabled": "yz(\"vertex\")===void 0&&!0",
   "verfuegbar": true
  },
  {
@@ -1185,7 +1195,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Zt()||nQt()!==null",
+  "enabled": "Qt()||crn()!==null",
   "verfuegbar": true
  },
  {
@@ -1195,7 +1205,7 @@
   "variabel": false,
   "hint": "<task>",
   "aliases": [],
-  "enabled": "!rl()",
+  "enabled": "!dl()",
   "verfuegbar": true
  },
  {
@@ -1229,7 +1239,7 @@
   "aliases": [
    "tp"
   ],
-  "enabled": "It()||LUn()",
+  "enabled": "Ct()||Z2n()",
   "verfuegbar": true
  },
  {
@@ -1269,7 +1279,7 @@
   "variabel": false,
   "hint": "<prompt>",
   "aliases": [],
-  "enabled": "Woe()",
+  "enabled": "Nie()",
   "verfuegbar": true
  },
  {
@@ -1279,7 +1289,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "uz()",
+  "enabled": "OK()",
   "verfuegbar": true
  },
  {
@@ -1312,7 +1322,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "CL()&&!Se()",
+  "enabled": "F0()&&!Se()",
   "verfuegbar": true
  },
  {
@@ -1322,7 +1332,7 @@
   "variabel": false,
   "hint": "[use case]",
   "aliases": [],
-  "enabled": "VU()&&!bt()",
+  "enabled": "JB()&&!bt()",
   "verfuegbar": true
  },
  {
@@ -1396,7 +1406,7 @@
   "variabel": false,
   "hint": "",
   "aliases": [],
-  "enabled": "Og()",
+  "enabled": "e_()",
   "verfuegbar": true
  }
 ]
