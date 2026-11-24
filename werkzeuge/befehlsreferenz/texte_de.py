@@ -156,6 +156,7 @@ SLASH = {
 "debug": "Fehlersuche für diese Sitzung einschalten.",
 "design": "Zugriff auf Design-Projekte erteilen oder entziehen.",
 "design-consent": "Zugriff auf Design-Projekte erteilen.",
+"claude-approvals": "Skill für Claude-Approvals-Richtliniendateien (.claude/approvals.yml) und eigene Klassifizierer; vor dem Anlegen, Ändern oder Erklären nutzen.",
 "design-login": "Design-Zugriff für /design-sync freischalten.",
 "design-revoke": "Zugriff auf Design-Projekte entziehen.",
 "design-sync": "Ein React-Designsystem mit Claude Design abgleichen.",

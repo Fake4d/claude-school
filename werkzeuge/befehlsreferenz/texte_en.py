@@ -160,6 +160,7 @@ SLASH = {
 "debug": "Turn on debugging for this session.",
 "design": "Grant or revoke access to design projects.",
 "design-consent": "Grant access to design projects.",
+"claude-approvals": "Skill for Claude Approvals policy files (.claude/approvals.yml) and custom classifiers; use before creating, changing or explaining them.",
 "design-login": "Unlock design access for /design-sync.",
 "design-revoke": "Revoke access to design projects.",
 "design-sync": "Sync a React design system to Claude Design.",
