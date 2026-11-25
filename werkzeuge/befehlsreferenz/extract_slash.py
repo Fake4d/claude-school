@@ -287,6 +287,42 @@ def variable_aufloesen(bezeichner, vor_position):
     return text
 
 
+def _objekt_feld_suchen(bezeichner, feldname, feld):
+    """`X={description:"...",...}` im Ausschnitt finden und das Feld lesen."""
+    b = re.escape(bezeichner)
+    for m in re.finditer(r'(?:var\s+|[,;{}\s])' + b + r'\s*=\s*\{', feld):
+        obj = klammer_bereich(feld, m.end())
+        if not obj:
+            continue
+        f = feld_oberste_ebene(obj, re.escape(feldname) + r':"((?:[^"\\]|\\.)*)"')
+        if f:
+            return entschluesseln(f.group(1)).strip()
+    return ""
+
+
+def objekt_feld_aufloesen(bezeichner, feldname, vor_position):
+    """`description:pKe.description` -> Text aus `pKe={description:"..."}`.
+
+    Seit 2.1.332 (/stickers) steht die Beschreibung in einem eigenen
+    Datenobjekt, oft in einem anderen Modul (importiert). Wie bei
+    variable_aufloesen: erst im eigenen Modul, sonst im Herkunftsmodul.
+    """
+    i = modul_von(vor_position)
+    if i is None:
+        return ""
+    start, ende = modul_bereich(i)
+    text = _objekt_feld_suchen(bezeichner, feldname, data[start:ende])
+    if not text:
+        herkunft = IMPORTE[i].get(bezeichner)
+        if herkunft:
+            chunk, export = herkunft
+            j, lokal = herkunft_modul(chunk, export)
+            if j is not None and lokal:
+                qstart, qende = modul_bereich(j)
+                text = _objekt_feld_suchen(lokal, feldname, data[qstart:qende])
+    return text
+
+
 # Kurze Zuweisungen `VAR="wert"` einmalig einsammeln, MIT Position. Einzeln zu
 # suchen waere unbezahlbar: die Datei hat ~300 Mio Zeichen und es gibt hunderte
 # Bezeichner. Derselbe kurze Bezeichner (z.B. `$ne`) wird im minifizierten Bundle
@@ -511,7 +547,7 @@ VERWORFEN = []
 # Shell-Sicherheitspruefung, `text` seit 2.1.317 ein Inhaltsblock-Typ in der
 # Routine, die Memory-Tags aus Text-/Thinking-Bloecken entfernt). Bekannte Fehltreffer werden nicht gemeldet, sonst
 # gewoehnt man sich an die Meldung und liest sie nicht mehr.
-VERWORFEN_FEHLTREFFER = {"files_with_matches", "shell_expansion", "text", "estimate"}  # estimate: interner Ausloeser der Kontext-Komprimierung (2.1.329)
+VERWORFEN_FEHLTREFFER = {"files_with_matches", "shell_expansion", "text", "estimate", "read_fail"}  # estimate: interner Ausloeser der Kontext-Komprimierung (2.1.329); read_fail: Name aus Fehlercode-Tabelle, Text aus Worktree-Hinweis (2.1.332)
 # Echte Befehle, deren Bauform der Auslesecode noch nicht beherrscht. Bekannt und
 # offen - sie werden gemeldet, aber als Altlast, nicht als Neuigkeit. Wer einen
 # davon auslesbar macht, nimmt ihn hier heraus. Seit 05.09.2026 leer: die vier
@@ -523,7 +559,7 @@ VERWORFEN_BEKANNT = set()
 # zusaetzlich mindestens ein befehlstypisches Feld (type / isEnabled / aliases /
 # requires). `inputSchema` schliesst Werkzeuge und Agenten aus. Diese Regel ist
 # unabhaengig von den Minifier-Namen und damit ueber Versionen hinweg vergleichbar.
-ANKER = re.compile(r'description:(?:"|\(\)\s*=>|[A-Za-z_$][\w$]{0,6}[,}])'
+ANKER = re.compile(r'description:(?:"|\(\)\s*=>|[A-Za-z_$][\w$]{0,6}(?:\.description)?[,}])'
                    r'|get description\(\)\s*\{')
 for t in ANKER.finditer(data):
     obj = klammer_bereich(data, t.start())
@@ -568,6 +604,12 @@ for t in ANKER.finditer(data):
             vr = feld_oberste_ebene(obj, r'description:([A-Za-z_$][\w$]{0,6})')
             if vr:
                 desc = variable_aufloesen(vr.group(1), t.start())
+        if not desc:
+            # `description:pKe.description` (seit 2.1.332 bei /stickers): Text
+            # steht in einem Datenobjekt, ggf. in einem importierten Modul.
+            of = feld_oberste_ebene(obj, r'description:([A-Za-z_$][\w$]{0,6})\.description\s*[,}]')
+            if of:
+                desc = objekt_feld_aufloesen(of.group(1), "description", t.start())
     if not desc:
         # Seit 2.1.260 kann die Beschreibung eine Pfeilfunktion sein, die je nach
         # Umgebung einen von mehreren Textbausteinen zurueckgibt:

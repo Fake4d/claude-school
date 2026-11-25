@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>Claude Code · Command Reference 2.1.331</title>
+<html lang="en"><head><meta charset="utf-8"><title>Claude Code · Command Reference 2.1.332</title>
 <style>
 @page { size: A4 portrait; margin: 17mm 15mm 15mm; }
 * { box-sizing: border-box; }
@@ -35,16 +35,16 @@ section { break-inside: auto; }
   padding-top: 2mm; }
 </style></head><body>
 
-<div class="kopfzeile">Complete reference · checked against version 2.1.331</div>
+<div class="kopfzeile">Complete reference · checked against version 2.1.332</div>
 <h1>Claude Code<br>Command Reference</h1>
 <p class="lead">Every terminal command, every option and every slash command inside a session — with an explanation of what it does.</p>
-<p class="meta">Compiled by Christian's virtual server · 24 November 2026 · Update of the edition of 22 November 2026 (2.1.330)</p>
+<p class="meta">Compiled by Christian's virtual server · 25 November 2026 · Update of the edition of 24 November 2026 (2.1.331)</p>
 
 <div class="kasten">
 <h3>How this list came about</h3>
 
 <p>Terminal commands and options (parts A and B) are read straight out of the installed
-version 2.1.331 — <code>claude --help</code> and the help of every subcommand.</p>
+version 2.1.332 — <code>claude --help</code> and the help of every subcommand.</p>
 <p>The slash commands (part C) come from the command definitions inside the program itself.
 The extraction also picks up commands whose description is only assembled at runtime or
 fetched from a variable, and since this edition equally those whose <i>name</i> sits in a
@@ -58,12 +58,11 @@ at the end, so that nothing appears available that is not.</p>
 <div class="kasten">
 <h3>What has changed since the last edition</h3>
 
-<p>Compared with 2.1.330: <b>one new command, <code>/claude-approvals</code>; nothing else of substance.</b></p>
+<p>Compared with 2.1.331: <b>one changed description for <code>/schedule</code>; nothing else of substance.</b></p>
 <ul>
-<li><code>/claude-approvals</code> is new: a skill for Claude Approvals policy files (<code>.claude/approvals.yml</code>) and custom classifiers (<code>.claude/classifiers/</code>). It is meant for use before creating, changing, cleaning up or explaining them, and before or after uninstalling or suspending the Claude GitHub App; not for CODEOWNERS, branch protection, GitHub Actions or Claude Code's own permission settings.</li>
-<li><code>claude auth</code>: in the subcommand help, <code>logout</code> is now listed with <code>[options]</code>.</li>
+<li><code>/schedule</code>: the description now reads “Create and manage scheduled tasks that run in the cloud” (before: “Create and manage scheduled remote Claude Code agents”). It still means creating and managing scheduled tasks that run in the cloud.</li>
 </ul>
-<p><code>claude --help</code> is character-for-character identical. Slash commands: 136 instead of 135 (one new, none removed, no description changed).</p>
+<p><code>claude --help</code> and the subcommand help are character-for-character identical. Slash commands: still 136 (none new, none removed).</p>
 
 </div>
 
@@ -75,5 +74,5 @@ at the end, so that nothing appears available that is not.</p>
 
 <section><h2>Appendix · Present, but switched off</h2><p class="unter">These names exist in the program, but are disabled by a flag in this version and are not available inside a session.</p><div class="z "><div class="l"><code>/pause-memory <span class="zus">also /memory-pause, /toggle-memory</span></code></div><div class="r">Pause account memory and local auto-memory for this session (run again to turn both back on). <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/version</code></div><div class="r">Show the version of this session. <span class="aus">present in the program, but switched off</span></div></div><div class="z "><div class="l"><code>/wellbeing <span class="zus">also /breaks, /break-reminder, /downtime</span></code></div><div class="r">Set up break reminders and quiet hours. <span class="aus">present in the program, but switched off</span></div></div></section>
 
-<div class="fuss">Claude Code 2.1.331 · 66 options · 133 available slash commands · 3 switched off · as of 24 November 2026</div>
+<div class="fuss">Claude Code 2.1.332 · 66 options · 133 available slash commands · 3 switched off · as of 25 November 2026</div>
 </body></html>

@@ -13,9 +13,9 @@ mit einer anderen Programmversion auseinanderlaufen.
 import json, pathlib, datetime, re, sys
 import texte_de, texte_en, aenderungen
 
-VERSION = "2.1.331"
-VORGAENGER = "2.1.330"
-VORGAENGER_DATUM = datetime.date(2026, 11, 22)   # Erscheinungstag der Vorfassung
+VERSION = "2.1.332"
+VORGAENGER = "2.1.331"
+VORGAENGER_DATUM = datetime.date(2026, 11, 24)   # Erscheinungstag der Vorfassung
 HERE = pathlib.Path(__file__).parent
 
 # Sprachkennung -> (Textmodul, Änderungskasten, Dateiname ohne Endung)
