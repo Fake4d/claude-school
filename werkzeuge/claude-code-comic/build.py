@@ -340,7 +340,7 @@ panel("Kniffe",
 
 # --- 14 ---
 panel("Context Window",
-  "Letzte Frage: Was genau ist dieses Kontext&shy;fenster?",
+  "Moment – was genau ist eigentlich dieses Kontext&shy;fenster?",
   ["Das ist Claudes Arbeits&shy;gedächtnis für das laufende Gespräch.",
    "Deine Eingaben, Claudes Antworten, gelesene Dateien und Werkzeug-Ergebnisse belegen alle Platz darin."],
   f'''{human("point")}

@@ -218,8 +218,8 @@ TEXTE = {
     "<b>Esc Esc</b><span>rewind</span>",
 
 # --- Kontextfenster ---
-"Letzte Frage: Was genau ist dieses Kontext&shy;fenster?":
-    "Last question: what exactly is this context window?",
+"Moment – was genau ist eigentlich dieses Kontext&shy;fenster?":
+    "Hang on – what exactly is this context window?",
 "Das ist Claudes Arbeits&shy;gedächtnis für das laufende Gespräch.":
     "That is Claude&#8217;s working memory for the conversation you are having.",
 "Deine Eingaben, Claudes Antworten, gelesene Dateien und Werkzeug-Ergebnisse belegen alle Platz darin.":
